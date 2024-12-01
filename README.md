@@ -5,11 +5,6 @@ This is the official repository for our WACV 2025 paper, ***"A Multi-task Superv
 ## Ladon: the first multi-task supervised compression model for split computing
 ![Entropic Student vs. Ladon](imgs/ladon_model-comparison.png)
 
-## Setup
-```shell
-pip install sc2bench
-```
-
 ## Datasets
 Follow the instructions in [my sc2-benchmark repository](https://github.com/yoshitomo-matsubara/sc2-benchmark/tree/main/script#datasets
 
