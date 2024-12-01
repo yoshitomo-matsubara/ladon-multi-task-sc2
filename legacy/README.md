@@ -1,5 +1,5 @@
 # Legacy code
-This study was done prior to the release of sc2bench==0.1.0, which introduces a lot of BC changes and updates the structure of configuration files.
+This study was done prior to the release of sc2bench==0.1.0, which introduces a lot of breaking changes and updates the structure of configuration files.
 To reuse the code and configurations at that time, use the files in this directory.  
 If you want to use more recent versions of the required packages, refer to [Updated code](../#updated-code)).
 
