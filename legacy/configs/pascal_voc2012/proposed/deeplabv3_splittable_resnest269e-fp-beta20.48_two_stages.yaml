@@ -106,10 +106,10 @@ models:
           pre_transform_params:
           skips_avgpool: True
           skips_fc: True
-        ckpt: 'resource/ckpt/ilsvrc2012/supervised_compression/entropic_student/ilsvrc2012-splittable_resnest269e-fp-beta20.48_from_resnest269e.pt'
+        ckpt: 'resource/ckpt/ilsvrc2012/ladon/ilsvrc2012-splittable_resnest269e-fp-beta20.48_from_resnest269e.pt'
       start_ckpt_file_path:
     experiment: &student_experiment !join [*pascal_dataset_name, '-deeplabv3_splittable_resnest269e-fp-beta20.48_two_stages']
-    ckpt: !join ['./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/', *student_experiment, '.pt']
+    ckpt: !join ['./resource/ckpt/pascal_voc2012/ladon/', *student_experiment, '.pt']
 
 train:
   log_freq: 1000
