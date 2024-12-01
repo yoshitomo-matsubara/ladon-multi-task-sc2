@@ -1,0 +1,1060 @@
+2023-03-02 22:05:21,284	INFO	torchdistill.common.main_util	Not using distributed mode
+2023-03-02 22:05:21,284	INFO	__main__	Namespace(adjust_lr=False, config='configs/coco2017/proposed/faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.yaml', device='cuda', dist_url='env://', iou_types=None, json=None, log='logs/coco2017/proposed/faster_rcnn_splittable_resnet50-fp-beta10.24.txt', log_config=False, no_dp_eval=False, seed=None, start_epoch=0, student_only=False, test_only=False, world_size=1)
+2023-03-02 22:05:45,480	INFO	torchdistill.common.main_util	Loading model parameters
+2023-03-02 22:05:45,790	INFO	torchdistill.common.main_util	ckpt file is not found at `./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt`
+2023-03-02 22:05:52,278	INFO	__main__	Start training
+2023-03-02 22:05:52,504	INFO	torchdistill.datasets.sampler	Using [0, 0.5, 0.6299605249474366, 0.7937005259840997, 1.0, 1.2599210498948732, 1.5874010519681994, 2.0, inf] as bins for aspect ratio quantization
+2023-03-02 22:05:52,504	INFO	torchdistill.datasets.sampler	Count of instances per bin: [  104   982 24236  2332  8225 74466  5763  1158]
+2023-03-02 22:05:52,507	INFO	torchdistill.models.util	[student model]
+2023-03-02 22:05:52,507	INFO	torchdistill.models.util	Using the original student model
+2023-03-02 22:05:52,507	INFO	torchdistill.models.util	Frozen module(s): {'backbone.body'}
+2023-03-02 22:05:52,508	INFO	torchdistill.core.training	Loss = 1.0 * OrgLoss
+2023-03-02 22:05:52,517	INFO	__main__	Updating entropy bottleneck
+2023-03-02 22:05:54,667	INFO	torchdistill.misc.log	Epoch: [0]  [    0/14658]  eta: 8:44:44  lr: 0.02  img/s: 7.35502153388606  loss: 5.3562 (5.3562)  time: 2.1480  data: 1.0509  max mem: 9333
+2023-03-02 22:08:39,565	INFO	torchdistill.misc.log	Epoch: [0]  [ 1000/14658]  eta: 0:37:59  lr: 0.02  img/s: 59.67152452611418  loss: 1.1268 (1.2744)  time: 0.1537  data: 0.0123  max mem: 9589
+2023-03-02 22:11:14,218	INFO	torchdistill.misc.log	Epoch: [0]  [ 2000/14658]  eta: 0:33:54  lr: 0.02  img/s: 61.79965558840051  loss: 1.1497 (1.2067)  time: 0.1553  data: 0.0126  max mem: 9589
+2023-03-02 22:13:49,439	INFO	torchdistill.misc.log	Epoch: [0]  [ 3000/14658]  eta: 0:30:52  lr: 0.02  img/s: 60.79031831440115  loss: 0.9690 (1.1742)  time: 0.1547  data: 0.0125  max mem: 9589
+2023-03-02 22:16:25,135	INFO	torchdistill.misc.log	Epoch: [0]  [ 4000/14658]  eta: 0:28:05  lr: 0.02  img/s: 58.69956440354775  loss: 0.9426 (1.1553)  time: 0.1550  data: 0.0119  max mem: 9589
+2023-03-02 22:19:00,281	INFO	torchdistill.misc.log	Epoch: [0]  [ 5000/14658]  eta: 0:25:21  lr: 0.02  img/s: 60.27976897304386  loss: 1.0706 (1.1407)  time: 0.1558  data: 0.0125  max mem: 9589
+2023-03-02 22:21:35,501	INFO	torchdistill.misc.log	Epoch: [0]  [ 6000/14658]  eta: 0:22:40  lr: 0.02  img/s: 60.94013762842505  loss: 1.0550 (1.1281)  time: 0.1585  data: 0.0131  max mem: 9589
+2023-03-02 22:24:10,380	INFO	torchdistill.misc.log	Epoch: [0]  [ 7000/14658]  eta: 0:20:00  lr: 0.02  img/s: 59.654868829958964  loss: 0.9627 (1.1163)  time: 0.1561  data: 0.0126  max mem: 9589
+2023-03-02 22:26:45,331	INFO	torchdistill.misc.log	Epoch: [0]  [ 8000/14658]  eta: 0:17:22  lr: 0.02  img/s: 60.14395359758524  loss: 1.0297 (1.1066)  time: 0.1540  data: 0.0123  max mem: 9589
+2023-03-02 22:29:20,228	INFO	torchdistill.misc.log	Epoch: [0]  [ 9000/14658]  eta: 0:14:44  lr: 0.02  img/s: 61.4146229859854  loss: 0.9622 (1.0980)  time: 0.1551  data: 0.0123  max mem: 9589
+2023-03-02 22:31:55,287	INFO	torchdistill.misc.log	Epoch: [0]  [10000/14658]  eta: 0:12:07  lr: 0.02  img/s: 60.985216446203786  loss: 0.9670 (1.0905)  time: 0.1531  data: 0.0122  max mem: 9589
+2023-03-02 22:34:30,161	INFO	torchdistill.misc.log	Epoch: [0]  [11000/14658]  eta: 0:09:31  lr: 0.02  img/s: 61.13499666580427  loss: 0.9526 (1.0844)  time: 0.1534  data: 0.0127  max mem: 9589
+2023-03-02 22:37:04,835	INFO	torchdistill.misc.log	Epoch: [0]  [12000/14658]  eta: 0:06:54  lr: 0.02  img/s: 60.22588814720817  loss: 0.9150 (1.0770)  time: 0.1546  data: 0.0119  max mem: 9589
+2023-03-02 22:39:39,722	INFO	torchdistill.misc.log	Epoch: [0]  [13000/14658]  eta: 0:04:18  lr: 0.02  img/s: 58.173930079144235  loss: 0.9290 (1.0714)  time: 0.1550  data: 0.0124  max mem: 9589
+2023-03-02 22:42:14,614	INFO	torchdistill.misc.log	Epoch: [0]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 62.83730938277755  loss: 0.9108 (1.0666)  time: 0.1536  data: 0.0122  max mem: 9589
+2023-03-02 22:43:56,832	INFO	torchdistill.misc.log	Epoch: [0] Total time: 0:38:04
+2023-03-02 22:44:03,802	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:20:30  model_time: 1.1501 (1.1501)  evaluator_time: 0.0546 (0.0546)  time: 1.6861  data: 0.4778  max mem: 17051
+2023-03-02 22:45:58,903	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:07:46  model_time: 0.0823 (0.0989)  evaluator_time: 0.0088 (0.0165)  time: 0.0960  data: 0.0001  max mem: 17060
+2023-03-02 22:47:40,840	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:27  model_time: 0.0808 (0.0914)  evaluator_time: 0.0097 (0.0169)  time: 0.0978  data: 0.0001  max mem: 17060
+2023-03-02 22:49:21,950	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:33  model_time: 0.0780 (0.0889)  evaluator_time: 0.0091 (0.0167)  time: 0.0954  data: 0.0001  max mem: 17060
+2023-03-02 22:51:04,384	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:45  model_time: 0.0806 (0.0874)  evaluator_time: 0.0105 (0.0172)  time: 0.1000  data: 0.0001  max mem: 17060
+2023-03-02 22:52:44,781	INFO	torchdistill.misc.log	Validation: Total time: 0:08:42
+2023-03-02 22:52:44,782	INFO	__main__	Averaged stats: model_time: 0.0781 (0.0867)  evaluator_time: 0.0126 (0.0170)
+2023-03-02 22:52:45,014	INFO	__main__	Accumulating evaluation results...
+2023-03-02 22:53:00,930	INFO	__main__	DONE (t=15.92s).
+2023-03-02 22:53:00,931	INFO	__main__	IoU metric: bbox
+2023-03-02 22:53:00,932	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.118
+2023-03-02 22:53:00,932	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.255
+2023-03-02 22:53:00,932	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.091
+2023-03-02 22:53:00,933	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.025
+2023-03-02 22:53:00,934	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.119
+2023-03-02 22:53:00,934	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.215
+2023-03-02 22:53:00,935	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.148
+2023-03-02 22:53:00,935	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.231
+2023-03-02 22:53:00,935	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.245
+2023-03-02 22:53:00,935	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.050
+2023-03-02 22:53:00,935	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.256
+2023-03-02 22:53:00,935	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.422
+2023-03-02 22:53:00,936	INFO	__main__	Best mAP (bbox): 0.0000 -> 0.1176
+2023-03-02 22:53:00,936	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-02 22:53:02,140	INFO	torchdistill.misc.log	Epoch: [1]  [    0/14658]  eta: 3:18:02  lr: 0.02  img/s: 52.54085980254762  loss: 1.1684 (1.1684)  time: 0.8107  data: 0.6467  max mem: 17060
+2023-03-02 22:55:37,550	INFO	torchdistill.misc.log	Epoch: [1]  [ 1000/14658]  eta: 0:35:31  lr: 0.02  img/s: 53.54675586223625  loss: 0.9736 (1.0021)  time: 0.1550  data: 0.0117  max mem: 17060
+2023-03-02 22:58:13,194	INFO	torchdistill.misc.log	Epoch: [1]  [ 2000/14658]  eta: 0:32:52  lr: 0.02  img/s: 62.39144671395766  loss: 0.8799 (0.9959)  time: 0.1550  data: 0.0125  max mem: 17060
+2023-03-02 23:00:48,513	INFO	torchdistill.misc.log	Epoch: [1]  [ 3000/14658]  eta: 0:30:14  lr: 0.02  img/s: 62.10402484573214  loss: 0.9867 (0.9929)  time: 0.1548  data: 0.0128  max mem: 17060
+2023-03-02 23:03:22,680	INFO	torchdistill.misc.log	Epoch: [1]  [ 4000/14658]  eta: 0:27:35  lr: 0.02  img/s: 60.85106244072112  loss: 1.0514 (0.9942)  time: 0.1537  data: 0.0121  max mem: 17060
+2023-03-02 23:05:56,443	INFO	torchdistill.misc.log	Epoch: [1]  [ 5000/14658]  eta: 0:24:56  lr: 0.02  img/s: 60.2818265765523  loss: 1.0425 (0.9928)  time: 0.1536  data: 0.0119  max mem: 17060
+2023-03-02 23:08:30,094	INFO	torchdistill.misc.log	Epoch: [1]  [ 6000/14658]  eta: 0:22:19  lr: 0.02  img/s: 60.380105088893686  loss: 0.9241 (0.9913)  time: 0.1545  data: 0.0117  max mem: 17060
+2023-03-02 23:11:03,470	INFO	torchdistill.misc.log	Epoch: [1]  [ 7000/14658]  eta: 0:19:43  lr: 0.02  img/s: 60.52550483869513  loss: 0.9425 (0.9878)  time: 0.1548  data: 0.0117  max mem: 17060
+2023-03-02 23:13:37,400	INFO	torchdistill.misc.log	Epoch: [1]  [ 8000/14658]  eta: 0:17:08  lr: 0.02  img/s: 61.18761602229087  loss: 0.8744 (0.9864)  time: 0.1545  data: 0.0121  max mem: 17060
+2023-03-02 23:16:11,580	INFO	torchdistill.misc.log	Epoch: [1]  [ 9000/14658]  eta: 0:14:33  lr: 0.02  img/s: 61.36138821175752  loss: 0.9323 (0.9863)  time: 0.1532  data: 0.0122  max mem: 17060
+2023-03-02 23:18:46,065	INFO	torchdistill.misc.log	Epoch: [1]  [10000/14658]  eta: 0:11:59  lr: 0.02  img/s: 60.33949655993411  loss: 0.9816 (0.9847)  time: 0.1571  data: 0.0127  max mem: 17060
+2023-03-02 23:21:21,212	INFO	torchdistill.misc.log	Epoch: [1]  [11000/14658]  eta: 0:09:25  lr: 0.02  img/s: 60.760266766622664  loss: 0.9705 (0.9825)  time: 0.1564  data: 0.0127  max mem: 17060
+2023-03-02 23:23:56,002	INFO	torchdistill.misc.log	Epoch: [1]  [12000/14658]  eta: 0:06:50  lr: 0.02  img/s: 60.906842084245454  loss: 0.8554 (0.9812)  time: 0.1552  data: 0.0127  max mem: 17060
+2023-03-02 23:26:31,166	INFO	torchdistill.misc.log	Epoch: [1]  [13000/14658]  eta: 0:04:16  lr: 0.02  img/s: 61.76427753623455  loss: 0.8142 (0.9793)  time: 0.1556  data: 0.0124  max mem: 17060
+2023-03-02 23:29:06,137	INFO	torchdistill.misc.log	Epoch: [1]  [14000/14658]  eta: 0:01:41  lr: 0.02  img/s: 59.64203861734065  loss: 0.9077 (0.9780)  time: 0.1541  data: 0.0122  max mem: 17060
+2023-03-02 23:30:48,185	INFO	torchdistill.misc.log	Epoch: [1] Total time: 0:37:46
+2023-03-02 23:30:52,101	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 0:53:18  model_time: 0.0951 (0.0951)  evaluator_time: 0.0284 (0.0284)  time: 0.6396  data: 0.5136  max mem: 17060
+2023-03-02 23:32:32,387	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:43  model_time: 0.0822 (0.0832)  evaluator_time: 0.0093 (0.0163)  time: 0.0980  data: 0.0001  max mem: 17060
+2023-03-02 23:34:13,999	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:03  model_time: 0.0789 (0.0834)  evaluator_time: 0.0114 (0.0167)  time: 0.0987  data: 0.0001  max mem: 17060
+2023-03-02 23:35:56,711	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:23  model_time: 0.0817 (0.0833)  evaluator_time: 0.0095 (0.0175)  time: 0.0977  data: 0.0001  max mem: 17060
+2023-03-02 23:37:36,432	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:41  model_time: 0.0850 (0.0831)  evaluator_time: 0.0099 (0.0172)  time: 0.1042  data: 0.0001  max mem: 17060
+2023-03-02 23:39:16,775	INFO	torchdistill.misc.log	Validation: Total time: 0:08:25
+2023-03-02 23:39:16,775	INFO	__main__	Averaged stats: model_time: 0.0787 (0.0832)  evaluator_time: 0.0106 (0.0170)
+2023-03-02 23:39:17,014	INFO	__main__	Accumulating evaluation results...
+2023-03-02 23:39:32,514	INFO	__main__	DONE (t=15.50s).
+2023-03-02 23:39:32,514	INFO	__main__	IoU metric: bbox
+2023-03-02 23:39:32,515	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.139
+2023-03-02 23:39:32,515	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.285
+2023-03-02 23:39:32,516	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.118
+2023-03-02 23:39:32,516	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.028
+2023-03-02 23:39:32,517	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.136
+2023-03-02 23:39:32,518	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.252
+2023-03-02 23:39:32,518	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.164
+2023-03-02 23:39:32,518	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.254
+2023-03-02 23:39:32,518	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.268
+2023-03-02 23:39:32,518	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.060
+2023-03-02 23:39:32,518	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.284
+2023-03-02 23:39:32,518	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.472
+2023-03-02 23:39:33,298	INFO	__main__	Best mAP (bbox): 0.1176 -> 0.1388
+2023-03-02 23:39:33,300	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-02 23:39:34,659	INFO	torchdistill.misc.log	Epoch: [2]  [    0/14658]  eta: 3:15:08  lr: 0.02  img/s: 54.7034373023274  loss: 1.0339 (1.0339)  time: 0.7988  data: 0.6421  max mem: 17060
+2023-03-02 23:42:11,786	INFO	torchdistill.misc.log	Epoch: [2]  [ 1000/14658]  eta: 0:35:54  lr: 0.02  img/s: 59.75898670694003  loss: 0.9818 (0.9645)  time: 0.1590  data: 0.0140  max mem: 17060
+2023-03-02 23:44:48,987	INFO	torchdistill.misc.log	Epoch: [2]  [ 2000/14658]  eta: 0:33:13  lr: 0.02  img/s: 59.92783177416532  loss: 0.9720 (0.9573)  time: 0.1566  data: 0.0132  max mem: 17060
+2023-03-02 23:47:26,270	INFO	torchdistill.misc.log	Epoch: [2]  [ 3000/14658]  eta: 0:30:35  lr: 0.02  img/s: 53.48871226395544  loss: 1.0047 (0.9572)  time: 0.1574  data: 0.0129  max mem: 17060
+2023-03-02 23:50:02,666	INFO	torchdistill.misc.log	Epoch: [2]  [ 4000/14658]  eta: 0:27:54  lr: 0.02  img/s: 60.460287972784755  loss: 0.9524 (0.9594)  time: 0.1546  data: 0.0123  max mem: 17060
+2023-03-02 23:52:38,522	INFO	torchdistill.misc.log	Epoch: [2]  [ 5000/14658]  eta: 0:25:15  lr: 0.02  img/s: 60.30436110981313  loss: 0.8679 (0.9566)  time: 0.1534  data: 0.0118  max mem: 17060
+2023-03-02 23:55:13,704	INFO	torchdistill.misc.log	Epoch: [2]  [ 6000/14658]  eta: 0:22:35  lr: 0.02  img/s: 57.79736217020668  loss: 0.9103 (0.9556)  time: 0.1551  data: 0.0118  max mem: 17060
+2023-03-02 23:57:49,408	INFO	torchdistill.misc.log	Epoch: [2]  [ 7000/14658]  eta: 0:19:58  lr: 0.02  img/s: 59.66144512761062  loss: 0.9314 (0.9550)  time: 0.1549  data: 0.0120  max mem: 17060
+2023-03-03 00:00:25,415	INFO	torchdistill.misc.log	Epoch: [2]  [ 8000/14658]  eta: 0:17:21  lr: 0.02  img/s: 59.240536007485744  loss: 0.9287 (0.9541)  time: 0.1550  data: 0.0122  max mem: 17060
+2023-03-03 00:03:01,705	INFO	torchdistill.misc.log	Epoch: [2]  [ 9000/14658]  eta: 0:14:44  lr: 0.02  img/s: 60.00370525352017  loss: 0.9896 (0.9538)  time: 0.1572  data: 0.0131  max mem: 17060
+2023-03-03 00:05:37,826	INFO	torchdistill.misc.log	Epoch: [2]  [10000/14658]  eta: 0:12:08  lr: 0.02  img/s: 58.03337299720508  loss: 0.7880 (0.9532)  time: 0.1553  data: 0.0119  max mem: 17060
+2023-03-03 00:08:14,411	INFO	torchdistill.misc.log	Epoch: [2]  [11000/14658]  eta: 0:09:32  lr: 0.02  img/s: 53.70891850448022  loss: 0.7366 (0.9525)  time: 0.1579  data: 0.0123  max mem: 17060
+2023-03-03 00:10:51,063	INFO	torchdistill.misc.log	Epoch: [2]  [12000/14658]  eta: 0:06:55  lr: 0.02  img/s: 60.61592823154936  loss: 0.9463 (0.9525)  time: 0.1556  data: 0.0128  max mem: 17060
+2023-03-03 00:13:27,755	INFO	torchdistill.misc.log	Epoch: [2]  [13000/14658]  eta: 0:04:19  lr: 0.02  img/s: 59.40341006661863  loss: 0.8754 (0.9524)  time: 0.1566  data: 0.0126  max mem: 17060
+2023-03-03 00:16:04,541	INFO	torchdistill.misc.log	Epoch: [2]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 60.24665006436832  loss: 1.0215 (0.9519)  time: 0.1596  data: 0.0134  max mem: 17060
+2023-03-03 00:17:47,873	INFO	torchdistill.misc.log	Epoch: [2] Total time: 0:38:14
+2023-03-03 00:17:51,810	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 0:56:00  model_time: 0.0973 (0.0973)  evaluator_time: 0.0265 (0.0265)  time: 0.6720  data: 0.5468  max mem: 17060
+2023-03-03 00:19:31,302	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:40  model_time: 0.0793 (0.0832)  evaluator_time: 0.0079 (0.0156)  time: 0.0935  data: 0.0001  max mem: 17060
+2023-03-03 00:21:11,518	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:00  model_time: 0.0796 (0.0832)  evaluator_time: 0.0100 (0.0159)  time: 0.0968  data: 0.0001  max mem: 17060
+2023-03-03 00:22:50,039	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:19  model_time: 0.0811 (0.0830)  evaluator_time: 0.0104 (0.0156)  time: 0.0977  data: 0.0001  max mem: 17060
+2023-03-03 00:24:32,721	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:40  model_time: 0.0817 (0.0833)  evaluator_time: 0.0098 (0.0162)  time: 0.0996  data: 0.0001  max mem: 17060
+2023-03-03 00:26:11,566	INFO	torchdistill.misc.log	Validation: Total time: 0:08:20
+2023-03-03 00:26:11,566	INFO	__main__	Averaged stats: model_time: 0.0787 (0.0833)  evaluator_time: 0.0104 (0.0159)
+2023-03-03 00:26:11,736	INFO	__main__	Accumulating evaluation results...
+2023-03-03 00:26:25,795	INFO	__main__	DONE (t=14.06s).
+2023-03-03 00:26:25,795	INFO	__main__	IoU metric: bbox
+2023-03-03 00:26:25,796	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.153
+2023-03-03 00:26:25,797	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.300
+2023-03-03 00:26:25,797	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.141
+2023-03-03 00:26:25,798	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.031
+2023-03-03 00:26:25,798	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.154
+2023-03-03 00:26:25,799	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.277
+2023-03-03 00:26:25,799	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.174
+2023-03-03 00:26:25,799	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.264
+2023-03-03 00:26:25,799	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.276
+2023-03-03 00:26:25,799	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.062
+2023-03-03 00:26:25,799	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.287
+2023-03-03 00:26:25,799	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.483
+2023-03-03 00:26:26,545	INFO	__main__	Best mAP (bbox): 0.1388 -> 0.1531
+2023-03-03 00:26:26,547	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 00:26:27,895	INFO	torchdistill.misc.log	Epoch: [3]  [    0/14658]  eta: 3:18:06  lr: 0.02  img/s: 54.03011761068673  loss: 0.6330 (0.6330)  time: 0.8110  data: 0.6538  max mem: 17060
+2023-03-03 00:29:04,963	INFO	torchdistill.misc.log	Epoch: [3]  [ 1000/14658]  eta: 0:35:54  lr: 0.02  img/s: 59.466471011487656  loss: 0.8304 (0.9436)  time: 0.1578  data: 0.0140  max mem: 17060
+2023-03-03 00:31:42,291	INFO	torchdistill.misc.log	Epoch: [3]  [ 2000/14658]  eta: 0:33:13  lr: 0.02  img/s: 60.27565418739211  loss: 0.8971 (0.9471)  time: 0.1568  data: 0.0126  max mem: 17060
+2023-03-03 00:34:19,820	INFO	torchdistill.misc.log	Epoch: [3]  [ 3000/14658]  eta: 0:30:36  lr: 0.02  img/s: 59.438029646005155  loss: 0.9616 (0.9467)  time: 0.1582  data: 0.0133  max mem: 17060
+2023-03-03 00:36:57,005	INFO	torchdistill.misc.log	Epoch: [3]  [ 4000/14658]  eta: 0:27:57  lr: 0.02  img/s: 59.476273785151506  loss: 0.7719 (0.9418)  time: 0.1579  data: 0.0132  max mem: 17060
+2023-03-03 00:39:34,302	INFO	torchdistill.misc.log	Epoch: [3]  [ 5000/14658]  eta: 0:25:20  lr: 0.02  img/s: 60.2538984779595  loss: 0.8935 (0.9422)  time: 0.1580  data: 0.0135  max mem: 17060
+2023-03-03 00:42:11,012	INFO	torchdistill.misc.log	Epoch: [3]  [ 6000/14658]  eta: 0:22:41  lr: 0.02  img/s: 60.12466290735574  loss: 0.8621 (0.9398)  time: 0.1568  data: 0.0129  max mem: 17060
+2023-03-03 00:44:47,286	INFO	torchdistill.misc.log	Epoch: [3]  [ 7000/14658]  eta: 0:20:03  lr: 0.02  img/s: 60.496696108710196  loss: 0.9331 (0.9395)  time: 0.1557  data: 0.0123  max mem: 17060
+2023-03-03 00:47:23,581	INFO	torchdistill.misc.log	Epoch: [3]  [ 8000/14658]  eta: 0:17:25  lr: 0.02  img/s: 60.465299664646615  loss: 0.9626 (0.9393)  time: 0.1561  data: 0.0125  max mem: 17060
+2023-03-03 00:49:59,225	INFO	torchdistill.misc.log	Epoch: [3]  [ 9000/14658]  eta: 0:14:47  lr: 0.02  img/s: 59.37345304365982  loss: 0.9929 (0.9384)  time: 0.1577  data: 0.0129  max mem: 17060
+2023-03-03 00:52:35,410	INFO	torchdistill.misc.log	Epoch: [3]  [10000/14658]  eta: 0:12:10  lr: 0.02  img/s: 60.406519081798166  loss: 0.8899 (0.9378)  time: 0.1534  data: 0.0119  max mem: 17060
+2023-03-03 00:55:10,737	INFO	torchdistill.misc.log	Epoch: [3]  [11000/14658]  eta: 0:09:33  lr: 0.02  img/s: 53.77993688303487  loss: 0.8813 (0.9368)  time: 0.1557  data: 0.0119  max mem: 17060
+2023-03-03 00:57:45,755	INFO	torchdistill.misc.log	Epoch: [3]  [12000/14658]  eta: 0:06:56  lr: 0.02  img/s: 60.677092224231465  loss: 0.9221 (0.9364)  time: 0.1537  data: 0.0120  max mem: 17060
+2023-03-03 01:00:21,505	INFO	torchdistill.misc.log	Epoch: [3]  [13000/14658]  eta: 0:04:19  lr: 0.02  img/s: 58.94519084827702  loss: 0.8929 (0.9364)  time: 0.1557  data: 0.0117  max mem: 17060
+2023-03-03 01:02:57,242	INFO	torchdistill.misc.log	Epoch: [3]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 53.0472983441311  loss: 0.8540 (0.9369)  time: 0.1563  data: 0.0119  max mem: 17060
+2023-03-03 01:04:39,881	INFO	torchdistill.misc.log	Epoch: [3] Total time: 0:38:12
+2023-03-03 01:04:43,826	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 0:56:43  model_time: 0.0985 (0.0985)  evaluator_time: 0.0290 (0.0290)  time: 0.6807  data: 0.5494  max mem: 17060
+2023-03-03 01:06:22,939	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:38  model_time: 0.0798 (0.0828)  evaluator_time: 0.0083 (0.0156)  time: 0.0944  data: 0.0001  max mem: 17060
+2023-03-03 01:08:02,986	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:04:59  model_time: 0.0781 (0.0830)  evaluator_time: 0.0097 (0.0158)  time: 0.0910  data: 0.0001  max mem: 17060
+2023-03-03 01:09:41,332	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:18  model_time: 0.0817 (0.0829)  evaluator_time: 0.0094 (0.0156)  time: 0.0962  data: 0.0001  max mem: 17060
+2023-03-03 01:11:19,226	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:38  model_time: 0.0828 (0.0827)  evaluator_time: 0.0096 (0.0154)  time: 0.0988  data: 0.0001  max mem: 17060
+2023-03-03 01:13:00,117	INFO	torchdistill.misc.log	Validation: Total time: 0:08:16
+2023-03-03 01:13:00,118	INFO	__main__	Averaged stats: model_time: 0.0786 (0.0827)  evaluator_time: 0.0093 (0.0158)
+2023-03-03 01:13:00,294	INFO	__main__	Accumulating evaluation results...
+2023-03-03 01:13:14,301	INFO	__main__	DONE (t=14.01s).
+2023-03-03 01:13:14,301	INFO	__main__	IoU metric: bbox
+2023-03-03 01:13:14,302	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.158
+2023-03-03 01:13:14,302	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.309
+2023-03-03 01:13:14,303	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.142
+2023-03-03 01:13:14,303	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.034
+2023-03-03 01:13:14,304	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.156
+2023-03-03 01:13:14,305	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.281
+2023-03-03 01:13:14,305	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.177
+2023-03-03 01:13:14,305	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.273
+2023-03-03 01:13:14,305	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.285
+2023-03-03 01:13:14,305	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.069
+2023-03-03 01:13:14,305	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.306
+2023-03-03 01:13:14,305	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.486
+2023-03-03 01:13:14,985	INFO	__main__	Best mAP (bbox): 0.1531 -> 0.1577
+2023-03-03 01:13:14,986	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 01:13:16,322	INFO	torchdistill.misc.log	Epoch: [4]  [    0/14658]  eta: 3:19:18  lr: 0.02  img/s: 54.131052439689356  loss: 1.0135 (1.0135)  time: 0.8159  data: 0.6571  max mem: 17060
+2023-03-03 01:15:53,578	INFO	torchdistill.misc.log	Epoch: [4]  [ 1000/14658]  eta: 0:35:56  lr: 0.02  img/s: 57.614164859486365  loss: 0.8456 (0.9207)  time: 0.1581  data: 0.0133  max mem: 17060
+2023-03-03 01:18:31,187	INFO	torchdistill.misc.log	Epoch: [4]  [ 2000/14658]  eta: 0:33:16  lr: 0.02  img/s: 59.57172962445474  loss: 0.9014 (0.9285)  time: 0.1584  data: 0.0131  max mem: 17060
+2023-03-03 01:21:08,783	INFO	torchdistill.misc.log	Epoch: [4]  [ 3000/14658]  eta: 0:30:38  lr: 0.02  img/s: 60.1433067817633  loss: 0.8668 (0.9299)  time: 0.1578  data: 0.0130  max mem: 17060
+2023-03-03 01:23:45,990	INFO	torchdistill.misc.log	Epoch: [4]  [ 4000/14658]  eta: 0:27:59  lr: 0.02  img/s: 59.13467177983307  loss: 0.7291 (0.9274)  time: 0.1572  data: 0.0124  max mem: 17060
+2023-03-03 01:26:24,231	INFO	torchdistill.misc.log	Epoch: [4]  [ 5000/14658]  eta: 0:25:23  lr: 0.02  img/s: 60.34850389650565  loss: 0.8876 (0.9264)  time: 0.1573  data: 0.0128  max mem: 17060
+2023-03-03 01:29:00,538	INFO	torchdistill.misc.log	Epoch: [4]  [ 6000/14658]  eta: 0:22:43  lr: 0.02  img/s: 58.106232910278855  loss: 1.0572 (0.9275)  time: 0.1557  data: 0.0128  max mem: 17060
+2023-03-03 01:31:36,858	INFO	torchdistill.misc.log	Epoch: [4]  [ 7000/14658]  eta: 0:20:04  lr: 0.02  img/s: 59.342371754286056  loss: 0.8451 (0.9285)  time: 0.1563  data: 0.0119  max mem: 17060
+2023-03-03 01:34:13,518	INFO	torchdistill.misc.log	Epoch: [4]  [ 8000/14658]  eta: 0:17:26  lr: 0.02  img/s: 59.45066689345296  loss: 0.9122 (0.9285)  time: 0.1567  data: 0.0123  max mem: 17060
+2023-03-03 01:36:49,711	INFO	torchdistill.misc.log	Epoch: [4]  [ 9000/14658]  eta: 0:14:48  lr: 0.02  img/s: 59.74313311789476  loss: 0.9305 (0.9285)  time: 0.1580  data: 0.0125  max mem: 17060
+2023-03-03 01:39:25,518	INFO	torchdistill.misc.log	Epoch: [4]  [10000/14658]  eta: 0:12:11  lr: 0.02  img/s: 56.88474181468026  loss: 0.9781 (0.9289)  time: 0.1549  data: 0.0122  max mem: 17060
+2023-03-03 01:42:00,997	INFO	torchdistill.misc.log	Epoch: [4]  [11000/14658]  eta: 0:09:33  lr: 0.02  img/s: 59.76281836640188  loss: 0.8946 (0.9289)  time: 0.1569  data: 0.0121  max mem: 17060
+2023-03-03 01:44:36,648	INFO	torchdistill.misc.log	Epoch: [4]  [12000/14658]  eta: 0:06:56  lr: 0.02  img/s: 61.43126374239991  loss: 0.9410 (0.9294)  time: 0.1553  data: 0.0122  max mem: 17060
+2023-03-03 01:47:11,606	INFO	torchdistill.misc.log	Epoch: [4]  [13000/14658]  eta: 0:04:19  lr: 0.02  img/s: 60.43143244099934  loss: 0.8609 (0.9289)  time: 0.1520  data: 0.0111  max mem: 17060
+2023-03-03 01:49:46,910	INFO	torchdistill.misc.log	Epoch: [4]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 57.68428942514153  loss: 1.0456 (0.9283)  time: 0.1586  data: 0.0126  max mem: 17060
+2023-03-03 01:51:29,803	INFO	torchdistill.misc.log	Epoch: [4] Total time: 0:38:14
+2023-03-03 01:51:33,769	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 0:57:25  model_time: 0.1016 (0.1016)  evaluator_time: 0.0290 (0.0290)  time: 0.6891  data: 0.5566  max mem: 17060
+2023-03-03 01:53:14,668	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:45  model_time: 0.0797 (0.0835)  evaluator_time: 0.0090 (0.0167)  time: 0.0960  data: 0.0001  max mem: 17060
+2023-03-03 01:54:55,698	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:03  model_time: 0.0835 (0.0833)  evaluator_time: 0.0136 (0.0169)  time: 0.0988  data: 0.0001  max mem: 17060
+2023-03-03 01:56:36,751	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:22  model_time: 0.0843 (0.0836)  evaluator_time: 0.0099 (0.0167)  time: 0.0993  data: 0.0001  max mem: 17060
+2023-03-03 01:58:17,156	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:40  model_time: 0.0891 (0.0836)  evaluator_time: 0.0107 (0.0165)  time: 0.1052  data: 0.0001  max mem: 17060
+2023-03-03 01:59:56,097	INFO	torchdistill.misc.log	Validation: Total time: 0:08:23
+2023-03-03 01:59:56,097	INFO	__main__	Averaged stats: model_time: 0.0787 (0.0833)  evaluator_time: 0.0101 (0.0164)
+2023-03-03 01:59:56,291	INFO	__main__	Accumulating evaluation results...
+2023-03-03 02:00:14,719	INFO	__main__	DONE (t=18.43s).
+2023-03-03 02:00:14,719	INFO	__main__	IoU metric: bbox
+2023-03-03 02:00:14,721	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.158
+2023-03-03 02:00:14,721	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.307
+2023-03-03 02:00:14,721	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.148
+2023-03-03 02:00:14,722	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.036
+2023-03-03 02:00:14,723	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.160
+2023-03-03 02:00:14,723	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.287
+2023-03-03 02:00:14,723	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.180
+2023-03-03 02:00:14,723	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.277
+2023-03-03 02:00:14,723	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.290
+2023-03-03 02:00:14,724	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.064
+2023-03-03 02:00:14,724	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.312
+2023-03-03 02:00:14,724	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.500
+2023-03-03 02:00:15,401	INFO	__main__	Best mAP (bbox): 0.1577 -> 0.1585
+2023-03-03 02:00:15,403	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 02:00:16,762	INFO	torchdistill.misc.log	Epoch: [5]  [    0/14658]  eta: 3:19:14  lr: 0.02  img/s: 53.85416837195716  loss: 0.9211 (0.9211)  time: 0.8155  data: 0.6570  max mem: 17060
+2023-03-03 02:02:53,657	INFO	torchdistill.misc.log	Epoch: [5]  [ 1000/14658]  eta: 0:35:51  lr: 0.02  img/s: 59.49726047314909  loss: 0.8915 (0.9289)  time: 0.1556  data: 0.0129  max mem: 17060
+2023-03-03 02:05:30,273	INFO	torchdistill.misc.log	Epoch: [5]  [ 2000/14658]  eta: 0:33:08  lr: 0.02  img/s: 59.83710052196739  loss: 0.7915 (0.9198)  time: 0.1556  data: 0.0129  max mem: 17060
+2023-03-03 02:08:07,008	INFO	torchdistill.misc.log	Epoch: [5]  [ 3000/14658]  eta: 0:30:29  lr: 0.02  img/s: 60.34101568119695  loss: 0.8597 (0.9170)  time: 0.1573  data: 0.0128  max mem: 17060
+2023-03-03 02:10:44,165	INFO	torchdistill.misc.log	Epoch: [5]  [ 4000/14658]  eta: 0:27:53  lr: 0.02  img/s: 60.3021935956926  loss: 1.0076 (0.9190)  time: 0.1578  data: 0.0131  max mem: 17060
+2023-03-03 02:13:20,736	INFO	torchdistill.misc.log	Epoch: [5]  [ 5000/14658]  eta: 0:25:15  lr: 0.02  img/s: 61.193530208832954  loss: 0.9236 (0.9199)  time: 0.1575  data: 0.0132  max mem: 17060
+2023-03-03 02:15:56,760	INFO	torchdistill.misc.log	Epoch: [5]  [ 6000/14658]  eta: 0:22:37  lr: 0.02  img/s: 60.34362006704361  loss: 0.8824 (0.9185)  time: 0.1550  data: 0.0126  max mem: 17060
+2023-03-03 02:18:32,647	INFO	torchdistill.misc.log	Epoch: [5]  [ 7000/14658]  eta: 0:19:59  lr: 0.02  img/s: 60.26039107509734  loss: 0.9523 (0.9185)  time: 0.1558  data: 0.0122  max mem: 17060
+2023-03-03 02:21:08,572	INFO	torchdistill.misc.log	Epoch: [5]  [ 8000/14658]  eta: 0:17:22  lr: 0.02  img/s: 60.04289592209591  loss: 0.9518 (0.9195)  time: 0.1564  data: 0.0124  max mem: 17060
+2023-03-03 02:23:44,343	INFO	torchdistill.misc.log	Epoch: [5]  [ 9000/14658]  eta: 0:14:45  lr: 0.02  img/s: 59.80308047665047  loss: 0.8296 (0.9200)  time: 0.1565  data: 0.0125  max mem: 17060
+2023-03-03 02:26:19,468	INFO	torchdistill.misc.log	Epoch: [5]  [10000/14658]  eta: 0:12:08  lr: 0.02  img/s: 60.21929490814854  loss: 0.9745 (0.9211)  time: 0.1552  data: 0.0120  max mem: 17060
+2023-03-03 02:28:54,507	INFO	torchdistill.misc.log	Epoch: [5]  [11000/14658]  eta: 0:09:31  lr: 0.02  img/s: 58.854311407809135  loss: 0.9370 (0.9210)  time: 0.1532  data: 0.0117  max mem: 17060
+2023-03-03 02:31:29,640	INFO	torchdistill.misc.log	Epoch: [5]  [12000/14658]  eta: 0:06:54  lr: 0.02  img/s: 60.68938374498995  loss: 0.8829 (0.9201)  time: 0.1542  data: 0.0118  max mem: 17060
+2023-03-03 02:34:04,768	INFO	torchdistill.misc.log	Epoch: [5]  [13000/14658]  eta: 0:04:18  lr: 0.02  img/s: 60.091498937120896  loss: 0.9161 (0.9205)  time: 0.1553  data: 0.0120  max mem: 17060
+2023-03-03 02:36:40,324	INFO	torchdistill.misc.log	Epoch: [5]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 60.630495550435924  loss: 0.8749 (0.9210)  time: 0.1553  data: 0.0118  max mem: 17060
+2023-03-03 02:38:22,606	INFO	torchdistill.misc.log	Epoch: [5] Total time: 0:38:06
+2023-03-03 02:38:26,575	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 0:59:10  model_time: 0.1150 (0.1150)  evaluator_time: 0.0279 (0.0279)  time: 0.7101  data: 0.5657  max mem: 17060
+2023-03-03 02:40:06,041	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:40  model_time: 0.0790 (0.0826)  evaluator_time: 0.0084 (0.0161)  time: 0.0970  data: 0.0001  max mem: 17060
+2023-03-03 02:41:45,834	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:04:59  model_time: 0.0777 (0.0825)  evaluator_time: 0.0093 (0.0164)  time: 0.0928  data: 0.0001  max mem: 17060
+2023-03-03 02:43:25,511	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:19  model_time: 0.0836 (0.0828)  evaluator_time: 0.0092 (0.0161)  time: 0.0979  data: 0.0001  max mem: 17060
+2023-03-03 02:45:04,472	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:39  model_time: 0.0821 (0.0828)  evaluator_time: 0.0085 (0.0160)  time: 0.1012  data: 0.0001  max mem: 17060
+2023-03-03 02:46:43,151	INFO	torchdistill.misc.log	Validation: Total time: 0:08:17
+2023-03-03 02:46:43,152	INFO	__main__	Averaged stats: model_time: 0.0787 (0.0827)  evaluator_time: 0.0085 (0.0158)
+2023-03-03 02:46:43,315	INFO	__main__	Accumulating evaluation results...
+2023-03-03 02:46:57,593	INFO	__main__	DONE (t=14.28s).
+2023-03-03 02:46:57,594	INFO	__main__	IoU metric: bbox
+2023-03-03 02:46:57,595	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.165
+2023-03-03 02:46:57,595	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.319
+2023-03-03 02:46:57,596	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.154
+2023-03-03 02:46:57,596	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.033
+2023-03-03 02:46:57,597	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.161
+2023-03-03 02:46:57,598	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.300
+2023-03-03 02:46:57,598	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.184
+2023-03-03 02:46:57,598	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.277
+2023-03-03 02:46:57,598	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.290
+2023-03-03 02:46:57,598	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.067
+2023-03-03 02:46:57,598	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.304
+2023-03-03 02:46:57,598	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.513
+2023-03-03 02:46:58,360	INFO	__main__	Best mAP (bbox): 0.1585 -> 0.1654
+2023-03-03 02:46:58,362	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 02:46:59,731	INFO	torchdistill.misc.log	Epoch: [6]  [    0/14658]  eta: 3:20:53  lr: 0.02  img/s: 53.17794429018802  loss: 0.4891 (0.4891)  time: 0.8223  data: 0.6638  max mem: 17060
+2023-03-03 02:49:37,029	INFO	torchdistill.misc.log	Epoch: [6]  [ 1000/14658]  eta: 0:35:57  lr: 0.02  img/s: 59.32904617506387  loss: 0.9489 (0.9107)  time: 0.1572  data: 0.0129  max mem: 17060
+2023-03-03 02:52:14,779	INFO	torchdistill.misc.log	Epoch: [6]  [ 2000/14658]  eta: 0:33:18  lr: 0.02  img/s: 59.36410423349038  loss: 0.8572 (0.9135)  time: 0.1589  data: 0.0137  max mem: 17060
+2023-03-03 02:54:51,843	INFO	torchdistill.misc.log	Epoch: [6]  [ 3000/14658]  eta: 0:30:37  lr: 0.02  img/s: 59.95481558512102  loss: 0.9047 (0.9153)  time: 0.1583  data: 0.0137  max mem: 17060
+2023-03-03 02:57:29,204	INFO	torchdistill.misc.log	Epoch: [6]  [ 4000/14658]  eta: 0:27:58  lr: 0.02  img/s: 57.43330486295707  loss: 0.9753 (0.9162)  time: 0.1591  data: 0.0134  max mem: 17060
+2023-03-03 03:00:06,246	INFO	torchdistill.misc.log	Epoch: [6]  [ 5000/14658]  eta: 0:25:20  lr: 0.02  img/s: 57.67348229632176  loss: 0.7779 (0.9151)  time: 0.1573  data: 0.0124  max mem: 17060
+2023-03-03 03:02:42,942	INFO	torchdistill.misc.log	Epoch: [6]  [ 6000/14658]  eta: 0:22:41  lr: 0.02  img/s: 59.68330582275599  loss: 0.9890 (0.9148)  time: 0.1575  data: 0.0128  max mem: 17060
+2023-03-03 03:05:19,192	INFO	torchdistill.misc.log	Epoch: [6]  [ 7000/14658]  eta: 0:20:03  lr: 0.02  img/s: 60.18645831091213  loss: 0.9209 (0.9162)  time: 0.1551  data: 0.0129  max mem: 17060
+2023-03-03 03:07:54,995	INFO	torchdistill.misc.log	Epoch: [6]  [ 8000/14658]  eta: 0:17:25  lr: 0.02  img/s: 53.387947850603496  loss: 0.9365 (0.9147)  time: 0.1548  data: 0.0132  max mem: 17060
+2023-03-03 03:10:30,744	INFO	torchdistill.misc.log	Epoch: [6]  [ 9000/14658]  eta: 0:14:47  lr: 0.02  img/s: 53.67858851157977  loss: 0.9159 (0.9147)  time: 0.1566  data: 0.0116  max mem: 17060
+2023-03-03 03:13:06,133	INFO	torchdistill.misc.log	Epoch: [6]  [10000/14658]  eta: 0:12:09  lr: 0.02  img/s: 60.48295615339552  loss: 0.8771 (0.9162)  time: 0.1546  data: 0.0116  max mem: 17060
+2023-03-03 03:15:41,788	INFO	torchdistill.misc.log	Epoch: [6]  [11000/14658]  eta: 0:09:32  lr: 0.02  img/s: 59.164909880204675  loss: 0.8705 (0.9172)  time: 0.1568  data: 0.0122  max mem: 17060
+2023-03-03 03:18:17,118	INFO	torchdistill.misc.log	Epoch: [6]  [12000/14658]  eta: 0:06:55  lr: 0.02  img/s: 59.26386865117002  loss: 0.9551 (0.9173)  time: 0.1563  data: 0.0117  max mem: 17060
+2023-03-03 03:20:52,622	INFO	torchdistill.misc.log	Epoch: [6]  [13000/14658]  eta: 0:04:19  lr: 0.02  img/s: 59.9121024316994  loss: 0.9829 (0.9170)  time: 0.1560  data: 0.0123  max mem: 17060
+2023-03-03 03:23:27,967	INFO	torchdistill.misc.log	Epoch: [6]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 56.51758214179239  loss: 0.9903 (0.9163)  time: 0.1577  data: 0.0122  max mem: 17060
+2023-03-03 03:25:10,344	INFO	torchdistill.misc.log	Epoch: [6] Total time: 0:38:11
+2023-03-03 03:25:14,452	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:00:27  model_time: 0.1082 (0.1082)  evaluator_time: 0.0274 (0.0274)  time: 0.7254  data: 0.5877  max mem: 17060
+2023-03-03 03:26:56,690	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:51  model_time: 0.0850 (0.0833)  evaluator_time: 0.0090 (0.0182)  time: 0.0999  data: 0.0001  max mem: 17060
+2023-03-03 03:28:37,231	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:05  model_time: 0.0805 (0.0834)  evaluator_time: 0.0102 (0.0172)  time: 0.0985  data: 0.0001  max mem: 17060
+2023-03-03 03:30:16,825	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:21  model_time: 0.0852 (0.0834)  evaluator_time: 0.0100 (0.0166)  time: 0.0980  data: 0.0001  max mem: 17060
+2023-03-03 03:31:56,126	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:40  model_time: 0.0834 (0.0834)  evaluator_time: 0.0087 (0.0163)  time: 0.1007  data: 0.0001  max mem: 17060
+2023-03-03 03:33:34,431	INFO	torchdistill.misc.log	Validation: Total time: 0:08:20
+2023-03-03 03:33:34,431	INFO	__main__	Averaged stats: model_time: 0.0786 (0.0832)  evaluator_time: 0.0108 (0.0160)
+2023-03-03 03:33:34,617	INFO	__main__	Accumulating evaluation results...
+2023-03-03 03:33:49,999	INFO	__main__	DONE (t=15.38s).
+2023-03-03 03:33:49,999	INFO	__main__	IoU metric: bbox
+2023-03-03 03:33:50,000	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.163
+2023-03-03 03:33:50,001	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.316
+2023-03-03 03:33:50,001	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.154
+2023-03-03 03:33:50,002	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.033
+2023-03-03 03:33:50,002	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.162
+2023-03-03 03:33:50,003	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.296
+2023-03-03 03:33:50,003	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.183
+2023-03-03 03:33:50,003	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.281
+2023-03-03 03:33:50,003	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.296
+2023-03-03 03:33:50,003	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.073
+2023-03-03 03:33:50,003	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.317
+2023-03-03 03:33:50,003	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.505
+2023-03-03 03:33:51,816	INFO	torchdistill.misc.log	Epoch: [7]  [    0/14658]  eta: 4:36:47  lr: 0.02  img/s: 55.32971992513748  loss: 0.8491 (0.8491)  time: 1.1330  data: 0.9575  max mem: 17060
+2023-03-03 03:36:29,075	INFO	torchdistill.misc.log	Epoch: [7]  [ 1000/14658]  eta: 0:36:01  lr: 0.02  img/s: 61.05612600465457  loss: 0.7983 (0.9130)  time: 0.1570  data: 0.0131  max mem: 17060
+2023-03-03 03:39:05,987	INFO	torchdistill.misc.log	Epoch: [7]  [ 2000/14658]  eta: 0:33:14  lr: 0.02  img/s: 60.0354833515235  loss: 0.8686 (0.9143)  time: 0.1550  data: 0.0122  max mem: 17060
+2023-03-03 03:41:42,715	INFO	torchdistill.misc.log	Epoch: [7]  [ 3000/14658]  eta: 0:30:33  lr: 0.02  img/s: 60.56417781676477  loss: 0.9538 (0.9092)  time: 0.1588  data: 0.0132  max mem: 17060
+2023-03-03 03:44:18,537	INFO	torchdistill.misc.log	Epoch: [7]  [ 4000/14658]  eta: 0:27:52  lr: 0.02  img/s: 53.18612049384438  loss: 0.9894 (0.9103)  time: 0.1562  data: 0.0122  max mem: 17060
+2023-03-03 03:46:54,275	INFO	torchdistill.misc.log	Epoch: [7]  [ 5000/14658]  eta: 0:25:13  lr: 0.02  img/s: 60.00295415163811  loss: 0.7757 (0.9105)  time: 0.1553  data: 0.0118  max mem: 17060
+2023-03-03 03:49:29,699	INFO	torchdistill.misc.log	Epoch: [7]  [ 6000/14658]  eta: 0:22:34  lr: 0.02  img/s: 60.46671616293402  loss: 0.8077 (0.9106)  time: 0.1550  data: 0.0115  max mem: 17060
+2023-03-03 03:52:04,813	INFO	torchdistill.misc.log	Epoch: [7]  [ 7000/14658]  eta: 0:19:56  lr: 0.02  img/s: 60.76422790728839  loss: 0.9064 (0.9116)  time: 0.1559  data: 0.0117  max mem: 17060
+2023-03-03 03:54:40,099	INFO	torchdistill.misc.log	Epoch: [7]  [ 8000/14658]  eta: 0:17:19  lr: 0.02  img/s: 60.50465941548138  loss: 0.8784 (0.9121)  time: 0.1548  data: 0.0118  max mem: 17060
+2023-03-03 03:57:15,180	INFO	torchdistill.misc.log	Epoch: [7]  [ 9000/14658]  eta: 0:14:42  lr: 0.02  img/s: 60.08213781791876  loss: 0.9324 (0.9117)  time: 0.1561  data: 0.0124  max mem: 17060
+2023-03-03 03:59:50,347	INFO	torchdistill.misc.log	Epoch: [7]  [10000/14658]  eta: 0:12:06  lr: 0.02  img/s: 60.36098838631686  loss: 0.8416 (0.9110)  time: 0.1552  data: 0.0117  max mem: 17060
+2023-03-03 04:02:25,847	INFO	torchdistill.misc.log	Epoch: [7]  [11000/14658]  eta: 0:09:30  lr: 0.02  img/s: 60.34904659302238  loss: 0.9446 (0.9124)  time: 0.1539  data: 0.0119  max mem: 17060
+2023-03-03 04:05:01,524	INFO	torchdistill.misc.log	Epoch: [7]  [12000/14658]  eta: 0:06:54  lr: 0.02  img/s: 64.0098892231504  loss: 0.8645 (0.9129)  time: 0.1595  data: 0.0135  max mem: 17060
+2023-03-03 04:07:37,940	INFO	torchdistill.misc.log	Epoch: [7]  [13000/14658]  eta: 0:04:18  lr: 0.02  img/s: 60.39738570562009  loss: 0.8607 (0.9131)  time: 0.1579  data: 0.0129  max mem: 17060
+2023-03-03 04:10:14,274	INFO	torchdistill.misc.log	Epoch: [7]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 60.29861753802085  loss: 0.8176 (0.9124)  time: 0.1542  data: 0.0120  max mem: 17060
+2023-03-03 04:11:57,364	INFO	torchdistill.misc.log	Epoch: [7] Total time: 0:38:06
+2023-03-03 04:12:01,355	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:00:29  model_time: 0.1171 (0.1171)  evaluator_time: 0.0295 (0.0295)  time: 0.7258  data: 0.5769  max mem: 17060
+2023-03-03 04:13:42,723	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:47  model_time: 0.0811 (0.0827)  evaluator_time: 0.0081 (0.0179)  time: 0.0942  data: 0.0001  max mem: 17060
+2023-03-03 04:15:21,659	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:01  model_time: 0.0788 (0.0825)  evaluator_time: 0.0095 (0.0170)  time: 0.0946  data: 0.0001  max mem: 17060
+2023-03-03 04:17:00,414	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:19  model_time: 0.0848 (0.0827)  evaluator_time: 0.0090 (0.0163)  time: 0.0968  data: 0.0001  max mem: 17060
+2023-03-03 04:18:39,118	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:39  model_time: 0.0846 (0.0828)  evaluator_time: 0.0083 (0.0159)  time: 0.1010  data: 0.0001  max mem: 17060
+2023-03-03 04:20:17,521	INFO	torchdistill.misc.log	Validation: Total time: 0:08:16
+2023-03-03 04:20:17,521	INFO	__main__	Averaged stats: model_time: 0.0786 (0.0828)  evaluator_time: 0.0092 (0.0156)
+2023-03-03 04:20:17,686	INFO	__main__	Accumulating evaluation results...
+2023-03-03 04:20:30,881	INFO	__main__	DONE (t=13.19s).
+2023-03-03 04:20:30,881	INFO	__main__	IoU metric: bbox
+2023-03-03 04:20:30,882	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.172
+2023-03-03 04:20:30,883	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.325
+2023-03-03 04:20:30,883	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.166
+2023-03-03 04:20:30,884	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.042
+2023-03-03 04:20:30,885	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.166
+2023-03-03 04:20:30,885	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.315
+2023-03-03 04:20:30,885	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.188
+2023-03-03 04:20:30,885	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.284
+2023-03-03 04:20:30,885	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.297
+2023-03-03 04:20:30,886	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.078
+2023-03-03 04:20:30,886	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.314
+2023-03-03 04:20:30,886	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.514
+2023-03-03 04:20:31,618	INFO	__main__	Best mAP (bbox): 0.1654 -> 0.1721
+2023-03-03 04:20:31,620	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 04:20:33,006	INFO	torchdistill.misc.log	Epoch: [8]  [    0/14658]  eta: 3:30:36  lr: 0.02  img/s: 52.174043926141884  loss: 1.0459 (1.0459)  time: 0.8621  data: 0.6976  max mem: 17060
+2023-03-03 04:23:10,529	INFO	torchdistill.misc.log	Epoch: [8]  [ 1000/14658]  eta: 0:36:01  lr: 0.02  img/s: 59.93853672827046  loss: 0.8509 (0.9096)  time: 0.1563  data: 0.0130  max mem: 17060
+2023-03-03 04:25:47,753	INFO	torchdistill.misc.log	Epoch: [8]  [ 2000/14658]  eta: 0:33:16  lr: 0.02  img/s: 59.90953515984181  loss: 0.7761 (0.9045)  time: 0.1573  data: 0.0133  max mem: 17060
+2023-03-03 04:28:25,229	INFO	torchdistill.misc.log	Epoch: [8]  [ 3000/14658]  eta: 0:30:37  lr: 0.02  img/s: 60.00617329210652  loss: 0.8938 (0.9084)  time: 0.1571  data: 0.0134  max mem: 17060
+2023-03-03 04:31:01,833	INFO	torchdistill.misc.log	Epoch: [8]  [ 4000/14658]  eta: 0:27:57  lr: 0.02  img/s: 60.14212098888907  loss: 0.8371 (0.9070)  time: 0.1560  data: 0.0124  max mem: 17060
+2023-03-03 04:33:38,255	INFO	torchdistill.misc.log	Epoch: [8]  [ 5000/14658]  eta: 0:25:18  lr: 0.02  img/s: 53.38573937835705  loss: 1.0465 (0.9095)  time: 0.1566  data: 0.0126  max mem: 17060
+2023-03-03 04:36:14,287	INFO	torchdistill.misc.log	Epoch: [8]  [ 6000/14658]  eta: 0:22:39  lr: 0.02  img/s: 58.39178759682098  loss: 0.7813 (0.9100)  time: 0.1546  data: 0.0124  max mem: 17060
+2023-03-03 04:38:49,906	INFO	torchdistill.misc.log	Epoch: [8]  [ 7000/14658]  eta: 0:20:00  lr: 0.02  img/s: 60.54112102655519  loss: 0.9380 (0.9108)  time: 0.1546  data: 0.0123  max mem: 17060
+2023-03-03 04:41:25,691	INFO	torchdistill.misc.log	Epoch: [8]  [ 8000/14658]  eta: 0:17:23  lr: 0.02  img/s: 59.94335520545082  loss: 0.8711 (0.9122)  time: 0.1549  data: 0.0122  max mem: 17060
+2023-03-03 04:44:01,292	INFO	torchdistill.misc.log	Epoch: [8]  [ 9000/14658]  eta: 0:14:45  lr: 0.02  img/s: 59.92708257057692  loss: 0.8850 (0.9129)  time: 0.1568  data: 0.0122  max mem: 17060
+2023-03-03 04:46:36,385	INFO	torchdistill.misc.log	Epoch: [8]  [10000/14658]  eta: 0:12:08  lr: 0.02  img/s: 59.8516161369324  loss: 0.9373 (0.9120)  time: 0.1554  data: 0.0122  max mem: 17060
+2023-03-03 04:49:11,744	INFO	torchdistill.misc.log	Epoch: [8]  [11000/14658]  eta: 0:09:31  lr: 0.02  img/s: 60.5195007575211  loss: 0.8142 (0.9108)  time: 0.1559  data: 0.0118  max mem: 17060
+2023-03-03 04:51:47,149	INFO	torchdistill.misc.log	Epoch: [8]  [12000/14658]  eta: 0:06:55  lr: 0.02  img/s: 60.28345109960098  loss: 0.9423 (0.9106)  time: 0.1538  data: 0.0119  max mem: 17060
+2023-03-03 04:54:22,504	INFO	torchdistill.misc.log	Epoch: [8]  [13000/14658]  eta: 0:04:18  lr: 0.02  img/s: 59.729414319637435  loss: 0.8160 (0.9102)  time: 0.1561  data: 0.0120  max mem: 17060
+2023-03-03 04:56:57,461	INFO	torchdistill.misc.log	Epoch: [8]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 53.26776733553467  loss: 0.8452 (0.9100)  time: 0.1565  data: 0.0122  max mem: 17060
+2023-03-03 04:58:40,033	INFO	torchdistill.misc.log	Epoch: [8] Total time: 0:38:07
+2023-03-03 04:58:44,042	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:00:35  model_time: 0.1029 (0.1029)  evaluator_time: 0.0294 (0.0294)  time: 0.7272  data: 0.5924  max mem: 17060
+2023-03-03 05:00:24,965	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:46  model_time: 0.0824 (0.0840)  evaluator_time: 0.0083 (0.0162)  time: 0.0979  data: 0.0001  max mem: 17060
+2023-03-03 05:02:08,427	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:07  model_time: 0.0797 (0.0849)  evaluator_time: 0.0099 (0.0165)  time: 0.0984  data: 0.0001  max mem: 17060
+2023-03-03 05:03:49,062	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:23  model_time: 0.0854 (0.0846)  evaluator_time: 0.0095 (0.0163)  time: 0.1000  data: 0.0001  max mem: 17060
+2023-03-03 05:05:28,499	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:41  model_time: 0.0824 (0.0842)  evaluator_time: 0.0087 (0.0162)  time: 0.0999  data: 0.0001  max mem: 17060
+2023-03-03 05:07:08,422	INFO	torchdistill.misc.log	Validation: Total time: 0:08:25
+2023-03-03 05:07:08,423	INFO	__main__	Averaged stats: model_time: 0.0814 (0.0841)  evaluator_time: 0.0107 (0.0160)
+2023-03-03 05:07:08,613	INFO	__main__	Accumulating evaluation results...
+2023-03-03 05:07:23,461	INFO	__main__	DONE (t=14.85s).
+2023-03-03 05:07:23,461	INFO	__main__	IoU metric: bbox
+2023-03-03 05:07:23,462	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.170
+2023-03-03 05:07:23,463	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.325
+2023-03-03 05:07:23,463	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.160
+2023-03-03 05:07:23,464	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.036
+2023-03-03 05:07:23,464	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.170
+2023-03-03 05:07:23,465	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.307
+2023-03-03 05:07:23,465	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.189
+2023-03-03 05:07:23,465	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.286
+2023-03-03 05:07:23,465	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.299
+2023-03-03 05:07:23,465	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.073
+2023-03-03 05:07:23,465	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.322
+2023-03-03 05:07:23,465	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.514
+2023-03-03 05:07:25,233	INFO	torchdistill.misc.log	Epoch: [9]  [    0/14658]  eta: 4:42:44  lr: 0.02  img/s: 55.65357694935945  loss: 0.7055 (0.7055)  time: 1.1574  data: 0.9985  max mem: 17060
+2023-03-03 05:10:02,094	INFO	torchdistill.misc.log	Epoch: [9]  [ 1000/14658]  eta: 0:35:56  lr: 0.02  img/s: 60.19768785297558  loss: 0.8528 (0.9014)  time: 0.1534  data: 0.0118  max mem: 17060
+2023-03-03 05:12:39,545	INFO	torchdistill.misc.log	Epoch: [9]  [ 2000/14658]  eta: 0:33:15  lr: 0.02  img/s: 60.46845963655237  loss: 0.7888 (0.9055)  time: 0.1566  data: 0.0128  max mem: 17060
+2023-03-03 05:15:16,153	INFO	torchdistill.misc.log	Epoch: [9]  [ 3000/14658]  eta: 0:30:33  lr: 0.02  img/s: 63.34586616625952  loss: 0.9154 (0.9037)  time: 0.1570  data: 0.0124  max mem: 17060
+2023-03-03 05:17:52,464	INFO	torchdistill.misc.log	Epoch: [9]  [ 4000/14658]  eta: 0:27:53  lr: 0.02  img/s: 60.3808656626712  loss: 0.9322 (0.9050)  time: 0.1563  data: 0.0129  max mem: 17060
+2023-03-03 05:20:28,066	INFO	torchdistill.misc.log	Epoch: [9]  [ 5000/14658]  eta: 0:25:14  lr: 0.02  img/s: 59.247021266076686  loss: 0.9172 (0.9040)  time: 0.1566  data: 0.0120  max mem: 17060
+2023-03-03 05:23:03,680	INFO	torchdistill.misc.log	Epoch: [9]  [ 6000/14658]  eta: 0:22:35  lr: 0.02  img/s: 60.44623787632045  loss: 0.9462 (0.9061)  time: 0.1555  data: 0.0120  max mem: 17060
+2023-03-03 05:25:39,203	INFO	torchdistill.misc.log	Epoch: [9]  [ 7000/14658]  eta: 0:19:57  lr: 0.02  img/s: 60.196499914785214  loss: 0.8870 (0.9071)  time: 0.1549  data: 0.0124  max mem: 17060
+2023-03-03 05:28:14,631	INFO	torchdistill.misc.log	Epoch: [9]  [ 8000/14658]  eta: 0:17:20  lr: 0.02  img/s: 60.047193902659444  loss: 0.8475 (0.9073)  time: 0.1542  data: 0.0118  max mem: 17060
+2023-03-03 05:30:50,029	INFO	torchdistill.misc.log	Epoch: [9]  [ 9000/14658]  eta: 0:14:43  lr: 0.02  img/s: 59.66685574975594  loss: 0.7572 (0.9079)  time: 0.1547  data: 0.0116  max mem: 17060
+2023-03-03 05:33:25,390	INFO	torchdistill.misc.log	Epoch: [9]  [10000/14658]  eta: 0:12:07  lr: 0.02  img/s: 59.406144492777486  loss: 0.9240 (0.9078)  time: 0.1555  data: 0.0121  max mem: 17060
+2023-03-03 05:36:00,832	INFO	torchdistill.misc.log	Epoch: [9]  [11000/14658]  eta: 0:09:30  lr: 0.02  img/s: 53.412933295978405  loss: 0.8862 (0.9088)  time: 0.1551  data: 0.0120  max mem: 17060
+2023-03-03 05:38:35,824	INFO	torchdistill.misc.log	Epoch: [9]  [12000/14658]  eta: 0:06:54  lr: 0.02  img/s: 58.20581842530257  loss: 0.8296 (0.9076)  time: 0.1518  data: 0.0109  max mem: 17060
+2023-03-03 05:41:11,057	INFO	torchdistill.misc.log	Epoch: [9]  [13000/14658]  eta: 0:04:18  lr: 0.02  img/s: 60.18721401396589  loss: 0.7210 (0.9070)  time: 0.1535  data: 0.0113  max mem: 17060
+2023-03-03 05:43:46,425	INFO	torchdistill.misc.log	Epoch: [9]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 64.65345508286303  loss: 0.9425 (0.9072)  time: 0.1581  data: 0.0137  max mem: 17060
+2023-03-03 05:45:29,134	INFO	torchdistill.misc.log	Epoch: [9] Total time: 0:38:05
+2023-03-03 05:45:33,178	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:02:28  model_time: 0.1056 (0.1056)  evaluator_time: 0.0417 (0.0417)  time: 0.7497  data: 0.5994  max mem: 17060
+2023-03-03 05:47:12,475	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:39  model_time: 0.0820 (0.0833)  evaluator_time: 0.0085 (0.0153)  time: 0.0971  data: 0.0001  max mem: 17060
+2023-03-03 05:48:55,035	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:03  model_time: 0.0849 (0.0845)  evaluator_time: 0.0096 (0.0156)  time: 0.0996  data: 0.0001  max mem: 17060
+2023-03-03 05:50:34,904	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:21  model_time: 0.0829 (0.0843)  evaluator_time: 0.0098 (0.0155)  time: 0.0990  data: 0.0001  max mem: 17060
+2023-03-03 05:52:14,217	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:40  model_time: 0.0805 (0.0842)  evaluator_time: 0.0089 (0.0154)  time: 0.0994  data: 0.0001  max mem: 17060
+2023-03-03 05:53:52,197	INFO	torchdistill.misc.log	Validation: Total time: 0:08:19
+2023-03-03 05:53:52,198	INFO	__main__	Averaged stats: model_time: 0.0786 (0.0839)  evaluator_time: 0.0099 (0.0152)
+2023-03-03 05:53:52,361	INFO	__main__	Accumulating evaluation results...
+2023-03-03 05:54:06,278	INFO	__main__	DONE (t=13.92s).
+2023-03-03 05:54:06,278	INFO	__main__	IoU metric: bbox
+2023-03-03 05:54:06,280	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.169
+2023-03-03 05:54:06,280	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.324
+2023-03-03 05:54:06,280	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.160
+2023-03-03 05:54:06,281	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.041
+2023-03-03 05:54:06,282	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.171
+2023-03-03 05:54:06,282	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.305
+2023-03-03 05:54:06,282	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.189
+2023-03-03 05:54:06,282	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.285
+2023-03-03 05:54:06,283	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.298
+2023-03-03 05:54:06,283	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.071
+2023-03-03 05:54:06,283	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.315
+2023-03-03 05:54:06,283	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.514
+2023-03-03 05:54:08,208	INFO	torchdistill.misc.log	Epoch: [10]  [    0/14658]  eta: 4:58:48  lr: 0.02  img/s: 52.60931571454554  loss: 0.9544 (0.9544)  time: 1.2231  data: 1.0579  max mem: 17060
+2023-03-03 05:56:44,860	INFO	torchdistill.misc.log	Epoch: [10]  [ 1000/14658]  eta: 0:35:54  lr: 0.02  img/s: 60.12821836114456  loss: 0.8749 (0.9018)  time: 0.1574  data: 0.0128  max mem: 17060
+2023-03-03 05:59:20,567	INFO	torchdistill.misc.log	Epoch: [10]  [ 2000/14658]  eta: 0:33:03  lr: 0.02  img/s: 62.233838495308504  loss: 0.8325 (0.9025)  time: 0.1553  data: 0.0120  max mem: 17060
+2023-03-03 06:01:55,225	INFO	torchdistill.misc.log	Epoch: [10]  [ 3000/14658]  eta: 0:30:18  lr: 0.02  img/s: 60.254547674715106  loss: 0.8303 (0.8965)  time: 0.1525  data: 0.0113  max mem: 17060
+2023-03-03 06:04:30,199	INFO	torchdistill.misc.log	Epoch: [10]  [ 4000/14658]  eta: 0:27:40  lr: 0.02  img/s: 59.62889602485068  loss: 0.9577 (0.9001)  time: 0.1576  data: 0.0119  max mem: 17060
+2023-03-03 06:07:05,312	INFO	torchdistill.misc.log	Epoch: [10]  [ 5000/14658]  eta: 0:25:03  lr: 0.02  img/s: 59.24628898835536  loss: 0.9141 (0.9027)  time: 0.1545  data: 0.0116  max mem: 17060
+2023-03-03 06:09:40,183	INFO	torchdistill.misc.log	Epoch: [10]  [ 6000/14658]  eta: 0:22:26  lr: 0.02  img/s: 60.264503777034626  loss: 0.9313 (0.9060)  time: 0.1556  data: 0.0115  max mem: 17060
+2023-03-03 06:12:14,865	INFO	torchdistill.misc.log	Epoch: [10]  [ 7000/14658]  eta: 0:19:49  lr: 0.02  img/s: 60.3014350025609  loss: 0.7477 (0.9060)  time: 0.1552  data: 0.0115  max mem: 17060
+2023-03-03 06:14:49,983	INFO	torchdistill.misc.log	Epoch: [10]  [ 8000/14658]  eta: 0:17:14  lr: 0.02  img/s: 60.37728026832402  loss: 0.9693 (0.9062)  time: 0.1537  data: 0.0114  max mem: 17060
+2023-03-03 06:17:24,832	INFO	torchdistill.misc.log	Epoch: [10]  [ 9000/14658]  eta: 0:14:38  lr: 0.02  img/s: 59.412455667872464  loss: 1.0070 (0.9066)  time: 0.1549  data: 0.0115  max mem: 17060
+2023-03-03 06:19:59,945	INFO	torchdistill.misc.log	Epoch: [10]  [10000/14658]  eta: 0:12:03  lr: 0.02  img/s: 51.39676894115196  loss: 0.9262 (0.9052)  time: 0.1562  data: 0.0120  max mem: 17060
+2023-03-03 06:22:35,536	INFO	torchdistill.misc.log	Epoch: [10]  [11000/14658]  eta: 0:09:28  lr: 0.02  img/s: 60.2396196877648  loss: 0.8233 (0.9058)  time: 0.1540  data: 0.0112  max mem: 17060
+2023-03-03 06:25:10,595	INFO	torchdistill.misc.log	Epoch: [10]  [12000/14658]  eta: 0:06:52  lr: 0.02  img/s: 60.965271645717735  loss: 0.9539 (0.9068)  time: 0.1546  data: 0.0120  max mem: 17060
+2023-03-03 06:27:45,992	INFO	torchdistill.misc.log	Epoch: [10]  [13000/14658]  eta: 0:04:17  lr: 0.02  img/s: 53.506538735690285  loss: 0.8545 (0.9069)  time: 0.1549  data: 0.0120  max mem: 17060
+2023-03-03 06:30:20,860	INFO	torchdistill.misc.log	Epoch: [10]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 59.548893743666554  loss: 0.8328 (0.9058)  time: 0.1551  data: 0.0115  max mem: 17060
+2023-03-03 06:32:03,333	INFO	torchdistill.misc.log	Epoch: [10] Total time: 0:37:56
+2023-03-03 06:32:07,328	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:00:48  model_time: 0.1118 (0.1118)  evaluator_time: 0.0328 (0.0328)  time: 0.7298  data: 0.5833  max mem: 17060
+2023-03-03 06:33:47,826	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:44  model_time: 0.0812 (0.0834)  evaluator_time: 0.0087 (0.0164)  time: 0.0981  data: 0.0001  max mem: 17060
+2023-03-03 06:35:31,042	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:06  model_time: 0.0781 (0.0830)  evaluator_time: 0.0125 (0.0181)  time: 0.0958  data: 0.0001  max mem: 17060
+2023-03-03 06:37:10,528	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:22  model_time: 0.0810 (0.0829)  evaluator_time: 0.0102 (0.0174)  time: 0.0966  data: 0.0001  max mem: 17060
+2023-03-03 06:38:49,521	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:40  model_time: 0.0811 (0.0827)  evaluator_time: 0.0095 (0.0171)  time: 0.0969  data: 0.0001  max mem: 17060
+2023-03-03 06:40:27,833	INFO	torchdistill.misc.log	Validation: Total time: 0:08:21
+2023-03-03 06:40:27,834	INFO	__main__	Averaged stats: model_time: 0.0785 (0.0825)  evaluator_time: 0.0104 (0.0168)
+2023-03-03 06:40:28,023	INFO	__main__	Accumulating evaluation results...
+2023-03-03 06:40:43,545	INFO	__main__	DONE (t=15.52s).
+2023-03-03 06:40:43,545	INFO	__main__	IoU metric: bbox
+2023-03-03 06:40:43,546	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.168
+2023-03-03 06:40:43,546	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.323
+2023-03-03 06:40:43,547	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.157
+2023-03-03 06:40:43,548	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.037
+2023-03-03 06:40:43,548	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.163
+2023-03-03 06:40:43,549	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.308
+2023-03-03 06:40:43,549	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.188
+2023-03-03 06:40:43,549	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.288
+2023-03-03 06:40:43,549	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.301
+2023-03-03 06:40:43,550	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.078
+2023-03-03 06:40:43,550	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.314
+2023-03-03 06:40:43,550	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.530
+2023-03-03 06:40:45,478	INFO	torchdistill.misc.log	Epoch: [11]  [    0/14658]  eta: 5:07:23  lr: 0.02  img/s: 55.94941706907131  loss: 0.9089 (0.9089)  time: 1.2582  data: 1.0841  max mem: 17060
+2023-03-03 06:43:23,150	INFO	torchdistill.misc.log	Epoch: [11]  [ 1000/14658]  eta: 0:36:08  lr: 0.02  img/s: 59.879065617359956  loss: 0.7970 (0.8902)  time: 0.1626  data: 0.0150  max mem: 17060
+2023-03-03 06:46:00,185	INFO	torchdistill.misc.log	Epoch: [11]  [ 2000/14658]  eta: 0:33:18  lr: 0.02  img/s: 58.09617239212074  loss: 0.9625 (0.8889)  time: 0.1570  data: 0.0122  max mem: 17060
+2023-03-03 06:48:36,284	INFO	torchdistill.misc.log	Epoch: [11]  [ 3000/14658]  eta: 0:30:33  lr: 0.02  img/s: 60.23886266814835  loss: 0.9617 (0.8919)  time: 0.1575  data: 0.0124  max mem: 17060
+2023-03-03 06:51:12,188	INFO	torchdistill.misc.log	Epoch: [11]  [ 4000/14658]  eta: 0:27:52  lr: 0.02  img/s: 53.69791670000672  loss: 0.8480 (0.8973)  time: 0.1562  data: 0.0117  max mem: 17060
+2023-03-03 06:53:47,718	INFO	torchdistill.misc.log	Epoch: [11]  [ 5000/14658]  eta: 0:25:13  lr: 0.02  img/s: 59.49493960864415  loss: 0.9093 (0.9009)  time: 0.1555  data: 0.0124  max mem: 17060
+2023-03-03 06:56:22,978	INFO	torchdistill.misc.log	Epoch: [11]  [ 6000/14658]  eta: 0:22:34  lr: 0.02  img/s: 59.299373683392005  loss: 0.9126 (0.9013)  time: 0.1553  data: 0.0119  max mem: 17060
+2023-03-03 06:58:58,400	INFO	torchdistill.misc.log	Epoch: [11]  [ 7000/14658]  eta: 0:19:56  lr: 0.02  img/s: 53.820134572663626  loss: 0.9957 (0.9040)  time: 0.1563  data: 0.0117  max mem: 17060
+2023-03-03 07:01:33,397	INFO	torchdistill.misc.log	Epoch: [11]  [ 8000/14658]  eta: 0:17:19  lr: 0.02  img/s: 59.8980920827145  loss: 0.7619 (0.9026)  time: 0.1569  data: 0.0121  max mem: 17060
+2023-03-03 07:04:08,543	INFO	torchdistill.misc.log	Epoch: [11]  [ 9000/14658]  eta: 0:14:42  lr: 0.02  img/s: 59.68213809921045  loss: 0.8351 (0.9027)  time: 0.1532  data: 0.0111  max mem: 17060
+2023-03-03 07:06:43,518	INFO	torchdistill.misc.log	Epoch: [11]  [10000/14658]  eta: 0:12:06  lr: 0.02  img/s: 60.34231784601883  loss: 0.8500 (0.9026)  time: 0.1528  data: 0.0109  max mem: 17060
+2023-03-03 07:09:18,779	INFO	torchdistill.misc.log	Epoch: [11]  [11000/14658]  eta: 0:09:30  lr: 0.02  img/s: 66.58973046132353  loss: 0.8237 (0.9022)  time: 0.1542  data: 0.0115  max mem: 17060
+2023-03-03 07:11:54,279	INFO	torchdistill.misc.log	Epoch: [11]  [12000/14658]  eta: 0:06:54  lr: 0.02  img/s: 60.360445475003644  loss: 0.8749 (0.9025)  time: 0.1549  data: 0.0115  max mem: 17060
+2023-03-03 07:14:29,621	INFO	torchdistill.misc.log	Epoch: [11]  [13000/14658]  eta: 0:04:18  lr: 0.02  img/s: 53.748751768028285  loss: 0.8055 (0.9023)  time: 0.1585  data: 0.0124  max mem: 17060
+2023-03-03 07:17:05,235	INFO	torchdistill.misc.log	Epoch: [11]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 60.27316393212935  loss: 0.8568 (0.9027)  time: 0.1557  data: 0.0115  max mem: 17060
+2023-03-03 07:18:48,097	INFO	torchdistill.misc.log	Epoch: [11] Total time: 0:38:03
+2023-03-03 07:18:52,108	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:02:42  model_time: 0.1068 (0.1068)  evaluator_time: 0.0411 (0.0411)  time: 0.7525  data: 0.6024  max mem: 17060
+2023-03-03 07:20:31,467	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:40  model_time: 0.0785 (0.0833)  evaluator_time: 0.0078 (0.0154)  time: 0.0950  data: 0.0001  max mem: 17060
+2023-03-03 07:22:11,986	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:00  model_time: 0.0813 (0.0835)  evaluator_time: 0.0090 (0.0157)  time: 0.0971  data: 0.0001  max mem: 17060
+2023-03-03 07:23:54,554	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:22  model_time: 0.0846 (0.0837)  evaluator_time: 0.0079 (0.0164)  time: 0.0976  data: 0.0001  max mem: 17060
+2023-03-03 07:25:33,715	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:40  model_time: 0.0828 (0.0836)  evaluator_time: 0.0086 (0.0161)  time: 0.0991  data: 0.0001  max mem: 17060
+2023-03-03 07:27:12,272	INFO	torchdistill.misc.log	Validation: Total time: 0:08:20
+2023-03-03 07:27:12,273	INFO	__main__	Averaged stats: model_time: 0.0785 (0.0835)  evaluator_time: 0.0089 (0.0158)
+2023-03-03 07:27:12,451	INFO	__main__	Accumulating evaluation results...
+2023-03-03 07:27:24,937	INFO	__main__	DONE (t=12.48s).
+2023-03-03 07:27:24,937	INFO	__main__	IoU metric: bbox
+2023-03-03 07:27:24,938	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.172
+2023-03-03 07:27:24,938	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.325
+2023-03-03 07:27:24,939	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.165
+2023-03-03 07:27:24,939	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.035
+2023-03-03 07:27:24,940	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.167
+2023-03-03 07:27:24,941	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.314
+2023-03-03 07:27:24,941	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.187
+2023-03-03 07:27:24,941	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.276
+2023-03-03 07:27:24,941	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.287
+2023-03-03 07:27:24,941	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.065
+2023-03-03 07:27:24,941	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.301
+2023-03-03 07:27:24,941	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.504
+2023-03-03 07:27:25,669	INFO	__main__	Best mAP (bbox): 0.1721 -> 0.1722
+2023-03-03 07:27:25,672	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 07:27:27,132	INFO	torchdistill.misc.log	Epoch: [12]  [    0/14658]  eta: 3:36:58  lr: 0.02  img/s: 53.73300067577738  loss: 1.6289 (1.6289)  time: 0.8881  data: 0.7278  max mem: 17060
+2023-03-03 07:30:04,050	INFO	torchdistill.misc.log	Epoch: [12]  [ 1000/14658]  eta: 0:35:53  lr: 0.02  img/s: 59.799456796812066  loss: 0.9770 (0.8965)  time: 0.1559  data: 0.0126  max mem: 17060
+2023-03-03 07:32:41,006	INFO	torchdistill.misc.log	Epoch: [12]  [ 2000/14658]  eta: 0:33:11  lr: 0.02  img/s: 53.171539948657816  loss: 0.9490 (0.9036)  time: 0.1588  data: 0.0130  max mem: 17060
+2023-03-03 07:35:18,435	INFO	torchdistill.misc.log	Epoch: [12]  [ 3000/14658]  eta: 0:30:34  lr: 0.02  img/s: 55.06702683896294  loss: 0.8115 (0.8999)  time: 0.1594  data: 0.0132  max mem: 17060
+2023-03-03 07:37:55,298	INFO	torchdistill.misc.log	Epoch: [12]  [ 4000/14658]  eta: 0:27:55  lr: 0.02  img/s: 61.105827505827506  loss: 0.8398 (0.8996)  time: 0.1556  data: 0.0131  max mem: 17060
+2023-03-03 07:40:31,222	INFO	torchdistill.misc.log	Epoch: [12]  [ 5000/14658]  eta: 0:25:15  lr: 0.02  img/s: 61.896555095415096  loss: 0.8073 (0.9007)  time: 0.1564  data: 0.0124  max mem: 17060
+2023-03-03 07:43:07,045	INFO	torchdistill.misc.log	Epoch: [12]  [ 6000/14658]  eta: 0:22:37  lr: 0.02  img/s: 60.23042859373794  loss: 0.8413 (0.8987)  time: 0.1556  data: 0.0121  max mem: 17060
+2023-03-03 07:45:42,890	INFO	torchdistill.misc.log	Epoch: [12]  [ 7000/14658]  eta: 0:19:59  lr: 0.02  img/s: 60.588674393787  loss: 0.8908 (0.8985)  time: 0.1554  data: 0.0117  max mem: 17060
+2023-03-03 07:48:18,225	INFO	torchdistill.misc.log	Epoch: [12]  [ 8000/14658]  eta: 0:17:21  lr: 0.02  img/s: 60.2906000413264  loss: 0.8540 (0.8989)  time: 0.1555  data: 0.0116  max mem: 17060
+2023-03-03 07:50:53,305	INFO	torchdistill.misc.log	Epoch: [12]  [ 9000/14658]  eta: 0:14:44  lr: 0.02  img/s: 61.4398125005722  loss: 0.8692 (0.8983)  time: 0.1538  data: 0.0116  max mem: 17060
+2023-03-03 07:53:28,512	INFO	torchdistill.misc.log	Epoch: [12]  [10000/14658]  eta: 0:12:07  lr: 0.02  img/s: 57.81070571432017  loss: 0.7900 (0.8987)  time: 0.1553  data: 0.0108  max mem: 17060
+2023-03-03 07:56:03,828	INFO	torchdistill.misc.log	Epoch: [12]  [11000/14658]  eta: 0:09:31  lr: 0.02  img/s: 60.18937327012042  loss: 0.9158 (0.8995)  time: 0.1526  data: 0.0116  max mem: 17060
+2023-03-03 07:58:38,817	INFO	torchdistill.misc.log	Epoch: [12]  [12000/14658]  eta: 0:06:54  lr: 0.02  img/s: 60.78360092096277  loss: 0.8059 (0.9001)  time: 0.1539  data: 0.0114  max mem: 17060
+2023-03-03 08:01:13,786	INFO	torchdistill.misc.log	Epoch: [12]  [13000/14658]  eta: 0:04:18  lr: 0.02  img/s: 61.50828831570207  loss: 0.8819 (0.9007)  time: 0.1555  data: 0.0119  max mem: 17060
+2023-03-03 08:03:48,981	INFO	torchdistill.misc.log	Epoch: [12]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 60.55357606906708  loss: 0.8605 (0.9008)  time: 0.1552  data: 0.0117  max mem: 17060
+2023-03-03 08:05:31,111	INFO	torchdistill.misc.log	Epoch: [12] Total time: 0:38:04
+2023-03-03 08:05:35,144	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:03:20  model_time: 0.1170 (0.1170)  evaluator_time: 0.0400 (0.0400)  time: 0.7601  data: 0.6014  max mem: 17060
+2023-03-03 08:07:14,767	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:41  model_time: 0.0797 (0.0840)  evaluator_time: 0.0080 (0.0149)  time: 0.0963  data: 0.0001  max mem: 17060
+2023-03-03 08:08:54,289	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:04:59  model_time: 0.0794 (0.0836)  evaluator_time: 0.0097 (0.0152)  time: 0.0974  data: 0.0001  max mem: 17060
+2023-03-03 08:10:33,242	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:19  model_time: 0.0843 (0.0836)  evaluator_time: 0.0083 (0.0151)  time: 0.0982  data: 0.0001  max mem: 17060
+2023-03-03 08:12:15,226	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:40  model_time: 0.0850 (0.0836)  evaluator_time: 0.0081 (0.0157)  time: 0.1000  data: 0.0001  max mem: 17060
+2023-03-03 08:13:53,749	INFO	torchdistill.misc.log	Validation: Total time: 0:08:19
+2023-03-03 08:13:53,750	INFO	__main__	Averaged stats: model_time: 0.0791 (0.0835)  evaluator_time: 0.0094 (0.0154)
+2023-03-03 08:13:53,918	INFO	__main__	Accumulating evaluation results...
+2023-03-03 08:14:07,276	INFO	__main__	DONE (t=13.36s).
+2023-03-03 08:14:07,277	INFO	__main__	IoU metric: bbox
+2023-03-03 08:14:07,278	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.170
+2023-03-03 08:14:07,278	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.323
+2023-03-03 08:14:07,278	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.163
+2023-03-03 08:14:07,279	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.033
+2023-03-03 08:14:07,280	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.172
+2023-03-03 08:14:07,280	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.309
+2023-03-03 08:14:07,281	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.187
+2023-03-03 08:14:07,281	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.278
+2023-03-03 08:14:07,281	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.291
+2023-03-03 08:14:07,281	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.070
+2023-03-03 08:14:07,281	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.307
+2023-03-03 08:14:07,281	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.502
+2023-03-03 08:14:09,106	INFO	torchdistill.misc.log	Epoch: [13]  [    0/14658]  eta: 5:06:51  lr: 0.02  img/s: 38.28019914482721  loss: 0.9260 (0.9260)  time: 1.2560  data: 1.0353  max mem: 17060
+2023-03-03 08:16:46,111	INFO	torchdistill.misc.log	Epoch: [13]  [ 1000/14658]  eta: 0:35:59  lr: 0.02  img/s: 62.09034941794516  loss: 0.8999 (0.9028)  time: 0.1562  data: 0.0132  max mem: 17060
+2023-03-03 08:19:22,686	INFO	torchdistill.misc.log	Epoch: [13]  [ 2000/14658]  eta: 0:33:11  lr: 0.02  img/s: 59.81160851476465  loss: 0.8404 (0.8996)  time: 0.1547  data: 0.0123  max mem: 17060
+2023-03-03 08:21:58,560	INFO	torchdistill.misc.log	Epoch: [13]  [ 3000/14658]  eta: 0:30:28  lr: 0.02  img/s: 59.23447043787116  loss: 0.8994 (0.8978)  time: 0.1556  data: 0.0124  max mem: 17060
+2023-03-03 08:24:34,081	INFO	torchdistill.misc.log	Epoch: [13]  [ 4000/14658]  eta: 0:27:48  lr: 0.02  img/s: 59.858235887006856  loss: 0.7407 (0.8955)  time: 0.1566  data: 0.0118  max mem: 17060
+2023-03-03 08:27:09,723	INFO	torchdistill.misc.log	Epoch: [13]  [ 5000/14658]  eta: 0:25:09  lr: 0.02  img/s: 59.51868426980841  loss: 0.8763 (0.8970)  time: 0.1574  data: 0.0123  max mem: 17060
+2023-03-03 08:29:45,121	INFO	torchdistill.misc.log	Epoch: [13]  [ 6000/14658]  eta: 0:22:32  lr: 0.02  img/s: 61.035579679564606  loss: 0.7824 (0.8989)  time: 0.1546  data: 0.0116  max mem: 17060
+2023-03-03 08:32:20,100	INFO	torchdistill.misc.log	Epoch: [13]  [ 7000/14658]  eta: 0:19:54  lr: 0.02  img/s: 61.87931899324305  loss: 0.8065 (0.8978)  time: 0.1529  data: 0.0113  max mem: 17060
+2023-03-03 08:34:55,410	INFO	torchdistill.misc.log	Epoch: [13]  [ 8000/14658]  eta: 0:17:18  lr: 0.02  img/s: 60.89269420479746  loss: 0.8294 (0.8999)  time: 0.1551  data: 0.0117  max mem: 17060
+2023-03-03 08:37:30,280	INFO	torchdistill.misc.log	Epoch: [13]  [ 9000/14658]  eta: 0:14:41  lr: 0.02  img/s: 61.00794725827771  loss: 0.9273 (0.9002)  time: 0.1573  data: 0.0121  max mem: 17060
+2023-03-03 08:40:05,150	INFO	torchdistill.misc.log	Epoch: [13]  [10000/14658]  eta: 0:12:05  lr: 0.02  img/s: 60.94434364073923  loss: 0.8815 (0.9006)  time: 0.1552  data: 0.0119  max mem: 17060
+2023-03-03 08:42:40,222	INFO	torchdistill.misc.log	Epoch: [13]  [11000/14658]  eta: 0:09:29  lr: 0.02  img/s: 59.783901279616295  loss: 0.8272 (0.9001)  time: 0.1549  data: 0.0114  max mem: 17060
+2023-03-03 08:45:15,309	INFO	torchdistill.misc.log	Epoch: [13]  [12000/14658]  eta: 0:06:53  lr: 0.02  img/s: 60.875018595723525  loss: 0.7939 (0.8992)  time: 0.1554  data: 0.0120  max mem: 17060
+2023-03-03 08:47:50,425	INFO	torchdistill.misc.log	Epoch: [13]  [13000/14658]  eta: 0:04:17  lr: 0.02  img/s: 59.80873002999845  loss: 0.8732 (0.9001)  time: 0.1570  data: 0.0125  max mem: 17060
+2023-03-03 08:50:26,242	INFO	torchdistill.misc.log	Epoch: [13]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 60.13824053911158  loss: 0.8132 (0.9003)  time: 0.1546  data: 0.0128  max mem: 17060
+2023-03-03 08:52:09,182	INFO	torchdistill.misc.log	Epoch: [13] Total time: 0:38:01
+2023-03-03 08:52:13,177	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:00:37  model_time: 0.1053 (0.1053)  evaluator_time: 0.0294 (0.0294)  time: 0.7275  data: 0.5914  max mem: 17060
+2023-03-03 08:53:53,320	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:43  model_time: 0.0816 (0.0832)  evaluator_time: 0.0080 (0.0162)  time: 0.0986  data: 0.0001  max mem: 17060
+2023-03-03 08:55:34,551	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:02  model_time: 0.0818 (0.0834)  evaluator_time: 0.0097 (0.0166)  time: 0.0982  data: 0.0001  max mem: 17060
+2023-03-03 08:57:14,412	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:21  model_time: 0.0811 (0.0833)  evaluator_time: 0.0096 (0.0164)  time: 0.0950  data: 0.0001  max mem: 17060
+2023-03-03 08:58:53,958	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:40  model_time: 0.0850 (0.0832)  evaluator_time: 0.0099 (0.0162)  time: 0.1003  data: 0.0001  max mem: 17060
+2023-03-03 09:00:35,565	INFO	torchdistill.misc.log	Validation: Total time: 0:08:23
+2023-03-03 09:00:35,566	INFO	__main__	Averaged stats: model_time: 0.0786 (0.0831)  evaluator_time: 0.0085 (0.0166)
+2023-03-03 09:00:35,726	INFO	__main__	Accumulating evaluation results...
+2023-03-03 09:00:49,885	INFO	__main__	DONE (t=14.16s).
+2023-03-03 09:00:49,886	INFO	__main__	IoU metric: bbox
+2023-03-03 09:00:49,887	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.172
+2023-03-03 09:00:49,887	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.329
+2023-03-03 09:00:49,888	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.164
+2023-03-03 09:00:49,888	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.038
+2023-03-03 09:00:49,889	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.172
+2023-03-03 09:00:49,890	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.314
+2023-03-03 09:00:49,890	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.191
+2023-03-03 09:00:49,890	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.287
+2023-03-03 09:00:49,890	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.300
+2023-03-03 09:00:49,890	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.073
+2023-03-03 09:00:49,890	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.321
+2023-03-03 09:00:49,890	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.524
+2023-03-03 09:00:51,804	INFO	torchdistill.misc.log	Epoch: [14]  [    0/14658]  eta: 5:15:57  lr: 0.02  img/s: 53.18148419347579  loss: 0.8072 (0.8072)  time: 1.2933  data: 1.1306  max mem: 17060
+2023-03-03 09:03:28,388	INFO	torchdistill.misc.log	Epoch: [14]  [ 1000/14658]  eta: 0:35:54  lr: 0.02  img/s: 59.1213351375733  loss: 0.9008 (0.8871)  time: 0.1579  data: 0.0133  max mem: 17060
+2023-03-03 09:06:05,234	INFO	torchdistill.misc.log	Epoch: [14]  [ 2000/14658]  eta: 0:33:10  lr: 0.02  img/s: 59.884836413737965  loss: 0.9487 (0.8894)  time: 0.1549  data: 0.0131  max mem: 17060
+2023-03-03 09:08:41,761	INFO	torchdistill.misc.log	Epoch: [14]  [ 3000/14658]  eta: 0:30:30  lr: 0.02  img/s: 60.89645159416923  loss: 0.7791 (0.8937)  time: 0.1571  data: 0.0129  max mem: 17060
+2023-03-03 09:11:18,086	INFO	torchdistill.misc.log	Epoch: [14]  [ 4000/14658]  eta: 0:27:51  lr: 0.02  img/s: 60.77567410428851  loss: 0.6884 (0.8933)  time: 0.1537  data: 0.0122  max mem: 17060
+2023-03-03 09:13:53,752	INFO	torchdistill.misc.log	Epoch: [14]  [ 5000/14658]  eta: 0:25:12  lr: 0.02  img/s: 53.846303951523865  loss: 0.8645 (0.8948)  time: 0.1565  data: 0.0124  max mem: 17060
+2023-03-03 09:16:29,125	INFO	torchdistill.misc.log	Epoch: [14]  [ 6000/14658]  eta: 0:22:34  lr: 0.02  img/s: 59.91755861502473  loss: 0.8132 (0.8959)  time: 0.1564  data: 0.0121  max mem: 17060
+2023-03-03 09:19:04,199	INFO	torchdistill.misc.log	Epoch: [14]  [ 7000/14658]  eta: 0:19:56  lr: 0.02  img/s: 59.370616576634596  loss: 0.9650 (0.8967)  time: 0.1562  data: 0.0121  max mem: 17060
+2023-03-03 09:21:39,444	INFO	torchdistill.misc.log	Epoch: [14]  [ 8000/14658]  eta: 0:17:19  lr: 0.02  img/s: 54.01507070934716  loss: 0.9121 (0.8985)  time: 0.1552  data: 0.0121  max mem: 17060
+2023-03-03 09:24:14,318	INFO	torchdistill.misc.log	Epoch: [14]  [ 9000/14658]  eta: 0:14:42  lr: 0.02  img/s: 53.74634116650195  loss: 0.8854 (0.9006)  time: 0.1538  data: 0.0118  max mem: 17060
+2023-03-03 09:26:49,246	INFO	torchdistill.misc.log	Epoch: [14]  [10000/14658]  eta: 0:12:05  lr: 0.02  img/s: 58.94788325117441  loss: 0.8473 (0.8990)  time: 0.1567  data: 0.0119  max mem: 17060
+2023-03-03 09:29:24,039	INFO	torchdistill.misc.log	Epoch: [14]  [11000/14658]  eta: 0:09:29  lr: 0.02  img/s: 58.3408218796999  loss: 0.8926 (0.8990)  time: 0.1549  data: 0.0121  max mem: 17060
+2023-03-03 09:31:59,141	INFO	torchdistill.misc.log	Epoch: [14]  [12000/14658]  eta: 0:06:53  lr: 0.02  img/s: 62.32863190470087  loss: 0.8103 (0.8990)  time: 0.1533  data: 0.0109  max mem: 17060
+2023-03-03 09:34:34,216	INFO	torchdistill.misc.log	Epoch: [14]  [13000/14658]  eta: 0:04:18  lr: 0.02  img/s: 53.65541304413874  loss: 0.8844 (0.8991)  time: 0.1553  data: 0.0119  max mem: 17060
+2023-03-03 09:37:09,194	INFO	torchdistill.misc.log	Epoch: [14]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 60.250111775680125  loss: 0.9424 (0.8990)  time: 0.1540  data: 0.0114  max mem: 17060
+2023-03-03 09:38:51,323	INFO	torchdistill.misc.log	Epoch: [14] Total time: 0:38:00
+2023-03-03 09:38:55,297	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 0:59:55  model_time: 0.1062 (0.1062)  evaluator_time: 0.0208 (0.0208)  time: 0.7191  data: 0.5906  max mem: 17060
+2023-03-03 09:40:33,302	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:34  model_time: 0.0828 (0.0824)  evaluator_time: 0.0081 (0.0148)  time: 0.0968  data: 0.0001  max mem: 17060
+2023-03-03 09:42:13,251	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:04:57  model_time: 0.0815 (0.0831)  evaluator_time: 0.0091 (0.0152)  time: 0.0967  data: 0.0001  max mem: 17060
+2023-03-03 09:43:51,816	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:18  model_time: 0.0845 (0.0831)  evaluator_time: 0.0088 (0.0150)  time: 0.0973  data: 0.0001  max mem: 17060
+2023-03-03 09:45:31,002	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:39  model_time: 0.0828 (0.0833)  evaluator_time: 0.0080 (0.0149)  time: 0.0993  data: 0.0001  max mem: 17060
+2023-03-03 09:47:10,874	INFO	torchdistill.misc.log	Validation: Total time: 0:08:16
+2023-03-03 09:47:10,875	INFO	__main__	Averaged stats: model_time: 0.0790 (0.0836)  evaluator_time: 0.0093 (0.0148)
+2023-03-03 09:47:11,109	INFO	__main__	Accumulating evaluation results...
+2023-03-03 09:47:23,757	INFO	__main__	DONE (t=12.65s).
+2023-03-03 09:47:23,757	INFO	__main__	IoU metric: bbox
+2023-03-03 09:47:23,758	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.177
+2023-03-03 09:47:23,759	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.329
+2023-03-03 09:47:23,759	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.174
+2023-03-03 09:47:23,760	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.037
+2023-03-03 09:47:23,761	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.179
+2023-03-03 09:47:23,761	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.317
+2023-03-03 09:47:23,761	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.193
+2023-03-03 09:47:23,761	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.287
+2023-03-03 09:47:23,761	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.298
+2023-03-03 09:47:23,762	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.066
+2023-03-03 09:47:23,762	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.312
+2023-03-03 09:47:23,762	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.519
+2023-03-03 09:47:24,454	INFO	__main__	Best mAP (bbox): 0.1722 -> 0.1772
+2023-03-03 09:47:24,456	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 09:47:25,904	INFO	torchdistill.misc.log	Epoch: [15]  [    0/14658]  eta: 3:52:13  lr: 0.02  img/s: 52.934907340652266  loss: 1.1768 (1.1768)  time: 0.9506  data: 0.7868  max mem: 17060
+2023-03-03 09:50:02,835	INFO	torchdistill.misc.log	Epoch: [15]  [ 1000/14658]  eta: 0:35:54  lr: 0.02  img/s: 59.86998420925855  loss: 0.8240 (0.8830)  time: 0.1554  data: 0.0126  max mem: 17060
+2023-03-03 09:52:39,944	INFO	torchdistill.misc.log	Epoch: [15]  [ 2000/14658]  eta: 0:33:12  lr: 0.02  img/s: 60.676653333429776  loss: 0.8528 (0.8873)  time: 0.1554  data: 0.0126  max mem: 17060
+2023-03-03 09:55:17,147	INFO	torchdistill.misc.log	Epoch: [15]  [ 3000/14658]  eta: 0:30:34  lr: 0.02  img/s: 59.30146970457454  loss: 0.8393 (0.8919)  time: 0.1592  data: 0.0137  max mem: 17060
+2023-03-03 09:57:54,163	INFO	torchdistill.misc.log	Epoch: [15]  [ 4000/14658]  eta: 0:27:56  lr: 0.02  img/s: 53.83913291134163  loss: 0.8416 (0.8953)  time: 0.1566  data: 0.0129  max mem: 17060
+2023-03-03 10:00:31,402	INFO	torchdistill.misc.log	Epoch: [15]  [ 5000/14658]  eta: 0:25:18  lr: 0.02  img/s: 60.060306544545256  loss: 0.9072 (0.8968)  time: 0.1552  data: 0.0131  max mem: 17060
+2023-03-03 10:03:07,631	INFO	torchdistill.misc.log	Epoch: [15]  [ 6000/14658]  eta: 0:22:40  lr: 0.02  img/s: 51.86701538956181  loss: 0.8879 (0.8971)  time: 0.1589  data: 0.0135  max mem: 17060
+2023-03-03 10:05:43,396	INFO	torchdistill.misc.log	Epoch: [15]  [ 7000/14658]  eta: 0:20:01  lr: 0.02  img/s: 62.5134968467923  loss: 0.9313 (0.8968)  time: 0.1564  data: 0.0126  max mem: 17060
+2023-03-03 10:08:19,131	INFO	torchdistill.misc.log	Epoch: [15]  [ 8000/14658]  eta: 0:17:23  lr: 0.02  img/s: 63.992188453557915  loss: 0.8270 (0.8958)  time: 0.1548  data: 0.0116  max mem: 17060
+2023-03-03 10:10:54,308	INFO	torchdistill.misc.log	Epoch: [15]  [ 9000/14658]  eta: 0:14:45  lr: 0.02  img/s: 59.95460133222791  loss: 0.9093 (0.8952)  time: 0.1543  data: 0.0116  max mem: 17060
+2023-03-03 10:13:29,524	INFO	torchdistill.misc.log	Epoch: [15]  [10000/14658]  eta: 0:12:08  lr: 0.02  img/s: 59.75196327386825  loss: 0.8605 (0.8965)  time: 0.1535  data: 0.0117  max mem: 17060
+2023-03-03 10:16:04,723	INFO	torchdistill.misc.log	Epoch: [15]  [11000/14658]  eta: 0:09:31  lr: 0.02  img/s: 60.441338216036186  loss: 0.8592 (0.8975)  time: 0.1570  data: 0.0119  max mem: 17060
+2023-03-03 10:18:40,144	INFO	torchdistill.misc.log	Epoch: [15]  [12000/14658]  eta: 0:06:55  lr: 0.02  img/s: 53.463911448051256  loss: 0.8295 (0.8978)  time: 0.1575  data: 0.0127  max mem: 17060
+2023-03-03 10:21:15,237	INFO	torchdistill.misc.log	Epoch: [15]  [13000/14658]  eta: 0:04:18  lr: 0.02  img/s: 60.4729277466492  loss: 0.8768 (0.8976)  time: 0.1567  data: 0.0120  max mem: 17060
+2023-03-03 10:23:50,429	INFO	torchdistill.misc.log	Epoch: [15]  [14000/14658]  eta: 0:01:42  lr: 0.02  img/s: 60.457564575645755  loss: 0.8713 (0.8972)  time: 0.1542  data: 0.0120  max mem: 17060
+2023-03-03 10:25:32,547	INFO	torchdistill.misc.log	Epoch: [15] Total time: 0:38:07
+2023-03-03 10:25:36,528	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 0:59:54  model_time: 0.1084 (0.1084)  evaluator_time: 0.0298 (0.0298)  time: 0.7190  data: 0.5772  max mem: 17060
+2023-03-03 10:27:18,997	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:52  model_time: 0.0839 (0.0832)  evaluator_time: 0.0085 (0.0185)  time: 0.0978  data: 0.0001  max mem: 17060
+2023-03-03 10:29:00,231	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:06  model_time: 0.0785 (0.0835)  evaluator_time: 0.0103 (0.0176)  time: 0.0952  data: 0.0001  max mem: 17060
+2023-03-03 10:30:40,234	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:22  model_time: 0.0828 (0.0835)  evaluator_time: 0.0091 (0.0170)  time: 0.0959  data: 0.0001  max mem: 17060
+2023-03-03 10:32:20,428	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:41  model_time: 0.0823 (0.0836)  evaluator_time: 0.0100 (0.0166)  time: 0.1012  data: 0.0001  max mem: 17060
+2023-03-03 10:34:00,518	INFO	torchdistill.misc.log	Validation: Total time: 0:08:24
+2023-03-03 10:34:00,518	INFO	__main__	Averaged stats: model_time: 0.0785 (0.0837)  evaluator_time: 0.0104 (0.0163)
+2023-03-03 10:34:00,739	INFO	__main__	Accumulating evaluation results...
+2023-03-03 10:34:14,738	INFO	__main__	DONE (t=14.00s).
+2023-03-03 10:34:14,739	INFO	__main__	IoU metric: bbox
+2023-03-03 10:34:14,740	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.173
+2023-03-03 10:34:14,740	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.331
+2023-03-03 10:34:14,740	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.163
+2023-03-03 10:34:14,741	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.036
+2023-03-03 10:34:14,742	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.178
+2023-03-03 10:34:14,742	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.314
+2023-03-03 10:34:14,743	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.191
+2023-03-03 10:34:14,743	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.289
+2023-03-03 10:34:14,743	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.302
+2023-03-03 10:34:14,743	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.072
+2023-03-03 10:34:14,743	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.322
+2023-03-03 10:34:14,743	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.522
+2023-03-03 10:34:16,671	INFO	torchdistill.misc.log	Epoch: [16]  [    0/14658]  eta: 5:27:45  lr: 0.002  img/s: 54.53814809336738  loss: 1.1537 (1.1537)  time: 1.3416  data: 1.1820  max mem: 17060
+2023-03-03 10:36:53,558	INFO	torchdistill.misc.log	Epoch: [16]  [ 1000/14658]  eta: 0:35:58  lr: 0.002  img/s: 59.990402803354016  loss: 0.9041 (0.8789)  time: 0.1576  data: 0.0142  max mem: 17060
+2023-03-03 10:39:30,208	INFO	torchdistill.misc.log	Epoch: [16]  [ 2000/14658]  eta: 0:33:11  lr: 0.002  img/s: 59.42276680485874  loss: 0.8625 (0.8584)  time: 0.1573  data: 0.0127  max mem: 17060
+2023-03-03 10:42:06,475	INFO	torchdistill.misc.log	Epoch: [16]  [ 3000/14658]  eta: 0:30:30  lr: 0.002  img/s: 60.223726270409195  loss: 0.7106 (0.8559)  time: 0.1558  data: 0.0116  max mem: 17060
+2023-03-03 10:44:42,516	INFO	torchdistill.misc.log	Epoch: [16]  [ 4000/14658]  eta: 0:27:50  lr: 0.002  img/s: 60.17555670729848  loss: 0.7874 (0.8548)  time: 0.1544  data: 0.0113  max mem: 17060
+2023-03-03 10:47:18,052	INFO	torchdistill.misc.log	Epoch: [16]  [ 5000/14658]  eta: 0:25:11  lr: 0.002  img/s: 60.07213432897279  loss: 0.7512 (0.8556)  time: 0.1556  data: 0.0122  max mem: 17060
+2023-03-03 10:49:53,201	INFO	torchdistill.misc.log	Epoch: [16]  [ 6000/14658]  eta: 0:22:33  lr: 0.002  img/s: 60.74992622257788  loss: 0.7367 (0.8544)  time: 0.1542  data: 0.0119  max mem: 17060
+2023-03-03 10:52:28,447	INFO	torchdistill.misc.log	Epoch: [16]  [ 7000/14658]  eta: 0:19:55  lr: 0.002  img/s: 59.763776358043714  loss: 0.8262 (0.8543)  time: 0.1543  data: 0.0120  max mem: 17060
+2023-03-03 10:55:03,476	INFO	torchdistill.misc.log	Epoch: [16]  [ 8000/14658]  eta: 0:17:18  lr: 0.002  img/s: 60.33548210763291  loss: 0.7766 (0.8528)  time: 0.1546  data: 0.0116  max mem: 17060
+2023-03-03 10:57:38,500	INFO	torchdistill.misc.log	Epoch: [16]  [ 9000/14658]  eta: 0:14:42  lr: 0.002  img/s: 60.48982535081267  loss: 0.8058 (0.8534)  time: 0.1539  data: 0.0118  max mem: 17060
+2023-03-03 11:00:13,513	INFO	torchdistill.misc.log	Epoch: [16]  [10000/14658]  eta: 0:12:05  lr: 0.002  img/s: 60.474998558163676  loss: 0.7730 (0.8524)  time: 0.1537  data: 0.0118  max mem: 17060
+2023-03-03 11:02:48,061	INFO	torchdistill.misc.log	Epoch: [16]  [11000/14658]  eta: 0:09:29  lr: 0.002  img/s: 60.342751913448815  loss: 0.8631 (0.8514)  time: 0.1526  data: 0.0116  max mem: 17060
+2023-03-03 11:05:23,389	INFO	torchdistill.misc.log	Epoch: [16]  [12000/14658]  eta: 0:06:53  lr: 0.002  img/s: 60.16347241721219  loss: 0.8396 (0.8521)  time: 0.1555  data: 0.0118  max mem: 17060
+2023-03-03 11:07:58,428	INFO	torchdistill.misc.log	Epoch: [16]  [13000/14658]  eta: 0:04:17  lr: 0.002  img/s: 59.08968470879942  loss: 0.8239 (0.8518)  time: 0.1535  data: 0.0117  max mem: 17060
+2023-03-03 11:10:33,358	INFO	torchdistill.misc.log	Epoch: [16]  [14000/14658]  eta: 0:01:42  lr: 0.002  img/s: 61.2292628094589  loss: 0.7991 (0.8518)  time: 0.1544  data: 0.0114  max mem: 17060
+2023-03-03 11:12:15,378	INFO	torchdistill.misc.log	Epoch: [16] Total time: 0:38:00
+2023-03-03 11:12:19,372	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:00:26  model_time: 0.1178 (0.1178)  evaluator_time: 0.0290 (0.0290)  time: 0.7254  data: 0.5766  max mem: 17060
+2023-03-03 11:14:02,933	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:56  model_time: 0.0811 (0.0841)  evaluator_time: 0.0077 (0.0187)  time: 0.0976  data: 0.0001  max mem: 17060
+2023-03-03 11:15:44,088	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:07  model_time: 0.0820 (0.0839)  evaluator_time: 0.0103 (0.0177)  time: 0.1001  data: 0.0001  max mem: 17060
+2023-03-03 11:17:24,416	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:23  model_time: 0.0814 (0.0838)  evaluator_time: 0.0094 (0.0171)  time: 0.0960  data: 0.0001  max mem: 17060
+2023-03-03 11:19:03,727	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:41  model_time: 0.0835 (0.0836)  evaluator_time: 0.0086 (0.0168)  time: 0.1003  data: 0.0001  max mem: 17060
+2023-03-03 11:20:42,438	INFO	torchdistill.misc.log	Validation: Total time: 0:08:23
+2023-03-03 11:20:42,439	INFO	__main__	Averaged stats: model_time: 0.0782 (0.0833)  evaluator_time: 0.0102 (0.0165)
+2023-03-03 11:20:42,645	INFO	__main__	Accumulating evaluation results...
+2023-03-03 11:20:56,862	INFO	__main__	DONE (t=14.22s).
+2023-03-03 11:20:56,862	INFO	__main__	IoU metric: bbox
+2023-03-03 11:20:56,864	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.204
+2023-03-03 11:20:56,864	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.365
+2023-03-03 11:20:56,864	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.202
+2023-03-03 11:20:56,865	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.049
+2023-03-03 11:20:56,866	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.208
+2023-03-03 11:20:56,866	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.357
+2023-03-03 11:20:56,866	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.211
+2023-03-03 11:20:56,866	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.320
+2023-03-03 11:20:56,867	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.336
+2023-03-03 11:20:56,867	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.094
+2023-03-03 11:20:56,867	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.367
+2023-03-03 11:20:56,867	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.558
+2023-03-03 11:20:57,510	INFO	__main__	Best mAP (bbox): 0.1772 -> 0.2038
+2023-03-03 11:20:57,512	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 11:20:58,947	INFO	torchdistill.misc.log	Epoch: [17]  [    0/14658]  eta: 3:37:54  lr: 0.002  img/s: 52.972596814170466  loss: 0.8596 (0.8596)  time: 0.8920  data: 0.7280  max mem: 17060
+2023-03-03 11:23:35,941	INFO	torchdistill.misc.log	Epoch: [17]  [ 1000/14658]  eta: 0:35:54  lr: 0.002  img/s: 60.07998624878245  loss: 0.8732 (0.8498)  time: 0.1588  data: 0.0130  max mem: 17060
+2023-03-03 11:26:13,178	INFO	torchdistill.misc.log	Epoch: [17]  [ 2000/14658]  eta: 0:33:13  lr: 0.002  img/s: 61.969715494076254  loss: 0.8371 (0.8502)  time: 0.1563  data: 0.0125  max mem: 17060
+2023-03-03 11:28:50,630	INFO	torchdistill.misc.log	Epoch: [17]  [ 3000/14658]  eta: 0:30:35  lr: 0.002  img/s: 59.38774455492508  loss: 0.7981 (0.8510)  time: 0.1574  data: 0.0126  max mem: 17060
+2023-03-03 11:31:27,768	INFO	torchdistill.misc.log	Epoch: [17]  [ 4000/14658]  eta: 0:27:57  lr: 0.002  img/s: 60.31303272471052  loss: 0.9538 (0.8505)  time: 0.1565  data: 0.0122  max mem: 17060
+2023-03-03 11:34:04,936	INFO	torchdistill.misc.log	Epoch: [17]  [ 5000/14658]  eta: 0:25:19  lr: 0.002  img/s: 59.701145825919866  loss: 0.8327 (0.8506)  time: 0.1581  data: 0.0128  max mem: 17060
+2023-03-03 11:36:41,651	INFO	torchdistill.misc.log	Epoch: [17]  [ 6000/14658]  eta: 0:22:41  lr: 0.002  img/s: 60.263421432625236  loss: 0.8057 (0.8491)  time: 0.1569  data: 0.0124  max mem: 17060
+2023-03-03 11:39:17,864	INFO	torchdistill.misc.log	Epoch: [17]  [ 7000/14658]  eta: 0:20:02  lr: 0.002  img/s: 60.567676114938834  loss: 0.8113 (0.8470)  time: 0.1555  data: 0.0120  max mem: 17060
+2023-03-03 11:41:53,376	INFO	torchdistill.misc.log	Epoch: [17]  [ 8000/14658]  eta: 0:17:24  lr: 0.002  img/s: 53.08162099824561  loss: 0.8195 (0.8458)  time: 0.1558  data: 0.0121  max mem: 17060
+2023-03-03 11:44:29,020	INFO	torchdistill.misc.log	Epoch: [17]  [ 9000/14658]  eta: 0:14:46  lr: 0.002  img/s: 60.20514053486682  loss: 0.8316 (0.8449)  time: 0.1550  data: 0.0118  max mem: 17060
+2023-03-03 11:47:04,337	INFO	torchdistill.misc.log	Epoch: [17]  [10000/14658]  eta: 0:12:09  lr: 0.002  img/s: 60.93272317861553  loss: 0.7980 (0.8433)  time: 0.1522  data: 0.0116  max mem: 17060
+2023-03-03 11:49:39,785	INFO	torchdistill.misc.log	Epoch: [17]  [11000/14658]  eta: 0:09:32  lr: 0.002  img/s: 57.37732535571808  loss: 0.8646 (0.8432)  time: 0.1553  data: 0.0114  max mem: 17060
+2023-03-03 11:52:15,008	INFO	torchdistill.misc.log	Epoch: [17]  [12000/14658]  eta: 0:06:55  lr: 0.002  img/s: 56.288615935878035  loss: 0.7855 (0.8422)  time: 0.1557  data: 0.0121  max mem: 17060
+2023-03-03 11:54:51,257	INFO	torchdistill.misc.log	Epoch: [17]  [13000/14658]  eta: 0:04:19  lr: 0.002  img/s: 60.04558208784287  loss: 0.8368 (0.8418)  time: 0.1540  data: 0.0116  max mem: 17060
+2023-03-03 11:57:26,790	INFO	torchdistill.misc.log	Epoch: [17]  [14000/14658]  eta: 0:01:42  lr: 0.002  img/s: 64.97898289855128  loss: 0.7604 (0.8419)  time: 0.1546  data: 0.0114  max mem: 17060
+2023-03-03 11:59:08,975	INFO	torchdistill.misc.log	Epoch: [17] Total time: 0:38:10
+2023-03-03 11:59:12,975	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:00:08  model_time: 0.1125 (0.1125)  evaluator_time: 0.0280 (0.0280)  time: 0.7216  data: 0.5788  max mem: 17060
+2023-03-03 12:00:56,110	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:54  model_time: 0.0811 (0.0833)  evaluator_time: 0.0086 (0.0191)  time: 0.0962  data: 0.0001  max mem: 17060
+2023-03-03 12:02:37,019	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:06  model_time: 0.0790 (0.0831)  evaluator_time: 0.0117 (0.0181)  time: 0.0966  data: 0.0001  max mem: 17060
+2023-03-03 12:04:16,641	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:22  model_time: 0.0815 (0.0830)  evaluator_time: 0.0097 (0.0175)  time: 0.0970  data: 0.0001  max mem: 17060
+2023-03-03 12:05:56,624	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:41  model_time: 0.0811 (0.0830)  evaluator_time: 0.0091 (0.0172)  time: 0.0999  data: 0.0001  max mem: 17060
+2023-03-03 12:07:34,637	INFO	torchdistill.misc.log	Validation: Total time: 0:08:22
+2023-03-03 12:07:34,637	INFO	__main__	Averaged stats: model_time: 0.0785 (0.0827)  evaluator_time: 0.0102 (0.0169)
+2023-03-03 12:07:34,836	INFO	__main__	Accumulating evaluation results...
+2023-03-03 12:07:49,982	INFO	__main__	DONE (t=15.15s).
+2023-03-03 12:07:49,982	INFO	__main__	IoU metric: bbox
+2023-03-03 12:07:49,984	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.206
+2023-03-03 12:07:49,984	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.369
+2023-03-03 12:07:49,984	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.206
+2023-03-03 12:07:49,985	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.052
+2023-03-03 12:07:49,986	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.211
+2023-03-03 12:07:49,986	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.358
+2023-03-03 12:07:49,986	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.214
+2023-03-03 12:07:49,987	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.325
+2023-03-03 12:07:49,987	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.341
+2023-03-03 12:07:49,987	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.101
+2023-03-03 12:07:49,987	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.373
+2023-03-03 12:07:49,987	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.562
+2023-03-03 12:07:50,665	INFO	__main__	Best mAP (bbox): 0.2038 -> 0.2057
+2023-03-03 12:07:50,668	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 12:07:52,164	INFO	torchdistill.misc.log	Epoch: [18]  [    0/14658]  eta: 3:44:00  lr: 0.002  img/s: 53.70247158786277  loss: 1.1325 (1.1325)  time: 0.9169  data: 0.7526  max mem: 17060
+2023-03-03 12:10:29,118	INFO	torchdistill.misc.log	Epoch: [18]  [ 1000/14658]  eta: 0:35:54  lr: 0.002  img/s: 59.164909880204675  loss: 0.7733 (0.8356)  time: 0.1559  data: 0.0128  max mem: 17060
+2023-03-03 12:13:06,601	INFO	torchdistill.misc.log	Epoch: [18]  [ 2000/14658]  eta: 0:33:14  lr: 0.002  img/s: 60.511860922255686  loss: 0.7780 (0.8397)  time: 0.1566  data: 0.0127  max mem: 17060
+2023-03-03 12:15:43,712	INFO	torchdistill.misc.log	Epoch: [18]  [ 3000/14658]  eta: 0:30:35  lr: 0.002  img/s: 60.16940606025829  loss: 0.7368 (0.8350)  time: 0.1565  data: 0.0124  max mem: 17060
+2023-03-03 12:18:20,790	INFO	torchdistill.misc.log	Epoch: [18]  [ 4000/14658]  eta: 0:27:56  lr: 0.002  img/s: 59.67842291917888  loss: 0.8289 (0.8351)  time: 0.1558  data: 0.0131  max mem: 17060
+2023-03-03 12:20:58,252	INFO	torchdistill.misc.log	Epoch: [18]  [ 5000/14658]  eta: 0:25:19  lr: 0.002  img/s: 59.52132373549415  loss: 0.7903 (0.8361)  time: 0.1560  data: 0.0125  max mem: 17060
+2023-03-03 12:23:35,051	INFO	torchdistill.misc.log	Epoch: [18]  [ 6000/14658]  eta: 0:22:41  lr: 0.002  img/s: 59.34226680508419  loss: 0.7479 (0.8381)  time: 0.1576  data: 0.0126  max mem: 17060
+2023-03-03 12:26:11,292	INFO	torchdistill.misc.log	Epoch: [18]  [ 7000/14658]  eta: 0:20:03  lr: 0.002  img/s: 60.08009382357944  loss: 0.9051 (0.8393)  time: 0.1540  data: 0.0126  max mem: 17060
+2023-03-03 12:28:47,464	INFO	torchdistill.misc.log	Epoch: [18]  [ 8000/14658]  eta: 0:17:25  lr: 0.002  img/s: 59.77133492464997  loss: 0.7897 (0.8401)  time: 0.1537  data: 0.0122  max mem: 17060
+2023-03-03 12:31:22,979	INFO	torchdistill.misc.log	Epoch: [18]  [ 9000/14658]  eta: 0:14:47  lr: 0.002  img/s: 59.02430495087821  loss: 0.7573 (0.8410)  time: 0.1552  data: 0.0115  max mem: 17060
+2023-03-03 12:33:58,373	INFO	torchdistill.misc.log	Epoch: [18]  [10000/14658]  eta: 0:12:09  lr: 0.002  img/s: 50.12156346672921  loss: 0.7299 (0.8393)  time: 0.1558  data: 0.0120  max mem: 17060
+2023-03-03 12:36:33,578	INFO	torchdistill.misc.log	Epoch: [18]  [11000/14658]  eta: 0:09:32  lr: 0.002  img/s: 65.24380460165703  loss: 0.8632 (0.8389)  time: 0.1547  data: 0.0118  max mem: 17060
+2023-03-03 12:39:08,886	INFO	torchdistill.misc.log	Epoch: [18]  [12000/14658]  eta: 0:06:55  lr: 0.002  img/s: 60.03269068372765  loss: 0.8303 (0.8384)  time: 0.1572  data: 0.0120  max mem: 17060
+2023-03-03 12:41:44,614	INFO	torchdistill.misc.log	Epoch: [18]  [13000/14658]  eta: 0:04:19  lr: 0.002  img/s: 60.21162262796644  loss: 0.8483 (0.8390)  time: 0.1551  data: 0.0119  max mem: 17060
+2023-03-03 12:44:20,111	INFO	torchdistill.misc.log	Epoch: [18]  [14000/14658]  eta: 0:01:42  lr: 0.002  img/s: 60.46769685447321  loss: 0.7613 (0.8390)  time: 0.1566  data: 0.0123  max mem: 17060
+2023-03-03 12:46:02,329	INFO	torchdistill.misc.log	Epoch: [18] Total time: 0:38:11
+2023-03-03 12:46:06,336	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:00:03  model_time: 0.1060 (0.1060)  evaluator_time: 0.0279 (0.0279)  time: 0.7208  data: 0.5844  max mem: 17060
+2023-03-03 12:47:48,149	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:49  model_time: 0.0811 (0.0823)  evaluator_time: 0.0083 (0.0188)  time: 0.0957  data: 0.0001  max mem: 17060
+2023-03-03 12:49:28,946	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:04  model_time: 0.0811 (0.0828)  evaluator_time: 0.0129 (0.0178)  time: 0.0990  data: 0.0001  max mem: 17060
+2023-03-03 12:51:09,471	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:22  model_time: 0.0850 (0.0831)  evaluator_time: 0.0099 (0.0171)  time: 0.0988  data: 0.0001  max mem: 17060
+2023-03-03 12:52:48,814	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:40  model_time: 0.0812 (0.0831)  evaluator_time: 0.0093 (0.0168)  time: 0.0984  data: 0.0001  max mem: 17060
+2023-03-03 12:54:27,582	INFO	torchdistill.misc.log	Validation: Total time: 0:08:21
+2023-03-03 12:54:27,583	INFO	__main__	Averaged stats: model_time: 0.0788 (0.0830)  evaluator_time: 0.0097 (0.0165)
+2023-03-03 12:54:27,808	INFO	__main__	Accumulating evaluation results...
+2023-03-03 12:54:42,746	INFO	__main__	DONE (t=14.94s).
+2023-03-03 12:54:42,746	INFO	__main__	IoU metric: bbox
+2023-03-03 12:54:42,748	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.207
+2023-03-03 12:54:42,748	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.369
+2023-03-03 12:54:42,748	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.206
+2023-03-03 12:54:42,749	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.056
+2023-03-03 12:54:42,750	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.211
+2023-03-03 12:54:42,750	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.363
+2023-03-03 12:54:42,750	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.216
+2023-03-03 12:54:42,750	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.326
+2023-03-03 12:54:42,751	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.341
+2023-03-03 12:54:42,751	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.103
+2023-03-03 12:54:42,751	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.370
+2023-03-03 12:54:42,751	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.569
+2023-03-03 12:54:43,461	INFO	__main__	Best mAP (bbox): 0.2057 -> 0.2072
+2023-03-03 12:54:43,463	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 12:54:44,946	INFO	torchdistill.misc.log	Epoch: [19]  [    0/14658]  eta: 3:47:13  lr: 0.002  img/s: 53.875699247927145  loss: 1.2920 (1.2920)  time: 0.9301  data: 0.7687  max mem: 17060
+2023-03-03 12:57:22,397	INFO	torchdistill.misc.log	Epoch: [19]  [ 1000/14658]  eta: 0:36:00  lr: 0.002  img/s: 59.42308250836772  loss: 0.7904 (0.8456)  time: 0.1579  data: 0.0135  max mem: 17060
+2023-03-03 12:59:59,995	INFO	torchdistill.misc.log	Epoch: [19]  [ 2000/14658]  eta: 0:33:18  lr: 0.002  img/s: 59.3283118683386  loss: 0.7476 (0.8403)  time: 0.1563  data: 0.0123  max mem: 17060
+2023-03-03 13:02:37,346	INFO	torchdistill.misc.log	Epoch: [19]  [ 3000/14658]  eta: 0:30:38  lr: 0.002  img/s: 61.3928237517679  loss: 0.7858 (0.8405)  time: 0.1581  data: 0.0130  max mem: 17060
+2023-03-03 13:05:14,775	INFO	torchdistill.misc.log	Epoch: [19]  [ 4000/14658]  eta: 0:28:00  lr: 0.002  img/s: 59.24649820871435  loss: 0.6911 (0.8375)  time: 0.1572  data: 0.0127  max mem: 17060
+2023-03-03 13:07:51,918	INFO	torchdistill.misc.log	Epoch: [19]  [ 5000/14658]  eta: 0:25:21  lr: 0.002  img/s: 60.01379330080556  loss: 0.8933 (0.8368)  time: 0.1585  data: 0.0131  max mem: 17060
+2023-03-03 13:10:28,994	INFO	torchdistill.misc.log	Epoch: [19]  [ 6000/14658]  eta: 0:22:43  lr: 0.002  img/s: 59.29214354755202  loss: 0.8170 (0.8361)  time: 0.1541  data: 0.0123  max mem: 17060
+2023-03-03 13:13:05,776	INFO	torchdistill.misc.log	Epoch: [19]  [ 7000/14658]  eta: 0:20:05  lr: 0.002  img/s: 59.17294381340853  loss: 0.8702 (0.8354)  time: 0.1570  data: 0.0125  max mem: 17060
+2023-03-03 13:15:42,017	INFO	torchdistill.misc.log	Epoch: [19]  [ 8000/14658]  eta: 0:17:26  lr: 0.002  img/s: 59.936930741351375  loss: 0.7270 (0.8350)  time: 0.1567  data: 0.0119  max mem: 17060
+2023-03-03 13:18:18,057	INFO	torchdistill.misc.log	Epoch: [19]  [ 9000/14658]  eta: 0:14:48  lr: 0.002  img/s: 60.209353736613934  loss: 0.7335 (0.8351)  time: 0.1551  data: 0.0120  max mem: 17060
+2023-03-03 13:20:53,556	INFO	torchdistill.misc.log	Epoch: [19]  [10000/14658]  eta: 0:12:10  lr: 0.002  img/s: 53.510378525955886  loss: 0.8562 (0.8361)  time: 0.1564  data: 0.0120  max mem: 17060
+2023-03-03 13:23:29,365	INFO	torchdistill.misc.log	Epoch: [19]  [11000/14658]  eta: 0:09:33  lr: 0.002  img/s: 58.00578425389867  loss: 0.7431 (0.8363)  time: 0.1562  data: 0.0116  max mem: 17060
+2023-03-03 13:26:05,021	INFO	torchdistill.misc.log	Epoch: [19]  [12000/14658]  eta: 0:06:56  lr: 0.002  img/s: 62.338011317824275  loss: 0.8150 (0.8362)  time: 0.1563  data: 0.0116  max mem: 17060
+2023-03-03 13:28:40,552	INFO	torchdistill.misc.log	Epoch: [19]  [13000/14658]  eta: 0:04:19  lr: 0.002  img/s: 64.1153197221718  loss: 0.7503 (0.8367)  time: 0.1556  data: 0.0116  max mem: 17060
+2023-03-03 13:31:15,896	INFO	torchdistill.misc.log	Epoch: [19]  [14000/14658]  eta: 0:01:43  lr: 0.002  img/s: 61.751660449374924  loss: 0.7901 (0.8367)  time: 0.1555  data: 0.0120  max mem: 17060
+2023-03-03 13:32:58,406	INFO	torchdistill.misc.log	Epoch: [19] Total time: 0:38:14
+2023-03-03 13:33:02,389	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 0:59:42  model_time: 0.1096 (0.1096)  evaluator_time: 0.0280 (0.0280)  time: 0.7165  data: 0.5772  max mem: 17060
+2023-03-03 13:34:42,013	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:40  model_time: 0.0818 (0.0830)  evaluator_time: 0.0082 (0.0159)  time: 0.0967  data: 0.0001  max mem: 17060
+2023-03-03 13:36:25,372	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:05  model_time: 0.0837 (0.0832)  evaluator_time: 0.0109 (0.0176)  time: 0.0982  data: 0.0001  max mem: 17060
+2023-03-03 13:38:04,298	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:21  model_time: 0.0827 (0.0830)  evaluator_time: 0.0094 (0.0169)  time: 0.0959  data: 0.0001  max mem: 17060
+2023-03-03 13:39:42,655	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:40  model_time: 0.0819 (0.0827)  evaluator_time: 0.0088 (0.0166)  time: 0.0980  data: 0.0001  max mem: 17060
+2023-03-03 13:41:21,804	INFO	torchdistill.misc.log	Validation: Total time: 0:08:20
+2023-03-03 13:41:21,804	INFO	__main__	Averaged stats: model_time: 0.0786 (0.0828)  evaluator_time: 0.0099 (0.0163)
+2023-03-03 13:41:21,994	INFO	__main__	Accumulating evaluation results...
+2023-03-03 13:41:36,637	INFO	__main__	DONE (t=14.64s).
+2023-03-03 13:41:36,638	INFO	__main__	IoU metric: bbox
+2023-03-03 13:41:36,639	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.208
+2023-03-03 13:41:36,640	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.371
+2023-03-03 13:41:36,640	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.208
+2023-03-03 13:41:36,641	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.053
+2023-03-03 13:41:36,641	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.215
+2023-03-03 13:41:36,642	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.363
+2023-03-03 13:41:36,642	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.215
+2023-03-03 13:41:36,642	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.328
+2023-03-03 13:41:36,642	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.344
+2023-03-03 13:41:36,642	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.101
+2023-03-03 13:41:36,642	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.377
+2023-03-03 13:41:36,642	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.563
+2023-03-03 13:41:37,357	INFO	__main__	Best mAP (bbox): 0.2072 -> 0.2082
+2023-03-03 13:41:37,360	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 13:41:38,779	INFO	torchdistill.misc.log	Epoch: [20]  [    0/14658]  eta: 3:36:41  lr: 0.002  img/s: 50.61824852313801  loss: 1.0204 (1.0204)  time: 0.8870  data: 0.7186  max mem: 17060
+2023-03-03 13:44:16,150	INFO	torchdistill.misc.log	Epoch: [20]  [ 1000/14658]  eta: 0:35:59  lr: 0.002  img/s: 60.14406140157483  loss: 0.8836 (0.8279)  time: 0.1553  data: 0.0125  max mem: 17060
+2023-03-03 13:46:53,607	INFO	torchdistill.misc.log	Epoch: [20]  [ 2000/14658]  eta: 0:33:17  lr: 0.002  img/s: 59.44024077646513  loss: 0.7021 (0.8237)  time: 0.1588  data: 0.0125  max mem: 17060
+2023-03-03 13:49:30,973	INFO	torchdistill.misc.log	Epoch: [20]  [ 3000/14658]  eta: 0:30:37  lr: 0.002  img/s: 60.79307177345569  loss: 0.8196 (0.8264)  time: 0.1583  data: 0.0129  max mem: 17060
+2023-03-03 13:52:08,451	INFO	torchdistill.misc.log	Epoch: [20]  [ 4000/14658]  eta: 0:27:59  lr: 0.002  img/s: 59.62306850327661  loss: 0.8769 (0.8310)  time: 0.1596  data: 0.0134  max mem: 17060
+2023-03-03 13:54:45,905	INFO	torchdistill.misc.log	Epoch: [20]  [ 5000/14658]  eta: 0:25:21  lr: 0.002  img/s: 57.76124603212857  loss: 0.7933 (0.8321)  time: 0.1566  data: 0.0124  max mem: 17060
+2023-03-03 13:57:22,839	INFO	torchdistill.misc.log	Epoch: [20]  [ 6000/14658]  eta: 0:22:43  lr: 0.002  img/s: 59.902048540136214  loss: 0.8992 (0.8333)  time: 0.1553  data: 0.0122  max mem: 17060
+2023-03-03 13:59:59,458	INFO	torchdistill.misc.log	Epoch: [20]  [ 7000/14658]  eta: 0:20:04  lr: 0.002  img/s: 60.329624135854075  loss: 0.8692 (0.8331)  time: 0.1566  data: 0.0126  max mem: 17060
+2023-03-03 14:02:35,600	INFO	torchdistill.misc.log	Epoch: [20]  [ 8000/14658]  eta: 0:17:26  lr: 0.002  img/s: 60.62534690101758  loss: 0.8660 (0.8348)  time: 0.1555  data: 0.0118  max mem: 17060
+2023-03-03 14:05:11,428	INFO	torchdistill.misc.log	Epoch: [20]  [ 9000/14658]  eta: 0:14:48  lr: 0.002  img/s: 58.001372489027865  loss: 0.7767 (0.8337)  time: 0.1555  data: 0.0118  max mem: 17060
+2023-03-03 14:07:46,923	INFO	torchdistill.misc.log	Epoch: [20]  [10000/14658]  eta: 0:12:10  lr: 0.002  img/s: 59.88323330317259  loss: 0.8943 (0.8333)  time: 0.1543  data: 0.0114  max mem: 17060
+2023-03-03 14:10:22,472	INFO	torchdistill.misc.log	Epoch: [20]  [11000/14658]  eta: 0:09:33  lr: 0.002  img/s: 59.89563292664423  loss: 0.7645 (0.8342)  time: 0.1550  data: 0.0121  max mem: 17060
+2023-03-03 14:12:58,091	INFO	torchdistill.misc.log	Epoch: [20]  [12000/14658]  eta: 0:06:56  lr: 0.002  img/s: 61.86209248774444  loss: 0.8283 (0.8343)  time: 0.1572  data: 0.0121  max mem: 17060
+2023-03-03 14:15:33,696	INFO	torchdistill.misc.log	Epoch: [20]  [13000/14658]  eta: 0:04:19  lr: 0.002  img/s: 59.46668178982589  loss: 0.7982 (0.8351)  time: 0.1573  data: 0.0122  max mem: 17060
+2023-03-03 14:18:09,299	INFO	torchdistill.misc.log	Epoch: [20]  [14000/14658]  eta: 0:01:42  lr: 0.002  img/s: 60.140180701405356  loss: 0.8019 (0.8352)  time: 0.1561  data: 0.0124  max mem: 17060
+2023-03-03 14:19:52,020	INFO	torchdistill.misc.log	Epoch: [20] Total time: 0:38:14
+2023-03-03 14:19:56,000	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 0:59:15  model_time: 0.1085 (0.1085)  evaluator_time: 0.0294 (0.0294)  time: 0.7111  data: 0.5719  max mem: 17060
+2023-03-03 14:21:36,259	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:43  model_time: 0.0840 (0.0836)  evaluator_time: 0.0084 (0.0160)  time: 0.0989  data: 0.0001  max mem: 17060
+2023-03-03 14:23:20,168	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:07  model_time: 0.0780 (0.0850)  evaluator_time: 0.0118 (0.0163)  time: 0.0969  data: 0.0001  max mem: 17060
+2023-03-03 14:24:59,533	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:22  model_time: 0.0818 (0.0843)  evaluator_time: 0.0100 (0.0161)  time: 0.0986  data: 0.0001  max mem: 17060
+2023-03-03 14:26:38,818	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:40  model_time: 0.0840 (0.0839)  evaluator_time: 0.0093 (0.0160)  time: 0.1007  data: 0.0001  max mem: 17060
+2023-03-03 14:28:17,771	INFO	torchdistill.misc.log	Validation: Total time: 0:08:22
+2023-03-03 14:28:17,772	INFO	__main__	Averaged stats: model_time: 0.0819 (0.0837)  evaluator_time: 0.0089 (0.0159)
+2023-03-03 14:28:17,985	INFO	__main__	Accumulating evaluation results...
+2023-03-03 14:28:32,779	INFO	__main__	DONE (t=14.79s).
+2023-03-03 14:28:32,779	INFO	__main__	IoU metric: bbox
+2023-03-03 14:28:32,780	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.209
+2023-03-03 14:28:32,781	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.373
+2023-03-03 14:28:32,781	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.211
+2023-03-03 14:28:32,782	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.052
+2023-03-03 14:28:32,782	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.215
+2023-03-03 14:28:32,783	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.363
+2023-03-03 14:28:32,783	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.216
+2023-03-03 14:28:32,783	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.327
+2023-03-03 14:28:32,783	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.342
+2023-03-03 14:28:32,783	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.101
+2023-03-03 14:28:32,784	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.376
+2023-03-03 14:28:32,784	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.564
+2023-03-03 14:28:33,482	INFO	__main__	Best mAP (bbox): 0.2082 -> 0.2094
+2023-03-03 14:28:33,485	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 14:28:34,889	INFO	torchdistill.misc.log	Epoch: [21]  [    0/14658]  eta: 3:27:51  lr: 0.002  img/s: 51.68908079530593  loss: 0.5543 (0.5543)  time: 0.8509  data: 0.6870  max mem: 17060
+2023-03-03 14:31:12,108	INFO	torchdistill.misc.log	Epoch: [21]  [ 1000/14658]  eta: 0:35:56  lr: 0.002  img/s: 60.63761746421859  loss: 0.8316 (0.8265)  time: 0.1594  data: 0.0132  max mem: 17060
+2023-03-03 14:33:49,672	INFO	torchdistill.misc.log	Epoch: [21]  [ 2000/14658]  eta: 0:33:16  lr: 0.002  img/s: 58.608518858795705  loss: 0.8209 (0.8291)  time: 0.1569  data: 0.0129  max mem: 17060
+2023-03-03 14:36:27,333	INFO	torchdistill.misc.log	Epoch: [21]  [ 3000/14658]  eta: 0:30:38  lr: 0.002  img/s: 60.69509221541289  loss: 0.9316 (0.8330)  time: 0.1578  data: 0.0142  max mem: 17060
+2023-03-03 14:39:04,611	INFO	torchdistill.misc.log	Epoch: [21]  [ 4000/14658]  eta: 0:27:59  lr: 0.002  img/s: 59.61851323427248  loss: 0.7633 (0.8326)  time: 0.1569  data: 0.0127  max mem: 17060
+2023-03-03 14:41:41,803	INFO	torchdistill.misc.log	Epoch: [21]  [ 5000/14658]  eta: 0:25:21  lr: 0.002  img/s: 60.30295220791077  loss: 0.8623 (0.8315)  time: 0.1557  data: 0.0128  max mem: 17060
+2023-03-03 14:44:18,343	INFO	torchdistill.misc.log	Epoch: [21]  [ 6000/14658]  eta: 0:22:42  lr: 0.002  img/s: 59.693180221129126  loss: 0.8720 (0.8326)  time: 0.1581  data: 0.0129  max mem: 17060
+2023-03-03 14:46:54,504	INFO	torchdistill.misc.log	Epoch: [21]  [ 7000/14658]  eta: 0:20:03  lr: 0.002  img/s: 57.57620246300939  loss: 0.7865 (0.8321)  time: 0.1563  data: 0.0119  max mem: 17060
+2023-03-03 14:49:30,280	INFO	torchdistill.misc.log	Epoch: [21]  [ 8000/14658]  eta: 0:17:25  lr: 0.002  img/s: 59.95813670079034  loss: 0.6913 (0.8319)  time: 0.1546  data: 0.0118  max mem: 17060
+2023-03-03 14:52:06,230	INFO	torchdistill.misc.log	Epoch: [21]  [ 9000/14658]  eta: 0:14:47  lr: 0.002  img/s: 60.93205928605412  loss: 0.7687 (0.8336)  time: 0.1567  data: 0.0119  max mem: 17060
+2023-03-03 14:54:41,536	INFO	torchdistill.misc.log	Epoch: [21]  [10000/14658]  eta: 0:12:10  lr: 0.002  img/s: 52.66992952108873  loss: 0.9207 (0.8325)  time: 0.1561  data: 0.0120  max mem: 17060
+2023-03-03 14:57:17,058	INFO	torchdistill.misc.log	Epoch: [21]  [11000/14658]  eta: 0:09:32  lr: 0.002  img/s: 59.484287053993256  loss: 0.7853 (0.8330)  time: 0.1571  data: 0.0122  max mem: 17060
+2023-03-03 14:59:52,235	INFO	torchdistill.misc.log	Epoch: [21]  [12000/14658]  eta: 0:06:55  lr: 0.002  img/s: 60.07364001754527  loss: 0.8484 (0.8333)  time: 0.1541  data: 0.0114  max mem: 17060
+2023-03-03 15:02:27,660	INFO	torchdistill.misc.log	Epoch: [21]  [13000/14658]  eta: 0:04:19  lr: 0.002  img/s: 60.85691174283507  loss: 0.8613 (0.8339)  time: 0.1575  data: 0.0121  max mem: 17060
+2023-03-03 15:05:03,000	INFO	torchdistill.misc.log	Epoch: [21]  [14000/14658]  eta: 0:01:42  lr: 0.002  img/s: 60.26233912709274  loss: 0.8204 (0.8342)  time: 0.1554  data: 0.0117  max mem: 17060
+2023-03-03 15:06:45,541	INFO	torchdistill.misc.log	Epoch: [21] Total time: 0:38:11
+2023-03-03 15:06:49,567	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:01:45  model_time: 0.1042 (0.1042)  evaluator_time: 0.0286 (0.0286)  time: 0.7410  data: 0.6046  max mem: 17060
+2023-03-03 15:08:29,338	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:41  model_time: 0.0836 (0.0832)  evaluator_time: 0.0080 (0.0158)  time: 0.0978  data: 0.0001  max mem: 17060
+2023-03-03 15:10:12,237	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:04  model_time: 0.0781 (0.0844)  evaluator_time: 0.0106 (0.0162)  time: 0.0963  data: 0.0001  max mem: 17060
+2023-03-03 15:11:51,327	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:21  model_time: 0.0808 (0.0839)  evaluator_time: 0.0094 (0.0159)  time: 0.0942  data: 0.0001  max mem: 17060
+2023-03-03 15:13:30,399	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:40  model_time: 0.0822 (0.0836)  evaluator_time: 0.0084 (0.0159)  time: 0.0985  data: 0.0001  max mem: 17060
+2023-03-03 15:15:08,935	INFO	torchdistill.misc.log	Validation: Total time: 0:08:20
+2023-03-03 15:15:08,935	INFO	__main__	Averaged stats: model_time: 0.0789 (0.0834)  evaluator_time: 0.0096 (0.0157)
+2023-03-03 15:15:09,127	INFO	__main__	Accumulating evaluation results...
+2023-03-03 15:15:23,676	INFO	__main__	DONE (t=14.55s).
+2023-03-03 15:15:23,676	INFO	__main__	IoU metric: bbox
+2023-03-03 15:15:23,677	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.210
+2023-03-03 15:15:23,678	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.375
+2023-03-03 15:15:23,678	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.211
+2023-03-03 15:15:23,679	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.052
+2023-03-03 15:15:23,679	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.216
+2023-03-03 15:15:23,680	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.362
+2023-03-03 15:15:23,680	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.217
+2023-03-03 15:15:23,680	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.328
+2023-03-03 15:15:23,680	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.343
+2023-03-03 15:15:23,680	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.100
+2023-03-03 15:15:23,680	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.377
+2023-03-03 15:15:23,681	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.568
+2023-03-03 15:15:24,389	INFO	__main__	Best mAP (bbox): 0.2094 -> 0.2101
+2023-03-03 15:15:24,391	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 15:15:25,813	INFO	torchdistill.misc.log	Epoch: [22]  [    0/14658]  eta: 3:29:09  lr: 0.0002  img/s: 52.386481545376625  loss: 0.7768 (0.7768)  time: 0.8561  data: 0.6922  max mem: 17060
+2023-03-03 15:18:02,927	INFO	torchdistill.misc.log	Epoch: [22]  [ 1000/14658]  eta: 0:35:55  lr: 0.0002  img/s: 61.570250542223725  loss: 0.8278 (0.8267)  time: 0.1592  data: 0.0129  max mem: 17060
+2023-03-03 15:20:39,786	INFO	torchdistill.misc.log	Epoch: [22]  [ 2000/14658]  eta: 0:33:11  lr: 0.0002  img/s: 58.192190963105304  loss: 0.7460 (0.8250)  time: 0.1586  data: 0.0129  max mem: 17060
+2023-03-03 15:23:17,048	INFO	torchdistill.misc.log	Epoch: [22]  [ 3000/14658]  eta: 0:30:33  lr: 0.0002  img/s: 60.37369529975044  loss: 0.7765 (0.8257)  time: 0.1580  data: 0.0134  max mem: 17060
+2023-03-03 15:25:54,118	INFO	torchdistill.misc.log	Epoch: [22]  [ 4000/14658]  eta: 0:27:55  lr: 0.0002  img/s: 59.70826356426377  loss: 0.8224 (0.8256)  time: 0.1585  data: 0.0130  max mem: 17060
+2023-03-03 15:28:30,910	INFO	torchdistill.misc.log	Epoch: [22]  [ 5000/14658]  eta: 0:25:17  lr: 0.0002  img/s: 60.61165793889779  loss: 0.7501 (0.8265)  time: 0.1562  data: 0.0126  max mem: 17060
+2023-03-03 15:31:07,385	INFO	torchdistill.misc.log	Epoch: [22]  [ 6000/14658]  eta: 0:22:39  lr: 0.0002  img/s: 60.644412233552266  loss: 0.7414 (0.8268)  time: 0.1562  data: 0.0119  max mem: 17060
+2023-03-03 15:33:43,507	INFO	torchdistill.misc.log	Epoch: [22]  [ 7000/14658]  eta: 0:20:01  lr: 0.0002  img/s: 59.720803410132504  loss: 0.8030 (0.8274)  time: 0.1559  data: 0.0119  max mem: 17060
+2023-03-03 15:36:19,498	INFO	torchdistill.misc.log	Epoch: [22]  [ 8000/14658]  eta: 0:17:23  lr: 0.0002  img/s: 59.81534029630976  loss: 0.7952 (0.8272)  time: 0.1587  data: 0.0129  max mem: 17060
+2023-03-03 15:38:55,186	INFO	torchdistill.misc.log	Epoch: [22]  [ 9000/14658]  eta: 0:14:46  lr: 0.0002  img/s: 65.34494261894422  loss: 0.8201 (0.8266)  time: 0.1556  data: 0.0120  max mem: 17060
+2023-03-03 15:41:30,479	INFO	torchdistill.misc.log	Epoch: [22]  [10000/14658]  eta: 0:12:09  lr: 0.0002  img/s: 60.09440470519126  loss: 0.7621 (0.8264)  time: 0.1560  data: 0.0125  max mem: 17060
+2023-03-03 15:44:05,873	INFO	torchdistill.misc.log	Epoch: [22]  [11000/14658]  eta: 0:09:32  lr: 0.0002  img/s: 64.54525554044461  loss: 0.7492 (0.8262)  time: 0.1557  data: 0.0122  max mem: 17060
+2023-03-03 15:46:41,146	INFO	torchdistill.misc.log	Epoch: [22]  [12000/14658]  eta: 0:06:55  lr: 0.0002  img/s: 60.60596515120591  loss: 0.8043 (0.8262)  time: 0.1540  data: 0.0118  max mem: 17060
+2023-03-03 15:49:16,379	INFO	torchdistill.misc.log	Epoch: [22]  [13000/14658]  eta: 0:04:19  lr: 0.0002  img/s: 60.32224904854446  loss: 0.7423 (0.8268)  time: 0.1552  data: 0.0114  max mem: 17060
+2023-03-03 15:51:51,689	INFO	torchdistill.misc.log	Epoch: [22]  [14000/14658]  eta: 0:01:42  lr: 0.0002  img/s: 57.59003712393353  loss: 0.7312 (0.8262)  time: 0.1549  data: 0.0121  max mem: 17060
+2023-03-03 15:53:34,064	INFO	torchdistill.misc.log	Epoch: [22] Total time: 0:38:09
+2023-03-03 15:53:38,771	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:20:26  model_time: 0.1145 (0.1145)  evaluator_time: 0.0288 (0.0288)  time: 0.9652  data: 0.8199  max mem: 17060
+2023-03-03 15:55:18,803	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:43  model_time: 0.0795 (0.0834)  evaluator_time: 0.0079 (0.0159)  time: 0.0977  data: 0.0001  max mem: 17060
+2023-03-03 15:56:59,257	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:02  model_time: 0.0850 (0.0833)  evaluator_time: 0.0109 (0.0162)  time: 0.1009  data: 0.0001  max mem: 17060
+2023-03-03 15:58:43,935	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:24  model_time: 0.0843 (0.0840)  evaluator_time: 0.0094 (0.0170)  time: 0.0991  data: 0.0001  max mem: 17060
+2023-03-03 16:00:24,434	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:41  model_time: 0.0856 (0.0840)  evaluator_time: 0.0108 (0.0167)  time: 0.1037  data: 0.0001  max mem: 17060
+2023-03-03 16:02:03,991	INFO	torchdistill.misc.log	Validation: Total time: 0:08:26
+2023-03-03 16:02:03,992	INFO	__main__	Averaged stats: model_time: 0.0785 (0.0839)  evaluator_time: 0.0090 (0.0164)
+2023-03-03 16:02:04,179	INFO	__main__	Accumulating evaluation results...
+2023-03-03 16:02:18,494	INFO	__main__	DONE (t=14.32s).
+2023-03-03 16:02:18,494	INFO	__main__	IoU metric: bbox
+2023-03-03 16:02:18,495	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.212
+2023-03-03 16:02:18,496	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.374
+2023-03-03 16:02:18,496	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.211
+2023-03-03 16:02:18,497	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.056
+2023-03-03 16:02:18,497	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.215
+2023-03-03 16:02:18,498	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.367
+2023-03-03 16:02:18,498	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.220
+2023-03-03 16:02:18,498	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.330
+2023-03-03 16:02:18,498	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.346
+2023-03-03 16:02:18,498	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.106
+2023-03-03 16:02:18,499	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.376
+2023-03-03 16:02:18,499	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.569
+2023-03-03 16:02:19,167	INFO	__main__	Best mAP (bbox): 0.2101 -> 0.2116
+2023-03-03 16:02:19,169	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 16:02:20,609	INFO	torchdistill.misc.log	Epoch: [23]  [    0/14658]  eta: 3:39:39  lr: 0.0002  img/s: 53.170950152677925  loss: 1.4327 (1.4327)  time: 0.8991  data: 0.7370  max mem: 17060
+2023-03-03 16:04:58,193	INFO	torchdistill.misc.log	Epoch: [23]  [ 1000/14658]  eta: 0:36:02  lr: 0.0002  img/s: 62.39875628089307  loss: 0.7736 (0.8336)  time: 0.1569  data: 0.0126  max mem: 17060
+2023-03-03 16:07:35,487	INFO	torchdistill.misc.log	Epoch: [23]  [ 2000/14658]  eta: 0:33:17  lr: 0.0002  img/s: 59.37776078966415  loss: 0.7575 (0.8271)  time: 0.1576  data: 0.0130  max mem: 17060
+2023-03-03 16:10:12,902	INFO	torchdistill.misc.log	Epoch: [23]  [ 3000/14658]  eta: 0:30:38  lr: 0.0002  img/s: 53.04251851500565  loss: 0.8609 (0.8299)  time: 0.1577  data: 0.0131  max mem: 17060
+2023-03-03 16:12:50,152	INFO	torchdistill.misc.log	Epoch: [23]  [ 4000/14658]  eta: 0:27:59  lr: 0.0002  img/s: 60.44210033324327  loss: 0.7344 (0.8284)  time: 0.1567  data: 0.0130  max mem: 17060
+2023-03-03 16:15:27,091	INFO	torchdistill.misc.log	Epoch: [23]  [ 5000/14658]  eta: 0:25:20  lr: 0.0002  img/s: 60.24113378407977  loss: 0.7427 (0.8273)  time: 0.1561  data: 0.0123  max mem: 17060
+2023-03-03 16:18:03,788	INFO	torchdistill.misc.log	Epoch: [23]  [ 6000/14658]  eta: 0:22:42  lr: 0.0002  img/s: 58.90731618253765  loss: 0.7968 (0.8263)  time: 0.1571  data: 0.0127  max mem: 17060
+2023-03-03 16:20:39,794	INFO	torchdistill.misc.log	Epoch: [23]  [ 7000/14658]  eta: 0:20:03  lr: 0.0002  img/s: 60.214972256318596  loss: 0.7882 (0.8253)  time: 0.1550  data: 0.0117  max mem: 17060
+2023-03-03 16:23:15,062	INFO	torchdistill.misc.log	Epoch: [23]  [ 8000/14658]  eta: 0:17:24  lr: 0.0002  img/s: 58.405610375504565  loss: 0.8887 (0.8264)  time: 0.1538  data: 0.0116  max mem: 17060
+2023-03-03 16:25:50,251	INFO	torchdistill.misc.log	Epoch: [23]  [ 9000/14658]  eta: 0:14:46  lr: 0.0002  img/s: 60.39521149931333  loss: 0.8611 (0.8265)  time: 0.1574  data: 0.0127  max mem: 17060
+2023-03-03 16:28:25,706	INFO	torchdistill.misc.log	Epoch: [23]  [10000/14658]  eta: 0:12:09  lr: 0.0002  img/s: 59.48861089836326  loss: 0.9042 (0.8259)  time: 0.1548  data: 0.0118  max mem: 17060
+2023-03-03 16:31:01,173	INFO	torchdistill.misc.log	Epoch: [23]  [11000/14658]  eta: 0:09:32  lr: 0.0002  img/s: 60.4007560347776  loss: 0.8268 (0.8256)  time: 0.1552  data: 0.0117  max mem: 17060
+2023-03-03 16:33:36,504	INFO	torchdistill.misc.log	Epoch: [23]  [12000/14658]  eta: 0:06:55  lr: 0.0002  img/s: 61.625998879675286  loss: 0.8033 (0.8253)  time: 0.1579  data: 0.0128  max mem: 17060
+2023-03-03 16:36:11,691	INFO	torchdistill.misc.log	Epoch: [23]  [13000/14658]  eta: 0:04:19  lr: 0.0002  img/s: 59.49145865136227  loss: 0.8497 (0.8253)  time: 0.1562  data: 0.0120  max mem: 17060
+2023-03-03 16:38:46,777	INFO	torchdistill.misc.log	Epoch: [23]  [14000/14658]  eta: 0:01:42  lr: 0.0002  img/s: 60.201467968258015  loss: 0.6485 (0.8252)  time: 0.1526  data: 0.0111  max mem: 17060
+2023-03-03 16:40:29,034	INFO	torchdistill.misc.log	Epoch: [23] Total time: 0:38:09
+2023-03-03 16:40:33,056	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:01:38  model_time: 0.1022 (0.1022)  evaluator_time: 0.0301 (0.0301)  time: 0.7398  data: 0.6058  max mem: 17060
+2023-03-03 16:42:13,095	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:42  model_time: 0.0774 (0.0836)  evaluator_time: 0.0080 (0.0157)  time: 0.0935  data: 0.0001  max mem: 17060
+2023-03-03 16:43:53,215	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:01  model_time: 0.0824 (0.0833)  evaluator_time: 0.0100 (0.0160)  time: 0.0980  data: 0.0001  max mem: 17060
+2023-03-03 16:45:33,390	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:20  model_time: 0.0833 (0.0835)  evaluator_time: 0.0095 (0.0158)  time: 0.0971  data: 0.0001  max mem: 17060
+2023-03-03 16:47:15,412	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:40  model_time: 0.0819 (0.0834)  evaluator_time: 0.0083 (0.0164)  time: 0.0971  data: 0.0001  max mem: 17060
+2023-03-03 16:48:54,232	INFO	torchdistill.misc.log	Validation: Total time: 0:08:21
+2023-03-03 16:48:54,233	INFO	__main__	Averaged stats: model_time: 0.0787 (0.0833)  evaluator_time: 0.0092 (0.0161)
+2023-03-03 16:48:54,420	INFO	__main__	Accumulating evaluation results...
+2023-03-03 16:49:08,546	INFO	__main__	DONE (t=14.13s).
+2023-03-03 16:49:08,547	INFO	__main__	IoU metric: bbox
+2023-03-03 16:49:08,548	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.211
+2023-03-03 16:49:08,548	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.376
+2023-03-03 16:49:08,548	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.212
+2023-03-03 16:49:08,549	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.052
+2023-03-03 16:49:08,550	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.217
+2023-03-03 16:49:08,550	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.368
+2023-03-03 16:49:08,550	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.219
+2023-03-03 16:49:08,551	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.329
+2023-03-03 16:49:08,551	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.344
+2023-03-03 16:49:08,551	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.098
+2023-03-03 16:49:08,551	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.376
+2023-03-03 16:49:08,551	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.571
+2023-03-03 16:49:10,570	INFO	torchdistill.misc.log	Epoch: [24]  [    0/14658]  eta: 5:28:00  lr: 0.0002  img/s: 55.46242111492015  loss: 0.6566 (0.6566)  time: 1.3427  data: 1.1845  max mem: 17060
+2023-03-03 16:51:48,084	INFO	torchdistill.misc.log	Epoch: [24]  [ 1000/14658]  eta: 0:36:07  lr: 0.0002  img/s: 59.344260903399245  loss: 0.8161 (0.8217)  time: 0.1582  data: 0.0129  max mem: 17060
+2023-03-03 16:54:25,450	INFO	torchdistill.misc.log	Epoch: [24]  [ 2000/14658]  eta: 0:33:20  lr: 0.0002  img/s: 60.13748606535929  loss: 0.7472 (0.8189)  time: 0.1571  data: 0.0124  max mem: 17060
+2023-03-03 16:57:01,859	INFO	torchdistill.misc.log	Epoch: [24]  [ 3000/14658]  eta: 0:30:35  lr: 0.0002  img/s: 58.14792055495769  loss: 0.7572 (0.8229)  time: 0.1551  data: 0.0117  max mem: 17060
+2023-03-03 16:59:38,350	INFO	torchdistill.misc.log	Epoch: [24]  [ 4000/14658]  eta: 0:27:55  lr: 0.0002  img/s: 60.19660790722874  loss: 0.8715 (0.8250)  time: 0.1561  data: 0.0128  max mem: 17060
+2023-03-03 17:02:13,603	INFO	torchdistill.misc.log	Epoch: [24]  [ 5000/14658]  eta: 0:25:14  lr: 0.0002  img/s: 60.32279127295739  loss: 0.8110 (0.8266)  time: 0.1583  data: 0.0126  max mem: 17060
+2023-03-03 17:04:48,845	INFO	torchdistill.misc.log	Epoch: [24]  [ 6000/14658]  eta: 0:22:35  lr: 0.0002  img/s: 59.28145874961795  loss: 0.8469 (0.8262)  time: 0.1558  data: 0.0120  max mem: 17060
+2023-03-03 17:07:24,213	INFO	torchdistill.misc.log	Epoch: [24]  [ 7000/14658]  eta: 0:19:57  lr: 0.0002  img/s: 60.290816702393165  loss: 0.7074 (0.8240)  time: 0.1534  data: 0.0111  max mem: 17060
+2023-03-03 17:09:59,293	INFO	torchdistill.misc.log	Epoch: [24]  [ 8000/14658]  eta: 0:17:20  lr: 0.0002  img/s: 60.68104252718079  loss: 0.8176 (0.8240)  time: 0.1558  data: 0.0121  max mem: 17060
+2023-03-03 17:12:34,350	INFO	torchdistill.misc.log	Epoch: [24]  [ 9000/14658]  eta: 0:14:43  lr: 0.0002  img/s: 60.023992114729964  loss: 0.8280 (0.8225)  time: 0.1563  data: 0.0122  max mem: 17060
+2023-03-03 17:15:09,556	INFO	torchdistill.misc.log	Epoch: [24]  [10000/14658]  eta: 0:12:06  lr: 0.0002  img/s: 53.4691935424757  loss: 0.8204 (0.8230)  time: 0.1566  data: 0.0127  max mem: 17060
+2023-03-03 17:17:45,115	INFO	torchdistill.misc.log	Epoch: [24]  [11000/14658]  eta: 0:09:30  lr: 0.0002  img/s: 60.85735324523634  loss: 0.9074 (0.8236)  time: 0.1539  data: 0.0118  max mem: 17060
+2023-03-03 17:20:20,635	INFO	torchdistill.misc.log	Epoch: [24]  [12000/14658]  eta: 0:06:54  lr: 0.0002  img/s: 59.50791767533009  loss: 0.7469 (0.8231)  time: 0.1561  data: 0.0124  max mem: 17060
+2023-03-03 17:22:56,207	INFO	torchdistill.misc.log	Epoch: [24]  [13000/14658]  eta: 0:04:18  lr: 0.0002  img/s: 60.875902132461526  loss: 0.8714 (0.8236)  time: 0.1566  data: 0.0115  max mem: 17060
+2023-03-03 17:25:31,631	INFO	torchdistill.misc.log	Epoch: [24]  [14000/14658]  eta: 0:01:42  lr: 0.0002  img/s: 60.18807769783656  loss: 0.8355 (0.8239)  time: 0.1571  data: 0.0130  max mem: 17060
+2023-03-03 17:27:14,222	INFO	torchdistill.misc.log	Epoch: [24] Total time: 0:38:04
+2023-03-03 17:27:18,228	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:01:38  model_time: 0.1123 (0.1123)  evaluator_time: 0.0277 (0.0277)  time: 0.7398  data: 0.5945  max mem: 17060
+2023-03-03 17:28:58,687	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:44  model_time: 0.0821 (0.0836)  evaluator_time: 0.0081 (0.0161)  time: 0.0983  data: 0.0001  max mem: 17060
+2023-03-03 17:30:39,103	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:02  model_time: 0.0799 (0.0832)  evaluator_time: 0.0112 (0.0164)  time: 0.0991  data: 0.0001  max mem: 17060
+2023-03-03 17:32:19,238	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:21  model_time: 0.0837 (0.0834)  evaluator_time: 0.0102 (0.0162)  time: 0.0980  data: 0.0001  max mem: 17060
+2023-03-03 17:34:00,969	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:40  model_time: 0.0788 (0.0831)  evaluator_time: 0.0091 (0.0168)  time: 0.0993  data: 0.0001  max mem: 17060
+2023-03-03 17:35:39,725	INFO	torchdistill.misc.log	Validation: Total time: 0:08:22
+2023-03-03 17:35:39,726	INFO	__main__	Averaged stats: model_time: 0.0788 (0.0830)  evaluator_time: 0.0096 (0.0166)
+2023-03-03 17:35:39,921	INFO	__main__	Accumulating evaluation results...
+2023-03-03 17:35:54,623	INFO	__main__	DONE (t=14.70s).
+2023-03-03 17:35:54,623	INFO	__main__	IoU metric: bbox
+2023-03-03 17:35:54,624	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.212
+2023-03-03 17:35:54,624	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.377
+2023-03-03 17:35:54,625	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.211
+2023-03-03 17:35:54,625	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.055
+2023-03-03 17:35:54,626	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.218
+2023-03-03 17:35:54,627	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.367
+2023-03-03 17:35:54,627	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.219
+2023-03-03 17:35:54,627	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.331
+2023-03-03 17:35:54,627	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.347
+2023-03-03 17:35:54,627	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.105
+2023-03-03 17:35:54,627	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.381
+2023-03-03 17:35:54,627	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.570
+2023-03-03 17:35:55,307	INFO	__main__	Best mAP (bbox): 0.2116 -> 0.2119
+2023-03-03 17:35:55,309	INFO	__main__	Updating ckpt at ./resource/ckpt/coco2017/supervised_compression/entropic_student/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt
+2023-03-03 17:35:56,745	INFO	torchdistill.misc.log	Epoch: [25]  [    0/14658]  eta: 3:32:28  lr: 0.0002  img/s: 49.82053908948102  loss: 0.8724 (0.8724)  time: 0.8697  data: 0.6965  max mem: 17060
+2023-03-03 17:38:33,612	INFO	torchdistill.misc.log	Epoch: [25]  [ 1000/14658]  eta: 0:35:52  lr: 0.0002  img/s: 60.18796973599716  loss: 0.8232 (0.8200)  time: 0.1569  data: 0.0127  max mem: 17060
+2023-03-03 17:41:10,857	INFO	torchdistill.misc.log	Epoch: [25]  [ 2000/14658]  eta: 0:33:12  lr: 0.0002  img/s: 61.60416245928787  loss: 0.7390 (0.8231)  time: 0.1576  data: 0.0132  max mem: 17060
+2023-03-03 17:43:48,044	INFO	torchdistill.misc.log	Epoch: [25]  [ 3000/14658]  eta: 0:30:34  lr: 0.0002  img/s: 59.90835856710278  loss: 0.8874 (0.8211)  time: 0.1562  data: 0.0124  max mem: 17060
+2023-03-03 17:46:25,128	INFO	torchdistill.misc.log	Epoch: [25]  [ 4000/14658]  eta: 0:27:56  lr: 0.0002  img/s: 61.23641433783071  loss: 0.8155 (0.8223)  time: 0.1574  data: 0.0135  max mem: 17060
+2023-03-03 17:49:02,228	INFO	torchdistill.misc.log	Epoch: [25]  [ 5000/14658]  eta: 0:25:18  lr: 0.0002  img/s: 59.37187719518647  loss: 0.8044 (0.8215)  time: 0.1577  data: 0.0126  max mem: 17060
+2023-03-03 17:51:38,647	INFO	torchdistill.misc.log	Epoch: [25]  [ 6000/14658]  eta: 0:22:40  lr: 0.0002  img/s: 59.73707054630391  loss: 0.8395 (0.8211)  time: 0.1565  data: 0.0130  max mem: 17060
+2023-03-03 17:54:14,626	INFO	torchdistill.misc.log	Epoch: [25]  [ 7000/14658]  eta: 0:20:01  lr: 0.0002  img/s: 56.764258973235506  loss: 0.8466 (0.8214)  time: 0.1556  data: 0.0121  max mem: 17060
+2023-03-03 17:56:50,670	INFO	torchdistill.misc.log	Epoch: [25]  [ 8000/14658]  eta: 0:17:24  lr: 0.0002  img/s: 59.490931269125895  loss: 0.8020 (0.8229)  time: 0.1568  data: 0.0121  max mem: 17060
+2023-03-03 17:59:26,151	INFO	torchdistill.misc.log	Epoch: [25]  [ 9000/14658]  eta: 0:14:46  lr: 0.0002  img/s: 59.748026616856514  loss: 0.8034 (0.8230)  time: 0.1538  data: 0.0118  max mem: 17060
+2023-03-03 18:02:01,303	INFO	torchdistill.misc.log	Epoch: [25]  [10000/14658]  eta: 0:12:09  lr: 0.0002  img/s: 59.5544953711592  loss: 0.8319 (0.8237)  time: 0.1573  data: 0.0121  max mem: 17060
+2023-03-03 18:04:36,471	INFO	torchdistill.misc.log	Epoch: [25]  [11000/14658]  eta: 0:09:32  lr: 0.0002  img/s: 62.04798236627698  loss: 0.8123 (0.8234)  time: 0.1517  data: 0.0112  max mem: 17060
+2023-03-03 18:07:11,594	INFO	torchdistill.misc.log	Epoch: [25]  [12000/14658]  eta: 0:06:55  lr: 0.0002  img/s: 60.075253339062556  loss: 0.8034 (0.8242)  time: 0.1536  data: 0.0115  max mem: 17060
+2023-03-03 18:09:46,398	INFO	torchdistill.misc.log	Epoch: [25]  [13000/14658]  eta: 0:04:18  lr: 0.0002  img/s: 60.870270025124945  loss: 0.8759 (0.8240)  time: 0.1544  data: 0.0121  max mem: 17060
+2023-03-03 18:12:21,396	INFO	torchdistill.misc.log	Epoch: [25]  [14000/14658]  eta: 0:01:42  lr: 0.0002  img/s: 59.9959805320431  loss: 0.7331 (0.8234)  time: 0.1555  data: 0.0123  max mem: 17060
+2023-03-03 18:14:03,387	INFO	torchdistill.misc.log	Epoch: [25] Total time: 0:38:07
+2023-03-03 18:14:07,394	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 1:00:21  model_time: 0.1020 (0.1020)  evaluator_time: 0.0299 (0.0299)  time: 0.7243  data: 0.5908  max mem: 17060
+2023-03-03 18:15:47,576	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:06:43  model_time: 0.0820 (0.0835)  evaluator_time: 0.0080 (0.0160)  time: 0.0978  data: 0.0001  max mem: 17060
+2023-03-03 18:17:27,997	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:05:01  model_time: 0.0846 (0.0832)  evaluator_time: 0.0101 (0.0163)  time: 0.0999  data: 0.0001  max mem: 17060
+2023-03-03 18:19:07,819	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:03:20  model_time: 0.0816 (0.0833)  evaluator_time: 0.0099 (0.0161)  time: 0.0969  data: 0.0001  max mem: 17060
+2023-03-03 18:20:46,732	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:01:39  model_time: 0.0803 (0.0831)  evaluator_time: 0.0088 (0.0160)  time: 0.1002  data: 0.0001  max mem: 17060
+2023-03-03 18:22:29,197	INFO	torchdistill.misc.log	Validation: Total time: 0:08:22
+2023-03-03 18:22:29,198	INFO	__main__	Averaged stats: model_time: 0.0784 (0.0831)  evaluator_time: 0.0103 (0.0165)
+2023-03-03 18:22:29,355	INFO	__main__	Accumulating evaluation results...
+2023-03-03 18:22:43,973	INFO	__main__	DONE (t=14.62s).
+2023-03-03 18:22:43,974	INFO	__main__	IoU metric: bbox
+2023-03-03 18:22:43,975	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.211
+2023-03-03 18:22:43,975	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.377
+2023-03-03 18:22:43,975	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.211
+2023-03-03 18:22:43,976	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.057
+2023-03-03 18:22:43,977	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.216
+2023-03-03 18:22:43,978	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.369
+2023-03-03 18:22:43,978	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.220
+2023-03-03 18:22:43,978	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.331
+2023-03-03 18:22:43,978	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.347
+2023-03-03 18:22:43,978	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.106
+2023-03-03 18:22:43,978	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.376
+2023-03-03 18:22:43,978	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.575
+2023-03-03 18:22:44,662	INFO	__main__	Training time 20:16:52
+2023-03-03 18:22:45,458	INFO	torchdistill.common.main_util	Loading model parameters
+2023-03-03 18:22:45,517	INFO	__main__	[Student: faster_rcnn_model]
+2023-03-03 18:22:49,934	INFO	torchdistill.misc.log	Test:  [   0/5000]  eta: 1:42:50  model_time: 0.1375 (0.1375)  evaluator_time: 0.0255 (0.0255)  time: 1.2341  data: 1.0697  max mem: 17060
+2023-03-03 18:24:28,348	INFO	torchdistill.misc.log	Test:  [1000/5000]  eta: 0:06:38  model_time: 0.0760 (0.0822)  evaluator_time: 0.0078 (0.0155)  time: 0.0942  data: 0.0001  max mem: 17060
+2023-03-03 18:26:08,322	INFO	torchdistill.misc.log	Test:  [2000/5000]  eta: 0:04:59  model_time: 0.0825 (0.0826)  evaluator_time: 0.0107 (0.0159)  time: 0.0984  data: 0.0001  max mem: 17060
+2023-03-03 18:27:47,198	INFO	torchdistill.misc.log	Test:  [3000/5000]  eta: 0:03:18  model_time: 0.0817 (0.0826)  evaluator_time: 0.0098 (0.0157)  time: 0.0948  data: 0.0001  max mem: 17060
+2023-03-03 18:29:26,041	INFO	torchdistill.misc.log	Test:  [4000/5000]  eta: 0:01:39  model_time: 0.0813 (0.0826)  evaluator_time: 0.0088 (0.0157)  time: 0.0984  data: 0.0001  max mem: 17060
+2023-03-03 18:31:03,473	INFO	torchdistill.misc.log	Test: Total time: 0:08:14
+2023-03-03 18:31:03,474	INFO	__main__	Averaged stats: model_time: 0.0778 (0.0824)  evaluator_time: 0.0095 (0.0155)
+2023-03-03 18:31:03,698	INFO	__main__	Accumulating evaluation results...
+2023-03-03 18:31:18,299	INFO	__main__	DONE (t=14.60s).
+2023-03-03 18:31:18,299	INFO	__main__	IoU metric: bbox
+2023-03-03 18:31:18,300	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.212
+2023-03-03 18:31:18,301	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.377
+2023-03-03 18:31:18,301	INFO	__main__	 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.211
+2023-03-03 18:31:18,302	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.055
+2023-03-03 18:31:18,303	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.218
+2023-03-03 18:31:18,303	INFO	__main__	 Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.367
+2023-03-03 18:31:18,303	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.219
+2023-03-03 18:31:18,304	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.331
+2023-03-03 18:31:18,304	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.347
+2023-03-03 18:31:18,304	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.105
+2023-03-03 18:31:18,304	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.381
+2023-03-03 18:31:18,304	INFO	__main__	 Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.570
+2023-03-03 18:31:18,306	INFO	sc2bench.analysis	Bottleneck size [KB]: mean 7.86768046875 std 1.2743764252916927 for 5000 samples
