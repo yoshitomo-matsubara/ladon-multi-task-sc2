@@ -1,0 +1,918 @@
+2023-01-25 12:52:10,566	INFO	torchdistill.common.main_util	Not using distributed mode
+2023-01-25 12:52:10,566	INFO	__main__	Namespace(adjust_lr=False, config='configs/pascal_voc2012/proposed/deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.yaml', device='cuda', dist_url='env://', json=None, log='logs/pascal_voc2012/proposed/deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.txt', log_config=False, no_dp_eval=False, num_classes=21, seed=None, start_epoch=0, student_only=False, test_only=False, world_size=1)
+2023-01-25 12:52:36,010	INFO	torchdistill.datasets.util	Loading train data
+2023-01-25 12:52:36,016	INFO	torchdistill.datasets.util	dataset_id `pascal_voc2012/train`: 0.0067026615142822266 sec
+2023-01-25 12:52:36,016	INFO	torchdistill.datasets.util	Loading val data
+2023-01-25 12:52:36,024	INFO	torchdistill.datasets.util	dataset_id `pascal_voc2012/val`: 0.007912874221801758 sec
+2023-01-25 12:52:41,596	INFO	torchdistill.common.main_util	Loading model parameters
+2023-01-25 12:52:42,776	INFO	torchdistill.common.main_util	ckpt file is not found at `./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt`
+2023-01-25 12:52:48,022	INFO	__main__	Start training
+2023-01-25 12:52:48,022	INFO	torchdistill.models.util	[student model]
+2023-01-25 12:52:48,022	INFO	torchdistill.models.util	Using the original student model
+2023-01-25 12:52:48,022	INFO	torchdistill.models.util	Frozen module(s): {'backbone'}
+2023-01-25 12:52:48,030	INFO	torchdistill.core.training	Loss = {'out': 1.0, 'aux': 0.5} * OrgLoss
+2023-01-25 12:52:48,092	INFO	torchdistill.core.training	Started stage 1
+2023-01-25 12:52:48,100	INFO	__main__	Updating entropy bottleneck
+2023-01-25 12:52:53,079	INFO	torchdistill.misc.log	Epoch: [0]  [   0/7330]  eta: 10:07:08  lr: 0.019999918144592576  img/s: 8.997493101268894  loss: 4.8408 (4.8408)  time: 4.9698  data: 3.1855  max mem: 10850
+2023-01-25 12:59:13,466	INFO	torchdistill.misc.log	Epoch: [0]  [1000/7330]  eta: 0:40:36  lr: 0.019918044075396296  img/s: 43.13945897021521  loss: 0.5442 (0.6887)  time: 0.3795  data: 0.0001  max mem: 10850
+2023-01-25 13:05:32,843	INFO	torchdistill.misc.log	Epoch: [0]  [2000/7330]  eta: 0:33:56  lr: 0.01983613259484933  img/s: 43.18223520592503  loss: 0.4711 (0.6044)  time: 0.3769  data: 0.0001  max mem: 10850
+2023-01-25 13:11:54,328	INFO	torchdistill.misc.log	Epoch: [0]  [3000/7330]  eta: 0:27:33  lr: 0.019754183514046644  img/s: 43.1139889948572  loss: 0.5106 (0.5672)  time: 0.3831  data: 0.0001  max mem: 10850
+2023-01-25 13:18:15,533	INFO	torchdistill.misc.log	Epoch: [0]  [4000/7330]  eta: 0:21:11  lr: 0.01967219664225379  img/s: 40.989371045903255  loss: 0.4118 (0.5463)  time: 0.3800  data: 0.0001  max mem: 10850
+2023-01-25 13:24:36,854	INFO	torchdistill.misc.log	Epoch: [0]  [5000/7330]  eta: 0:14:49  lr: 0.019590171786880658  img/s: 43.07582654866348  loss: 0.4103 (0.5313)  time: 0.3808  data: 0.0001  max mem: 10850
+2023-01-25 13:30:57,695	INFO	torchdistill.misc.log	Epoch: [0]  [6000/7330]  eta: 0:08:27  lr: 0.01950810875345466  img/s: 43.12390734532546  loss: 0.4676 (0.5208)  time: 0.3862  data: 0.0001  max mem: 10850
+2023-01-25 13:37:18,569	INFO	torchdistill.misc.log	Epoch: [0]  [7000/7330]  eta: 0:02:05  lr: 0.01942600734559348  img/s: 43.073835876343715  loss: 0.4397 (0.5119)  time: 0.3808  data: 0.0001  max mem: 10850
+2023-01-25 13:39:24,321	INFO	torchdistill.misc.log	Epoch: [0] Total time: 0:46:36
+2023-01-25 13:39:26,682	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 3:12:23  model_time: 0.8845 (0.8845)  evaluator_time: 0.0020 (0.0020)  time: 2.3087  data: 1.4214  max mem: 10850
+2023-01-25 13:44:04,417	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:18:39  model_time: 0.2380 (0.2762)  evaluator_time: 0.0005 (0.0005)  time: 0.2788  data: 0.0001  max mem: 11290
+2023-01-25 13:48:15,204	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:13:15  model_time: 0.2448 (0.2624)  evaluator_time: 0.0005 (0.0005)  time: 0.2429  data: 0.0001  max mem: 11299
+2023-01-25 13:52:22,754	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:08:38  model_time: 0.2302 (0.2568)  evaluator_time: 0.0005 (0.0005)  time: 0.2334  data: 0.0001  max mem: 11299
+2023-01-25 13:56:23,165	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:04:14  model_time: 0.2378 (0.2521)  evaluator_time: 0.0005 (0.0005)  time: 0.2364  data: 0.0001  max mem: 11299
+2023-01-25 14:00:25,604	INFO	torchdistill.misc.log	Validation: Total time: 0:21:01
+2023-01-25 14:00:25,604	INFO	__main__	mean IoU: 52.2, IoU: ['89.0', '56.4', '53.1', '43.4', '40.5', '32.0', '63.2', '45.0', '73.1', '27.4', '56.5', '38.3', '64.9', '57.2', '68.6', '68.7', '12.9', '63.5', '34.3', '67.6', '40.6'], Global pixelwise acc: 90.1, Average row correct: ['93.8', '92.0', '73.7', '75.8', '49.0', '44.0', '86.8', '61.6', '88.5', '36.5', '81.8', '64.0', '83.8', '79.3', '84.8', '80.3', '17.1', '89.3', '40.8', '82.6', '43.8']
+2023-01-25 14:00:25,605	INFO	__main__	Best mIoU: 0.0000 -> 52.2064
+2023-01-25 14:00:25,605	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-25 14:00:29,173	INFO	torchdistill.misc.log	Epoch: [1]  [   0/7330]  eta: 5:27:47  lr: 0.0193989054259838  img/s: 34.48477962717165  loss: 0.4527 (0.4527)  time: 2.6832  data: 2.2141  max mem: 11299
+2023-01-25 14:06:49,146	INFO	torchdistill.misc.log	Epoch: [1]  [1000/7330]  eta: 0:40:19  lr: 0.019316752672502848  img/s: 43.236792936646815  loss: 0.3985 (0.4491)  time: 0.3762  data: 0.0001  max mem: 11299
+2023-01-25 14:13:09,045	INFO	torchdistill.misc.log	Epoch: [1]  [2000/7330]  eta: 0:33:51  lr: 0.01923456107945041  img/s: 42.942582280813795  loss: 0.4355 (0.4463)  time: 0.3818  data: 0.0001  max mem: 11299
+2023-01-25 14:19:28,975	INFO	torchdistill.misc.log	Epoch: [1]  [3000/7330]  eta: 0:27:28  lr: 0.019152330443881146  img/s: 42.852339869314434  loss: 0.4021 (0.4459)  time: 0.3793  data: 0.0001  max mem: 11299
+2023-01-25 14:25:48,342	INFO	torchdistill.misc.log	Epoch: [1]  [4000/7330]  eta: 0:21:06  lr: 0.0190700605608156  img/s: 43.22350945284719  loss: 0.4093 (0.4444)  time: 0.3806  data: 0.0001  max mem: 11299
+2023-01-25 14:32:08,436	INFO	torchdistill.misc.log	Epoch: [1]  [5000/7330]  eta: 0:14:46  lr: 0.01898775122320992  img/s: 43.10050403588365  loss: 0.3477 (0.4446)  time: 0.3825  data: 0.0001  max mem: 11299
+2023-01-25 14:38:29,467	INFO	torchdistill.misc.log	Epoch: [1]  [6000/7330]  eta: 0:08:25  lr: 0.018905402221925053  img/s: 43.188293463983726  loss: 0.4716 (0.4437)  time: 0.3787  data: 0.0001  max mem: 11299
+2023-01-25 14:44:49,627	INFO	torchdistill.misc.log	Epoch: [1]  [7000/7330]  eta: 0:02:05  lr: 0.01882301334569527  img/s: 41.559240414769604  loss: 0.4039 (0.4435)  time: 0.3802  data: 0.0001  max mem: 11299
+2023-01-25 14:46:54,989	INFO	torchdistill.misc.log	Epoch: [1] Total time: 0:46:28
+2023-01-25 14:46:56,704	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:18:43  model_time: 0.2609 (0.2609)  evaluator_time: 0.0006 (0.0006)  time: 1.6647  data: 1.4024  max mem: 11299
+2023-01-25 14:50:45,699	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:21  model_time: 0.2455 (0.2268)  evaluator_time: 0.0005 (0.0005)  time: 0.2451  data: 0.0001  max mem: 11299
+2023-01-25 14:54:44,116	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:43  model_time: 0.2456 (0.2315)  evaluator_time: 0.0005 (0.0005)  time: 0.2439  data: 0.0001  max mem: 11299
+2023-01-25 14:58:42,679	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:51  model_time: 0.2290 (0.2331)  evaluator_time: 0.0005 (0.0005)  time: 0.2388  data: 0.0001  max mem: 11299
+2023-01-25 15:02:40,629	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:56  model_time: 0.2406 (0.2338)  evaluator_time: 0.0005 (0.0005)  time: 0.2394  data: 0.0001  max mem: 11299
+2023-01-25 15:06:35,331	INFO	torchdistill.misc.log	Validation: Total time: 0:19:40
+2023-01-25 15:06:35,331	INFO	__main__	mean IoU: 54.2, IoU: ['89.6', '67.6', '54.7', '48.0', '41.9', '28.1', '68.1', '45.7', '74.7', '22.4', '61.5', '35.1', '66.9', '59.6', '69.2', '68.8', '17.0', '65.1', '37.5', '67.7', '48.8'], Global pixelwise acc: 90.5, Average row correct: ['94.9', '86.8', '70.3', '75.1', '48.7', '33.4', '77.5', '63.0', '86.8', '25.3', '85.5', '52.7', '85.0', '78.2', '85.4', '79.9', '23.5', '91.2', '51.9', '78.7', '54.9']
+2023-01-25 15:06:35,333	INFO	__main__	Best mIoU: 52.2064 -> 54.1936
+2023-01-25 15:06:35,333	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-25 15:06:41,517	INFO	torchdistill.misc.log	Epoch: [2]  [   0/7330]  eta: 5:16:44  lr: 0.01879581622966907  img/s: 40.69467982792851  loss: 0.4426 (0.4426)  time: 2.5927  data: 2.1942  max mem: 11299
+2023-01-25 15:12:58,734	INFO	torchdistill.misc.log	Epoch: [2]  [1000/7330]  eta: 0:40:01  lr: 0.018713373988699437  img/s: 43.05181252417736  loss: 0.3999 (0.4341)  time: 0.3764  data: 0.0001  max mem: 11299
+2023-01-25 15:19:16,121	INFO	torchdistill.misc.log	Epoch: [2]  [2000/7330]  eta: 0:33:36  lr: 0.018630891372104635  img/s: 43.0833208679982  loss: 0.3940 (0.4304)  time: 0.3764  data: 0.0001  max mem: 11299
+2023-01-25 15:25:34,246	INFO	torchdistill.misc.log	Epoch: [2]  [3000/7330]  eta: 0:27:18  lr: 0.018548368161302238  img/s: 43.19415880992961  loss: 0.4192 (0.4308)  time: 0.3774  data: 0.0001  max mem: 11299
+2023-01-25 15:31:54,866	INFO	torchdistill.misc.log	Epoch: [2]  [4000/7330]  eta: 0:21:01  lr: 0.018465804135439527  img/s: 40.666370142343794  loss: 0.3628 (0.4301)  time: 0.3814  data: 0.0001  max mem: 11299
+2023-01-25 15:38:15,982	INFO	torchdistill.misc.log	Epoch: [2]  [5000/7330]  eta: 0:14:43  lr: 0.018383199071358505  img/s: 43.15235785876832  loss: 0.4706 (0.4292)  time: 0.3789  data: 0.0001  max mem: 11299
+2023-01-25 15:44:34,713	INFO	torchdistill.misc.log	Epoch: [2]  [6000/7330]  eta: 0:08:24  lr: 0.0183005527435602  img/s: 43.216188925752675  loss: 0.4311 (0.4284)  time: 0.3780  data: 0.0001  max mem: 11299
+2023-01-25 15:50:53,818	INFO	torchdistill.misc.log	Epoch: [2]  [7000/7330]  eta: 0:02:05  lr: 0.018217864924168225  img/s: 43.196383054321124  loss: 0.3622 (0.4282)  time: 0.3769  data: 0.0001  max mem: 11299
+2023-01-25 15:52:58,430	INFO	torchdistill.misc.log	Epoch: [2] Total time: 0:46:19
+2023-01-25 15:53:00,154	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:19:27  model_time: 0.2523 (0.2523)  evaluator_time: 0.0006 (0.0006)  time: 1.6735  data: 1.4199  max mem: 11299
+2023-01-25 15:56:59,804	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:16:04  model_time: 0.2461 (0.2375)  evaluator_time: 0.0005 (0.0005)  time: 0.2454  data: 0.0001  max mem: 11299
+2023-01-25 16:00:56,693	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:56  model_time: 0.2462 (0.2361)  evaluator_time: 0.0005 (0.0005)  time: 0.2509  data: 0.0001  max mem: 11299
+2023-01-25 16:04:53,808	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:56  model_time: 0.2289 (0.2357)  evaluator_time: 0.0005 (0.0005)  time: 0.2389  data: 0.0001  max mem: 11299
+2023-01-25 16:08:52,368	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:58  model_time: 0.2010 (0.2359)  evaluator_time: 0.0005 (0.0005)  time: 0.2057  data: 0.0001  max mem: 11299
+2023-01-25 16:12:47,496	INFO	torchdistill.misc.log	Validation: Total time: 0:19:49
+2023-01-25 16:12:47,497	INFO	__main__	mean IoU: 54.1, IoU: ['89.7', '61.4', '53.3', '52.0', '42.2', '24.2', '66.1', '44.0', '75.4', '27.5', '60.5', '33.7', '68.1', '60.3', '68.1', '69.7', '17.2', '65.4', '38.3', '67.7', '51.0'], Global pixelwise acc: 90.6, Average row correct: ['94.8', '66.8', '78.9', '75.7', '67.4', '27.2', '78.4', '57.8', '88.9', '34.8', '85.5', '46.1', '83.2', '81.5', '88.4', '83.5', '21.8', '89.6', '52.8', '83.5', '57.8']
+2023-01-25 16:12:50,119	INFO	torchdistill.misc.log	Epoch: [3]  [   0/7330]  eta: 5:19:07  lr: 0.01819056879925762  img/s: 40.491446934550694  loss: 0.3483 (0.3483)  time: 2.6122  data: 2.2111  max mem: 11299
+2023-01-25 16:19:10,012	INFO	torchdistill.misc.log	Epoch: [3]  [1000/7330]  eta: 0:40:18  lr: 0.01810782543880481  img/s: 43.25585520548652  loss: 0.4414 (0.4230)  time: 0.3795  data: 0.0001  max mem: 11299
+2023-01-25 16:25:30,881	INFO	torchdistill.misc.log	Epoch: [3]  [2000/7330]  eta: 0:33:53  lr: 0.01802504004637366  img/s: 43.15602088449798  loss: 0.3202 (0.4231)  time: 0.3818  data: 0.0001  max mem: 11299
+2023-01-25 16:31:49,304	INFO	torchdistill.misc.log	Epoch: [3]  [3000/7330]  eta: 0:27:27  lr: 0.017942212385898566  img/s: 43.18040138956897  loss: 0.4005 (0.4211)  time: 0.3779  data: 0.0001  max mem: 11299
+2023-01-25 16:38:06,970	INFO	torchdistill.misc.log	Epoch: [3]  [4000/7330]  eta: 0:21:04  lr: 0.01785934221876978  img/s: 43.178345477649636  loss: 0.3400 (0.4181)  time: 0.3776  data: 0.0001  max mem: 11299
+2023-01-25 16:44:24,494	INFO	torchdistill.misc.log	Epoch: [3]  [5000/7330]  eta: 0:14:43  lr: 0.017776429303792775  img/s: 43.21137487387615  loss: 0.4369 (0.4191)  time: 0.3786  data: 0.0001  max mem: 11299
+2023-01-25 16:50:41,661	INFO	torchdistill.misc.log	Epoch: [3]  [6000/7330]  eta: 0:08:24  lr: 0.017693473397146657  img/s: 43.206784436280664  loss: 0.3956 (0.4206)  time: 0.3776  data: 0.0001  max mem: 11299
+2023-01-25 16:57:01,501	INFO	torchdistill.misc.log	Epoch: [3]  [7000/7330]  eta: 0:02:05  lr: 0.01761047425234176  img/s: 43.18454159003657  loss: 0.3303 (0.4201)  time: 0.3809  data: 0.0001  max mem: 11299
+2023-01-25 16:59:06,436	INFO	torchdistill.misc.log	Epoch: [3] Total time: 0:46:18
+2023-01-25 16:59:08,184	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:21:26  model_time: 0.3162 (0.3162)  evaluator_time: 0.0006 (0.0006)  time: 1.6972  data: 1.3796  max mem: 11299
+2023-01-25 17:03:05,299	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:54  model_time: 0.2481 (0.2350)  evaluator_time: 0.0005 (0.0005)  time: 0.2467  data: 0.0001  max mem: 11299
+2023-01-25 17:06:55,176	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:42  model_time: 0.2073 (0.2313)  evaluator_time: 0.0005 (0.0005)  time: 0.2069  data: 0.0001  max mem: 11299
+2023-01-25 17:10:52,123	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:50  model_time: 0.2290 (0.2325)  evaluator_time: 0.0005 (0.0005)  time: 0.2261  data: 0.0001  max mem: 11299
+2023-01-25 17:14:48,996	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:55  model_time: 0.2374 (0.2330)  evaluator_time: 0.0005 (0.0005)  time: 0.2370  data: 0.0001  max mem: 11299
+2023-01-25 17:18:43,508	INFO	torchdistill.misc.log	Validation: Total time: 0:19:37
+2023-01-25 17:18:43,508	INFO	__main__	mean IoU: 54.3, IoU: ['90.0', '65.1', '53.8', '56.5', '46.2', '30.0', '68.2', '38.7', '76.1', '22.2', '60.9', '33.5', '69.1', '62.1', '68.1', '68.8', '2.4', '70.7', '35.8', '69.1', '52.4'], Global pixelwise acc: 90.9, Average row correct: ['96.1', '89.5', '68.6', '72.3', '62.0', '35.9', '81.0', '48.1', '85.7', '24.7', '75.2', '44.6', '79.8', '78.0', '87.3', '78.2', '2.4', '84.5', '42.1', '82.8', '59.6']
+2023-01-25 17:18:43,509	INFO	__main__	Best mIoU: 54.1936 -> 54.2776
+2023-01-25 17:18:43,509	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-25 17:18:50,992	INFO	torchdistill.misc.log	Epoch: [4]  [   0/7330]  eta: 4:50:23  lr: 0.017583075003546632  img/s: 37.491132088226045  loss: 0.2950 (0.2950)  time: 2.3770  data: 1.9449  max mem: 11299
+2023-01-25 17:25:10,917	INFO	torchdistill.misc.log	Epoch: [4]  [1000/7330]  eta: 0:40:17  lr: 0.017500017965396294  img/s: 43.032294966335364  loss: 0.4019 (0.4113)  time: 0.3826  data: 0.0001  max mem: 11299
+2023-01-25 17:31:30,949	INFO	torchdistill.misc.log	Epoch: [4]  [2000/7330]  eta: 0:33:50  lr: 0.01741691710416835  img/s: 41.335587703948164  loss: 0.3891 (0.4150)  time: 0.3827  data: 0.0001  max mem: 11299
+2023-01-25 17:37:50,671	INFO	torchdistill.misc.log	Epoch: [4]  [3000/7330]  eta: 0:27:27  lr: 0.01733377216416827  img/s: 43.177984324151126  loss: 0.3539 (0.4158)  time: 0.3811  data: 0.0001  max mem: 11299
+2023-01-25 17:44:10,674	INFO	torchdistill.misc.log	Epoch: [4]  [4000/7330]  eta: 0:21:06  lr: 0.017250582886838135  img/s: 43.1605450244587  loss: 0.3626 (0.4145)  time: 0.3801  data: 0.0001  max mem: 11299
+2023-01-25 17:50:30,880	INFO	torchdistill.misc.log	Epoch: [4]  [5000/7330]  eta: 0:14:46  lr: 0.01716734901070907  img/s: 43.2414176156829  loss: 0.4317 (0.4144)  time: 0.3801  data: 0.0001  max mem: 11299
+2023-01-25 17:56:50,964	INFO	torchdistill.misc.log	Epoch: [4]  [6000/7330]  eta: 0:08:25  lr: 0.0170840702713526  img/s: 41.904618702726935  loss: 0.3347 (0.4137)  time: 0.3805  data: 0.0001  max mem: 11299
+2023-01-25 18:03:10,998	INFO	torchdistill.misc.log	Epoch: [4]  [7000/7330]  eta: 0:02:05  lr: 0.017000746401330917  img/s: 43.234146728006806  loss: 0.3666 (0.4122)  time: 0.3811  data: 0.0001  max mem: 11299
+2023-01-25 18:05:16,286	INFO	torchdistill.misc.log	Epoch: [4] Total time: 0:46:27
+2023-01-25 18:05:17,997	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:18:22  model_time: 0.2566 (0.2566)  evaluator_time: 0.0006 (0.0006)  time: 1.6605  data: 1.4026  max mem: 11299
+2023-01-25 18:09:10,321	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:34  model_time: 0.2464 (0.2302)  evaluator_time: 0.0005 (0.0005)  time: 0.2460  data: 0.0001  max mem: 11299
+2023-01-25 18:12:57,394	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:31  model_time: 0.2092 (0.2275)  evaluator_time: 0.0005 (0.0005)  time: 0.2144  data: 0.0001  max mem: 11299
+2023-01-25 18:16:44,815	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:38  model_time: 0.2301 (0.2268)  evaluator_time: 0.0005 (0.0005)  time: 0.2287  data: 0.0001  max mem: 11299
+2023-01-25 18:20:42,231	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:51  model_time: 0.2305 (0.2289)  evaluator_time: 0.0005 (0.0005)  time: 0.2353  data: 0.0001  max mem: 11299
+2023-01-25 18:24:38,252	INFO	torchdistill.misc.log	Validation: Total time: 0:19:21
+2023-01-25 18:24:38,252	INFO	__main__	mean IoU: 56.0, IoU: ['89.6', '64.9', '54.7', '53.5', '44.7', '30.6', '71.5', '46.2', '76.5', '26.1', '64.0', '38.0', '68.6', '59.7', '68.2', '70.3', '18.3', '72.0', '38.0', '67.5', '52.2'], Global pixelwise acc: 90.6, Average row correct: ['94.1', '88.5', '74.9', '61.9', '67.9', '37.3', '86.3', '64.2', '89.4', '31.4', '81.1', '58.0', '84.6', '80.7', '86.0', '83.6', '22.1', '82.8', '65.8', '88.7', '69.6']
+2023-01-25 18:24:38,254	INFO	__main__	Best mIoU: 54.2776 -> 55.9585
+2023-01-25 18:24:38,254	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-25 18:24:44,641	INFO	torchdistill.misc.log	Epoch: [5]  [   0/7330]  eta: 5:34:33  lr: 0.01697323957428409  img/s: 38.90612513711003  loss: 0.5565 (0.5565)  time: 2.7385  data: 2.3220  max mem: 11299
+2023-01-25 18:31:04,322	INFO	torchdistill.misc.log	Epoch: [5]  [1000/7330]  eta: 0:40:18  lr: 0.01688985526082569  img/s: 43.134162951041155  loss: 0.3266 (0.4055)  time: 0.3833  data: 0.0001  max mem: 11299
+2023-01-25 18:37:24,301	INFO	torchdistill.misc.log	Epoch: [5]  [2000/7330]  eta: 0:33:50  lr: 0.01680642518161071  img/s: 43.24464990636933  loss: 0.3780 (0.4074)  time: 0.3836  data: 0.0001  max mem: 11299
+2023-01-25 18:43:45,334	INFO	torchdistill.misc.log	Epoch: [5]  [3000/7330]  eta: 0:27:29  lr: 0.016722949058807376  img/s: 43.17945675707847  loss: 0.3762 (0.4066)  time: 0.3803  data: 0.0001  max mem: 11299
+2023-01-25 18:50:05,655	INFO	torchdistill.misc.log	Epoch: [5]  [4000/7330]  eta: 0:21:08  lr: 0.016639426611346073  img/s: 43.23559513892513  loss: 0.3190 (0.4084)  time: 0.3829  data: 0.0001  max mem: 11299
+2023-01-25 18:56:24,481	INFO	torchdistill.misc.log	Epoch: [5]  [5000/7330]  eta: 0:14:46  lr: 0.016555857554863322  img/s: 43.206728800595414  loss: 0.3416 (0.4094)  time: 0.3804  data: 0.0001  max mem: 11299
+2023-01-25 19:02:43,653	INFO	torchdistill.misc.log	Epoch: [5]  [6000/7330]  eta: 0:08:25  lr: 0.016472241601644497  img/s: 43.1186982571681  loss: 0.3699 (0.4084)  time: 0.3810  data: 0.0001  max mem: 11299
+2023-01-25 19:09:03,604	INFO	torchdistill.misc.log	Epoch: [5]  [7000/7330]  eta: 0:02:05  lr: 0.016388578460565194  img/s: 43.19616061957384  loss: 0.3281 (0.4081)  time: 0.3797  data: 0.0001  max mem: 11299
+2023-01-25 19:11:08,721	INFO	torchdistill.misc.log	Epoch: [5] Total time: 0:46:26
+2023-01-25 19:11:10,477	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:22:09  model_time: 0.2789 (0.2789)  evaluator_time: 0.0006 (0.0006)  time: 1.7059  data: 1.4256  max mem: 11299
+2023-01-25 19:15:02,924	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:35  model_time: 0.2445 (0.2303)  evaluator_time: 0.0005 (0.0005)  time: 0.2471  data: 0.0001  max mem: 11299
+2023-01-25 19:18:58,996	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:44  model_time: 0.2441 (0.2321)  evaluator_time: 0.0005 (0.0005)  time: 0.2425  data: 0.0001  max mem: 11299
+2023-01-25 19:22:54,039	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:50  model_time: 0.2292 (0.2323)  evaluator_time: 0.0005 (0.0005)  time: 0.2391  data: 0.0001  max mem: 11299
+2023-01-25 19:26:49,296	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:55  model_time: 0.2365 (0.2325)  evaluator_time: 0.0005 (0.0005)  time: 0.2367  data: 0.0001  max mem: 11299
+2023-01-25 19:30:50,379	INFO	torchdistill.misc.log	Validation: Total time: 0:19:41
+2023-01-25 19:30:50,379	INFO	__main__	mean IoU: 56.2, IoU: ['89.1', '69.6', '56.2', '54.6', '41.4', '29.8', '69.5', '46.8', '76.3', '27.6', '62.6', '36.3', '70.0', '59.9', '69.7', '70.1', '17.5', '70.8', '40.1', '70.1', '52.9'], Global pixelwise acc: 90.3, Average row correct: ['93.8', '83.2', '71.5', '63.3', '69.8', '35.4', '77.4', '62.1', '89.1', '34.4', '82.7', '67.5', '81.5', '78.7', '82.5', '81.3', '19.9', '84.2', '55.6', '85.4', '62.4']
+2023-01-25 19:30:50,381	INFO	__main__	Best mIoU: 55.9585 -> 56.2240
+2023-01-25 19:30:50,381	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-25 19:30:56,956	INFO	torchdistill.misc.log	Epoch: [6]  [   0/7330]  eta: 5:08:20  lr: 0.01636095921852277  img/s: 37.528639909093144  loss: 0.2537 (0.2537)  time: 2.5240  data: 2.0927  max mem: 11299
+2023-01-25 19:37:17,191	INFO	torchdistill.misc.log	Epoch: [6]  [1000/7330]  eta: 0:40:20  lr: 0.016277232860529997  img/s: 41.95670215113796  loss: 0.3890 (0.4010)  time: 0.3874  data: 0.0001  max mem: 11299
+2023-01-25 19:43:37,572	INFO	torchdistill.misc.log	Epoch: [6]  [2000/7330]  eta: 0:33:52  lr: 0.016193458622790247  img/s: 43.21604977625286  loss: 0.3883 (0.4029)  time: 0.3788  data: 0.0001  max mem: 11299
+2023-01-25 19:49:58,905	INFO	torchdistill.misc.log	Epoch: [6]  [3000/7330]  eta: 0:27:31  lr: 0.01610963620238409  img/s: 43.201583119231564  loss: 0.3677 (0.4019)  time: 0.3835  data: 0.0001  max mem: 11299
+2023-01-25 19:56:18,897	INFO	torchdistill.misc.log	Epoch: [6]  [4000/7330]  eta: 0:21:08  lr: 0.01602576529271219  img/s: 43.1051826653983  loss: 0.4288 (0.4006)  time: 0.3792  data: 0.0001  max mem: 11299
+2023-01-25 20:02:39,613	INFO	torchdistill.misc.log	Epoch: [6]  [5000/7330]  eta: 0:14:47  lr: 0.015941845583428923  img/s: 43.15416154372463  loss: 0.3650 (0.4027)  time: 0.3836  data: 0.0001  max mem: 11299
+2023-01-25 20:09:00,131	INFO	torchdistill.misc.log	Epoch: [6]  [6000/7330]  eta: 0:08:26  lr: 0.015857876760374433  img/s: 43.19285217316308  loss: 0.3346 (0.4033)  time: 0.3786  data: 0.0001  max mem: 11299
+2023-01-25 20:15:19,763	INFO	torchdistill.misc.log	Epoch: [6]  [7000/7330]  eta: 0:02:05  lr: 0.015773858505504994  img/s: 43.17570641824077  loss: 0.4435 (0.4043)  time: 0.3784  data: 0.0001  max mem: 11299
+2023-01-25 20:17:24,915	INFO	torchdistill.misc.log	Epoch: [6] Total time: 0:46:30
+2023-01-25 20:17:26,643	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:19:48  model_time: 0.2773 (0.2773)  evaluator_time: 0.0006 (0.0006)  time: 1.6778  data: 1.3992  max mem: 11299
+2023-01-25 20:21:25,926	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:16:02  model_time: 0.2478 (0.2371)  evaluator_time: 0.0005 (0.0005)  time: 0.2464  data: 0.0001  max mem: 11299
+2023-01-25 20:25:26,990	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:12:02  model_time: 0.2462 (0.2380)  evaluator_time: 0.0005 (0.0005)  time: 0.2442  data: 0.0001  max mem: 11299
+2023-01-25 20:29:25,652	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:08:00  model_time: 0.2294 (0.2375)  evaluator_time: 0.0005 (0.0005)  time: 0.2388  data: 0.0001  max mem: 11299
+2023-01-25 20:33:12,181	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:56  model_time: 0.2387 (0.2342)  evaluator_time: 0.0005 (0.0005)  time: 0.2383  data: 0.0001  max mem: 11299
+2023-01-25 20:37:05,472	INFO	torchdistill.misc.log	Validation: Total time: 0:19:40
+2023-01-25 20:37:05,473	INFO	__main__	mean IoU: 56.7, IoU: ['89.9', '65.2', '55.5', '56.4', '45.1', '34.6', '71.5', '46.4', '75.7', '28.2', '64.3', '35.8', '66.8', '57.8', '69.2', '70.9', '19.5', '72.0', '40.9', '71.1', '54.1'], Global pixelwise acc: 91.0, Average row correct: ['94.5', '89.8', '76.1', '70.2', '66.1', '45.3', '85.2', '71.5', '90.7', '35.2', '85.5', '48.7', '87.5', '86.1', '85.3', '85.6', '24.2', '86.5', '53.2', '86.2', '64.4']
+2023-01-25 20:37:05,474	INFO	__main__	Best mIoU: 56.2240 -> 56.7161
+2023-01-25 20:37:05,474	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-25 20:37:11,641	INFO	torchdistill.misc.log	Epoch: [7]  [   0/7330]  eta: 5:27:30  lr: 0.015746121578819255  img/s: 37.94211510377296  loss: 0.4053 (0.4053)  time: 2.6808  data: 2.2542  max mem: 11299
+2023-01-25 20:43:30,599	INFO	torchdistill.misc.log	Epoch: [7]  [1000/7330]  eta: 0:40:13  lr: 0.01566203708003033  img/s: 43.17353985272755  loss: 0.3379 (0.3924)  time: 0.3804  data: 0.0001  max mem: 11299
+2023-01-25 20:49:52,109	INFO	torchdistill.misc.log	Epoch: [7]  [2000/7330]  eta: 0:33:52  lr: 0.01557790239291488  img/s: 43.12958890269939  loss: 0.4160 (0.4009)  time: 0.3812  data: 0.0001  max mem: 11299
+2023-01-25 20:56:11,884	INFO	torchdistill.misc.log	Epoch: [7]  [3000/7330]  eta: 0:27:29  lr: 0.015493717185972065  img/s: 43.18006798514699  loss: 0.3785 (0.4000)  time: 0.3796  data: 0.0001  max mem: 11299
+2023-01-25 21:02:30,377	INFO	torchdistill.misc.log	Epoch: [7]  [4000/7330]  eta: 0:21:06  lr: 0.015409481123495598  img/s: 43.20352998965441  loss: 0.3496 (0.4005)  time: 0.3778  data: 0.0001  max mem: 11299
+2023-01-25 21:08:48,655	INFO	torchdistill.misc.log	Epoch: [7]  [5000/7330]  eta: 0:14:45  lr: 0.015325193865494531  img/s: 43.23910515250564  loss: 0.3477 (0.4006)  time: 0.3777  data: 0.0001  max mem: 11299
+2023-01-25 21:15:07,324	INFO	torchdistill.misc.log	Epoch: [7]  [6000/7330]  eta: 0:08:24  lr: 0.015240855067612009  img/s: 43.216829024993544  loss: 0.4029 (0.4011)  time: 0.3771  data: 0.0001  max mem: 11299
+2023-01-25 21:21:26,164	INFO	torchdistill.misc.log	Epoch: [7]  [7000/7330]  eta: 0:02:05  lr: 0.01515646438104202  img/s: 43.18562539777331  loss: 0.4305 (0.4016)  time: 0.3769  data: 0.0001  max mem: 11299
+2023-01-25 21:23:30,949	INFO	torchdistill.misc.log	Epoch: [7] Total time: 0:46:21
+2023-01-25 21:23:32,692	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:21:03  model_time: 0.2859 (0.2859)  evaluator_time: 0.0006 (0.0006)  time: 1.6926  data: 1.4054  max mem: 11299
+2023-01-25 21:27:27,806	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:46  model_time: 0.2337 (0.2330)  evaluator_time: 0.0005 (0.0005)  time: 0.2419  data: 0.0001  max mem: 11299
+2023-01-25 21:31:18,614	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:41  model_time: 0.2250 (0.2308)  evaluator_time: 0.0005 (0.0005)  time: 0.2256  data: 0.0001  max mem: 11299
+2023-01-25 21:35:10,396	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:46  model_time: 0.2291 (0.2304)  evaluator_time: 0.0005 (0.0005)  time: 0.2370  data: 0.0001  max mem: 11299
+2023-01-25 21:39:08,047	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:54  model_time: 0.2436 (0.2316)  evaluator_time: 0.0005 (0.0005)  time: 0.2378  data: 0.0001  max mem: 11299
+2023-01-25 21:43:00,308	INFO	torchdistill.misc.log	Validation: Total time: 0:19:29
+2023-01-25 21:43:00,308	INFO	__main__	mean IoU: 56.6, IoU: ['90.2', '66.7', '56.2', '54.8', '43.1', '34.9', '69.5', '47.6', '76.4', '24.5', '65.6', '35.6', '68.8', '58.2', '70.2', '71.0', '21.1', '70.8', '40.7', '70.1', '52.9'], Global pixelwise acc: 91.1, Average row correct: ['95.2', '86.4', '75.8', '75.7', '50.2', '45.3', '79.6', '61.7', '88.8', '28.5', '80.3', '48.2', '84.6', '84.7', '85.8', '84.0', '34.7', '90.4', '53.7', '80.8', '71.0']
+2023-01-25 21:43:02,653	INFO	torchdistill.misc.log	Epoch: [8]  [   0/7330]  eta: 4:45:14  lr: 0.015128604007409377  img/s: 36.443588594826345  loss: 0.2691 (0.2691)  time: 2.3348  data: 1.8904  max mem: 11299
+2023-01-25 21:49:22,682	INFO	torchdistill.misc.log	Epoch: [8]  [1000/7330]  eta: 0:40:17  lr: 0.015044143760616274  img/s: 43.23754507611316  loss: 0.3829 (0.3944)  time: 0.3792  data: 0.0001  max mem: 11299
+2023-01-25 21:55:43,492	INFO	torchdistill.misc.log	Epoch: [8]  [2000/7330]  eta: 0:33:52  lr: 0.014959630794675218  img/s: 43.196410858825615  loss: 0.3516 (0.3926)  time: 0.3797  data: 0.0001  max mem: 11299
+2023-01-25 22:02:03,150	INFO	torchdistill.misc.log	Epoch: [8]  [3000/7330]  eta: 0:27:28  lr: 0.014875064745336572  img/s: 43.20814755532778  loss: 0.3898 (0.3922)  time: 0.3781  data: 0.0001  max mem: 11299
+2023-01-25 22:08:21,880	INFO	torchdistill.misc.log	Epoch: [8]  [4000/7330]  eta: 0:21:06  lr: 0.014790445243515707  img/s: 43.22005764059959  loss: 0.3606 (0.3952)  time: 0.3820  data: 0.0001  max mem: 11299
+2023-01-25 22:14:41,842	INFO	torchdistill.misc.log	Epoch: [8]  [5000/7330]  eta: 0:14:45  lr: 0.014705771915197651  img/s: 43.21763613367233  loss: 0.3741 (0.3976)  time: 0.3781  data: 0.0001  max mem: 11299
+2023-01-25 22:21:00,593	INFO	torchdistill.misc.log	Epoch: [8]  [6000/7330]  eta: 0:08:25  lr: 0.014621044381339262  img/s: 43.19037812010874  loss: 0.3324 (0.3993)  time: 0.3797  data: 0.0001  max mem: 11299
+2023-01-25 22:27:20,381	INFO	torchdistill.misc.log	Epoch: [8]  [7000/7330]  eta: 0:02:05  lr: 0.014536262257768781  img/s: 43.10399214853048  loss: 0.3559 (0.3998)  time: 0.3800  data: 0.0001  max mem: 11299
+2023-01-25 22:29:25,430	INFO	torchdistill.misc.log	Epoch: [8] Total time: 0:46:25
+2023-01-25 22:29:27,142	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:18:23  model_time: 0.2556 (0.2556)  evaluator_time: 0.0006 (0.0006)  time: 1.6607  data: 1.4038  max mem: 11299
+2023-01-25 22:33:14,328	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:14  model_time: 0.2302 (0.2250)  evaluator_time: 0.0005 (0.0005)  time: 0.2333  data: 0.0001  max mem: 11299
+2023-01-25 22:37:07,155	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:32  model_time: 0.2103 (0.2278)  evaluator_time: 0.0005 (0.0005)  time: 0.2128  data: 0.0001  max mem: 11299
+2023-01-25 22:41:03,494	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:45  model_time: 0.2298 (0.2299)  evaluator_time: 0.0005 (0.0005)  time: 0.2397  data: 0.0001  max mem: 11299
+2023-01-25 22:44:59,296	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:53  model_time: 0.2298 (0.2308)  evaluator_time: 0.0005 (0.0005)  time: 0.2352  data: 0.0001  max mem: 11299
+2023-01-25 22:48:56,562	INFO	torchdistill.misc.log	Validation: Total time: 0:19:31
+2023-01-25 22:48:56,562	INFO	__main__	mean IoU: 56.8, IoU: ['90.4', '67.8', '56.9', '56.9', '46.5', '31.6', '71.5', '47.4', '76.8', '28.2', '63.9', '31.1', '70.6', '61.7', '70.4', '70.9', '17.9', '73.4', '37.5', '70.4', '52.1'], Global pixelwise acc: 91.3, Average row correct: ['95.9', '85.2', '74.9', '69.6', '55.5', '38.2', '80.8', '66.4', '87.2', '35.2', '84.0', '38.4', '81.8', '77.5', '82.5', '83.2', '24.1', '87.4', '43.2', '82.8', '58.2']
+2023-01-25 22:48:56,563	INFO	__main__	Best mIoU: 56.7161 -> 56.8412
+2023-01-25 22:48:56,563	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-25 22:49:03,882	INFO	torchdistill.misc.log	Epoch: [9]  [   0/7330]  eta: 5:03:17  lr: 0.014508272111059829  img/s: 35.25639942588518  loss: 0.8615 (0.8615)  time: 2.4826  data: 2.0231  max mem: 11299
+2023-01-25 22:55:24,267	INFO	torchdistill.misc.log	Epoch: [9]  [1000/7330]  eta: 0:40:21  lr: 0.014423416778904394  img/s: 41.83917424992456  loss: 0.3180 (0.3920)  time: 0.3802  data: 0.0001  max mem: 11299
+2023-01-25 23:01:44,964	INFO	torchdistill.misc.log	Epoch: [9]  [2000/7330]  eta: 0:33:53  lr: 0.014338505941438037  img/s: 43.18704276690057  loss: 0.3522 (0.3963)  time: 0.3818  data: 0.0001  max mem: 11299
+2023-01-25 23:08:05,043	INFO	torchdistill.misc.log	Epoch: [9]  [3000/7330]  eta: 0:27:30  lr: 0.01425353919665178  img/s: 43.157131015074704  loss: 0.2901 (0.3954)  time: 0.3802  data: 0.0001  max mem: 11299
+2023-01-25 23:14:25,453	INFO	torchdistill.misc.log	Epoch: [9]  [4000/7330]  eta: 0:21:08  lr: 0.014168516136941223  img/s: 43.18882155783577  loss: 0.3291 (0.3965)  time: 0.3819  data: 0.0001  max mem: 11299
+2023-01-25 23:20:45,737	INFO	torchdistill.misc.log	Epoch: [9]  [5000/7330]  eta: 0:14:47  lr: 0.014083436348990744  img/s: 43.17226223652959  loss: 0.3303 (0.3969)  time: 0.3790  data: 0.0001  max mem: 11299
+2023-01-25 23:27:05,570	INFO	torchdistill.misc.log	Epoch: [9]  [6000/7330]  eta: 0:08:26  lr: 0.01399829941365462  img/s: 43.22445601381454  loss: 0.3431 (0.3976)  time: 0.3779  data: 0.0001  max mem: 11299
+2023-01-25 23:33:25,165	INFO	torchdistill.misc.log	Epoch: [9]  [7000/7330]  eta: 0:02:05  lr: 0.01391310490583479  img/s: 43.22754654560258  loss: 0.3633 (0.3978)  time: 0.3786  data: 0.0001  max mem: 11299
+2023-01-25 23:35:29,491	INFO	torchdistill.misc.log	Epoch: [9] Total time: 0:46:28
+2023-01-25 23:35:31,244	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:21:53  model_time: 0.2924 (0.2924)  evaluator_time: 0.0006 (0.0006)  time: 1.7026  data: 1.4089  max mem: 11299
+2023-01-25 23:39:21,369	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:26  model_time: 0.2338 (0.2280)  evaluator_time: 0.0005 (0.0005)  time: 0.2436  data: 0.0001  max mem: 11299
+2023-01-25 23:43:19,514	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:44  model_time: 0.2085 (0.2320)  evaluator_time: 0.0005 (0.0005)  time: 0.2155  data: 0.0001  max mem: 11299
+2023-01-25 23:47:16,024	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:50  model_time: 0.2299 (0.2327)  evaluator_time: 0.0005 (0.0005)  time: 0.2392  data: 0.0001  max mem: 11299
+2023-01-25 23:51:04,897	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:53  model_time: 0.2295 (0.2312)  evaluator_time: 0.0005 (0.0005)  time: 0.2259  data: 0.0001  max mem: 11299
+2023-01-25 23:54:58,699	INFO	torchdistill.misc.log	Validation: Total time: 0:19:29
+2023-01-25 23:54:58,699	INFO	__main__	mean IoU: 57.1, IoU: ['89.9', '68.0', '56.8', '55.0', '47.5', '30.0', '69.4', '44.8', '77.6', '28.2', '65.4', '38.6', '68.8', '61.3', '70.4', '71.1', '19.5', '72.9', '40.4', '67.7', '55.5'], Global pixelwise acc: 90.9, Average row correct: ['94.3', '86.6', '71.6', '74.5', '59.1', '35.5', '81.8', '52.4', '89.7', '35.7', '83.5', '60.9', '83.7', '83.9', '86.5', '85.9', '23.0', '85.6', '53.1', '82.0', '67.9']
+2023-01-25 23:54:58,700	INFO	__main__	Best mIoU: 56.8412 -> 57.0824
+2023-01-25 23:54:58,700	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-25 23:55:05,100	INFO	torchdistill.misc.log	Epoch: [10]  [   0/7330]  eta: 5:26:06  lr: 0.013884978010659221  img/s: 40.33454861925008  loss: 0.3884 (0.3884)  time: 2.6694  data: 2.2677  max mem: 11299
+2023-01-26 00:01:24,598	INFO	torchdistill.misc.log	Epoch: [10]  [1000/7330]  eta: 0:40:16  lr: 0.01379970626229617  img/s: 40.45758904618308  loss: 0.3927 (0.3877)  time: 0.3819  data: 0.0001  max mem: 11299
+2023-01-26 00:07:44,910	INFO	torchdistill.misc.log	Epoch: [10]  [2000/7330]  eta: 0:33:50  lr: 0.013714375927169078  img/s: 43.169984934314385  loss: 0.3403 (0.3908)  time: 0.3805  data: 0.0001  max mem: 11299
+2023-01-26 00:14:05,668	INFO	torchdistill.misc.log	Epoch: [10]  [3000/7330]  eta: 0:27:29  lr: 0.013628986559432859  img/s: 41.925719437157525  loss: 0.4345 (0.3918)  time: 0.3790  data: 0.0001  max mem: 11299
+2023-01-26 00:20:26,488	INFO	torchdistill.misc.log	Epoch: [10]  [4000/7330]  eta: 0:21:08  lr: 0.013543537706719927  img/s: 40.773849855396506  loss: 0.3261 (0.3927)  time: 0.3780  data: 0.0001  max mem: 11299
+2023-01-26 00:26:47,085	INFO	torchdistill.misc.log	Epoch: [10]  [5000/7330]  eta: 0:14:47  lr: 0.013458028909998363  img/s: 40.511955183155045  loss: 0.3537 (0.3935)  time: 0.3796  data: 0.0001  max mem: 11299
+2023-01-26 00:33:07,738	INFO	torchdistill.misc.log	Epoch: [10]  [6000/7330]  eta: 0:08:26  lr: 0.013372459703425956  img/s: 43.19351938206026  loss: 0.3490 (0.3931)  time: 0.3823  data: 0.0001  max mem: 11299
+2023-01-26 00:39:29,054	INFO	torchdistill.misc.log	Epoch: [10]  [7000/7330]  eta: 0:02:05  lr: 0.01328682961419998  img/s: 42.266084970691615  loss: 0.3068 (0.3940)  time: 0.3785  data: 0.0001  max mem: 11299
+2023-01-26 00:41:34,544	INFO	torchdistill.misc.log	Epoch: [10] Total time: 0:46:32
+2023-01-26 00:41:36,275	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:20:02  model_time: 0.2744 (0.2744)  evaluator_time: 0.0006 (0.0006)  time: 1.6804  data: 1.4048  max mem: 11299
+2023-01-26 00:45:34,197	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:57  model_time: 0.2436 (0.2358)  evaluator_time: 0.0005 (0.0005)  time: 0.2461  data: 0.0001  max mem: 11299
+2023-01-26 00:49:32,050	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:55  model_time: 0.2064 (0.2357)  evaluator_time: 0.0005 (0.0005)  time: 0.2070  data: 0.0001  max mem: 11299
+2023-01-26 00:53:26,361	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:54  model_time: 0.1919 (0.2345)  evaluator_time: 0.0005 (0.0005)  time: 0.2019  data: 0.0001  max mem: 11299
+2023-01-26 00:57:24,294	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:57  model_time: 0.2147 (0.2348)  evaluator_time: 0.0005 (0.0005)  time: 0.2204  data: 0.0001  max mem: 11299
+2023-01-26 01:01:19,173	INFO	torchdistill.misc.log	Validation: Total time: 0:19:44
+2023-01-26 01:01:19,173	INFO	__main__	mean IoU: 56.5, IoU: ['90.0', '63.7', '55.3', '53.3', '44.6', '36.6', '72.7', '45.1', '76.7', '29.4', '58.6', '39.1', '69.4', '61.0', '69.9', '71.3', '20.1', '65.6', '41.3', '69.9', '52.5'], Global pixelwise acc: 91.0, Average row correct: ['94.4', '90.2', '77.7', '71.1', '64.8', '49.8', '82.8', '69.8', '90.2', '37.7', '88.3', '56.9', '85.5', '78.0', '88.1', '84.5', '28.4', '88.8', '55.2', '86.9', '57.9']
+2023-01-26 01:01:21,676	INFO	torchdistill.misc.log	Epoch: [11]  [   0/7330]  eta: 5:04:28  lr: 0.013258558242466254  img/s: 34.57845567560521  loss: 0.3945 (0.3945)  time: 2.4923  data: 2.0242  max mem: 11299
+2023-01-26 01:07:41,135	INFO	torchdistill.misc.log	Epoch: [11]  [1000/7330]  eta: 0:40:15  lr: 0.013172846434467098  img/s: 43.16046174951073  loss: 0.3706 (0.3952)  time: 0.3776  data: 0.0001  max mem: 11299
+2023-01-26 01:14:00,954	INFO	torchdistill.misc.log	Epoch: [11]  [2000/7330]  eta: 0:33:49  lr: 0.013087072614306715  img/s: 43.16454259989889  loss: 0.3520 (0.3900)  time: 0.3818  data: 0.0001  max mem: 11299
+2023-01-26 01:20:20,417	INFO	torchdistill.misc.log	Epoch: [11]  [3000/7330]  eta: 0:27:26  lr: 0.01300123628486315  img/s: 43.07405705307101  loss: 0.3892 (0.3930)  time: 0.3806  data: 0.0001  max mem: 11299
+2023-01-26 01:26:40,482	INFO	torchdistill.misc.log	Epoch: [11]  [4000/7330]  eta: 0:21:06  lr: 0.012915336941350443  img/s: 43.20747989443573  loss: 0.3918 (0.3928)  time: 0.3761  data: 0.0001  max mem: 11299
+2023-01-26 01:33:01,675	INFO	torchdistill.misc.log	Epoch: [11]  [5000/7330]  eta: 0:14:46  lr: 0.01282937407114292  img/s: 43.15174741493445  loss: 0.3771 (0.3939)  time: 0.3802  data: 0.0001  max mem: 11299
+2023-01-26 01:39:21,247	INFO	torchdistill.misc.log	Epoch: [11]  [6000/7330]  eta: 0:08:25  lr: 0.012743347153594107  img/s: 43.20024822377734  loss: 0.4380 (0.3933)  time: 0.3779  data: 0.0001  max mem: 11299
+2023-01-26 01:45:40,335	INFO	torchdistill.misc.log	Epoch: [11]  [7000/7330]  eta: 0:02:05  lr: 0.012657255659850087  img/s: 43.15135895966878  loss: 0.3928 (0.3936)  time: 0.3805  data: 0.0001  max mem: 11299
+2023-01-26 01:47:45,301	INFO	torchdistill.misc.log	Epoch: [11] Total time: 0:46:26
+2023-01-26 01:47:47,108	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:26:15  model_time: 0.2780 (0.2780)  evaluator_time: 0.0006 (0.0006)  time: 1.7552  data: 1.4759  max mem: 11299
+2023-01-26 01:51:41,066	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:41  model_time: 0.2197 (0.2318)  evaluator_time: 0.0005 (0.0005)  time: 0.2274  data: 0.0001  max mem: 11299
+2023-01-26 01:55:39,763	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:51  model_time: 0.2456 (0.2341)  evaluator_time: 0.0005 (0.0005)  time: 0.2421  data: 0.0001  max mem: 11299
+2023-01-26 01:59:34,421	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:52  model_time: 0.2303 (0.2336)  evaluator_time: 0.0005 (0.0005)  time: 0.2397  data: 0.0001  max mem: 11299
+2023-01-26 02:03:32,375	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:56  model_time: 0.2376 (0.2341)  evaluator_time: 0.0005 (0.0005)  time: 0.2387  data: 0.0001  max mem: 11299
+2023-01-26 02:07:22,477	INFO	torchdistill.misc.log	Validation: Total time: 0:19:37
+2023-01-26 02:07:22,478	INFO	__main__	mean IoU: 56.6, IoU: ['90.3', '65.6', '57.0', '55.3', '47.9', '29.9', '63.7', '46.9', '77.3', '28.0', '65.9', '34.8', '70.6', '61.9', '70.4', '71.3', '19.7', '70.9', '40.2', '66.9', '55.2'], Global pixelwise acc: 91.2, Average row correct: ['95.3', '89.3', '68.6', '71.6', '62.5', '34.4', '66.8', '57.7', '88.3', '34.1', '84.5', '46.8', '83.9', '81.7', '85.2', '84.7', '30.5', '88.3', '52.3', '88.5', '63.2']
+2023-01-26 02:07:24,959	INFO	torchdistill.misc.log	Epoch: [12]  [   0/7330]  eta: 5:01:52  lr: 0.012628831204342796  img/s: 35.47088864246367  loss: 0.4287 (0.4287)  time: 2.4711  data: 2.0147  max mem: 11299
+2023-01-26 02:13:43,268	INFO	torchdistill.misc.log	Epoch: [12]  [1000/7330]  eta: 0:40:07  lr: 0.012542652990351533  img/s: 43.192629774777934  loss: 0.3619 (0.3933)  time: 0.3783  data: 0.0001  max mem: 11299
+2023-01-26 02:20:02,387	INFO	torchdistill.misc.log	Epoch: [12]  [2000/7330]  eta: 0:33:44  lr: 0.012456408935006314  img/s: 43.16737466390501  loss: 0.3556 (0.3923)  time: 0.3780  data: 0.0001  max mem: 11299
+2023-01-26 02:26:22,514	INFO	torchdistill.misc.log	Epoch: [12]  [3000/7330]  eta: 0:27:24  lr: 0.012370098480700942  img/s: 43.15485530885728  loss: 0.3257 (0.3937)  time: 0.3776  data: 0.0001  max mem: 11299
+2023-01-26 02:32:41,997	INFO	torchdistill.misc.log	Epoch: [12]  [4000/7330]  eta: 0:21:04  lr: 0.012283721060743831  img/s: 42.33076333542541  loss: 0.3705 (0.3938)  time: 0.3796  data: 0.0001  max mem: 11299
+2023-01-26 02:39:01,641	INFO	torchdistill.misc.log	Epoch: [12]  [5000/7330]  eta: 0:14:44  lr: 0.012197276099137762  img/s: 43.19654988188495  loss: 0.3599 (0.3932)  time: 0.3774  data: 0.0001  max mem: 11299
+2023-01-26 02:45:22,610	INFO	torchdistill.misc.log	Epoch: [12]  [6000/7330]  eta: 0:08:25  lr: 0.012110763010352538  img/s: 42.864793809889406  loss: 0.4030 (0.3924)  time: 0.3823  data: 0.0001  max mem: 11299
+2023-01-26 02:51:43,096	INFO	torchdistill.misc.log	Epoch: [12]  [7000/7330]  eta: 0:02:05  lr: 0.012024181199090218  img/s: 40.81819265588544  loss: 0.3795 (0.3927)  time: 0.3793  data: 0.0001  max mem: 11299
+2023-01-26 02:53:48,287	INFO	torchdistill.misc.log	Epoch: [12] Total time: 0:46:25
+2023-01-26 02:53:50,054	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:22:59  model_time: 0.2808 (0.2808)  evaluator_time: 0.0006 (0.0006)  time: 1.7160  data: 1.4339  max mem: 11299
+2023-01-26 02:57:46,628	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:52  model_time: 0.2464 (0.2344)  evaluator_time: 0.0005 (0.0005)  time: 0.2459  data: 0.0001  max mem: 11299
+2023-01-26 03:01:45,025	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:54  model_time: 0.2289 (0.2353)  evaluator_time: 0.0005 (0.0005)  time: 0.2295  data: 0.0001  max mem: 11299
+2023-01-26 03:05:36,655	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:52  model_time: 0.2292 (0.2334)  evaluator_time: 0.0005 (0.0005)  time: 0.2389  data: 0.0001  max mem: 11299
+2023-01-26 03:09:34,536	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:56  model_time: 0.2368 (0.2339)  evaluator_time: 0.0005 (0.0005)  time: 0.2368  data: 0.0001  max mem: 11299
+2023-01-26 03:13:23,530	INFO	torchdistill.misc.log	Validation: Total time: 0:19:35
+2023-01-26 03:13:23,530	INFO	__main__	mean IoU: 55.4, IoU: ['89.6', '66.2', '52.6', '52.8', '42.2', '32.2', '66.4', '43.8', '77.6', '29.8', '65.6', '35.3', '67.5', '61.0', '70.3', '70.7', '17.7', '69.3', '39.7', '58.4', '54.7'], Global pixelwise acc: 90.6, Average row correct: ['94.1', '86.4', '74.4', '72.1', '66.9', '39.0', '80.8', '63.8', '90.0', '39.8', '82.1', '48.2', '82.3', '75.8', '86.6', '85.7', '23.9', '88.3', '67.7', '91.6', '63.9']
+2023-01-26 03:13:26,174	INFO	torchdistill.misc.log	Epoch: [13]  [   0/7330]  eta: 5:21:41  lr: 0.011995594017348133  img/s: 36.719787874112086  loss: 0.2495 (0.2495)  time: 2.6332  data: 2.1924  max mem: 11299
+2023-01-26 03:19:45,265	INFO	torchdistill.misc.log	Epoch: [13]  [1000/7330]  eta: 0:40:13  lr: 0.011908919865555043  img/s: 43.23982951195703  loss: 0.3205 (0.3858)  time: 0.3796  data: 0.0001  max mem: 11299
+2023-01-26 03:26:04,354	INFO	torchdistill.misc.log	Epoch: [13]  [2000/7330]  eta: 0:33:46  lr: 0.011822175564974557  img/s: 43.13019871976143  loss: 0.3613 (0.3861)  time: 0.3816  data: 0.0001  max mem: 11299
+2023-01-26 03:32:24,181	INFO	torchdistill.misc.log	Epoch: [13]  [3000/7330]  eta: 0:27:25  lr: 0.011735360485988567  img/s: 43.23152869298911  loss: 0.3640 (0.3873)  time: 0.3780  data: 0.0001  max mem: 11299
+2023-01-26 03:38:43,630	INFO	torchdistill.misc.log	Epoch: [13]  [4000/7330]  eta: 0:21:05  lr: 0.011648473988101586  img/s: 43.11764550925751  loss: 0.3777 (0.3884)  time: 0.3798  data: 0.0001  max mem: 11299
+2023-01-26 03:45:03,884	INFO	torchdistill.misc.log	Epoch: [13]  [5000/7330]  eta: 0:14:45  lr: 0.011561515419661064  img/s: 43.18843243479794  loss: 0.3033 (0.3892)  time: 0.3802  data: 0.0001  max mem: 11299
+2023-01-26 03:51:24,698	INFO	torchdistill.misc.log	Epoch: [13]  [6000/7330]  eta: 0:08:25  lr: 0.01147448411756807  img/s: 43.193296976804206  loss: 0.3219 (0.3899)  time: 0.3826  data: 0.0001  max mem: 11299
+2023-01-26 03:57:44,752	INFO	torchdistill.misc.log	Epoch: [13]  [7000/7330]  eta: 0:02:05  lr: 0.011387379406977996  img/s: 42.24950736404192  loss: 0.4195 (0.3908)  time: 0.3801  data: 0.0001  max mem: 11299
+2023-01-26 03:59:49,889	INFO	torchdistill.misc.log	Epoch: [13] Total time: 0:46:26
+2023-01-26 03:59:51,665	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:23:43  model_time: 0.2827 (0.2827)  evaluator_time: 0.0007 (0.0007)  time: 1.7247  data: 1.4406  max mem: 11299
+2023-01-26 04:03:45,495	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:41  model_time: 0.2474 (0.2317)  evaluator_time: 0.0005 (0.0005)  time: 0.2464  data: 0.0001  max mem: 11299
+2023-01-26 04:07:30,646	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:30  model_time: 0.2454 (0.2273)  evaluator_time: 0.0005 (0.0005)  time: 0.2432  data: 0.0001  max mem: 11299
+2023-01-26 04:11:27,482	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:44  model_time: 0.2291 (0.2298)  evaluator_time: 0.0005 (0.0005)  time: 0.2380  data: 0.0001  max mem: 11299
+2023-01-26 04:15:25,371	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:53  model_time: 0.2371 (0.2312)  evaluator_time: 0.0005 (0.0005)  time: 0.2375  data: 0.0001  max mem: 11299
+2023-01-26 04:19:24,503	INFO	torchdistill.misc.log	Validation: Total time: 0:19:34
+2023-01-26 04:19:24,503	INFO	__main__	mean IoU: 56.6, IoU: ['89.9', '66.1', '54.1', '46.6', '47.6', '38.2', '67.9', '46.0', '75.6', '30.4', '63.7', '37.3', '70.3', '61.6', '70.3', '70.9', '20.1', '70.4', '40.6', '65.4', '56.0'], Global pixelwise acc: 90.9, Average row correct: ['94.5', '90.4', '77.8', '75.7', '63.3', '53.3', '78.9', '63.8', '90.1', '39.2', '80.0', '53.4', '84.1', '78.5', '83.6', '84.8', '32.1', '87.7', '50.0', '87.0', '67.6']
+2023-01-26 04:19:26,975	INFO	torchdistill.misc.log	Epoch: [14]  [   0/7330]  eta: 5:00:42  lr: 0.011358618626263892  img/s: 38.54516339324945  loss: 0.3546 (0.3546)  time: 2.4615  data: 2.0412  max mem: 11299
+2023-01-26 04:25:46,530	INFO	torchdistill.misc.log	Epoch: [14]  [1000/7330]  eta: 0:40:15  lr: 0.011271415215955457  img/s: 43.20514324379483  loss: 0.3686 (0.3856)  time: 0.3793  data: 0.0001  max mem: 11299
+2023-01-26 04:32:05,939	INFO	torchdistill.misc.log	Epoch: [14]  [2000/7330]  eta: 0:33:48  lr: 0.011184136777440524  img/s: 43.13069767382075  loss: 0.4205 (0.3895)  time: 0.3796  data: 0.0001  max mem: 11299
+2023-01-26 04:38:26,317	INFO	torchdistill.misc.log	Epoch: [14]  [3000/7330]  eta: 0:27:27  lr: 0.011096782594466378  img/s: 43.148279311879065  loss: 0.3738 (0.3895)  time: 0.3831  data: 0.0001  max mem: 11299
+2023-01-26 04:44:47,031	INFO	torchdistill.misc.log	Epoch: [14]  [4000/7330]  eta: 0:21:07  lr: 0.01100935193761214  img/s: 43.20711825340106  loss: 0.3518 (0.3880)  time: 0.3794  data: 0.0001  max mem: 11299
+2023-01-26 04:51:07,407	INFO	torchdistill.misc.log	Epoch: [14]  [5000/7330]  eta: 0:14:46  lr: 0.010921844063928212  img/s: 43.215381871126986  loss: 0.3476 (0.3870)  time: 0.3797  data: 0.0001  max mem: 11299
+2023-01-26 04:57:27,511	INFO	torchdistill.misc.log	Epoch: [14]  [6000/7330]  eta: 0:08:25  lr: 0.010834258216562588  img/s: 43.19835726309217  loss: 0.3414 (0.3869)  time: 0.3810  data: 0.0001  max mem: 11299
+2023-01-26 05:03:47,754	INFO	torchdistill.misc.log	Epoch: [14]  [7000/7330]  eta: 0:02:05  lr: 0.010746593624373356  img/s: 43.09485781217491  loss: 0.3587 (0.3881)  time: 0.3818  data: 0.0001  max mem: 11299
+2023-01-26 05:05:52,875	INFO	torchdistill.misc.log	Epoch: [14] Total time: 0:46:28
+2023-01-26 05:05:54,597	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:19:14  model_time: 0.2534 (0.2534)  evaluator_time: 0.0006 (0.0006)  time: 1.6709  data: 1.4162  max mem: 11299
+2023-01-26 05:09:49,913	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:46  model_time: 0.2468 (0.2331)  evaluator_time: 0.0005 (0.0005)  time: 0.2459  data: 0.0001  max mem: 11299
+2023-01-26 05:13:44,266	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:46  model_time: 0.2445 (0.2326)  evaluator_time: 0.0005 (0.0005)  time: 0.2431  data: 0.0001  max mem: 11299
+2023-01-26 05:17:37,907	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:49  model_time: 0.2306 (0.2322)  evaluator_time: 0.0005 (0.0005)  time: 0.2404  data: 0.0001  max mem: 11299
+2023-01-26 05:21:31,466	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:54  model_time: 0.2374 (0.2320)  evaluator_time: 0.0005 (0.0005)  time: 0.2373  data: 0.0001  max mem: 11299
+2023-01-26 05:25:26,787	INFO	torchdistill.misc.log	Validation: Total time: 0:19:33
+2023-01-26 05:25:26,787	INFO	__main__	mean IoU: 57.3, IoU: ['90.1', '68.9', '56.9', '56.4', '47.5', '36.0', '71.7', '45.9', '77.6', '27.2', '63.1', '37.5', '70.1', '60.6', '71.4', '71.1', '18.2', '68.1', '38.7', '70.8', '55.8'], Global pixelwise acc: 91.1, Average row correct: ['94.7', '86.7', '74.7', '75.2', '57.3', '49.3', '83.5', '52.5', '90.1', '32.3', '83.2', '58.6', '81.0', '81.9', '86.1', '84.4', '23.9', '92.0', '50.2', '84.4', '65.3']
+2023-01-26 05:25:26,789	INFO	__main__	Best mIoU: 57.0824 -> 57.3094
+2023-01-26 05:25:26,789	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-26 05:25:33,528	INFO	torchdistill.misc.log	Epoch: [15]  [   0/7330]  eta: 5:29:15  lr: 0.010717646894889542  img/s: 36.26573054716732  loss: 0.3163 (0.3163)  time: 2.6951  data: 2.2486  max mem: 11299
+2023-01-26 05:31:53,745	INFO	torchdistill.misc.log	Epoch: [15]  [1000/7330]  eta: 0:40:21  lr: 0.010629876351911923  img/s: 43.17092915241764  loss: 0.3200 (0.3835)  time: 0.3826  data: 0.0001  max mem: 11299
+2023-01-26 05:38:14,196	INFO	torchdistill.misc.log	Epoch: [15]  [2000/7330]  eta: 0:33:53  lr: 0.01054202520963452  img/s: 41.17807995591889  loss: 0.3160 (0.3845)  time: 0.3829  data: 0.0001  max mem: 11299
+2023-01-26 05:44:34,107	INFO	torchdistill.misc.log	Epoch: [15]  [3000/7330]  eta: 0:27:29  lr: 0.010454092646346762  img/s: 43.16737466390501  loss: 0.3829 (0.3858)  time: 0.3798  data: 0.0001  max mem: 11299
+2023-01-26 05:50:53,745	INFO	torchdistill.misc.log	Epoch: [15]  [4000/7330]  eta: 0:21:07  lr: 0.010366077824195121  img/s: 42.34337009968622  loss: 0.3355 (0.3847)  time: 0.3792  data: 0.0001  max mem: 11299
+2023-01-26 05:57:13,930	INFO	torchdistill.misc.log	Epoch: [15]  [5000/7330]  eta: 0:14:46  lr: 0.010277979888710532  img/s: 43.213628718392535  loss: 0.3740 (0.3847)  time: 0.3827  data: 0.0001  max mem: 11299
+2023-01-26 06:03:34,132	INFO	torchdistill.misc.log	Epoch: [15]  [6000/7330]  eta: 0:08:26  lr: 0.01018979796831734  img/s: 43.2012771984035  loss: 0.3897 (0.3854)  time: 0.3779  data: 0.0001  max mem: 11299
+2023-01-26 06:09:54,769	INFO	torchdistill.misc.log	Epoch: [15]  [7000/7330]  eta: 0:02:05  lr: 0.010101531173822864  img/s: 43.221699966380406  loss: 0.3423 (0.3862)  time: 0.3760  data: 0.0001  max mem: 11299
+2023-01-26 06:11:59,773	INFO	torchdistill.misc.log	Epoch: [15] Total time: 0:46:28
+2023-01-26 06:12:01,970	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:58:45  model_time: 0.3312 (0.3312)  evaluator_time: 0.0006 (0.0006)  time: 2.1450  data: 1.8124  max mem: 11299
+2023-01-26 06:15:58,781	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:54  model_time: 0.2460 (0.2347)  evaluator_time: 0.0005 (0.0005)  time: 0.2459  data: 0.0001  max mem: 11299
+2023-01-26 06:19:53,280	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:49  model_time: 0.2294 (0.2335)  evaluator_time: 0.0005 (0.0005)  time: 0.2412  data: 0.0001  max mem: 11299
+2023-01-26 06:23:46,423	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:50  model_time: 0.2271 (0.2326)  evaluator_time: 0.0005 (0.0005)  time: 0.2268  data: 0.0001  max mem: 11299
+2023-01-26 06:27:40,981	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:55  model_time: 0.2382 (0.2326)  evaluator_time: 0.0005 (0.0005)  time: 0.2375  data: 0.0001  max mem: 11299
+2023-01-26 06:31:39,876	INFO	torchdistill.misc.log	Validation: Total time: 0:19:40
+2023-01-26 06:31:39,876	INFO	__main__	mean IoU: 55.6, IoU: ['89.9', '63.4', '54.5', '56.0', '45.1', '33.8', '69.3', '45.2', '72.4', '29.2', '61.7', '35.6', '69.7', '61.7', '70.5', '70.6', '15.3', '64.2', '38.3', '65.9', '54.8'], Global pixelwise acc: 90.9, Average row correct: ['94.8', '88.6', '72.6', '66.8', '65.9', '43.1', '81.1', '61.7', '92.9', '37.4', '80.7', '49.9', '82.6', '77.9', '85.6', '83.7', '18.4', '88.0', '45.9', '86.1', '62.7']
+2023-01-26 06:31:42,412	INFO	torchdistill.misc.log	Epoch: [16]  [   0/7330]  eta: 5:08:34  lr: 0.01007238435189998  img/s: 39.20505684274481  loss: 0.7439 (0.7439)  time: 2.5259  data: 2.1123  max mem: 11299
+2023-01-26 06:38:00,446	INFO	torchdistill.misc.log	Epoch: [16]  [1000/7330]  eta: 0:40:06  lr: 0.009984003265801072  img/s: 43.142676035512466  loss: 0.3538 (0.3895)  time: 0.3772  data: 0.0001  max mem: 11299
+2023-01-26 06:44:20,405	INFO	torchdistill.misc.log	Epoch: [16]  [2000/7330]  eta: 0:33:45  lr: 0.009895535162425691  img/s: 42.213602810513635  loss: 0.3354 (0.3857)  time: 0.3817  data: 0.0001  max mem: 11299
+2023-01-26 06:50:39,974	INFO	torchdistill.misc.log	Epoch: [16]  [3000/7330]  eta: 0:27:24  lr: 0.009806979089968275  img/s: 43.17273439022868  loss: 0.3378 (0.3847)  time: 0.3787  data: 0.0001  max mem: 11299
+2023-01-26 06:57:00,079	INFO	torchdistill.misc.log	Epoch: [16]  [4000/7330]  eta: 0:21:05  lr: 0.009718334076547833  img/s: 43.19735623327611  loss: 0.3543 (0.3832)  time: 0.3814  data: 0.0001  max mem: 11299
+2023-01-26 07:03:20,611	INFO	torchdistill.misc.log	Epoch: [16]  [5000/7330]  eta: 0:14:45  lr: 0.009629599129576543  img/s: 43.222145364377035  loss: 0.3125 (0.3841)  time: 0.3790  data: 0.0001  max mem: 11299
+2023-01-26 07:09:41,820	INFO	torchdistill.misc.log	Epoch: [16]  [6000/7330]  eta: 0:08:25  lr: 0.009540773235101793  img/s: 43.21312784373724  loss: 0.3256 (0.3852)  time: 0.3783  data: 0.0001  max mem: 11299
+2023-01-26 07:16:02,331	INFO	torchdistill.misc.log	Epoch: [16]  [7000/7330]  eta: 0:02:05  lr: 0.0094518553571203  img/s: 43.23790722667072  loss: 0.3124 (0.3847)  time: 0.3793  data: 0.0001  max mem: 11299
+2023-01-26 07:18:07,703	INFO	torchdistill.misc.log	Epoch: [16] Total time: 0:46:27
+2023-01-26 07:18:09,489	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:24:31  model_time: 0.2887 (0.2887)  evaluator_time: 0.0007 (0.0007)  time: 1.7343  data: 1.4440  max mem: 11299
+2023-01-26 07:22:03,854	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:43  model_time: 0.2461 (0.2322)  evaluator_time: 0.0005 (0.0005)  time: 0.2454  data: 0.0001  max mem: 11299
+2023-01-26 07:26:02,381	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:51  model_time: 0.2457 (0.2343)  evaluator_time: 0.0005 (0.0005)  time: 0.2429  data: 0.0001  max mem: 11299
+2023-01-26 07:30:00,998	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:55  model_time: 0.2290 (0.2350)  evaluator_time: 0.0005 (0.0005)  time: 0.2384  data: 0.0001  max mem: 11299
+2023-01-26 07:33:57,429	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:57  model_time: 0.2048 (0.2348)  evaluator_time: 0.0005 (0.0005)  time: 0.2021  data: 0.0001  max mem: 11299
+2023-01-26 07:37:48,993	INFO	torchdistill.misc.log	Validation: Total time: 0:19:41
+2023-01-26 07:37:48,994	INFO	__main__	mean IoU: 57.3, IoU: ['89.8', '69.3', '56.7', '56.1', '44.5', '32.7', '70.4', '43.1', '77.9', '30.5', '65.9', '39.0', '70.0', '61.8', '71.2', '71.1', '19.4', '69.7', '39.9', '69.9', '55.0'], Global pixelwise acc: 90.8, Average row correct: ['94.2', '86.9', '74.7', '74.5', '65.8', '39.4', '87.3', '60.0', '89.0', '40.2', '79.9', '64.1', '85.1', '77.9', '87.2', '83.2', '24.3', '90.2', '54.0', '87.3', '62.4']
+2023-01-26 07:37:48,995	INFO	__main__	Best mIoU: 57.3094 -> 57.3358
+2023-01-26 07:37:48,995	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-26 07:37:56,470	INFO	torchdistill.misc.log	Epoch: [17]  [   0/7330]  eta: 5:38:58  lr: 0.009422492091813709  img/s: 42.0979604946202  loss: 0.3204 (0.3204)  time: 2.7746  data: 2.3895  max mem: 11299
+2023-01-26 07:44:13,757	INFO	torchdistill.misc.log	Epoch: [17]  [1000/7330]  eta: 0:40:03  lr: 0.009333450231272702  img/s: 43.20419752847978  loss: 0.3635 (0.3802)  time: 0.3811  data: 0.0001  max mem: 11299
+2023-01-26 07:50:33,031	INFO	torchdistill.misc.log	Epoch: [17]  [2000/7330]  eta: 0:33:42  lr: 0.00924431388372959  img/s: 43.1709569241636  loss: 0.4215 (0.3818)  time: 0.3838  data: 0.0001  max mem: 11299
+2023-01-26 07:56:53,120	INFO	torchdistill.misc.log	Epoch: [17]  [3000/7330]  eta: 0:27:24  lr: 0.00915508193441851  img/s: 43.20923254828686  loss: 0.3258 (0.3842)  time: 0.3771  data: 0.0001  max mem: 11299
+2023-01-26 08:03:12,433	INFO	torchdistill.misc.log	Epoch: [17]  [4000/7330]  eta: 0:21:04  lr: 0.009065753243192335  img/s: 41.20824547291115  loss: 0.3759 (0.3836)  time: 0.3825  data: 0.0001  max mem: 11299
+2023-01-26 08:09:33,032	INFO	torchdistill.misc.log	Epoch: [17]  [5000/7330]  eta: 0:14:44  lr: 0.008976326643660246  img/s: 42.85121800151971  loss: 0.3235 (0.3835)  time: 0.3821  data: 0.0001  max mem: 11299
+2023-01-26 08:15:53,072	INFO	torchdistill.misc.log	Epoch: [17]  [6000/7330]  eta: 0:08:25  lr: 0.008886800942286097  img/s: 40.45797929741428  loss: 0.3545 (0.3833)  time: 0.3810  data: 0.0001  max mem: 11299
+2023-01-26 08:22:13,571	INFO	torchdistill.misc.log	Epoch: [17]  [7000/7330]  eta: 0:02:05  lr: 0.008797174917445373  img/s: 43.18540307380253  loss: 0.3524 (0.3836)  time: 0.3815  data: 0.0001  max mem: 11299
+2023-01-26 08:24:18,806	INFO	torchdistill.misc.log	Epoch: [17] Total time: 0:46:25
+2023-01-26 08:24:20,590	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:24:25  model_time: 0.2829 (0.2829)  evaluator_time: 0.0006 (0.0006)  time: 1.7331  data: 1.4489  max mem: 11299
+2023-01-26 08:28:13,775	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:38  model_time: 0.2442 (0.2310)  evaluator_time: 0.0005 (0.0005)  time: 0.2416  data: 0.0001  max mem: 11299
+2023-01-26 08:32:08,323	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:43  model_time: 0.2090 (0.2317)  evaluator_time: 0.0005 (0.0005)  time: 0.2086  data: 0.0001  max mem: 11299
+2023-01-26 08:35:52,179	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:42  model_time: 0.2291 (0.2283)  evaluator_time: 0.0005 (0.0005)  time: 0.2303  data: 0.0001  max mem: 11299
+2023-01-26 08:39:50,148	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:52  model_time: 0.2370 (0.2302)  evaluator_time: 0.0005 (0.0005)  time: 0.2368  data: 0.0001  max mem: 11299
+2023-01-26 08:43:46,737	INFO	torchdistill.misc.log	Validation: Total time: 0:19:27
+2023-01-26 08:43:46,738	INFO	__main__	mean IoU: 58.1, IoU: ['90.3', '68.6', '55.6', '57.5', '47.4', '37.2', '70.6', '47.7', '78.0', '28.3', '66.6', '36.2', '70.3', '61.8', '71.4', '71.0', '22.7', '73.7', '39.4', '69.9', '55.4'], Global pixelwise acc: 91.3, Average row correct: ['95.3', '84.3', '78.6', '72.9', '67.4', '47.0', '79.2', '55.8', '88.2', '34.7', '80.4', '51.6', '85.1', '77.0', '85.1', '83.3', '32.1', '87.2', '46.9', '86.1', '63.4']
+2023-01-26 08:43:46,739	INFO	__main__	Best mIoU: 57.3358 -> 58.0776
+2023-01-26 08:43:46,739	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-26 08:43:56,583	INFO	torchdistill.misc.log	Epoch: [18]  [   0/7330]  eta: 7:22:05  lr: 0.008767576100944  img/s: 40.40329565466067  loss: 0.1968 (0.1968)  time: 3.6187  data: 3.2173  max mem: 11299
+2023-01-26 08:50:16,368	INFO	torchdistill.misc.log	Epoch: [18]  [1000/7330]  eta: 0:40:24  lr: 0.008677814702894705  img/s: 43.147419308588034  loss: 0.3198 (0.3745)  time: 0.3813  data: 0.0001  max mem: 11299
+2023-01-26 08:56:37,280	INFO	torchdistill.misc.log	Epoch: [18]  [2000/7330]  eta: 0:33:55  lr: 0.008587950020413694  img/s: 43.139847211258335  loss: 0.3925 (0.3798)  time: 0.3820  data: 0.0001  max mem: 11299
+2023-01-26 09:02:58,145	INFO	torchdistill.misc.log	Epoch: [18]  [3000/7330]  eta: 0:27:32  lr: 0.008497980730962454  img/s: 43.20681225417702  loss: 0.3406 (0.3821)  time: 0.3799  data: 0.0001  max mem: 11299
+2023-01-26 09:09:18,303	INFO	torchdistill.misc.log	Epoch: [18]  [4000/7330]  eta: 0:21:09  lr: 0.008407905479290769  img/s: 43.16407062535898  loss: 0.3488 (0.3818)  time: 0.3786  data: 0.0001  max mem: 11299
+2023-01-26 09:15:39,036	INFO	torchdistill.misc.log	Epoch: [18]  [5000/7330]  eta: 0:14:48  lr: 0.008317722876228088  img/s: 41.80771365685696  loss: 0.3882 (0.3817)  time: 0.3806  data: 0.0001  max mem: 11299
+2023-01-26 09:21:59,863	INFO	torchdistill.misc.log	Epoch: [18]  [6000/7330]  eta: 0:08:26  lr: 0.008227431497415106  img/s: 43.202250597895535  loss: 0.3408 (0.3817)  time: 0.3821  data: 0.0001  max mem: 11299
+2023-01-26 09:28:19,512	INFO	torchdistill.misc.log	Epoch: [18]  [7000/7330]  eta: 0:02:05  lr: 0.00813702988197187  img/s: 43.17226223652959  loss: 0.3294 (0.3824)  time: 0.3778  data: 0.0001  max mem: 11299
+2023-01-26 09:30:24,365	INFO	torchdistill.misc.log	Epoch: [18] Total time: 0:46:31
+2023-01-26 09:30:26,177	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:26:42  model_time: 0.2797 (0.2797)  evaluator_time: 0.0006 (0.0006)  time: 1.7606  data: 1.4795  max mem: 11299
+2023-01-26 09:34:19,338	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:38  model_time: 0.2125 (0.2310)  evaluator_time: 0.0005 (0.0005)  time: 0.2237  data: 0.0001  max mem: 11299
+2023-01-26 09:38:11,238	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:39  model_time: 0.2096 (0.2303)  evaluator_time: 0.0005 (0.0005)  time: 0.2089  data: 0.0001  max mem: 11299
+2023-01-26 09:42:08,825	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:49  model_time: 0.2293 (0.2320)  evaluator_time: 0.0005 (0.0005)  time: 0.2398  data: 0.0001  max mem: 11299
+2023-01-26 09:46:00,371	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:53  model_time: 0.2382 (0.2314)  evaluator_time: 0.0005 (0.0005)  time: 0.2384  data: 0.0001  max mem: 11299
+2023-01-26 09:49:55,179	INFO	torchdistill.misc.log	Validation: Total time: 0:19:30
+2023-01-26 09:49:55,179	INFO	__main__	mean IoU: 58.2, IoU: ['89.8', '68.3', '57.9', '57.6', '47.6', '34.9', '73.0', '47.9', '77.5', '29.2', '66.6', '38.4', '70.4', '60.5', '71.1', '71.3', '21.3', '70.1', '40.7', '71.7', '56.2'], Global pixelwise acc: 90.9, Average row correct: ['94.2', '87.1', '75.9', '73.3', '60.5', '43.0', '82.5', '59.5', '87.6', '36.5', '81.8', '65.7', '81.3', '80.8', '83.6', '83.9', '27.6', '89.1', '55.2', '85.5', '68.1']
+2023-01-26 09:49:55,180	INFO	__main__	Best mIoU: 58.0776 -> 58.1801
+2023-01-26 09:49:55,180	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-26 09:50:01,420	INFO	torchdistill.misc.log	Epoch: [19]  [   0/7330]  eta: 5:14:46  lr: 0.008107172903102507  img/s: 35.49606685708241  loss: 0.2607 (0.2607)  time: 2.5766  data: 2.1208  max mem: 11299
+2023-01-26 09:56:20,782	INFO	torchdistill.misc.log	Epoch: [19]  [1000/7330]  eta: 0:40:15  lr: 0.008016622343954921  img/s: 43.17851216591742  loss: 0.3557 (0.3762)  time: 0.3813  data: 0.0001  max mem: 11299
+2023-01-26 10:02:41,780	INFO	torchdistill.misc.log	Epoch: [19]  [2000/7330]  eta: 0:33:52  lr: 0.007925957994676656  img/s: 41.80529156429564  loss: 0.3407 (0.3795)  time: 0.3843  data: 0.0001  max mem: 11299
+2023-01-26 10:09:01,032	INFO	torchdistill.misc.log	Epoch: [19]  [3000/7330]  eta: 0:27:27  lr: 0.007835178262274195  img/s: 43.20447567574528  loss: 0.3323 (0.3794)  time: 0.3767  data: 0.0001  max mem: 11299
+2023-01-26 10:15:20,901	INFO	torchdistill.misc.log	Epoch: [19]  [4000/7330]  eta: 0:21:06  lr: 0.0077442815106295105  img/s: 43.15796365048853  loss: 0.3186 (0.3808)  time: 0.3782  data: 0.0001  max mem: 11299
+2023-01-26 10:21:41,036	INFO	torchdistill.misc.log	Epoch: [19]  [5000/7330]  eta: 0:14:46  lr: 0.00765326605875416  img/s: 42.73927264945943  loss: 0.3088 (0.3819)  time: 0.3796  data: 0.0001  max mem: 11299
+2023-01-26 10:28:01,272	INFO	torchdistill.misc.log	Epoch: [19]  [6000/7330]  eta: 0:08:25  lr: 0.007562130178948645  img/s: 42.493140258863654  loss: 0.3790 (0.3805)  time: 0.3794  data: 0.0001  max mem: 11299
+2023-01-26 10:34:20,378	INFO	torchdistill.misc.log	Epoch: [19]  [7000/7330]  eta: 0:02:05  lr: 0.00747087209486057  img/s: 40.43572262227479  loss: 0.3357 (0.3795)  time: 0.3799  data: 0.0001  max mem: 11299
+2023-01-26 10:36:25,141	INFO	torchdistill.misc.log	Epoch: [19] Total time: 0:46:26
+2023-01-26 10:36:26,877	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:20:24  model_time: 0.2805 (0.2805)  evaluator_time: 0.0007 (0.0007)  time: 1.6850  data: 1.4030  max mem: 11299
+2023-01-26 10:40:25,329	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:59  model_time: 0.2601 (0.2363)  evaluator_time: 0.0005 (0.0005)  time: 0.2588  data: 0.0001  max mem: 11299
+2023-01-26 10:44:27,958	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:12:03  model_time: 0.2455 (0.2384)  evaluator_time: 0.0005 (0.0005)  time: 0.2427  data: 0.0001  max mem: 11299
+2023-01-26 10:48:24,936	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:59  model_time: 0.2298 (0.2372)  evaluator_time: 0.0005 (0.0005)  time: 0.2388  data: 0.0001  max mem: 11299
+2023-01-26 10:52:22,507	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:59  model_time: 0.2376 (0.2367)  evaluator_time: 0.0005 (0.0005)  time: 0.2376  data: 0.0001  max mem: 11299
+2023-01-26 10:56:15,112	INFO	torchdistill.misc.log	Validation: Total time: 0:19:49
+2023-01-26 10:56:15,112	INFO	__main__	mean IoU: 57.7, IoU: ['90.2', '68.9', '56.3', '54.8', '48.3', '32.8', '70.8', '48.3', '77.5', '28.3', '65.1', '38.5', '70.6', '60.8', '70.1', '71.4', '22.3', '69.7', '42.3', '71.7', '53.6'], Global pixelwise acc: 91.2, Average row correct: ['94.7', '86.2', '72.7', '77.4', '59.8', '38.3', '81.7', '61.5', '88.9', '34.1', '78.2', '57.4', '82.1', '80.6', '87.6', '85.5', '33.5', '90.6', '55.9', '87.9', '60.6']
+2023-01-26 10:56:17,756	INFO	torchdistill.misc.log	Epoch: [20]  [   0/7330]  eta: 5:21:43  lr: 0.007440729799467336  img/s: 41.06851171093545  loss: 0.4177 (0.4177)  time: 2.6336  data: 2.2388  max mem: 11299
+2023-01-26 11:02:36,975	INFO	torchdistill.misc.log	Epoch: [20]  [1000/7330]  eta: 0:40:14  lr: 0.00734930634380572  img/s: 42.36673381738246  loss: 0.3420 (0.3748)  time: 0.3774  data: 0.0001  max mem: 11299
+2023-01-26 11:08:55,784	INFO	torchdistill.misc.log	Epoch: [20]  [2000/7330]  eta: 0:33:46  lr: 0.007257756344518298  img/s: 43.16029520057882  loss: 0.3640 (0.3772)  time: 0.3826  data: 0.0001  max mem: 11299
+2023-01-26 11:15:16,700	INFO	torchdistill.misc.log	Epoch: [20]  [3000/7330]  eta: 0:27:27  lr: 0.007166077847794664  img/s: 43.20155530806816  loss: 0.3532 (0.3763)  time: 0.3795  data: 0.0001  max mem: 11299
+2023-01-26 11:21:37,044	INFO	torchdistill.misc.log	Epoch: [20]  [4000/7330]  eta: 0:21:06  lr: 0.0070742688414121395  img/s: 40.124257560121634  loss: 0.2970 (0.3772)  time: 0.3826  data: 0.0001  max mem: 11299
+2023-01-26 11:27:57,934	INFO	torchdistill.misc.log	Epoch: [20]  [5000/7330]  eta: 0:14:46  lr: 0.006982327252120534  img/s: 43.20489290335872  loss: 0.3315 (0.3768)  time: 0.3813  data: 0.0001  max mem: 11299
+2023-01-26 11:34:18,800	INFO	torchdistill.misc.log	Epoch: [20]  [6000/7330]  eta: 0:08:26  lr: 0.006890250942869789  img/s: 43.2085648538636  loss: 0.3644 (0.3770)  time: 0.3813  data: 0.0001  max mem: 11299
+2023-01-26 11:40:39,494	INFO	torchdistill.misc.log	Epoch: [20]  [7000/7330]  eta: 0:02:05  lr: 0.006798037709868564  img/s: 43.20314060153232  loss: 0.3329 (0.3763)  time: 0.3812  data: 0.0001  max mem: 11299
+2023-01-26 11:42:44,305	INFO	torchdistill.misc.log	Epoch: [20] Total time: 0:46:29
+2023-01-26 11:42:46,079	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:23:35  model_time: 0.2944 (0.2944)  evaluator_time: 0.0006 (0.0006)  time: 1.7231  data: 1.4274  max mem: 11299
+2023-01-26 11:46:43,516	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:55  model_time: 0.2295 (0.2353)  evaluator_time: 0.0005 (0.0005)  time: 0.2368  data: 0.0001  max mem: 11299
+2023-01-26 11:50:34,698	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:45  model_time: 0.2446 (0.2321)  evaluator_time: 0.0005 (0.0005)  time: 0.2423  data: 0.0001  max mem: 11299
+2023-01-26 11:54:27,516	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:48  model_time: 0.2308 (0.2316)  evaluator_time: 0.0005 (0.0005)  time: 0.2401  data: 0.0001  max mem: 11299
+2023-01-26 11:58:25,657	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:55  model_time: 0.2035 (0.2327)  evaluator_time: 0.0005 (0.0005)  time: 0.2002  data: 0.0001  max mem: 11299
+2023-01-26 12:02:19,523	INFO	torchdistill.misc.log	Validation: Total time: 0:19:35
+2023-01-26 12:02:19,523	INFO	__main__	mean IoU: 57.4, IoU: ['90.3', '68.1', '56.7', '55.5', '49.1', '36.3', '71.7', '43.7', '78.5', '25.4', '65.5', '36.0', '70.6', '61.8', '70.3', '71.4', '19.3', '71.7', '39.5', '70.6', '54.3'], Global pixelwise acc: 91.3, Average row correct: ['95.3', '89.1', '75.4', '73.4', '63.8', '44.5', '83.4', '57.6', '89.1', '30.1', '84.2', '49.5', '81.7', '78.8', '85.8', '83.5', '23.5', '85.6', '56.5', '88.7', '63.7']
+2023-01-26 12:02:21,791	INFO	torchdistill.misc.log	Epoch: [21]  [   0/7330]  eta: 4:35:41  lr: 0.0067675769095968796  img/s: 38.94319686638619  loss: 0.3089 (0.3089)  time: 2.2567  data: 1.8401  max mem: 11299
+2023-01-26 12:08:40,497	INFO	torchdistill.misc.log	Epoch: [21]  [1000/7330]  eta: 0:40:09  lr: 0.0066751780327162094  img/s: 43.11249332679772  loss: 0.3610 (0.3805)  time: 0.3783  data: 0.0001  max mem: 11299
+2023-01-26 12:14:59,533	INFO	torchdistill.misc.log	Epoch: [21]  [2000/7330]  eta: 0:33:44  lr: 0.006582636820474897  img/s: 43.13760105624953  loss: 0.3228 (0.3764)  time: 0.3770  data: 0.0001  max mem: 11299
+2023-01-26 12:21:19,547	INFO	torchdistill.misc.log	Epoch: [21]  [3000/7330]  eta: 0:27:24  lr: 0.006489950823186106  img/s: 43.207146071727266  loss: 0.3814 (0.3772)  time: 0.3816  data: 0.0001  max mem: 11299
+2023-01-26 12:27:40,639	INFO	torchdistill.misc.log	Epoch: [21]  [4000/7330]  eta: 0:21:05  lr: 0.0063971175093916815  img/s: 43.06170228466378  loss: 0.3512 (0.3761)  time: 0.3779  data: 0.0001  max mem: 11299
+2023-01-26 12:33:59,589	INFO	torchdistill.misc.log	Epoch: [21]  [5000/7330]  eta: 0:14:45  lr: 0.006304134261767544  img/s: 43.17212336975996  loss: 0.4016 (0.3765)  time: 0.3763  data: 0.0001  max mem: 11299
+2023-01-26 12:40:19,262	INFO	torchdistill.misc.log	Epoch: [21]  [6000/7330]  eta: 0:08:25  lr: 0.006210998372753487  img/s: 43.158296713650046  loss: 0.3430 (0.3762)  time: 0.3817  data: 0.0001  max mem: 11299
+2023-01-26 12:46:38,565	INFO	torchdistill.misc.log	Epoch: [21]  [7000/7330]  eta: 0:02:05  lr: 0.006117707039883825  img/s: 41.51625291998258  loss: 0.3637 (0.3757)  time: 0.3823  data: 0.0001  max mem: 11299
+2023-01-26 12:48:43,894	INFO	torchdistill.misc.log	Epoch: [21] Total time: 0:46:24
+2023-01-26 12:48:45,616	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:19:13  model_time: 0.2580 (0.2580)  evaluator_time: 0.0006 (0.0006)  time: 1.6708  data: 1.4115  max mem: 11299
+2023-01-26 12:52:36,594	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:29  model_time: 0.2461 (0.2288)  evaluator_time: 0.0005 (0.0005)  time: 0.2478  data: 0.0001  max mem: 11299
+2023-01-26 12:56:35,626	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:47  model_time: 0.2458 (0.2328)  evaluator_time: 0.0005 (0.0005)  time: 0.2438  data: 0.0001  max mem: 11299
+2023-01-26 13:00:25,866	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:47  model_time: 0.1917 (0.2312)  evaluator_time: 0.0005 (0.0005)  time: 0.2016  data: 0.0001  max mem: 11299
+2023-01-26 13:04:22,341	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:54  model_time: 0.2371 (0.2320)  evaluator_time: 0.0005 (0.0005)  time: 0.2369  data: 0.0001  max mem: 11299
+2023-01-26 13:08:20,199	INFO	torchdistill.misc.log	Validation: Total time: 0:19:36
+2023-01-26 13:08:20,200	INFO	__main__	mean IoU: 57.5, IoU: ['89.8', '68.0', '58.4', '52.8', '48.0', '35.7', '65.5', '47.2', '77.9', '28.5', '66.3', '38.6', '70.7', '62.0', '71.1', '71.5', '21.0', '71.3', '40.7', '66.8', '56.2'], Global pixelwise acc: 90.8, Average row correct: ['94.2', '82.8', '73.3', '75.3', '56.8', '43.3', '73.5', '57.1', '89.5', '35.3', '84.1', '66.1', '85.0', '81.9', '86.7', '84.0', '31.3', '88.2', '54.4', '89.2', '65.4']
+2023-01-26 13:08:22,946	INFO	torchdistill.misc.log	Epoch: [22]  [   0/7330]  eta: 5:34:11  lr: 0.006086886296156717  img/s: 36.30840647708355  loss: 0.2778 (0.2778)  time: 2.7356  data: 2.2804  max mem: 11299
+2023-01-26 13:14:44,035	INFO	torchdistill.misc.log	Epoch: [22]  [1000/7330]  eta: 0:40:27  lr: 0.00599338370811037  img/s: 41.46725508200287  loss: 0.3182 (0.3605)  time: 0.3825  data: 0.0001  max mem: 11299
+2023-01-26 13:21:05,446	INFO	torchdistill.misc.log	Epoch: [22]  [2000/7330]  eta: 0:33:58  lr: 0.005899718749655234  img/s: 43.15818569202502  loss: 0.3567 (0.3667)  time: 0.3801  data: 0.0001  max mem: 11299
+2023-01-26 13:27:26,736	INFO	torchdistill.misc.log	Epoch: [22]  [3000/7330]  eta: 0:27:34  lr: 0.005805888264244607  img/s: 43.07602009606417  loss: 0.3211 (0.3691)  time: 0.3833  data: 0.0001  max mem: 11299
+2023-01-26 13:33:47,981	INFO	torchdistill.misc.log	Epoch: [22]  [4000/7330]  eta: 0:21:11  lr: 0.005711888976067509  img/s: 41.679340025575684  loss: 0.3378 (0.3700)  time: 0.3801  data: 0.0001  max mem: 11299
+2023-01-26 13:40:07,898	INFO	torchdistill.misc.log	Epoch: [22]  [5000/7330]  eta: 0:14:48  lr: 0.005617717483274467  img/s: 40.96487558028452  loss: 0.3326 (0.3707)  time: 0.3805  data: 0.0001  max mem: 11299
+2023-01-26 13:46:28,519	INFO	torchdistill.misc.log	Epoch: [22]  [6000/7330]  eta: 0:08:27  lr: 0.005523370250684882  img/s: 41.85809423002195  loss: 0.3261 (0.3714)  time: 0.3816  data: 0.0001  max mem: 11299
+2023-01-26 13:52:49,247	INFO	torchdistill.misc.log	Epoch: [22]  [7000/7330]  eta: 0:02:05  lr: 0.005428843601925663  img/s: 43.15432804532214  loss: 0.3772 (0.3726)  time: 0.3788  data: 0.0001  max mem: 11299
+2023-01-26 13:54:54,275	INFO	torchdistill.misc.log	Epoch: [22] Total time: 0:46:34
+2023-01-26 13:54:56,035	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:22:20  model_time: 0.2941 (0.2941)  evaluator_time: 0.0006 (0.0006)  time: 1.7081  data: 1.4127  max mem: 11299
+2023-01-26 13:58:51,509	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:47  model_time: 0.2331 (0.2333)  evaluator_time: 0.0005 (0.0005)  time: 0.2439  data: 0.0001  max mem: 11299
+2023-01-26 14:02:46,765	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:48  model_time: 0.2449 (0.2332)  evaluator_time: 0.0005 (0.0005)  time: 0.2425  data: 0.0001  max mem: 11299
+2023-01-26 14:06:44,500	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:53  model_time: 0.2305 (0.2340)  evaluator_time: 0.0005 (0.0005)  time: 0.2404  data: 0.0001  max mem: 11299
+2023-01-26 14:10:43,714	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:57  model_time: 0.2373 (0.2347)  evaluator_time: 0.0005 (0.0005)  time: 0.2377  data: 0.0001  max mem: 11299
+2023-01-26 14:14:43,419	INFO	torchdistill.misc.log	Validation: Total time: 0:19:49
+2023-01-26 14:14:43,420	INFO	__main__	mean IoU: 57.5, IoU: ['90.3', '70.0', '56.5', '55.2', '45.1', '37.8', '70.3', '44.3', '79.0', '29.6', '65.9', '35.1', '71.3', '61.3', '69.1', '71.3', '18.4', '68.1', '42.1', '71.3', '55.4'], Global pixelwise acc: 91.3, Average row correct: ['95.4', '83.9', '72.8', '73.6', '51.4', '49.4', '77.0', '60.5', '88.9', '39.3', '79.0', '46.5', '82.8', '78.6', '85.5', '84.4', '23.6', '87.4', '53.8', '83.5', '63.9']
+2023-01-26 14:14:45,973	INFO	torchdistill.misc.log	Epoch: [23]  [   0/7330]  eta: 5:10:37  lr: 0.005397609787290013  img/s: 39.844362707990086  loss: 0.2216 (0.2216)  time: 2.5426  data: 2.1358  max mem: 11299
+2023-01-26 14:21:06,227	INFO	torchdistill.misc.log	Epoch: [23]  [1000/7330]  eta: 0:40:20  lr: 0.005302838559950166  img/s: 40.56173545032388  loss: 0.3993 (0.3717)  time: 0.3834  data: 0.0001  max mem: 11299
+2023-01-26 14:27:27,709	INFO	torchdistill.misc.log	Epoch: [23]  [2000/7330]  eta: 0:33:55  lr: 0.005207878753934975  img/s: 43.15138670624153  loss: 0.2787 (0.3717)  time: 0.3821  data: 0.0001  max mem: 11299
+2023-01-26 14:33:48,942	INFO	torchdistill.misc.log	Epoch: [23]  [3000/7330]  eta: 0:27:32  lr: 0.005112726157533594  img/s: 43.122688084224  loss: 0.3166 (0.3725)  time: 0.3814  data: 0.0001  max mem: 11299
+2023-01-26 14:40:10,063	INFO	torchdistill.misc.log	Epoch: [23]  [4000/7330]  eta: 0:21:10  lr: 0.005017376375723918  img/s: 40.91672077813202  loss: 0.3314 (0.3708)  time: 0.3820  data: 0.0001  max mem: 11299
+2023-01-26 14:46:30,575	INFO	torchdistill.misc.log	Epoch: [23]  [5000/7330]  eta: 0:14:48  lr: 0.0049218248181447  img/s: 41.097484933422905  loss: 0.3108 (0.3708)  time: 0.3845  data: 0.0001  max mem: 11299
+2023-01-26 14:52:52,421	INFO	torchdistill.misc.log	Epoch: [23]  [6000/7330]  eta: 0:08:27  lr: 0.004826066686001276  img/s: 43.10382603512594  loss: 0.3247 (0.3714)  time: 0.3803  data: 0.0001  max mem: 11299
+2023-01-26 14:59:13,356	INFO	torchdistill.misc.log	Epoch: [23]  [7000/7330]  eta: 0:02:05  lr: 0.004730096957784583  img/s: 43.16171090747248  loss: 0.3548 (0.3720)  time: 0.3803  data: 0.0001  max mem: 11299
+2023-01-26 15:01:18,538	INFO	torchdistill.misc.log	Epoch: [23] Total time: 0:46:35
+2023-01-26 15:01:20,310	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:23:24  model_time: 0.3320 (0.3320)  evaluator_time: 0.0006 (0.0006)  time: 1.7209  data: 1.3874  max mem: 11299
+2023-01-26 15:05:16,791	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:51  model_time: 0.2480 (0.2344)  evaluator_time: 0.0005 (0.0005)  time: 0.2468  data: 0.0001  max mem: 11299
+2023-01-26 15:09:14,462	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:53  model_time: 0.2454 (0.2349)  evaluator_time: 0.0005 (0.0005)  time: 0.2427  data: 0.0001  max mem: 11299
+2023-01-26 15:13:08,805	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:53  model_time: 0.1985 (0.2340)  evaluator_time: 0.0005 (0.0005)  time: 0.2136  data: 0.0001  max mem: 11299
+2023-01-26 15:17:02,780	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:55  model_time: 0.2370 (0.2334)  evaluator_time: 0.0005 (0.0005)  time: 0.2369  data: 0.0001  max mem: 11299
+2023-01-26 15:20:52,834	INFO	torchdistill.misc.log	Validation: Total time: 0:19:34
+2023-01-26 15:20:52,834	INFO	__main__	mean IoU: 58.2, IoU: ['90.1', '70.6', '57.2', '58.4', '49.4', '36.9', '67.6', '47.7', '77.7', '27.8', '65.2', '38.7', '71.0', '62.3', '71.3', '71.4', '19.6', '71.4', '42.6', '67.5', '57.3'], Global pixelwise acc: 91.1, Average row correct: ['94.6', '83.3', '72.8', '75.0', '60.2', '46.7', '79.3', '55.2', '91.1', '32.8', '84.5', '60.1', '83.2', '79.4', '85.4', '84.7', '27.1', '90.0', '58.1', '89.7', '68.8']
+2023-01-26 15:20:55,130	INFO	torchdistill.misc.log	Epoch: [24]  [   0/7330]  eta: 4:39:10  lr: 0.00469837962335247  img/s: 36.155513903487766  loss: 0.2415 (0.2415)  time: 2.2852  data: 1.8374  max mem: 11299
+2023-01-26 15:27:13,324	INFO	torchdistill.misc.log	Epoch: [24]  [1000/7330]  eta: 0:40:06  lr: 0.004602120279505545  img/s: 43.067035800600934  loss: 0.3660 (0.3678)  time: 0.3774  data: 0.0001  max mem: 11299
+2023-01-26 15:33:33,365	INFO	torchdistill.misc.log	Epoch: [24]  [2000/7330]  eta: 0:33:45  lr: 0.004505636685309248  img/s: 43.088576743075116  loss: 0.3059 (0.3683)  time: 0.3807  data: 0.0001  max mem: 11299
+2023-01-26 15:39:53,945	INFO	torchdistill.misc.log	Epoch: [24]  [3000/7330]  eta: 0:27:26  lr: 0.004408922956495956  img/s: 40.68959696547844  loss: 0.3390 (0.3690)  time: 0.3810  data: 0.0001  max mem: 11299
+2023-01-26 15:46:14,909	INFO	torchdistill.misc.log	Epoch: [24]  [4000/7330]  eta: 0:21:06  lr: 0.004311972906799579  img/s: 43.10349381215782  loss: 0.3689 (0.3685)  time: 0.3843  data: 0.0001  max mem: 11299
+2023-01-26 15:52:35,342	INFO	torchdistill.misc.log	Epoch: [24]  [5000/7330]  eta: 0:14:46  lr: 0.00421478002449987  img/s: 43.19132323051595  loss: 0.3504 (0.3691)  time: 0.3788  data: 0.0001  max mem: 11299
+2023-01-26 15:58:56,160	INFO	torchdistill.misc.log	Epoch: [24]  [6000/7330]  eta: 0:08:26  lr: 0.004117337446495103  img/s: 43.201471874792794  loss: 0.3340 (0.3691)  time: 0.3777  data: 0.0001  max mem: 11299
+2023-01-26 16:05:16,930	INFO	torchdistill.misc.log	Epoch: [24]  [7000/7330]  eta: 0:02:05  lr: 0.004019637929570625  img/s: 42.84265543413796  loss: 0.3257 (0.3683)  time: 0.3822  data: 0.0001  max mem: 11299
+2023-01-26 16:07:21,921	INFO	torchdistill.misc.log	Epoch: [24] Total time: 0:46:29
+2023-01-26 16:07:23,648	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:19:41  model_time: 0.2847 (0.2847)  evaluator_time: 0.0006 (0.0006)  time: 1.6762  data: 1.3902  max mem: 11299
+2023-01-26 16:11:12,420	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:20  model_time: 0.2465 (0.2266)  evaluator_time: 0.0005 (0.0005)  time: 0.2458  data: 0.0001  max mem: 11299
+2023-01-26 16:15:07,060	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:37  model_time: 0.2466 (0.2295)  evaluator_time: 0.0005 (0.0005)  time: 0.2505  data: 0.0001  max mem: 11299
+2023-01-26 16:19:03,482	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:47  model_time: 0.2303 (0.2311)  evaluator_time: 0.0005 (0.0005)  time: 0.2380  data: 0.0001  max mem: 11299
+2023-01-26 16:22:59,170	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:54  model_time: 0.2229 (0.2317)  evaluator_time: 0.0005 (0.0005)  time: 0.2250  data: 0.0001  max mem: 11299
+2023-01-26 16:26:55,776	INFO	torchdistill.misc.log	Validation: Total time: 0:19:33
+2023-01-26 16:26:55,776	INFO	__main__	mean IoU: 58.6, IoU: ['90.0', '69.6', '57.9', '57.4', '48.0', '37.1', '72.8', '46.3', '78.1', '30.6', '67.2', '38.7', '71.0', '61.6', '71.4', '71.3', '19.6', '71.8', '42.8', '72.7', '55.7'], Global pixelwise acc: 91.1, Average row correct: ['94.4', '82.3', '73.9', '71.2', '58.5', '47.4', '84.7', '62.7', '88.3', '39.5', '81.8', '62.3', '82.4', '77.1', '83.6', '84.4', '25.3', '86.0', '58.8', '82.9', '74.9']
+2023-01-26 16:26:55,777	INFO	__main__	Best mIoU: 58.1801 -> 58.6480
+2023-01-26 16:26:55,777	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-26 16:27:01,932	INFO	torchdistill.misc.log	Epoch: [25]  [   0/7330]  eta: 5:13:52  lr: 0.003987339411400905  img/s: 39.32873601479643  loss: 0.3171 (0.3171)  time: 2.5692  data: 2.1572  max mem: 11299
+2023-01-26 16:33:20,629	INFO	torchdistill.misc.log	Epoch: [25]  [1000/7330]  eta: 0:40:10  lr: 0.0038892862290872995  img/s: 43.05435359315225  loss: 0.3412 (0.3731)  time: 0.3765  data: 0.0001  max mem: 11299
+2023-01-26 16:39:51,072	INFO	torchdistill.misc.log	Epoch: [25]  [2000/7330]  eta: 0:34:15  lr: 0.003790957570935853  img/s: 43.1184489174908  loss: 0.3638 (0.3731)  time: 0.3857  data: 0.0001  max mem: 11299
+2023-01-26 16:46:15,493	INFO	torchdistill.misc.log	Epoch: [25]  [3000/7330]  eta: 0:27:48  lr: 0.003692344676394762  img/s: 38.79784425792592  loss: 0.3342 (0.3711)  time: 0.4149  data: 0.0001  max mem: 11299
+2023-01-26 16:52:48,153	INFO	torchdistill.misc.log	Epoch: [25]  [4000/7330]  eta: 0:21:29  lr: 0.0035934382371302855  img/s: 42.96386134557076  loss: 0.3530 (0.3707)  time: 0.3849  data: 0.0001  max mem: 11299
+2023-01-26 16:59:07,804	INFO	torchdistill.misc.log	Epoch: [25]  [5000/7330]  eta: 0:14:58  lr: 0.0034942283449050293  img/s: 43.1217459751392  loss: 0.2882 (0.3678)  time: 0.3776  data: 0.0001  max mem: 11299
+2023-01-26 17:05:31,570	INFO	torchdistill.misc.log	Epoch: [25]  [6000/7330]  eta: 0:08:32  lr: 0.0033947044326882105  img/s: 43.08713816560354  loss: 0.3294 (0.3675)  time: 0.3822  data: 0.0001  max mem: 11299
+2023-01-26 17:11:53,541	INFO	torchdistill.misc.log	Epoch: [25]  [7000/7330]  eta: 0:02:06  lr: 0.003294855207868836  img/s: 43.06847303602257  loss: 0.3764 (0.3663)  time: 0.3824  data: 0.0002  max mem: 11299
+2023-01-26 17:13:59,545	INFO	torchdistill.misc.log	Epoch: [25] Total time: 0:47:00
+2023-01-26 17:14:01,307	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:22:37  model_time: 0.2922 (0.2922)  evaluator_time: 0.0006 (0.0006)  time: 1.7115  data: 1.4178  max mem: 11299
+2023-01-26 17:18:00,893	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:16:04  model_time: 0.2336 (0.2374)  evaluator_time: 0.0005 (0.0005)  time: 0.2426  data: 0.0001  max mem: 11299
+2023-01-26 17:21:52,380	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:48  model_time: 0.2085 (0.2334)  evaluator_time: 0.0005 (0.0005)  time: 0.2071  data: 0.0001  max mem: 11299
+2023-01-26 17:25:44,636	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:49  model_time: 0.2296 (0.2323)  evaluator_time: 0.0005 (0.0005)  time: 0.2395  data: 0.0001  max mem: 11299
+2023-01-26 17:29:38,401	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:54  model_time: 0.2384 (0.2321)  evaluator_time: 0.0009 (0.0005)  time: 0.2349  data: 0.0001  max mem: 11299
+2023-01-26 17:33:24,904	INFO	torchdistill.misc.log	Validation: Total time: 0:19:25
+2023-01-26 17:33:24,904	INFO	__main__	mean IoU: 58.3, IoU: ['90.1', '68.2', '57.0', '57.6', '48.6', '38.4', '70.6', '47.7', '77.2', '31.0', '66.6', '38.7', '70.9', '60.5', '70.2', '71.5', '19.9', '73.2', '41.3', '69.3', '56.1'], Global pixelwise acc: 91.1, Average row correct: ['94.3', '86.5', '70.9', '75.7', '64.7', '52.7', '82.0', '63.4', '90.7', '42.5', '83.3', '58.1', '84.3', '79.5', '85.9', '85.8', '28.0', '87.3', '57.3', '87.6', '69.9']
+2023-01-26 17:33:27,237	INFO	torchdistill.misc.log	Epoch: [26]  [   0/7330]  eta: 4:43:48  lr: 0.003261831536966854  img/s: 35.77927688489498  loss: 0.5879 (0.5879)  time: 2.3231  data: 1.8704  max mem: 11299
+2023-01-26 17:39:47,757	INFO	torchdistill.misc.log	Epoch: [26]  [1000/7330]  eta: 0:40:20  lr: 0.003161530758236655  img/s: 38.21930885152763  loss: 0.3305 (0.3574)  time: 0.4249  data: 0.0001  max mem: 11299
+2023-01-26 17:46:56,086	INFO	torchdistill.misc.log	Epoch: [26]  [2000/7330]  eta: 0:36:00  lr: 0.0030608750939025257  img/s: 43.04932698605347  loss: 0.3968 (0.3597)  time: 0.3843  data: 0.0001  max mem: 11299
+2023-01-26 17:53:17,291	INFO	torchdistill.misc.log	Epoch: [26]  [3000/7330]  eta: 0:28:40  lr: 0.002959850222006607  img/s: 43.15571560860171  loss: 0.2544 (0.3582)  time: 0.3814  data: 0.0001  max mem: 11299
+2023-01-26 17:59:48,104	INFO	torchdistill.misc.log	Epoch: [26]  [4000/7330]  eta: 0:21:57  lr: 0.002858440674878433  img/s: 43.147779950955616  loss: 0.2830 (0.3608)  time: 0.3780  data: 0.0001  max mem: 11299
+2023-01-26 18:06:38,777	INFO	torchdistill.misc.log	Epoch: [26]  [5000/7330]  eta: 0:15:28  lr: 0.002756629698443889  img/s: 38.75205081564891  loss: 0.3504 (0.3617)  time: 0.4383  data: 0.0001  max mem: 11299
+2023-01-26 18:13:08,451	INFO	torchdistill.misc.log	Epoch: [26]  [6000/7330]  eta: 0:08:48  lr: 0.002654399087735639  img/s: 41.07014539726293  loss: 0.3312 (0.3624)  time: 0.3845  data: 0.0001  max mem: 11299
+2023-01-26 18:20:01,021	INFO	torchdistill.misc.log	Epoch: [26]  [7000/7330]  eta: 0:02:11  lr: 0.0025517289933805727  img/s: 32.25589048865305  loss: 0.4011 (0.3633)  time: 0.4240  data: 0.0001  max mem: 11299
+2023-01-26 18:22:22,767	INFO	torchdistill.misc.log	Epoch: [26] Total time: 0:48:57
+2023-01-26 18:22:24,562	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:25:22  model_time: 0.2948 (0.2948)  evaluator_time: 0.0006 (0.0006)  time: 1.7445  data: 1.4485  max mem: 11299
+2023-01-26 18:26:24,613	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:16:06  model_time: 0.2468 (0.2379)  evaluator_time: 0.0005 (0.0005)  time: 0.2460  data: 0.0001  max mem: 11299
+2023-01-26 18:30:20,707	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:56  model_time: 0.2269 (0.2358)  evaluator_time: 0.0009 (0.0006)  time: 0.2309  data: 0.0001  max mem: 11299
+2023-01-26 18:34:08,283	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:50  model_time: 0.2290 (0.2322)  evaluator_time: 0.0005 (0.0007)  time: 0.2331  data: 0.0001  max mem: 11299
+2023-01-26 18:38:00,846	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:54  model_time: 0.2447 (0.2318)  evaluator_time: 0.0005 (0.0007)  time: 0.2395  data: 0.0001  max mem: 11299
+2023-01-26 18:41:56,882	INFO	torchdistill.misc.log	Validation: Total time: 0:19:34
+2023-01-26 18:41:56,882	INFO	__main__	mean IoU: 59.1, IoU: ['90.3', '69.7', '57.7', '58.7', '48.8', '37.8', '72.1', '48.2', '78.6', '30.9', '67.1', '39.3', '71.7', '62.3', '71.6', '71.8', '19.8', '72.2', '41.2', '73.0', '57.7'], Global pixelwise acc: 91.3, Average row correct: ['94.6', '86.5', '75.4', '73.4', '62.8', '47.8', '82.9', '64.3', '91.1', '42.0', '84.1', '60.5', '82.6', '79.1', '83.5', '84.8', '25.7', '87.2', '59.9', '85.5', '73.6']
+2023-01-26 18:41:56,884	INFO	__main__	Best mIoU: 58.6480 -> 59.0697
+2023-01-26 18:41:56,884	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-26 18:42:05,365	INFO	torchdistill.misc.log	Epoch: [27]  [   0/7330]  eta: 4:58:26  lr: 0.0025177477735249497  img/s: 35.62075646157978  loss: 0.3106 (0.3106)  time: 2.4429  data: 1.9864  max mem: 11299
+2023-01-26 18:48:25,618	INFO	torchdistill.misc.log	Epoch: [27]  [1000/7330]  eta: 0:40:20  lr: 0.002414459150108242  img/s: 41.1517686484564  loss: 0.3288 (0.3599)  time: 0.3808  data: 0.0001  max mem: 11299
+2023-01-26 18:55:10,873	INFO	torchdistill.misc.log	Epoch: [27]  [2000/7330]  eta: 0:34:58  lr: 0.0023106770475627603  img/s: 38.75798173244354  loss: 0.3640 (0.3596)  time: 0.4734  data: 0.0001  max mem: 11299
+2023-01-26 19:02:51,467	INFO	torchdistill.misc.log	Epoch: [27]  [3000/7330]  eta: 0:30:01  lr: 0.0022063742192963936  img/s: 32.23367335126845  loss: 0.3333 (0.3585)  time: 0.4860  data: 0.0001  max mem: 11299
+2023-01-26 19:10:34,632	INFO	torchdistill.misc.log	Epoch: [27]  [4000/7330]  eta: 0:23:44  lr: 0.0021015203936198493  img/s: 38.7782052511814  loss: 0.3485 (0.3581)  time: 0.4751  data: 0.0001  max mem: 11299
+2023-01-26 19:17:57,838	INFO	torchdistill.misc.log	Epoch: [27]  [5000/7330]  eta: 0:16:43  lr: 0.0019960817500094983  img/s: 43.183291110243125  loss: 0.3588 (0.3587)  time: 0.3803  data: 0.0001  max mem: 11299
+2023-01-26 19:24:17,400	INFO	torchdistill.misc.log	Epoch: [27]  [6000/7330]  eta: 0:09:21  lr: 0.001890020268281097  img/s: 43.12410132503952  loss: 0.2802 (0.3597)  time: 0.3801  data: 0.0001  max mem: 11299
+2023-01-26 19:30:38,208	INFO	torchdistill.misc.log	Epoch: [27]  [7000/7330]  eta: 0:02:17  lr: 0.00178329290987478  img/s: 41.6789776273696  loss: 0.3113 (0.3582)  time: 0.3806  data: 0.0001  max mem: 11299
+2023-01-26 19:32:43,278	INFO	torchdistill.misc.log	Epoch: [27] Total time: 0:50:40
+2023-01-26 19:32:45,039	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:22:28  model_time: 0.2814 (0.2814)  evaluator_time: 0.0006 (0.0006)  time: 1.7097  data: 1.4270  max mem: 11299
+2023-01-26 19:36:44,590	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:16:04  model_time: 0.2480 (0.2374)  evaluator_time: 0.0005 (0.0005)  time: 0.2467  data: 0.0001  max mem: 11299
+2023-01-26 19:40:47,102	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:12:05  model_time: 0.2470 (0.2388)  evaluator_time: 0.0005 (0.0005)  time: 0.2445  data: 0.0001  max mem: 11299
+2023-01-26 19:44:41,964	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:58  model_time: 0.2294 (0.2368)  evaluator_time: 0.0005 (0.0005)  time: 0.2387  data: 0.0001  max mem: 11299
+2023-01-26 19:48:30,467	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:56  model_time: 0.2376 (0.2342)  evaluator_time: 0.0005 (0.0005)  time: 0.2373  data: 0.0001  max mem: 11299
+2023-01-26 19:52:27,602	INFO	torchdistill.misc.log	Validation: Total time: 0:19:44
+2023-01-26 19:52:27,602	INFO	__main__	mean IoU: 58.2, IoU: ['90.2', '68.1', '58.0', '57.7', '48.0', '33.3', '71.7', '45.2', '78.4', '31.1', '66.7', '39.3', '71.3', '60.9', '69.4', '71.6', '20.4', '72.8', '41.1', '69.2', '57.1'], Global pixelwise acc: 91.2, Average row correct: ['94.8', '85.6', '74.1', '72.1', '62.1', '40.1', '80.3', '60.6', '89.1', '41.6', '83.6', '59.5', '83.5', '79.1', '86.5', '83.8', '28.4', '86.6', '52.7', '87.7', '64.0']
+2023-01-26 19:52:30,269	INFO	torchdistill.misc.log	Epoch: [28]  [   0/7330]  eta: 5:24:30  lr: 0.0017479185830156995  img/s: 37.88783407885161  loss: 0.6562 (0.6562)  time: 2.6562  data: 2.2285  max mem: 11299
+2023-01-26 19:58:50,460	INFO	torchdistill.misc.log	Epoch: [28]  [1000/7330]  eta: 0:40:20  lr: 0.0016402283111589416  img/s: 43.0114994097115  loss: 0.3560 (0.3628)  time: 0.3811  data: 0.0001  max mem: 11299
+2023-01-26 20:05:11,368	INFO	torchdistill.misc.log	Epoch: [28]  [2000/7330]  eta: 0:33:54  lr: 0.00153174597964394  img/s: 43.14575488347363  loss: 0.3211 (0.3576)  time: 0.3817  data: 0.0001  max mem: 11299
+2023-01-26 20:11:32,212	INFO	torchdistill.misc.log	Epoch: [28]  [3000/7330]  eta: 0:27:31  lr: 0.0014224023505576015  img/s: 41.368202964678936  loss: 0.2874 (0.3564)  time: 0.3796  data: 0.0001  max mem: 11299
+2023-01-26 20:17:53,156	INFO	torchdistill.misc.log	Epoch: [28]  [4000/7330]  eta: 0:21:09  lr: 0.0013121156190113586  img/s: 43.11781172919423  loss: 0.3454 (0.3563)  time: 0.3800  data: 0.0001  max mem: 11299
+2023-01-26 20:24:14,402	INFO	torchdistill.misc.log	Epoch: [28]  [5000/7330]  eta: 0:14:48  lr: 0.00120078772223061  img/s: 42.016332239550366  loss: 0.3377 (0.3558)  time: 0.3831  data: 0.0001  max mem: 11299
+2023-01-26 20:30:35,606	INFO	torchdistill.misc.log	Epoch: [28]  [6000/7330]  eta: 0:08:27  lr: 0.001088299062156319  img/s: 43.1482515693023  loss: 0.3635 (0.3560)  time: 0.3858  data: 0.0001  max mem: 11299
+2023-01-26 20:36:56,059	INFO	torchdistill.misc.log	Epoch: [28]  [7000/7330]  eta: 0:02:05  lr: 0.0009745006919133526  img/s: 43.19346378053152  loss: 0.3091 (0.3554)  time: 0.3794  data: 0.0001  max mem: 11299
+2023-01-26 20:39:01,201	INFO	torchdistill.misc.log	Epoch: [28] Total time: 0:46:33
+2023-01-26 20:39:03,001	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:25:43  model_time: 0.2813 (0.2813)  evaluator_time: 0.0006 (0.0006)  time: 1.7488  data: 1.4661  max mem: 11299
+2023-01-26 20:42:59,407	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:51  model_time: 0.2477 (0.2342)  evaluator_time: 0.0005 (0.0005)  time: 0.2467  data: 0.0001  max mem: 11299
+2023-01-26 20:46:55,194	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:50  model_time: 0.2461 (0.2339)  evaluator_time: 0.0005 (0.0005)  time: 0.2433  data: 0.0001  max mem: 11299
+2023-01-26 20:50:53,560	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:54  model_time: 0.2295 (0.2347)  evaluator_time: 0.0005 (0.0005)  time: 0.2388  data: 0.0001  max mem: 11299
+2023-01-26 20:54:47,846	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:56  model_time: 0.2373 (0.2340)  evaluator_time: 0.0005 (0.0005)  time: 0.2372  data: 0.0001  max mem: 11299
+2023-01-26 20:58:48,808	INFO	torchdistill.misc.log	Validation: Total time: 0:19:47
+2023-01-26 20:58:48,808	INFO	__main__	mean IoU: 58.7, IoU: ['89.9', '67.7', '58.1', '57.0', '49.3', '37.2', '72.7', '46.3', '78.4', '30.6', '66.9', '38.7', '71.6', '61.8', '70.9', '72.0', '20.1', '71.2', '42.3', '71.5', '57.9'], Global pixelwise acc: 90.9, Average row correct: ['93.9', '85.4', '76.0', '73.6', '67.3', '48.1', '81.1', '65.8', '88.9', '42.2', '84.3', '64.8', '83.7', '79.6', '85.4', '85.2', '28.4', '88.4', '60.4', '87.9', '71.6']
+2023-01-26 20:58:51,542	INFO	torchdistill.misc.log	Epoch: [29]  [   0/7330]  eta: 5:32:41  lr: 0.0009366288672355283  img/s: 39.091099940002216  loss: 0.3332 (0.3332)  time: 2.7233  data: 2.3087  max mem: 11299
+2023-01-26 21:05:10,733	INFO	torchdistill.misc.log	Epoch: [29]  [1000/7330]  eta: 0:40:15  lr: 0.0008207839876030538  img/s: 43.15316256112021  loss: 0.3076 (0.3524)  time: 0.3764  data: 0.0001  max mem: 11299
+2023-01-26 21:11:28,883	INFO	torchdistill.misc.log	Epoch: [29]  [2000/7330]  eta: 0:33:44  lr: 0.0007030859792778627  img/s: 43.22183915226827  loss: 0.3237 (0.3523)  time: 0.3798  data: 0.0001  max mem: 11299
+2023-01-26 21:17:48,995	INFO	torchdistill.misc.log	Epoch: [29]  [3000/7330]  eta: 0:27:25  lr: 0.0005831444094892075  img/s: 40.682246333322425  loss: 0.2962 (0.3516)  time: 0.3798  data: 0.0001  max mem: 11299
+2023-01-26 21:24:09,013	INFO	torchdistill.misc.log	Epoch: [29]  [4000/7330]  eta: 0:21:05  lr: 0.00046037285129670903  img/s: 43.119501704633805  loss: 0.3399 (0.3502)  time: 0.3800  data: 0.0001  max mem: 11299
+2023-01-26 21:30:29,624	INFO	torchdistill.misc.log	Epoch: [29]  [5000/7330]  eta: 0:14:45  lr: 0.0003337950014878176  img/s: 43.15463330158789  loss: 0.3380 (0.3497)  time: 0.3811  data: 0.0001  max mem: 11299
+2023-01-26 21:36:50,329	INFO	torchdistill.misc.log	Epoch: [29]  [6000/7330]  eta: 0:08:25  lr: 0.00020146507604506145  img/s: 43.0146698467252  loss: 0.3229 (0.3507)  time: 0.3766  data: 0.0001  max mem: 11299
+2023-01-26 21:43:09,373	INFO	torchdistill.misc.log	Epoch: [29]  [7000/7330]  eta: 0:02:05  lr: 5.7346061667625084e-05  img/s: 43.182624217297665  loss: 0.3208 (0.3499)  time: 0.3805  data: 0.0001  max mem: 11299
+2023-01-26 21:45:14,469	INFO	torchdistill.misc.log	Epoch: [29] Total time: 0:46:25
+2023-01-26 21:45:16,241	INFO	torchdistill.misc.log	Validation:  [   0/5000]  eta: 2:23:26  model_time: 0.2513 (0.2513)  evaluator_time: 0.0007 (0.0007)  time: 1.7213  data: 1.4684  max mem: 11299
+2023-01-26 21:49:12,052	INFO	torchdistill.misc.log	Validation:  [1000/5000]  eta: 0:15:49  model_time: 0.2445 (0.2336)  evaluator_time: 0.0005 (0.0005)  time: 0.2449  data: 0.0001  max mem: 11299
+2023-01-26 21:53:10,441	INFO	torchdistill.misc.log	Validation:  [2000/5000]  eta: 0:11:53  model_time: 0.2435 (0.2349)  evaluator_time: 0.0005 (0.0005)  time: 0.2420  data: 0.0001  max mem: 11299
+2023-01-26 21:57:01,837	INFO	torchdistill.misc.log	Validation:  [3000/5000]  eta: 0:07:51  model_time: 0.1998 (0.2330)  evaluator_time: 0.0005 (0.0005)  time: 0.2074  data: 0.0001  max mem: 11299
+2023-01-26 22:00:58,437	INFO	torchdistill.misc.log	Validation:  [4000/5000]  eta: 0:03:55  model_time: 0.2388 (0.2333)  evaluator_time: 0.0005 (0.0005)  time: 0.2388  data: 0.0001  max mem: 11299
+2023-01-26 22:04:52,887	INFO	torchdistill.misc.log	Validation: Total time: 0:19:38
+2023-01-26 22:04:52,887	INFO	__main__	mean IoU: 58.8, IoU: ['90.2', '67.2', '58.3', '57.1', '49.0', '37.1', '73.5', '47.3', '79.0', '29.9', '67.2', '38.1', '71.2', '62.0', '70.7', '71.8', '20.5', '72.6', '43.5', '71.8', '57.8'], Global pixelwise acc: 91.2, Average row correct: ['94.7', '85.9', '74.7', '73.7', '62.6', '46.5', '82.5', '62.1', '88.9', '37.3', '83.1', '58.8', '83.4', '80.0', '85.0', '84.7', '26.4', '87.2', '58.8', '87.9', '65.5']
+2023-01-26 22:04:52,896	INFO	torchdistill.models.util	[student model]
+2023-01-26 22:04:52,896	INFO	torchdistill.models.util	Using the original student model
+2023-01-26 22:04:52,896	INFO	torchdistill.models.util	Frozen module(s): {'backbone'}
+2023-01-26 22:04:52,903	INFO	torchdistill.core.training	Loss = {'out': 1.0, 'aux': 0.5} * OrgLoss
+2023-01-26 22:04:52,961	INFO	torchdistill.core.training	Advanced to stage 2
+2023-01-26 22:04:55,383	INFO	torchdistill.misc.log	Epoch: [30]  [ 0/92]  eta: 0:03:42  lr: 0.01999673910089596  img/s: 41.10866261351629  loss: 0.4144 (0.4144)  time: 2.4140  data: 2.0199  max mem: 11299
+2023-01-26 22:05:30,017	INFO	torchdistill.misc.log	Epoch: [30] Total time: 0:00:37
+2023-01-26 22:05:31,776	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:41:14  model_time: 0.3012 (0.3012)  evaluator_time: 0.0006 (0.0006)  time: 1.7075  data: 1.4050  max mem: 11299
+2023-01-26 22:09:26,323	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:45  model_time: 0.2288 (0.2326)  evaluator_time: 0.0005 (0.0005)  time: 0.2352  data: 0.0001  max mem: 11299
+2023-01-26 22:11:08,058	INFO	torchdistill.misc.log	Validation: Total time: 0:05:37
+2023-01-26 22:11:08,058	INFO	__main__	mean IoU: 67.6, IoU: ['90.3', '75.7', '28.9', '74.0', '66.1', '48.5', '85.5', '76.6', '83.1', '37.2', '79.4', '61.3', '79.5', '76.7', '74.3', '76.7', '55.1', '75.1', '38.8', '78.4', '58.0'], Global pixelwise acc: 91.6, Average row correct: ['94.7', '95.1', '38.7', '82.8', '77.6', '96.7', '96.7', '90.8', '89.8', '47.4', '89.9', '65.2', '90.3', '89.1', '91.7', '84.3', '70.9', '78.6', '44.1', '91.8', '90.2']
+2023-01-26 22:11:08,060	INFO	__main__	Best mIoU: 59.0697 -> 67.5787
+2023-01-26 22:11:08,060	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-26 22:11:16,604	INFO	torchdistill.misc.log	Epoch: [31]  [ 0/92]  eta: 0:03:46  lr: 0.019696482073868895  img/s: 41.52655461134484  loss: 0.3108 (0.3108)  time: 2.4607  data: 2.0705  max mem: 11299
+2023-01-26 22:11:50,571	INFO	torchdistill.misc.log	Epoch: [31] Total time: 0:00:36
+2023-01-26 22:11:52,341	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:41:31  model_time: 0.2986 (0.2986)  evaluator_time: 0.0006 (0.0006)  time: 1.7195  data: 1.4196  max mem: 11299
+2023-01-26 22:15:38,968	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:42  model_time: 0.2299 (0.2247)  evaluator_time: 0.0005 (0.0005)  time: 0.2359  data: 0.0001  max mem: 11299
+2023-01-26 22:17:22,652	INFO	torchdistill.misc.log	Validation: Total time: 0:05:32
+2023-01-26 22:17:22,652	INFO	__main__	mean IoU: 67.0, IoU: ['90.0', '81.4', '34.6', '73.6', '59.3', '60.0', '82.4', '78.3', '81.7', '24.8', '77.2', '62.4', '76.3', '74.3', '74.8', '77.0', '56.3', '62.6', '44.6', '76.9', '57.7'], Global pixelwise acc: 91.3, Average row correct: ['93.5', '89.2', '64.8', '89.7', '87.6', '91.9', '92.6', '87.2', '93.1', '27.5', '93.2', '70.2', '88.4', '93.3', '91.6', '87.5', '73.5', '94.8', '64.5', '89.6', '87.5']
+2023-01-26 22:17:24,923	INFO	torchdistill.misc.log	Epoch: [32]  [ 0/92]  eta: 0:03:28  lr: 0.019395715585525025  img/s: 40.9807855424718  loss: 0.4164 (0.4164)  time: 2.2611  data: 1.8654  max mem: 11299
+2023-01-26 22:17:58,904	INFO	torchdistill.misc.log	Epoch: [32] Total time: 0:00:36
+2023-01-26 22:18:00,604	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:39:49  model_time: 0.2625 (0.2625)  evaluator_time: 0.0006 (0.0006)  time: 1.6494  data: 1.3857  max mem: 11299
+2023-01-26 22:21:43,042	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:40  model_time: 0.2240 (0.2205)  evaluator_time: 0.0005 (0.0005)  time: 0.2195  data: 0.0001  max mem: 11299
+2023-01-26 22:23:24,999	INFO	torchdistill.misc.log	Validation: Total time: 0:05:26
+2023-01-26 22:23:24,999	INFO	__main__	mean IoU: 69.6, IoU: ['90.7', '76.2', '34.1', '75.7', '60.3', '70.4', '87.3', '78.7', '84.5', '32.3', '81.1', '60.5', '79.0', '74.6', '74.2', '76.6', '56.0', '76.4', '42.5', '82.1', '67.9'], Global pixelwise acc: 91.9, Average row correct: ['94.0', '93.8', '70.4', '89.8', '88.0', '90.6', '96.5', '84.1', '94.0', '55.6', '88.1', '75.7', '93.1', '93.7', '90.9', '86.9', '76.1', '93.1', '55.0', '91.9', '84.6']
+2023-01-26 22:23:25,000	INFO	__main__	Best mIoU: 67.5787 -> 69.5717
+2023-01-26 22:23:25,000	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-26 22:23:33,275	INFO	torchdistill.misc.log	Epoch: [33]  [ 0/92]  eta: 0:03:18  lr: 0.019094429962566804  img/s: 36.849616864023105  loss: 0.2641 (0.2641)  time: 2.1532  data: 1.7138  max mem: 11299
+2023-01-26 22:24:07,275	INFO	torchdistill.misc.log	Epoch: [33] Total time: 0:00:36
+2023-01-26 22:24:08,995	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:18  model_time: 0.2986 (0.2986)  evaluator_time: 0.0006 (0.0006)  time: 1.6689  data: 1.3690  max mem: 11299
+2023-01-26 22:28:00,192	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2283 (0.2292)  evaluator_time: 0.0005 (0.0005)  time: 0.2339  data: 0.0001  max mem: 11299
+2023-01-26 22:29:42,300	INFO	torchdistill.misc.log	Validation: Total time: 0:05:34
+2023-01-26 22:29:42,300	INFO	__main__	mean IoU: 69.5, IoU: ['90.8', '77.8', '38.0', '68.1', '68.4', '67.0', '87.9', '80.1', '83.4', '35.5', '82.2', '54.7', '81.7', '76.7', '76.2', '77.2', '52.8', '75.0', '40.4', '82.2', '63.5'], Global pixelwise acc: 92.0, Average row correct: ['94.4', '92.4', '66.4', '92.3', '82.3', '93.9', '94.1', '88.4', '94.1', '50.4', '91.7', '78.9', '91.4', '90.0', '91.1', '85.7', '77.4', '93.5', '47.7', '90.2', '83.6']
+2023-01-26 22:29:44,449	INFO	torchdistill.misc.log	Epoch: [34]  [ 0/92]  eta: 0:03:16  lr: 0.018792615174877993  img/s: 35.92190079371027  loss: 0.3516 (0.3516)  time: 2.1390  data: 1.6885  max mem: 11299
+2023-01-26 22:30:18,439	INFO	torchdistill.misc.log	Epoch: [34] Total time: 0:00:36
+2023-01-26 22:30:20,180	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:48  model_time: 0.3118 (0.3118)  evaluator_time: 0.0006 (0.0006)  time: 1.6899  data: 1.3768  max mem: 11299
+2023-01-26 22:34:14,827	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:46  model_time: 0.1915 (0.2327)  evaluator_time: 0.0005 (0.0005)  time: 0.2089  data: 0.0001  max mem: 11299
+2023-01-26 22:35:52,543	INFO	torchdistill.misc.log	Validation: Total time: 0:05:34
+2023-01-26 22:35:52,543	INFO	__main__	mean IoU: 69.9, IoU: ['91.2', '78.2', '33.4', '74.7', '69.5', '65.6', '86.8', '78.7', '85.3', '36.2', '81.5', '60.5', '82.8', '77.7', '74.0', '76.9', '57.0', '80.2', '39.7', '72.0', '65.8'], Global pixelwise acc: 92.3, Average row correct: ['94.9', '91.3', '46.8', '89.5', '79.3', '93.3', '93.6', '86.0', '92.2', '54.5', '88.2', '71.8', '93.5', '92.6', '90.0', '87.6', '70.3', '89.9', '51.7', '93.5', '75.3']
+2023-01-26 22:35:52,544	INFO	__main__	Best mIoU: 69.5717 -> 69.8926
+2023-01-26 22:35:52,544	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-26 22:36:01,197	INFO	torchdistill.misc.log	Epoch: [35]  [ 0/92]  eta: 0:03:47  lr: 0.0184902608157457  img/s: 40.75656543449506  loss: 0.2476 (0.2476)  time: 2.4737  data: 2.0760  max mem: 11299
+2023-01-26 22:36:35,196	INFO	torchdistill.misc.log	Epoch: [35] Total time: 0:00:36
+2023-01-26 22:36:36,971	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:41:38  model_time: 0.3291 (0.3291)  evaluator_time: 0.0006 (0.0006)  time: 1.7240  data: 1.3936  max mem: 11299
+2023-01-26 22:40:32,343	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:46  model_time: 0.1916 (0.2334)  evaluator_time: 0.0005 (0.0005)  time: 0.1983  data: 0.0001  max mem: 11299
+2023-01-26 22:42:08,544	INFO	torchdistill.misc.log	Validation: Total time: 0:05:33
+2023-01-26 22:42:08,544	INFO	__main__	mean IoU: 70.3, IoU: ['91.2', '80.5', '38.3', '73.3', '67.2', '68.4', '86.8', '79.3', '84.7', '27.5', '84.6', '62.2', '81.2', '79.0', '76.1', '76.9', '54.0', '81.3', '38.4', '81.7', '64.0'], Global pixelwise acc: 92.3, Average row correct: ['95.1', '90.6', '68.9', '84.9', '78.8', '92.1', '95.8', '88.6', '91.8', '36.6', '91.5', '72.9', '93.9', '87.0', '86.6', '86.1', '65.0', '90.1', '59.1', '89.3', '88.9']
+2023-01-26 22:42:08,546	INFO	__main__	Best mIoU: 69.8926 -> 70.3113
+2023-01-26 22:42:08,546	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-26 22:42:17,171	INFO	torchdistill.misc.log	Epoch: [36]  [ 0/92]  eta: 0:03:47  lr: 0.018187356080606093  img/s: 40.186488583993636  loss: 0.2891 (0.2891)  time: 2.4682  data: 2.0651  max mem: 11299
+2023-01-26 22:42:51,154	INFO	torchdistill.misc.log	Epoch: [36] Total time: 0:00:36
+2023-01-26 22:42:52,844	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:39:34  model_time: 0.2518 (0.2518)  evaluator_time: 0.0007 (0.0007)  time: 1.6387  data: 1.3855  max mem: 11299
+2023-01-26 22:46:41,347	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:43  model_time: 0.2056 (0.2265)  evaluator_time: 0.0005 (0.0005)  time: 0.2064  data: 0.0001  max mem: 11299
+2023-01-26 22:48:23,404	INFO	torchdistill.misc.log	Validation: Total time: 0:05:32
+2023-01-26 22:48:23,404	INFO	__main__	mean IoU: 69.3, IoU: ['90.8', '78.8', '36.5', '76.1', '64.0', '63.0', '86.1', '77.8', '84.1', '34.1', '78.3', '62.1', '80.9', '79.2', '73.5', '76.7', '52.0', '81.2', '41.9', '81.2', '56.1'], Global pixelwise acc: 91.9, Average row correct: ['94.6', '91.7', '70.3', '89.3', '86.1', '94.3', '95.3', '84.9', '90.6', '49.1', '81.3', '71.0', '92.0', '92.6', '90.8', '84.6', '60.7', '90.8', '63.4', '92.7', '79.5']
+2023-01-26 22:48:25,868	INFO	torchdistill.misc.log	Epoch: [37]  [ 0/92]  eta: 0:03:45  lr: 0.017883889744174028  img/s: 40.805410654338694  loss: 0.1866 (0.1866)  time: 2.4531  data: 2.0561  max mem: 11299
+2023-01-26 22:48:59,913	INFO	torchdistill.misc.log	Epoch: [37] Total time: 0:00:36
+2023-01-26 22:49:01,640	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:28  model_time: 0.2838 (0.2838)  evaluator_time: 0.0010 (0.0010)  time: 1.6759  data: 1.3905  max mem: 11299
+2023-01-26 22:52:48,558	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:42  model_time: 0.2301 (0.2246)  evaluator_time: 0.0005 (0.0009)  time: 0.2385  data: 0.0001  max mem: 11299
+2023-01-26 22:54:30,442	INFO	torchdistill.misc.log	Validation: Total time: 0:05:30
+2023-01-26 22:54:30,442	INFO	__main__	mean IoU: 69.7, IoU: ['90.8', '79.3', '38.5', '72.6', '68.8', '52.8', '86.9', '80.2', '83.8', '30.2', '81.7', '58.2', '81.4', '78.5', '76.7', '76.7', '57.3', '79.9', '39.2', '83.1', '67.8'], Global pixelwise acc: 92.0, Average row correct: ['95.0', '89.8', '59.5', '90.8', '78.5', '94.0', '96.5', '86.6', '91.3', '44.4', '87.2', '69.9', '92.6', '87.8', '87.4', '83.2', '72.1', '89.6', '57.0', '89.6', '83.6']
+2023-01-26 22:54:32,724	INFO	torchdistill.misc.log	Epoch: [38]  [ 0/92]  eta: 0:03:28  lr: 0.017579850135801  img/s: 37.591769218144066  loss: 0.1972 (0.1972)  time: 2.2712  data: 1.8403  max mem: 11299
+2023-01-26 22:55:06,689	INFO	torchdistill.misc.log	Epoch: [38] Total time: 0:00:36
+2023-01-26 22:55:08,394	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:39:57  model_time: 0.2682 (0.2682)  evaluator_time: 0.0006 (0.0006)  time: 1.6544  data: 1.3850  max mem: 11299
+2023-01-26 22:59:03,098	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:46  model_time: 0.2112 (0.2327)  evaluator_time: 0.0005 (0.0005)  time: 0.2131  data: 0.0001  max mem: 11299
+2023-01-26 23:00:36,192	INFO	torchdistill.misc.log	Validation: Total time: 0:05:29
+2023-01-26 23:00:36,192	INFO	__main__	mean IoU: 69.7, IoU: ['91.3', '79.1', '38.2', '75.4', '64.5', '66.1', '88.1', '79.9', '84.0', '24.8', '82.2', '59.7', '80.1', '73.9', '75.4', '77.3', '53.2', '80.3', '41.6', '81.0', '68.0'], Global pixelwise acc: 92.3, Average row correct: ['95.1', '91.5', '69.8', '91.2', '73.5', '92.3', '94.5', '85.7', '94.1', '29.8', '89.9', '67.9', '91.5', '94.5', '90.6', '86.9', '79.9', '90.4', '58.8', '89.9', '79.4']
+2023-01-26 23:00:38,721	INFO	torchdistill.misc.log	Epoch: [39]  [ 0/92]  eta: 0:03:51  lr: 0.01727522511288731  img/s: 42.14568170585195  loss: 0.1890 (0.1890)  time: 2.5185  data: 2.1340  max mem: 11299
+2023-01-26 23:01:12,702	INFO	torchdistill.misc.log	Epoch: [39] Total time: 0:00:36
+2023-01-26 23:01:14,425	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:22  model_time: 0.2789 (0.2789)  evaluator_time: 0.0006 (0.0006)  time: 1.6717  data: 1.3915  max mem: 11299
+2023-01-26 23:05:06,491	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2033 (0.2301)  evaluator_time: 0.0005 (0.0005)  time: 0.2051  data: 0.0001  max mem: 11299
+2023-01-26 23:06:49,936	INFO	torchdistill.misc.log	Validation: Total time: 0:05:37
+2023-01-26 23:06:49,936	INFO	__main__	mean IoU: 70.6, IoU: ['91.5', '80.5', '39.8', '75.9', '68.9', '73.2', '87.9', '79.8', '85.0', '28.6', '81.6', '59.7', '82.1', '78.2', '74.3', '77.0', '50.2', '78.7', '38.9', '80.9', '70.7'], Global pixelwise acc: 92.6, Average row correct: ['95.7', '89.7', '55.5', '91.8', '82.9', '89.3', '94.8', '86.5', '91.1', '33.5', '93.0', '66.9', '93.3', '88.7', '84.2', '85.3', '58.4', '88.9', '60.4', '94.3', '82.7']
+2023-01-26 23:06:49,937	INFO	__main__	Best mIoU: 70.3113 -> 70.6392
+2023-01-26 23:06:49,937	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-26 23:06:58,483	INFO	torchdistill.misc.log	Epoch: [40]  [ 0/92]  eta: 0:03:23  lr: 0.01697000203215356  img/s: 37.583074505464225  loss: 0.2235 (0.2235)  time: 2.2117  data: 1.7805  max mem: 11299
+2023-01-26 23:07:32,415	INFO	torchdistill.misc.log	Epoch: [40] Total time: 0:00:36
+2023-01-26 23:07:34,146	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:34  model_time: 0.3268 (0.3268)  evaluator_time: 0.0006 (0.0006)  time: 1.6803  data: 1.3520  max mem: 11299
+2023-01-26 23:11:25,347	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2147 (0.2293)  evaluator_time: 0.0005 (0.0005)  time: 0.2166  data: 0.0001  max mem: 11299
+2023-01-26 23:13:10,259	INFO	torchdistill.misc.log	Validation: Total time: 0:05:37
+2023-01-26 23:13:10,259	INFO	__main__	mean IoU: 70.3, IoU: ['91.3', '78.0', '39.5', '77.6', '66.6', '64.3', '87.2', '79.4', '84.3', '34.9', '78.5', '62.3', '81.8', '77.0', '74.5', '77.5', '55.9', '77.7', '42.7', '81.3', '63.3'], Global pixelwise acc: 92.4, Average row correct: ['94.8', '95.0', '71.2', '91.8', '81.9', '94.2', '96.7', '87.1', '92.5', '48.8', '94.4', '71.7', '91.8', '87.8', '89.8', '85.8', '75.1', '84.8', '55.5', '93.4', '86.5']
+2023-01-26 23:13:12,550	INFO	torchdistill.misc.log	Epoch: [41]  [ 0/92]  eta: 0:03:29  lr: 0.016664167718552832  img/s: 37.66128179600944  loss: 0.2304 (0.2304)  time: 2.2811  data: 1.8510  max mem: 11299
+2023-01-26 23:13:46,499	INFO	torchdistill.misc.log	Epoch: [41] Total time: 0:00:36
+2023-01-26 23:13:48,201	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:39:52  model_time: 0.2672 (0.2672)  evaluator_time: 0.0006 (0.0006)  time: 1.6509  data: 1.3822  max mem: 11299
+2023-01-26 23:17:41,402	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:45  model_time: 0.2308 (0.2312)  evaluator_time: 0.0005 (0.0005)  time: 0.2369  data: 0.0001  max mem: 11299
+2023-01-26 23:19:27,543	INFO	torchdistill.misc.log	Validation: Total time: 0:05:40
+2023-01-26 23:19:27,544	INFO	__main__	mean IoU: 71.0, IoU: ['91.3', '81.1', '38.9', '77.6', '68.4', '67.5', '87.4', '78.9', '86.2', '33.0', '84.0', '62.3', '81.4', '78.5', '74.7', '77.7', '57.6', '79.9', '46.0', '76.9', '62.4'], Global pixelwise acc: 92.5, Average row correct: ['94.9', '89.5', '69.3', '91.0', '81.1', '92.8', '96.3', '84.6', '93.7', '42.4', '90.6', '71.0', '93.3', '93.2', '91.3', '86.2', '73.7', '91.8', '61.3', '94.5', '86.5']
+2023-01-26 23:19:27,545	INFO	__main__	Best mIoU: 70.6392 -> 71.0301
+2023-01-26 23:19:27,545	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-26 23:19:36,852	INFO	torchdistill.misc.log	Epoch: [42]  [ 0/92]  eta: 0:03:34  lr: 0.01635770843157755  img/s: 37.64617605200432  loss: 0.2685 (0.2685)  time: 2.3353  data: 1.9052  max mem: 11299
+2023-01-26 23:20:10,800	INFO	torchdistill.misc.log	Epoch: [42] Total time: 0:00:36
+2023-01-26 23:20:12,530	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:34  model_time: 0.3034 (0.3034)  evaluator_time: 0.0006 (0.0006)  time: 1.6800  data: 1.3752  max mem: 11299
+2023-01-26 23:23:55,212	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:40  model_time: 0.2280 (0.2207)  evaluator_time: 0.0005 (0.0005)  time: 0.2334  data: 0.0001  max mem: 11299
+2023-01-26 23:25:36,296	INFO	torchdistill.misc.log	Validation: Total time: 0:05:25
+2023-01-26 23:25:36,297	INFO	__main__	mean IoU: 71.0, IoU: ['91.6', '80.2', '39.2', '77.2', '66.8', '68.2', '88.1', '80.3', '83.3', '29.4', '83.0', '60.5', '81.1', '77.9', '76.7', '77.5', '55.3', '81.5', '43.4', '82.4', '67.3'], Global pixelwise acc: 92.6, Average row correct: ['95.2', '92.6', '68.5', '91.3', '83.5', '92.4', '95.8', '86.9', '95.0', '50.6', '92.0', '66.9', '92.3', '91.2', '85.8', '86.3', '76.0', '91.8', '53.6', '89.1', '82.9']
+2023-01-26 23:25:38,885	INFO	torchdistill.misc.log	Epoch: [43]  [ 0/92]  eta: 0:03:55  lr: 0.01605060982868376  img/s: 39.09640622733392  loss: 0.2831 (0.2831)  time: 2.5612  data: 2.1465  max mem: 11299
+2023-01-26 23:26:12,832	INFO	torchdistill.misc.log	Epoch: [43] Total time: 0:00:36
+2023-01-26 23:26:14,555	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:23  model_time: 0.3001 (0.3001)  evaluator_time: 0.0007 (0.0007)  time: 1.6724  data: 1.3709  max mem: 11299
+2023-01-26 23:29:57,972	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:40  model_time: 0.2267 (0.2215)  evaluator_time: 0.0005 (0.0005)  time: 0.2350  data: 0.0001  max mem: 11299
+2023-01-26 23:31:41,202	INFO	torchdistill.misc.log	Validation: Total time: 0:05:28
+2023-01-26 23:31:41,202	INFO	__main__	mean IoU: 70.8, IoU: ['91.6', '76.3', '39.0', '77.4', '66.5', '67.1', '86.2', '78.8', '84.8', '32.8', '82.9', '62.0', '82.7', '78.2', '76.1', '77.6', '55.0', '82.2', '41.4', '81.5', '65.9'], Global pixelwise acc: 92.5, Average row correct: ['95.2', '94.1', '68.7', '89.2', '83.8', '92.8', '93.0', '83.7', '93.9', '57.7', '92.7', '70.6', '92.6', '89.7', '87.6', '86.4', '75.1', '89.9', '51.0', '89.9', '82.1']
+2023-01-26 23:31:43,505	INFO	torchdistill.misc.log	Epoch: [44]  [ 0/92]  eta: 0:03:30  lr: 0.015742856925519508  img/s: 36.32271309442171  loss: 0.2860 (0.2860)  time: 2.2924  data: 1.8469  max mem: 11299
+2023-01-26 23:32:17,478	INFO	torchdistill.misc.log	Epoch: [44] Total time: 0:00:36
+2023-01-26 23:32:19,190	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:06  model_time: 0.2733 (0.2733)  evaluator_time: 0.0007 (0.0007)  time: 1.6607  data: 1.3859  max mem: 11299
+2023-01-26 23:36:05,296	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:42  model_time: 0.2276 (0.2241)  evaluator_time: 0.0005 (0.0005)  time: 0.2325  data: 0.0001  max mem: 11299
+2023-01-26 23:37:51,172	INFO	torchdistill.misc.log	Validation: Total time: 0:05:33
+2023-01-26 23:37:51,172	INFO	__main__	mean IoU: 71.1, IoU: ['91.4', '80.4', '39.4', '76.5', '68.8', '67.8', '87.7', '79.0', '85.8', '36.1', '80.9', '62.1', '81.8', '79.0', '76.9', '77.4', '54.0', '75.1', '44.8', '83.2', '64.7'], Global pixelwise acc: 92.5, Average row correct: ['95.0', '91.7', '65.5', '88.7', '83.7', '92.4', '94.5', '89.4', '93.1', '48.2', '93.0', '73.9', '93.5', '90.2', '89.5', '84.8', '78.0', '93.7', '62.6', '88.9', '84.5']
+2023-01-26 23:37:51,173	INFO	__main__	Best mIoU: 71.0301 -> 71.0821
+2023-01-26 23:37:51,173	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-26 23:37:58,965	INFO	torchdistill.misc.log	Epoch: [45]  [ 0/92]  eta: 0:03:20  lr: 0.015434434052602338  img/s: 36.80933418460816  loss: 0.2535 (0.2535)  time: 2.1816  data: 1.7414  max mem: 11299
+2023-01-26 23:38:32,935	INFO	torchdistill.misc.log	Epoch: [45] Total time: 0:00:36
+2023-01-26 23:38:34,666	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:34  model_time: 0.3005 (0.3005)  evaluator_time: 0.0006 (0.0006)  time: 1.6801  data: 1.3783  max mem: 11299
+2023-01-26 23:42:23,716	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:43  model_time: 0.1927 (0.2271)  evaluator_time: 0.0005 (0.0005)  time: 0.1988  data: 0.0001  max mem: 11299
+2023-01-26 23:44:08,101	INFO	torchdistill.misc.log	Validation: Total time: 0:05:35
+2023-01-26 23:44:08,101	INFO	__main__	mean IoU: 70.8, IoU: ['91.5', '79.1', '38.5', '74.3', '68.3', '61.3', '87.8', '78.1', '86.5', '34.6', '82.4', '61.5', '82.4', '77.6', '75.4', '77.6', '56.6', '80.5', '42.6', '83.4', '67.4'], Global pixelwise acc: 92.5, Average row correct: ['95.2', '91.1', '60.9', '90.7', '81.0', '94.1', '95.6', '83.4', '93.6', '50.4', '88.2', '71.0', '93.5', '92.0', '88.7', '86.4', '70.8', '90.5', '59.4', '90.6', '84.0']
+2023-01-26 23:44:10,343	INFO	torchdistill.misc.log	Epoch: [46]  [ 0/92]  eta: 0:03:25  lr: 0.0151253248080428  img/s: 36.773511664047376  loss: 0.2569 (0.2569)  time: 2.2317  data: 1.7914  max mem: 11299
+2023-01-26 23:44:44,340	INFO	torchdistill.misc.log	Epoch: [46] Total time: 0:00:36
+2023-01-26 23:44:46,074	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:39  model_time: 0.3072 (0.3072)  evaluator_time: 0.0006 (0.0006)  time: 1.6838  data: 1.3752  max mem: 11299
+2023-01-26 23:48:37,119	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2290 (0.2291)  evaluator_time: 0.0005 (0.0005)  time: 0.2349  data: 0.0001  max mem: 11299
+2023-01-26 23:50:23,193	INFO	torchdistill.misc.log	Validation: Total time: 0:05:38
+2023-01-26 23:50:23,193	INFO	__main__	mean IoU: 71.6, IoU: ['91.8', '79.3', '38.6', '78.2', '69.4', '69.2', '86.1', '80.6', '85.3', '32.8', '81.7', '63.1', '83.1', '79.1', '77.4', '77.8', '56.6', '78.9', '43.2', '82.6', '68.0'], Global pixelwise acc: 92.8, Average row correct: ['95.7', '92.8', '67.8', '88.6', '82.4', '91.9', '96.2', '89.5', '91.0', '45.5', '88.3', '72.0', '90.4', '90.6', '87.1', '85.9', '72.4', '92.2', '54.2', '90.8', '87.6']
+2023-01-26 23:50:23,194	INFO	__main__	Best mIoU: 71.0821 -> 71.5626
+2023-01-26 23:50:23,194	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-26 23:50:32,499	INFO	torchdistill.misc.log	Epoch: [47]  [ 0/92]  eta: 0:05:07  lr: 0.014815512005854752  img/s: 40.759535924997785  loss: 0.2174 (0.2174)  time: 3.3421  data: 2.9444  max mem: 11299
+2023-01-26 23:51:06,490	INFO	torchdistill.misc.log	Epoch: [47] Total time: 0:00:37
+2023-01-26 23:51:08,216	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:27  model_time: 0.3037 (0.3037)  evaluator_time: 0.0006 (0.0006)  time: 1.6754  data: 1.3704  max mem: 11299
+2023-01-26 23:54:55,800	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:42  model_time: 0.1946 (0.2254)  evaluator_time: 0.0009 (0.0007)  time: 0.2004  data: 0.0001  max mem: 11299
+2023-01-26 23:56:36,433	INFO	torchdistill.misc.log	Validation: Total time: 0:05:29
+2023-01-26 23:56:36,433	INFO	__main__	mean IoU: 70.9, IoU: ['91.6', '79.4', '40.2', '78.0', '69.8', '64.2', '87.2', '80.4', '86.9', '31.7', '80.9', '59.7', '81.4', '77.5', '77.0', '77.4', '56.2', '81.4', '36.3', '82.8', '68.6'], Global pixelwise acc: 92.6, Average row correct: ['95.6', '92.8', '65.6', '89.2', '82.2', '92.1', '94.5', '88.1', '92.1', '45.7', '85.3', '72.1', '94.7', '90.3', '88.6', '86.3', '74.0', '89.6', '45.8', '87.6', '85.9']
+2023-01-26 23:56:38,877	INFO	torchdistill.misc.log	Epoch: [48]  [ 0/92]  eta: 0:03:43  lr: 0.01450497761932807  img/s: 30.74807093939673  loss: 0.2498 (0.2498)  time: 2.4329  data: 1.9074  max mem: 11299
+2023-01-26 23:57:21,872	INFO	torchdistill.misc.log	Epoch: [48] Total time: 0:00:45
+2023-01-26 23:57:23,648	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:41:39  model_time: 0.2818 (0.2818)  evaluator_time: 0.0011 (0.0011)  time: 1.7253  data: 1.4416  max mem: 11299
+2023-01-27 00:01:13,465	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:43  model_time: 0.1935 (0.2274)  evaluator_time: 0.0010 (0.0010)  time: 0.1999  data: 0.0001  max mem: 11299
+2023-01-27 00:02:52,692	INFO	torchdistill.misc.log	Validation: Total time: 0:05:30
+2023-01-27 00:02:52,692	INFO	__main__	mean IoU: 70.8, IoU: ['91.6', '79.7', '39.3', '77.3', '69.2', '69.4', '85.2', '81.0', '84.9', '33.2', '80.9', '61.1', '81.7', '76.9', '76.4', '77.2', '54.4', '79.6', '38.7', '79.9', '68.6'], Global pixelwise acc: 92.5, Average row correct: ['95.4', '90.5', '59.9', '87.7', '79.5', '91.4', '95.2', '88.4', '93.2', '59.4', '87.8', '69.6', '91.4', '91.1', '87.7', '87.9', '66.6', '88.1', '49.8', '83.6', '86.9']
+2023-01-27 00:02:55,389	INFO	torchdistill.misc.log	Epoch: [49]  [ 0/92]  eta: 0:04:07  lr: 0.014193702718863015  img/s: 29.483277808702084  loss: 0.3161 (0.3161)  time: 2.6870  data: 2.1389  max mem: 11299
+2023-01-27 00:03:39,070	INFO	torchdistill.misc.log	Epoch: [49] Total time: 0:00:46
+2023-01-27 00:03:40,869	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:42:18  model_time: 0.2735 (0.2735)  evaluator_time: 0.0012 (0.0012)  time: 1.7521  data: 1.4765  max mem: 11299
+2023-01-27 00:07:29,069	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:43  model_time: 0.1928 (0.2257)  evaluator_time: 0.0009 (0.0010)  time: 0.1992  data: 0.0001  max mem: 11299
+2023-01-27 00:09:07,944	INFO	torchdistill.misc.log	Validation: Total time: 0:05:28
+2023-01-27 00:09:07,945	INFO	__main__	mean IoU: 71.4, IoU: ['91.7', '79.4', '41.0', '77.6', '69.1', '66.9', '86.9', '80.2', '86.3', '35.7', '81.8', '61.5', '80.8', '77.3', '76.9', '77.2', '56.2', '80.9', '41.4', '81.7', '69.1'], Global pixelwise acc: 92.8, Average row correct: ['95.8', '90.7', '69.6', '89.4', '79.9', '91.2', '94.8', '86.4', '93.2', '47.9', '89.5', '68.4', '93.9', '89.3', '87.2', '84.8', '74.5', '89.5', '52.3', '89.9', '86.2']
+2023-01-27 00:09:10,526	INFO	torchdistill.misc.log	Epoch: [50]  [ 0/92]  eta: 0:03:56  lr: 0.01388166740357589  img/s: 31.235158975733814  loss: 0.3972 (0.3972)  time: 2.5713  data: 2.0537  max mem: 11299
+2023-01-27 00:09:53,471	INFO	torchdistill.misc.log	Epoch: [50] Total time: 0:00:45
+2023-01-27 00:09:55,234	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:52  model_time: 0.2837 (0.2837)  evaluator_time: 0.0011 (0.0011)  time: 1.6922  data: 1.4068  max mem: 11299
+2023-01-27 00:13:44,352	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:43  model_time: 0.1921 (0.2270)  evaluator_time: 0.0005 (0.0006)  time: 0.1979  data: 0.0001  max mem: 11299
+2023-01-27 00:15:28,259	INFO	torchdistill.misc.log	Validation: Total time: 0:05:34
+2023-01-27 00:15:28,259	INFO	__main__	mean IoU: 70.7, IoU: ['91.6', '77.2', '38.5', '77.3', '67.6', '66.8', '86.0', '81.4', '85.2', '35.1', '82.0', '60.5', '81.8', '77.7', '76.6', '76.7', '56.7', '75.3', '45.0', '82.5', '64.0'], Global pixelwise acc: 92.6, Average row correct: ['95.7', '92.8', '66.6', '89.6', '81.9', '91.8', '96.4', '87.9', '93.4', '50.5', '90.1', '65.6', '89.6', '90.6', '88.7', '83.9', '74.1', '93.1', '55.3', '90.2', '76.0']
+2023-01-27 00:15:30,667	INFO	torchdistill.misc.log	Epoch: [51]  [ 0/92]  eta: 0:03:40  lr: 0.013568850725880271  img/s: 28.96410004976333  loss: 0.1657 (0.1657)  time: 2.3977  data: 1.8403  max mem: 11299
+2023-01-27 00:16:13,437	INFO	torchdistill.misc.log	Epoch: [51] Total time: 0:00:45
+2023-01-27 00:16:15,205	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:41:16  model_time: 0.2968 (0.2968)  evaluator_time: 0.0013 (0.0013)  time: 1.7088  data: 1.4100  max mem: 11299
+2023-01-27 00:19:52,027	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:38  model_time: 0.2281 (0.2144)  evaluator_time: 0.0009 (0.0011)  time: 0.2228  data: 0.0001  max mem: 11299
+2023-01-27 00:21:30,578	INFO	torchdistill.misc.log	Validation: Total time: 0:05:17
+2023-01-27 00:21:30,579	INFO	__main__	mean IoU: 71.2, IoU: ['91.6', '79.6', '38.3', '75.1', '70.4', '62.8', '87.1', '80.4', '83.8', '34.9', '83.6', '61.3', '80.9', '79.9', '76.9', '77.5', '56.4', '81.6', '43.3', '82.8', '66.9'], Global pixelwise acc: 92.6, Average row correct: ['95.3', '91.9', '64.1', '91.8', '81.2', '92.5', '93.6', '88.3', '93.9', '49.1', '89.4', '72.4', '89.5', '89.7', '89.3', '85.6', '76.1', '90.1', '58.3', '91.0', '84.5']
+2023-01-27 00:21:33,102	INFO	torchdistill.misc.log	Epoch: [52]  [ 0/92]  eta: 0:03:51  lr: 0.013255230608123123  img/s: 29.39180317888835  loss: 0.2194 (0.2194)  time: 2.5135  data: 1.9630  max mem: 11299
+2023-01-27 00:22:16,367	INFO	torchdistill.misc.log	Epoch: [52] Total time: 0:00:45
+2023-01-27 00:22:18,083	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:11  model_time: 0.2693 (0.2693)  evaluator_time: 0.0018 (0.0018)  time: 1.6641  data: 1.3922  max mem: 11299
+2023-01-27 00:25:56,315	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:38  model_time: 0.2216 (0.2157)  evaluator_time: 0.0009 (0.0011)  time: 0.2221  data: 0.0001  max mem: 11299
+2023-01-27 00:27:36,167	INFO	torchdistill.misc.log	Validation: Total time: 0:05:19
+2023-01-27 00:27:36,167	INFO	__main__	mean IoU: 70.9, IoU: ['91.3', '78.2', '40.5', '75.6', '67.4', '67.9', '87.9', '80.9', '84.9', '34.6', '82.7', '60.4', '80.5', '78.2', '77.4', '77.1', '55.5', '76.9', '41.3', '82.5', '66.9'], Global pixelwise acc: 92.4, Average row correct: ['94.8', '93.5', '65.8', '90.0', '84.8', '92.3', '94.5', '89.9', '94.1', '48.2', '92.2', '71.8', '92.7', '89.6', '89.4', '85.8', '76.1', '91.3', '58.2', '93.0', '86.1']
+2023-01-27 00:27:38,588	INFO	torchdistill.misc.log	Epoch: [53]  [ 0/92]  eta: 0:03:41  lr: 0.012940783750207184  img/s: 26.48337174427782  loss: 0.1332 (0.1332)  time: 2.4103  data: 1.8009  max mem: 11299
+2023-01-27 00:28:21,643	INFO	torchdistill.misc.log	Epoch: [53] Total time: 0:00:45
+2023-01-27 00:28:23,341	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:39:45  model_time: 0.2660 (0.2660)  evaluator_time: 0.0019 (0.0019)  time: 1.6466  data: 1.3781  max mem: 11299
+2023-01-27 00:32:05,578	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:40  model_time: 0.1949 (0.2198)  evaluator_time: 0.0005 (0.0010)  time: 0.1992  data: 0.0001  max mem: 11299
+2023-01-27 00:33:45,834	INFO	torchdistill.misc.log	Validation: Total time: 0:05:24
+2023-01-27 00:33:45,834	INFO	__main__	mean IoU: 70.4, IoU: ['91.6', '80.8', '37.9', '76.3', '67.3', '68.1', '87.6', '80.6', '84.3', '34.9', '76.1', '60.2', '81.9', '71.9', '77.0', '77.2', '57.5', '75.3', '39.5', '84.3', '68.1'], Global pixelwise acc: 92.6, Average row correct: ['95.5', '90.2', '76.9', '91.4', '80.1', '92.2', '96.2', '88.1', '94.9', '48.3', '82.7', '71.4', '91.1', '91.4', '89.0', '85.5', '73.9', '89.4', '46.7', '91.6', '84.2']
+2023-01-27 00:33:47,986	INFO	torchdistill.misc.log	Epoch: [54]  [ 0/92]  eta: 0:03:17  lr: 0.012625485526954267  img/s: 35.321402837655114  loss: 0.1522 (0.1522)  time: 2.1423  data: 1.6839  max mem: 11299
+2023-01-27 00:34:21,918	INFO	torchdistill.misc.log	Epoch: [54] Total time: 0:00:36
+2023-01-27 00:34:23,623	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:39:56  model_time: 0.2703 (0.2703)  evaluator_time: 0.0006 (0.0006)  time: 1.6536  data: 1.3821  max mem: 11299
+2023-01-27 00:38:13,052	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:43  model_time: 0.2271 (0.2274)  evaluator_time: 0.0005 (0.0005)  time: 0.2333  data: 0.0001  max mem: 11299
+2023-01-27 00:39:54,708	INFO	torchdistill.misc.log	Validation: Total time: 0:05:32
+2023-01-27 00:39:54,708	INFO	__main__	mean IoU: 71.3, IoU: ['91.5', '79.0', '39.3', '76.6', '68.0', '65.2', '86.8', '80.4', '85.5', '34.9', '82.3', '61.5', '82.2', '77.3', '77.7', '77.1', '56.8', '79.6', '42.9', '82.6', '70.1'], Global pixelwise acc: 92.7, Average row correct: ['95.6', '91.3', '72.4', '91.6', '81.8', '93.0', '95.4', '86.5', '93.8', '44.2', '88.1', '69.5', '93.0', '88.5', '86.7', '83.9', '77.5', '91.7', '56.6', '89.9', '85.7']
+2023-01-27 00:39:57,096	INFO	torchdistill.misc.log	Epoch: [55]  [ 0/92]  eta: 0:03:38  lr: 0.012309309873752672  img/s: 40.88105245972743  loss: 0.1473 (0.1473)  time: 2.3778  data: 1.9730  max mem: 11299
+2023-01-27 00:40:31,062	INFO	torchdistill.misc.log	Epoch: [55] Total time: 0:00:36
+2023-01-27 00:40:32,774	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:06  model_time: 0.2880 (0.2880)  evaluator_time: 0.0006 (0.0006)  time: 1.6608  data: 1.3714  max mem: 11299
+2023-01-27 00:44:18,173	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:41  model_time: 0.2192 (0.2234)  evaluator_time: 0.0005 (0.0005)  time: 0.2209  data: 0.0001  max mem: 11299
+2023-01-27 00:46:04,370	INFO	torchdistill.misc.log	Validation: Total time: 0:05:33
+2023-01-27 00:46:04,370	INFO	__main__	mean IoU: 70.9, IoU: ['91.8', '81.2', '39.7', '77.5', '68.1', '69.7', '86.0', '81.6', '85.5', '33.5', '81.6', '60.8', '81.6', '75.2', '77.3', '77.3', '55.3', '77.3', '39.4', '82.0', '66.7'], Global pixelwise acc: 92.7, Average row correct: ['95.6', '90.7', '68.9', '90.6', '83.1', '91.3', '95.9', '89.2', '93.3', '58.0', '91.3', '67.6', '93.6', '84.4', '88.1', '85.7', '66.7', '90.9', '46.7', '86.6', '84.2']
+2023-01-27 00:46:07,183	INFO	torchdistill.misc.log	Epoch: [56]  [ 0/92]  eta: 0:04:17  lr: 0.011992229158777226  img/s: 40.820402395859375  loss: 0.1910 (0.1910)  time: 2.8024  data: 2.4054  max mem: 11299
+2023-01-27 00:46:41,147	INFO	torchdistill.misc.log	Epoch: [56] Total time: 0:00:36
+2023-01-27 00:46:42,864	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:15  model_time: 0.2957 (0.2957)  evaluator_time: 0.0006 (0.0006)  time: 1.6669  data: 1.3698  max mem: 11299
+2023-01-27 00:50:38,536	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:46  model_time: 0.2287 (0.2337)  evaluator_time: 0.0005 (0.0005)  time: 0.2352  data: 0.0001  max mem: 11299
+2023-01-27 00:52:22,305	INFO	torchdistill.misc.log	Validation: Total time: 0:05:41
+2023-01-27 00:52:22,305	INFO	__main__	mean IoU: 71.1, IoU: ['91.4', '80.5', '39.6', '78.7', '68.4', '65.9', '86.8', '81.6', '85.3', '35.3', '82.2', '61.8', '80.8', '78.2', '77.2', '77.2', '56.6', '80.2', '42.1', '79.0', '65.3'], Global pixelwise acc: 92.5, Average row correct: ['95.0', '89.8', '73.8', '88.5', '79.1', '91.2', '96.8', '88.1', '92.9', '56.1', '88.9', '69.3', '93.5', '90.1', '89.1', '85.4', '76.6', '88.9', '54.4', '94.2', '86.9']
+2023-01-27 00:52:24,462	INFO	torchdistill.misc.log	Epoch: [57]  [ 0/92]  eta: 0:03:17  lr: 0.011674214039762734  img/s: 37.20543892738302  loss: 0.2592 (0.2592)  time: 2.1468  data: 1.7117  max mem: 11299
+2023-01-27 00:52:58,440	INFO	torchdistill.misc.log	Epoch: [57] Total time: 0:00:36
+2023-01-27 00:53:00,949	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:59:21  model_time: 0.3347 (0.3347)  evaluator_time: 0.0006 (0.0006)  time: 2.4580  data: 2.1219  max mem: 11299
+2023-01-27 00:56:56,465	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:46  model_time: 0.2278 (0.2336)  evaluator_time: 0.0005 (0.0005)  time: 0.2279  data: 0.0001  max mem: 11299
+2023-01-27 00:58:35,442	INFO	torchdistill.misc.log	Validation: Total time: 0:05:36
+2023-01-27 00:58:35,443	INFO	__main__	mean IoU: 70.8, IoU: ['91.6', '80.3', '39.3', '74.2', '68.7', '67.1', '88.3', '81.8', '85.2', '35.0', '80.3', '63.1', '82.1', '75.7', '77.9', '77.5', '55.8', '75.1', '41.1', '79.3', '67.2'], Global pixelwise acc: 92.7, Average row correct: ['95.8', '88.4', '61.8', '89.1', '79.8', '89.6', '95.7', '88.9', '93.8', '45.1', '88.9', '75.4', '92.0', '89.2', '87.7', '85.3', '69.2', '90.8', '49.1', '92.8', '75.6']
+2023-01-27 00:58:38,002	INFO	torchdistill.misc.log	Epoch: [58]  [ 0/92]  eta: 0:03:54  lr: 0.011355233302937178  img/s: 40.856188773276884  loss: 0.2769 (0.2769)  time: 2.5491  data: 2.1524  max mem: 11299
+2023-01-27 00:59:11,947	INFO	torchdistill.misc.log	Epoch: [58] Total time: 0:00:36
+2023-01-27 00:59:13,633	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:39:28  model_time: 0.2924 (0.2924)  evaluator_time: 0.0007 (0.0007)  time: 1.6344  data: 1.3405  max mem: 11299
+2023-01-27 01:03:02,202	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:43  model_time: 0.2285 (0.2266)  evaluator_time: 0.0005 (0.0005)  time: 0.2345  data: 0.0001  max mem: 11299
+2023-01-27 01:04:47,925	INFO	torchdistill.misc.log	Validation: Total time: 0:05:35
+2023-01-27 01:04:47,925	INFO	__main__	mean IoU: 71.4, IoU: ['91.7', '80.5', '39.6', '77.2', '66.8', '67.6', '88.1', '79.7', '85.3', '38.1', '81.7', '62.3', '82.4', '78.1', '74.8', '77.6', '55.8', '80.9', '43.9', '80.7', '67.8'], Global pixelwise acc: 92.8, Average row correct: ['95.4', '89.1', '69.8', '89.1', '80.3', '91.0', '95.6', '85.8', '93.0', '55.8', '88.6', '73.0', '93.1', '91.5', '89.6', '86.7', '70.6', '89.7', '53.2', '93.3', '84.6']
+2023-01-27 01:04:50,826	INFO	torchdistill.misc.log	Epoch: [59]  [ 0/92]  eta: 0:04:26  lr: 0.011035253681263521  img/s: 40.29006455765131  loss: 0.2009 (0.2009)  time: 2.8914  data: 2.4892  max mem: 11299
+2023-01-27 01:05:24,803	INFO	torchdistill.misc.log	Epoch: [59] Total time: 0:00:36
+2023-01-27 01:05:26,521	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:15  model_time: 0.2997 (0.2997)  evaluator_time: 0.0006 (0.0006)  time: 1.6672  data: 1.3662  max mem: 11299
+2023-01-27 01:09:13,345	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:42  model_time: 0.2099 (0.2249)  evaluator_time: 0.0005 (0.0005)  time: 0.2175  data: 0.0001  max mem: 11299
+2023-01-27 01:10:57,045	INFO	torchdistill.misc.log	Validation: Total time: 0:05:32
+2023-01-27 01:10:57,045	INFO	__main__	mean IoU: 71.0, IoU: ['91.5', '80.2', '38.3', '75.0', '64.4', '65.1', '88.3', '80.9', '84.9', '34.2', '82.5', '63.4', '81.5', '78.6', '76.7', '77.6', '55.5', '80.6', '42.7', '82.0', '66.9'], Global pixelwise acc: 92.6, Average row correct: ['95.2', '91.4', '61.6', '91.6', '81.8', '90.5', '95.3', '88.2', '94.0', '45.8', '90.5', '74.4', '93.8', '90.8', '87.3', '87.0', '72.9', '89.9', '54.6', '92.3', '83.6']
+2023-01-27 01:10:59,441	INFO	torchdistill.misc.log	Epoch: [60]  [ 0/92]  eta: 0:03:39  lr: 0.010714239648576077  img/s: 40.791669629902486  loss: 0.1355 (0.1355)  time: 2.3854  data: 1.9879  max mem: 11299
+2023-01-27 01:11:33,402	INFO	torchdistill.misc.log	Epoch: [60] Total time: 0:00:36
+2023-01-27 01:11:35,134	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:35  model_time: 0.3061 (0.3061)  evaluator_time: 0.0006 (0.0006)  time: 1.6811  data: 1.3737  max mem: 11299
+2023-01-27 01:15:27,496	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2270 (0.2304)  evaluator_time: 0.0005 (0.0005)  time: 0.2239  data: 0.0001  max mem: 11299
+2023-01-27 01:17:07,553	INFO	torchdistill.misc.log	Validation: Total time: 0:05:34
+2023-01-27 01:17:07,553	INFO	__main__	mean IoU: 71.5, IoU: ['91.9', '80.3', '39.4', '77.6', '67.2', '69.7', '89.4', '80.4', '85.7', '37.0', '81.2', '63.0', '81.9', '76.3', '76.0', '77.3', '56.7', '79.1', '43.4', '82.1', '66.4'], Global pixelwise acc: 92.9, Average row correct: ['96.0', '92.4', '73.9', '88.5', '79.7', '90.6', '95.2', '86.6', '91.0', '49.4', '89.1', '73.9', '91.8', '86.8', '88.5', '84.8', '68.3', '90.4', '52.6', '91.7', '81.2']
+2023-01-27 01:17:10,840	INFO	torchdistill.misc.log	Epoch: [61]  [ 0/92]  eta: 0:05:01  lr: 0.010392153185501152  img/s: 41.49779460006295  loss: 0.2478 (0.2478)  time: 3.2768  data: 2.8863  max mem: 11299
+2023-01-27 01:17:44,765	INFO	torchdistill.misc.log	Epoch: [61] Total time: 0:00:37
+2023-01-27 01:17:46,488	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:21  model_time: 0.2647 (0.2647)  evaluator_time: 0.0006 (0.0006)  time: 1.6715  data: 1.4055  max mem: 11299
+2023-01-27 01:21:28,427	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:40  model_time: 0.2289 (0.2199)  evaluator_time: 0.0005 (0.0005)  time: 0.2346  data: 0.0001  max mem: 11299
+2023-01-27 01:23:12,839	INFO	torchdistill.misc.log	Validation: Total time: 0:05:28
+2023-01-27 01:23:12,839	INFO	__main__	mean IoU: 71.1, IoU: ['91.8', '78.7', '40.1', '77.2', '68.7', '66.9', '88.6', '81.0', '84.1', '34.3', '82.2', '61.2', '80.4', '78.1', '76.1', '77.5', '57.0', '81.2', '38.4', '83.1', '67.5'], Global pixelwise acc: 92.8, Average row correct: ['96.0', '93.1', '62.6', '91.1', '79.6', '92.5', '96.1', '86.7', '93.1', '45.0', '88.6', '69.6', '90.9', '88.3', '87.4', '85.0', '69.6', '89.3', '47.9', '91.2', '83.2']
+2023-01-27 01:23:15,272	INFO	torchdistill.misc.log	Epoch: [62]  [ 0/92]  eta: 0:03:42  lr: 0.01006895351218416  img/s: 40.52208252370319  loss: 0.1325 (0.1325)  time: 2.4230  data: 2.0232  max mem: 11299
+2023-01-27 01:23:49,226	INFO	torchdistill.misc.log	Epoch: [62] Total time: 0:00:36
+2023-01-27 01:23:50,916	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:39:36  model_time: 0.2654 (0.2654)  evaluator_time: 0.0006 (0.0006)  time: 1.6400  data: 1.3734  max mem: 11299
+2023-01-27 01:27:39,886	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:43  model_time: 0.2285 (0.2270)  evaluator_time: 0.0005 (0.0005)  time: 0.2340  data: 0.0001  max mem: 11299
+2023-01-27 01:29:25,387	INFO	torchdistill.misc.log	Validation: Total time: 0:05:36
+2023-01-27 01:29:25,387	INFO	__main__	mean IoU: 71.1, IoU: ['91.8', '80.9', '41.1', '77.7', '67.3', '67.9', '88.0', '80.8', '84.5', '32.1', '82.8', '62.9', '81.2', '77.6', '76.0', '77.5', '56.2', '79.7', '35.2', '83.7', '67.1'], Global pixelwise acc: 92.7, Average row correct: ['95.6', '90.8', '67.3', '91.1', '81.2', '92.9', '95.3', '86.5', '93.2', '57.6', '90.3', '71.0', '91.6', '90.3', '87.8', '86.3', '74.7', '92.0', '41.0', '91.0', '80.0']
+2023-01-27 01:29:27,812	INFO	torchdistill.misc.log	Epoch: [63]  [ 0/92]  eta: 0:03:42  lr: 0.00974459678175711  img/s: 41.51746008570893  loss: 0.2134 (0.2134)  time: 2.4150  data: 2.0248  max mem: 11299
+2023-01-27 01:30:01,790	INFO	torchdistill.misc.log	Epoch: [63] Total time: 0:00:36
+2023-01-27 01:30:03,497	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:39:59  model_time: 0.3015 (0.3015)  evaluator_time: 0.0006 (0.0006)  time: 1.6557  data: 1.3528  max mem: 11299
+2023-01-27 01:33:48,476	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:41  model_time: 0.2304 (0.2230)  evaluator_time: 0.0005 (0.0005)  time: 0.2365  data: 0.0001  max mem: 11299
+2023-01-27 01:35:32,522	INFO	torchdistill.misc.log	Validation: Total time: 0:05:30
+2023-01-27 01:35:32,522	INFO	__main__	mean IoU: 71.2, IoU: ['91.7', '79.7', '40.1', '77.4', '67.3', '67.5', '87.7', '80.9', '84.4', '35.4', '82.0', '61.7', '81.2', '78.2', '77.0', '77.5', '55.5', '77.4', '39.4', '83.5', '70.3'], Global pixelwise acc: 92.8, Average row correct: ['95.6', '91.0', '68.4', '91.1', '79.5', '90.6', '96.3', '88.6', '93.2', '51.4', '89.5', '70.1', '93.3', '90.4', '88.3', '86.5', '69.9', '90.5', '45.8', '91.6', '81.0']
+2023-01-27 01:35:34,666	INFO	torchdistill.misc.log	Epoch: [64]  [ 0/92]  eta: 0:03:16  lr: 0.009419035727105009  img/s: 37.84774807444701  loss: 0.3136 (0.3136)  time: 2.1333  data: 1.7054  max mem: 11299
+2023-01-27 01:36:08,644	INFO	torchdistill.misc.log	Epoch: [64] Total time: 0:00:36
+2023-01-27 01:36:10,359	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:12  model_time: 0.2752 (0.2752)  evaluator_time: 0.0006 (0.0006)  time: 1.6646  data: 1.3882  max mem: 11299
+2023-01-27 01:39:57,519	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:42  model_time: 0.2404 (0.2252)  evaluator_time: 0.0005 (0.0005)  time: 0.2439  data: 0.0001  max mem: 11299
+2023-01-27 01:41:38,893	INFO	torchdistill.misc.log	Validation: Total time: 0:05:30
+2023-01-27 01:41:38,893	INFO	__main__	mean IoU: 71.5, IoU: ['91.8', '80.4', '39.5', '78.2', '66.7', '68.6', '88.9', '79.9', '84.6', '34.3', '82.1', '62.5', '82.1', '78.2', '75.5', '77.3', '56.3', '79.1', '43.0', '83.3', '69.6'], Global pixelwise acc: 92.8, Average row correct: ['95.6', '90.8', '72.9', '89.8', '81.2', '91.6', '95.2', '86.0', '93.2', '51.3', '91.6', '72.0', '91.8', '88.7', '88.7', '86.5', '74.1', '91.2', '52.5', '91.4', '85.4']
+2023-01-27 01:41:41,986	INFO	torchdistill.misc.log	Epoch: [65]  [ 0/92]  eta: 0:04:43  lr: 0.009092219251736939  img/s: 38.157266776745224  loss: 0.2680 (0.2680)  time: 3.0824  data: 2.6580  max mem: 11299
+2023-01-27 01:42:15,979	INFO	torchdistill.misc.log	Epoch: [65] Total time: 0:00:37
+2023-01-27 01:42:17,716	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:42  model_time: 0.3446 (0.3446)  evaluator_time: 0.0006 (0.0006)  time: 1.6859  data: 1.3399  max mem: 11299
+2023-01-27 01:46:13,593	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:46  model_time: 0.2296 (0.2340)  evaluator_time: 0.0005 (0.0005)  time: 0.2352  data: 0.0001  max mem: 11299
+2023-01-27 01:47:56,917	INFO	torchdistill.misc.log	Validation: Total time: 0:05:40
+2023-01-27 01:47:56,917	INFO	__main__	mean IoU: 71.2, IoU: ['91.6', '79.9', '39.9', '77.9', '66.0', '64.1', '87.5', '80.8', '83.9', '34.2', '82.4', '62.5', '81.1', '78.2', '76.3', '77.2', '56.9', '79.3', '44.0', '82.0', '68.9'], Global pixelwise acc: 92.6, Average row correct: ['95.2', '91.3', '71.4', '89.1', '83.3', '93.0', '96.6', '87.4', '94.1', '49.4', '89.9', '71.1', '90.8', '90.6', '88.5', '85.6', '74.0', '87.9', '57.7', '93.7', '85.7']
+2023-01-27 01:47:59,284	INFO	torchdistill.misc.log	Epoch: [66]  [ 0/92]  eta: 0:03:36  lr: 0.008764091953315211  img/s: 42.171954641287236  loss: 0.2086 (0.2086)  time: 2.3564  data: 1.9719  max mem: 11299
+2023-01-27 01:48:33,273	INFO	torchdistill.misc.log	Epoch: [66] Total time: 0:00:36
+2023-01-27 01:48:35,046	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:41:34  model_time: 0.3568 (0.3568)  evaluator_time: 0.0006 (0.0006)  time: 1.7218  data: 1.3637  max mem: 11299
+2023-01-27 01:52:27,801	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:45  model_time: 0.2293 (0.2309)  evaluator_time: 0.0005 (0.0005)  time: 0.2351  data: 0.0001  max mem: 11299
+2023-01-27 01:54:07,480	INFO	torchdistill.misc.log	Validation: Total time: 0:05:34
+2023-01-27 01:54:07,480	INFO	__main__	mean IoU: 70.6, IoU: ['91.3', '79.3', '39.2', '76.7', '67.2', '66.7', '88.7', '81.6', '82.5', '29.9', '82.4', '60.3', '81.3', '78.4', '77.3', '77.6', '55.7', '78.5', '41.2', '82.8', '63.2'], Global pixelwise acc: 92.3, Average row correct: ['94.7', '91.9', '70.2', '88.7', '85.9', '92.1', '95.5', '89.9', '94.5', '51.0', '91.3', '71.4', '91.4', '90.0', '89.5', '86.5', '70.5', '89.5', '57.0', '90.9', '88.9']
+2023-01-27 01:54:09,733	INFO	torchdistill.misc.log	Epoch: [67]  [ 0/92]  eta: 0:03:26  lr: 0.00843459356547398  img/s: 38.20270833380772  loss: 0.2206 (0.2206)  time: 2.2427  data: 1.8186  max mem: 11299
+2023-01-27 01:54:43,720	INFO	torchdistill.misc.log	Epoch: [67] Total time: 0:00:36
+2023-01-27 01:54:45,395	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:39:14  model_time: 0.2817 (0.2817)  evaluator_time: 0.0006 (0.0006)  time: 1.6246  data: 1.3415  max mem: 11299
+2023-01-27 01:58:33,585	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:43  model_time: 0.2067 (0.2262)  evaluator_time: 0.0005 (0.0005)  time: 0.2111  data: 0.0001  max mem: 11299
+2023-01-27 02:00:10,537	INFO	torchdistill.misc.log	Validation: Total time: 0:05:26
+2023-01-27 02:00:10,537	INFO	__main__	mean IoU: 71.1, IoU: ['91.5', '75.8', '39.6', '77.3', '65.5', '71.0', '86.0', '81.1', '82.4', '34.1', '82.3', '61.9', '81.1', '79.0', '76.8', '77.3', '56.2', '78.7', '45.3', '82.4', '68.8'], Global pixelwise acc: 92.6, Average row correct: ['94.9', '94.7', '77.7', '92.2', '81.8', '90.6', '96.5', '89.0', '95.0', '47.5', '91.8', '71.7', '92.0', '89.7', '89.8', '87.2', '76.3', '89.5', '56.8', '92.4', '84.5']
+2023-01-27 02:00:12,820	INFO	torchdistill.misc.log	Epoch: [68]  [ 0/92]  eta: 0:03:29  lr: 0.008103658299730731  img/s: 41.79448672126012  loss: 0.2596 (0.2596)  time: 2.2725  data: 1.8846  max mem: 11299
+2023-01-27 02:00:46,802	INFO	torchdistill.misc.log	Epoch: [68] Total time: 0:00:36
+2023-01-27 02:00:48,541	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:45  model_time: 0.3087 (0.3087)  evaluator_time: 0.0006 (0.0006)  time: 1.6878  data: 1.3776  max mem: 11299
+2023-01-27 02:04:40,558	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.1935 (0.2301)  evaluator_time: 0.0005 (0.0005)  time: 0.1999  data: 0.0001  max mem: 11299
+2023-01-27 02:06:25,334	INFO	torchdistill.misc.log	Validation: Total time: 0:05:38
+2023-01-27 02:06:25,334	INFO	__main__	mean IoU: 71.5, IoU: ['91.9', '80.8', '38.9', '78.7', '68.5', '66.6', '84.8', '81.7', '84.7', '33.3', '83.4', '62.2', '81.4', '80.3', '77.2', '77.0', '56.7', '79.2', '43.2', '81.9', '69.1'], Global pixelwise acc: 92.9, Average row correct: ['96.1', '89.5', '58.7', '89.3', '79.3', '93.5', '95.9', '89.4', '92.7', '44.6', '91.0', '70.6', '91.6', '91.2', '88.7', '84.7', '68.3', '87.8', '53.2', '87.7', '84.4']
+2023-01-27 02:06:27,531	INFO	torchdistill.misc.log	Epoch: [69]  [ 0/92]  eta: 0:03:21  lr: 0.007771214064223895  img/s: 36.077765000803716  loss: 0.1831 (0.1831)  time: 2.1862  data: 1.7375  max mem: 11299
+2023-01-27 02:07:01,527	INFO	torchdistill.misc.log	Epoch: [69] Total time: 0:00:36
+2023-01-27 02:07:03,258	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:34  model_time: 0.3044 (0.3044)  evaluator_time: 0.0006 (0.0006)  time: 1.6800  data: 1.3740  max mem: 11299
+2023-01-27 02:10:55,493	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2275 (0.2303)  evaluator_time: 0.0005 (0.0005)  time: 0.2338  data: 0.0001  max mem: 11299
+2023-01-27 02:12:39,583	INFO	torchdistill.misc.log	Validation: Total time: 0:05:38
+2023-01-27 02:12:39,583	INFO	__main__	mean IoU: 71.6, IoU: ['91.8', '80.0', '39.9', '78.2', '67.7', '67.8', '88.1', '81.3', '85.3', '32.4', '82.2', '61.4', '83.0', '79.5', '77.3', '77.2', '57.1', '79.7', '43.5', '82.7', '67.8'], Global pixelwise acc: 92.8, Average row correct: ['95.8', '88.8', '70.5', '90.4', '80.4', '93.7', '95.1', '88.1', '93.0', '43.5', '89.7', '69.3', '92.1', '90.4', '87.2', '85.8', '72.9', '88.0', '57.4', '93.1', '78.2']
+2023-01-27 02:12:39,584	INFO	__main__	Best mIoU: 71.5626 -> 71.6268
+2023-01-27 02:12:39,584	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-27 02:12:47,594	INFO	torchdistill.misc.log	Epoch: [70]  [ 0/92]  eta: 0:03:58  lr: 0.007437181529216747  img/s: 39.45677026375513  loss: 0.1775 (0.1775)  time: 2.5978  data: 2.1874  max mem: 11299
+2023-01-27 02:13:21,528	INFO	torchdistill.misc.log	Epoch: [70] Total time: 0:00:36
+2023-01-27 02:13:23,241	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:07  model_time: 0.2751 (0.2751)  evaluator_time: 0.0006 (0.0006)  time: 1.6613  data: 1.3847  max mem: 11299
+2023-01-27 02:17:13,981	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2296 (0.2288)  evaluator_time: 0.0005 (0.0005)  time: 0.2350  data: 0.0001  max mem: 11299
+2023-01-27 02:18:58,038	INFO	torchdistill.misc.log	Validation: Total time: 0:05:36
+2023-01-27 02:18:58,039	INFO	__main__	mean IoU: 71.1, IoU: ['91.6', '80.6', '39.8', '77.1', '67.5', '67.6', '84.2', '81.4', '84.8', '33.9', '82.8', '59.9', '82.4', '79.0', '77.7', '77.4', '56.8', '77.7', '42.1', '82.8', '66.1'], Global pixelwise acc: 92.6, Average row correct: ['95.3', '90.0', '72.9', '90.7', '80.4', '91.6', '96.7', '89.6', '94.1', '50.5', '90.8', '66.9', '92.5', '91.3', '88.9', '86.1', '74.0', '91.7', '52.5', '91.2', '85.1']
+2023-01-27 02:19:00,382	INFO	torchdistill.misc.log	Epoch: [71]  [ 0/92]  eta: 0:03:34  lr: 0.007101473000088457  img/s: 41.689774619188434  loss: 0.1820 (0.1820)  time: 2.3333  data: 1.9444  max mem: 11299
+2023-01-27 02:19:34,454	INFO	torchdistill.misc.log	Epoch: [71] Total time: 0:00:36
+2023-01-27 02:19:36,187	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:38  model_time: 0.2610 (0.2610)  evaluator_time: 0.0006 (0.0006)  time: 1.6830  data: 1.4208  max mem: 11299
+2023-01-27 02:23:28,119	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2293 (0.2299)  evaluator_time: 0.0005 (0.0005)  time: 0.2270  data: 0.0001  max mem: 11299
+2023-01-27 02:25:10,475	INFO	torchdistill.misc.log	Validation: Total time: 0:05:35
+2023-01-27 02:25:10,475	INFO	__main__	mean IoU: 71.5, IoU: ['91.8', '79.0', '41.0', '78.2', '68.4', '69.3', '87.5', '80.9', '85.1', '35.0', '82.0', '61.1', '82.5', '79.0', '76.5', '77.1', '57.1', '76.6', '43.5', '83.1', '68.0'], Global pixelwise acc: 92.8, Average row correct: ['95.6', '90.6', '68.5', '89.9', '80.7', '90.7', '94.9', '87.3', '92.7', '50.1', '89.5', '69.5', '92.1', '91.8', '89.8', '85.4', '74.7', '92.4', '55.5', '92.3', '82.3']
+2023-01-27 02:25:12,920	INFO	torchdistill.misc.log	Epoch: [72]  [ 0/92]  eta: 0:03:44  lr: 0.0067639910458476005  img/s: 41.05391483936642  loss: 0.1937 (0.1937)  time: 2.4349  data: 2.0401  max mem: 11299
+2023-01-27 02:25:46,876	INFO	torchdistill.misc.log	Epoch: [72] Total time: 0:00:36
+2023-01-27 02:25:48,657	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:41:47  model_time: 0.2891 (0.2891)  evaluator_time: 0.0007 (0.0007)  time: 1.7303  data: 1.4397  max mem: 11299
+2023-01-27 02:29:40,024	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2277 (0.2294)  evaluator_time: 0.0005 (0.0005)  time: 0.2333  data: 0.0001  max mem: 11299
+2023-01-27 02:31:22,826	INFO	torchdistill.misc.log	Validation: Total time: 0:05:35
+2023-01-27 02:31:22,827	INFO	__main__	mean IoU: 72.1, IoU: ['91.9', '79.7', '41.0', '78.4', '68.7', '70.1', '87.0', '81.6', '85.1', '36.2', '83.0', '61.3', '82.7', '79.8', '77.5', '77.4', '57.5', '80.0', '42.1', '83.2', '69.4'], Global pixelwise acc: 92.9, Average row correct: ['95.8', '91.4', '70.6', '91.1', '79.8', '92.0', '96.0', '88.6', '93.5', '47.8', '90.2', '73.9', '91.3', '92.3', '89.3', '86.0', '75.6', '89.1', '51.3', '91.0', '83.9']
+2023-01-27 02:31:22,828	INFO	__main__	Best mIoU: 71.6268 -> 72.0713
+2023-01-27 02:31:22,828	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-27 02:31:29,437	INFO	torchdistill.misc.log	Epoch: [73]  [ 0/92]  eta: 0:03:26  lr: 0.006424626813479871  img/s: 31.130299975739202  loss: 0.1801 (0.1801)  time: 2.2481  data: 1.7289  max mem: 11299
+2023-01-27 02:32:03,399	INFO	torchdistill.misc.log	Epoch: [73] Total time: 0:00:36
+2023-01-27 02:32:05,136	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:42  model_time: 0.2952 (0.2952)  evaluator_time: 0.0007 (0.0007)  time: 1.6857  data: 1.3891  max mem: 11299
+2023-01-27 02:35:55,693	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2243 (0.2286)  evaluator_time: 0.0005 (0.0005)  time: 0.2212  data: 0.0001  max mem: 11299
+2023-01-27 02:37:31,883	INFO	torchdistill.misc.log	Validation: Total time: 0:05:28
+2023-01-27 02:37:31,883	INFO	__main__	mean IoU: 71.6, IoU: ['91.9', '80.1', '41.1', '78.4', '68.6', '68.2', '85.9', '81.5', '85.4', '34.0', '81.8', '60.3', '81.9', '78.5', '77.4', '77.7', '56.9', '79.2', '43.7', '82.8', '68.3'], Global pixelwise acc: 92.9, Average row correct: ['95.8', '90.7', '68.8', '90.2', '79.7', '91.9', '95.6', '88.3', '93.1', '43.3', '91.5', '69.2', '92.9', '87.1', '89.0', '86.3', '70.9', '90.2', '54.8', '90.1', '85.9']
+2023-01-27 02:37:34,015	INFO	torchdistill.misc.log	Epoch: [74]  [ 0/92]  eta: 0:03:15  lr: 0.006083257933261719  img/s: 37.469362094389105  loss: 0.1452 (0.1452)  time: 2.1215  data: 1.6893  max mem: 11299
+2023-01-27 02:38:08,005	INFO	torchdistill.misc.log	Epoch: [74] Total time: 0:00:36
+2023-01-27 02:38:09,737	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:34  model_time: 0.3233 (0.3233)  evaluator_time: 0.0006 (0.0006)  time: 1.6804  data: 1.3557  max mem: 11299
+2023-01-27 02:42:06,433	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:46  model_time: 0.2282 (0.2348)  evaluator_time: 0.0005 (0.0005)  time: 0.2336  data: 0.0001  max mem: 11299
+2023-01-27 02:43:52,055	INFO	torchdistill.misc.log	Validation: Total time: 0:05:43
+2023-01-27 02:43:52,055	INFO	__main__	mean IoU: 72.0, IoU: ['91.9', '80.2', '41.3', '78.5', '67.8', '69.4', '87.5', '81.8', '85.0', '36.8', '83.1', '62.6', '82.7', '79.9', '77.5', '77.6', '57.0', '78.7', '43.6', '83.3', '65.3'], Global pixelwise acc: 92.9, Average row correct: ['95.7', '89.5', '68.6', '91.2', '82.3', '90.9', '94.6', '88.5', '93.9', '50.6', '89.0', '72.0', '91.9', '91.7', '87.8', '86.7', '76.7', '91.4', '53.9', '90.8', '86.4']
+2023-01-27 02:43:54,516	INFO	torchdistill.misc.log	Epoch: [75]  [ 0/92]  eta: 0:03:45  lr: 0.005739745883727897  img/s: 41.712007617806876  loss: 0.1309 (0.1309)  time: 2.4510  data: 2.0625  max mem: 11299
+2023-01-27 02:44:28,497	INFO	torchdistill.misc.log	Epoch: [75] Total time: 0:00:36
+2023-01-27 02:44:30,250	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:41:05  model_time: 0.2992 (0.2992)  evaluator_time: 0.0006 (0.0006)  time: 1.7013  data: 1.4007  max mem: 11299
+2023-01-27 02:48:20,330	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:43  model_time: 0.2295 (0.2281)  evaluator_time: 0.0005 (0.0005)  time: 0.2277  data: 0.0001  max mem: 11299
+2023-01-27 02:50:05,167	INFO	torchdistill.misc.log	Validation: Total time: 0:05:36
+2023-01-27 02:50:05,167	INFO	__main__	mean IoU: 71.9, IoU: ['91.9', '80.9', '39.6', '77.5', '68.2', '69.7', '88.3', '81.7', '85.5', '32.7', '83.0', '60.6', '82.2', '79.4', '77.4', '77.6', '57.2', '80.4', '44.3', '83.5', '67.6'], Global pixelwise acc: 92.9, Average row correct: ['95.9', '89.5', '63.3', '89.4', '81.2', '90.4', '93.2', '87.9', '93.4', '43.2', '90.2', '72.6', '92.3', '92.3', '86.1', '86.5', '73.7', '88.0', '57.7', '91.7', '83.3']
+2023-01-27 02:50:07,945	INFO	torchdistill.misc.log	Epoch: [76]  [ 0/92]  eta: 0:04:14  lr: 0.0053939326311350086  img/s: 41.24955759392562  loss: 0.1569 (0.1569)  time: 2.7681  data: 2.3752  max mem: 11299
+2023-01-27 02:50:41,915	INFO	torchdistill.misc.log	Epoch: [76] Total time: 0:00:36
+2023-01-27 02:50:43,619	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:39:55  model_time: 0.2900 (0.2900)  evaluator_time: 0.0006 (0.0006)  time: 1.6530  data: 1.3617  max mem: 11299
+2023-01-27 02:54:34,679	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2286 (0.2291)  evaluator_time: 0.0005 (0.0005)  time: 0.2341  data: 0.0001  max mem: 11299
+2023-01-27 02:56:20,436	INFO	torchdistill.misc.log	Validation: Total time: 0:05:38
+2023-01-27 02:56:20,437	INFO	__main__	mean IoU: 71.5, IoU: ['91.9', '80.1', '40.1', '78.6', '69.1', '68.5', '86.3', '80.7', '84.8', '34.9', '82.3', '60.7', '82.2', '79.4', '76.8', '77.6', '56.6', '78.6', '43.6', '82.8', '66.4'], Global pixelwise acc: 92.8, Average row correct: ['95.7', '91.8', '66.5', '90.5', '80.9', '91.7', '95.6', '86.8', '93.3', '48.8', '89.2', '69.7', '91.9', '90.8', '87.9', '86.5', '72.9', '90.4', '55.3', '89.6', '85.6']
+2023-01-27 02:56:22,830	INFO	torchdistill.misc.log	Epoch: [77]  [ 0/92]  eta: 0:03:38  lr: 0.005045636276842549  img/s: 43.19282437323969  loss: 0.2570 (0.2570)  time: 2.3754  data: 1.9997  max mem: 11299
+2023-01-27 02:56:56,806	INFO	torchdistill.misc.log	Epoch: [77] Total time: 0:00:36
+2023-01-27 02:56:58,528	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:22  model_time: 0.2884 (0.2884)  evaluator_time: 0.0006 (0.0006)  time: 1.6717  data: 1.3819  max mem: 11299
+2023-01-27 03:00:52,251	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:45  model_time: 0.2291 (0.2317)  evaluator_time: 0.0005 (0.0005)  time: 0.2351  data: 0.0001  max mem: 11299
+2023-01-27 03:02:38,359	INFO	torchdistill.misc.log	Validation: Total time: 0:05:41
+2023-01-27 03:02:38,359	INFO	__main__	mean IoU: 71.5, IoU: ['91.8', '81.3', '41.8', '78.7', '68.4', '68.5', '86.2', '81.1', '84.1', '32.4', '82.7', '61.2', '82.1', '79.2', '76.2', '77.7', '56.2', '80.2', '40.9', '82.8', '69.0'], Global pixelwise acc: 92.8, Average row correct: ['95.9', '89.9', '69.5', '89.3', '80.3', '92.6', '95.1', '88.2', '94.5', '42.6', '89.7', '68.0', '89.6', '90.8', '90.5', '86.2', '72.5', '91.3', '51.2', '90.2', '82.5']
+2023-01-27 03:02:40,823	INFO	torchdistill.misc.log	Epoch: [78]  [ 0/92]  eta: 0:03:45  lr: 0.004694645319659401  img/s: 40.72414100707026  loss: 0.2266 (0.2266)  time: 2.4537  data: 2.0559  max mem: 11299
+2023-01-27 03:03:14,810	INFO	torchdistill.misc.log	Epoch: [78] Total time: 0:00:36
+2023-01-27 03:03:16,520	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:03  model_time: 0.2772 (0.2772)  evaluator_time: 0.0006 (0.0006)  time: 1.6587  data: 1.3803  max mem: 11299
+2023-01-27 03:07:08,176	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2290 (0.2297)  evaluator_time: 0.0005 (0.0005)  time: 0.2355  data: 0.0001  max mem: 11299
+2023-01-27 03:08:50,061	INFO	torchdistill.misc.log	Validation: Total time: 0:05:35
+2023-01-27 03:08:50,061	INFO	__main__	mean IoU: 71.4, IoU: ['91.7', '80.2', '41.0', '78.3', '67.7', '66.4', '87.4', '80.5', '85.0', '35.1', '82.9', '61.9', '82.4', '79.9', '76.7', '77.8', '56.2', '78.0', '41.2', '81.9', '67.1'], Global pixelwise acc: 92.8, Average row correct: ['95.5', '92.4', '72.6', '91.1', '80.4', '93.0', '95.8', '87.5', '94.0', '47.9', '90.4', '71.1', '91.6', '90.8', '89.6', '87.1', '76.0', '92.6', '49.5', '90.3', '82.2']
+2023-01-27 03:08:52,541	INFO	torchdistill.misc.log	Epoch: [79]  [ 0/92]  eta: 0:03:47  lr: 0.00434071093814102  img/s: 41.44346493240543  loss: 0.2012 (0.2012)  time: 2.4702  data: 2.0793  max mem: 11299
+2023-01-27 03:09:26,499	INFO	torchdistill.misc.log	Epoch: [79] Total time: 0:00:36
+2023-01-27 03:09:28,207	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:01  model_time: 0.3212 (0.3212)  evaluator_time: 0.0006 (0.0006)  time: 1.6574  data: 1.3349  max mem: 11299
+2023-01-27 03:13:16,453	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:43  model_time: 0.2291 (0.2263)  evaluator_time: 0.0005 (0.0005)  time: 0.2352  data: 0.0001  max mem: 11299
+2023-01-27 03:15:01,736	INFO	torchdistill.misc.log	Validation: Total time: 0:05:35
+2023-01-27 03:15:01,736	INFO	__main__	mean IoU: 71.9, IoU: ['91.9', '81.2', '40.7', '78.0', '69.0', '70.6', '89.0', '81.5', '85.4', '34.8', '83.1', '61.7', '81.9', '79.6', '77.2', '77.6', '55.7', '79.7', '41.6', '83.0', '67.2'], Global pixelwise acc: 93.0, Average row correct: ['95.9', '90.5', '72.6', '91.3', '80.4', '90.8', '94.1', '87.8', '93.4', '47.0', '89.4', '69.9', '92.1', '92.0', '88.9', '86.2', '71.6', '91.9', '50.7', '91.1', '84.9']
+2023-01-27 03:15:03,941	INFO	torchdistill.misc.log	Epoch: [80]  [ 0/92]  eta: 0:03:21  lr: 0.0039835363635130515  img/s: 36.54384655136455  loss: 0.1220 (0.1220)  time: 2.1950  data: 1.7520  max mem: 11299
+2023-01-27 03:15:37,929	INFO	torchdistill.misc.log	Epoch: [80] Total time: 0:00:36
+2023-01-27 03:15:39,669	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:46  model_time: 0.2924 (0.2924)  evaluator_time: 0.0006 (0.0006)  time: 1.6884  data: 1.3947  max mem: 11299
+2023-01-27 03:19:32,023	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2281 (0.2304)  evaluator_time: 0.0005 (0.0005)  time: 0.2344  data: 0.0001  max mem: 11299
+2023-01-27 03:21:13,629	INFO	torchdistill.misc.log	Validation: Total time: 0:05:35
+2023-01-27 03:21:13,629	INFO	__main__	mean IoU: 71.9, IoU: ['92.0', '80.6', '40.5', '78.6', '68.7', '70.3', '87.4', '81.7', '85.9', '33.2', '82.6', '60.5', '82.6', '79.0', '77.8', '77.8', '56.0', '79.9', '41.9', '83.6', '70.0'], Global pixelwise acc: 93.0, Average row correct: ['95.9', '91.1', '63.9', '90.4', '80.6', '90.9', '95.5', '88.2', '92.4', '45.5', '91.5', '67.0', '91.7', '89.0', '87.9', '86.9', '71.7', '91.3', '54.0', '91.6', '84.6']
+2023-01-27 03:21:16,090	INFO	torchdistill.misc.log	Epoch: [81]  [ 0/92]  eta: 0:03:45  lr: 0.00362276183839611  img/s: 40.547766028602034  loss: 0.2696 (0.2696)  time: 2.4503  data: 2.0507  max mem: 11299
+2023-01-27 03:21:50,060	INFO	torchdistill.misc.log	Epoch: [81] Total time: 0:00:36
+2023-01-27 03:21:51,791	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:29  model_time: 0.2960 (0.2960)  evaluator_time: 0.0006 (0.0006)  time: 1.6764  data: 1.3790  max mem: 11299
+2023-01-27 03:25:42,078	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2292 (0.2283)  evaluator_time: 0.0005 (0.0005)  time: 0.2356  data: 0.0001  max mem: 11299
+2023-01-27 03:27:28,054	INFO	torchdistill.misc.log	Validation: Total time: 0:05:37
+2023-01-27 03:27:28,054	INFO	__main__	mean IoU: 71.8, IoU: ['92.0', '80.6', '40.6', '78.6', '68.7', '68.7', '89.1', '82.2', '85.1', '34.5', '82.9', '61.2', '81.7', '79.5', '77.6', '77.7', '56.2', '78.2', '41.0', '84.1', '68.5'], Global pixelwise acc: 92.9, Average row correct: ['95.9', '92.5', '71.5', '90.0', '79.3', '92.2', '94.4', '88.9', '94.2', '48.6', '90.6', '67.4', '92.3', '89.9', '89.7', '86.2', '71.6', '90.6', '50.6', '92.2', '80.9']
+2023-01-27 03:27:30,451	INFO	torchdistill.misc.log	Epoch: [82]  [ 0/92]  eta: 0:03:39  lr: 0.0032579426183993033  img/s: 40.64250523407536  loss: 0.1481 (0.1481)  time: 2.3865  data: 1.9876  max mem: 11299
+2023-01-27 03:28:04,422	INFO	torchdistill.misc.log	Epoch: [82] Total time: 0:00:36
+2023-01-27 03:28:06,123	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:39:51  model_time: 0.2892 (0.2892)  evaluator_time: 0.0006 (0.0006)  time: 1.6505  data: 1.3600  max mem: 11299
+2023-01-27 03:31:57,955	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.2302 (0.2299)  evaluator_time: 0.0005 (0.0005)  time: 0.2359  data: 0.0001  max mem: 11299
+2023-01-27 03:33:43,320	INFO	torchdistill.misc.log	Validation: Total time: 0:05:38
+2023-01-27 03:33:43,320	INFO	__main__	mean IoU: 71.6, IoU: ['91.9', '81.0', '40.5', '78.8', '68.7', '69.3', '86.8', '82.1', '84.2', '33.4', '82.6', '61.4', '81.5', '79.1', '77.9', '77.6', '55.9', '79.5', '41.3', '82.8', '67.6'], Global pixelwise acc: 92.9, Average row correct: ['95.8', '90.5', '71.1', '89.6', '79.8', '91.5', '95.0', '89.0', '93.2', '46.0', '90.6', '69.7', '91.8', '91.6', '88.7', '86.1', '70.1', '90.6', '52.2', '90.9', '82.6']
+2023-01-27 03:33:45,861	INFO	torchdistill.misc.log	Epoch: [83]  [ 0/92]  eta: 0:03:52  lr: 0.00288851549333348  img/s: 41.99745294997832  loss: 0.2190 (0.2190)  time: 2.5307  data: 2.1449  max mem: 11299
+2023-01-27 03:34:19,846	INFO	torchdistill.misc.log	Epoch: [83] Total time: 0:00:36
+2023-01-27 03:34:21,607	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:41:16  model_time: 0.2783 (0.2783)  evaluator_time: 0.0006 (0.0006)  time: 1.7093  data: 1.4297  max mem: 11299
+2023-01-27 03:38:11,303	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:43  model_time: 0.2305 (0.2277)  evaluator_time: 0.0005 (0.0005)  time: 0.2364  data: 0.0001  max mem: 11299
+2023-01-27 03:39:56,007	INFO	torchdistill.misc.log	Validation: Total time: 0:05:36
+2023-01-27 03:39:56,007	INFO	__main__	mean IoU: 71.5, IoU: ['91.8', '81.4', '40.6', '78.2', '68.2', '69.0', '86.7', '81.7', '83.8', '34.3', '82.8', '61.7', '81.5', '79.2', '77.8', '77.6', '56.4', '78.6', '40.6', '82.9', '66.7'], Global pixelwise acc: 92.8, Average row correct: ['95.7', '91.0', '69.8', '91.3', '79.7', '91.1', '95.7', '88.1', '94.5', '47.9', '90.0', '69.1', '90.6', '89.9', '88.5', '86.9', '70.5', '90.9', '49.2', '91.2', '86.4']
+2023-01-27 03:39:58,460	INFO	torchdistill.misc.log	Epoch: [84]  [ 0/92]  eta: 0:03:44  lr: 0.002513745259933839  img/s: 41.71348547524405  loss: 0.1695 (0.1695)  time: 2.4429  data: 2.0541  max mem: 11299
+2023-01-27 03:40:32,422	INFO	torchdistill.misc.log	Epoch: [84] Total time: 0:00:36
+2023-01-27 03:40:34,161	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:46  model_time: 0.2845 (0.2845)  evaluator_time: 0.0006 (0.0006)  time: 1.6886  data: 1.4028  max mem: 11299
+2023-01-27 03:44:20,532	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:42  model_time: 0.2290 (0.2244)  evaluator_time: 0.0005 (0.0005)  time: 0.2350  data: 0.0001  max mem: 11299
+2023-01-27 03:46:01,992	INFO	torchdistill.misc.log	Validation: Total time: 0:05:29
+2023-01-27 03:46:01,992	INFO	__main__	mean IoU: 71.4, IoU: ['91.8', '80.1', '40.0', '77.5', '68.0', '69.1', '86.7', '81.5', '84.8', '33.7', '82.9', '60.7', '81.6', '79.2', '77.0', '77.5', '56.7', '79.3', '42.0', '82.4', '66.7'], Global pixelwise acc: 92.8, Average row correct: ['95.5', '91.4', '73.1', '90.4', '80.4', '91.0', '95.8', '88.6', '93.4', '47.0', '89.6', '68.4', '91.7', '90.9', '89.2', '86.3', '72.6', '91.1', '54.5', '91.6', '82.3']
+2023-01-27 03:46:04,360	INFO	torchdistill.misc.log	Epoch: [85]  [ 0/92]  eta: 0:03:36  lr: 0.0021326335773316067  img/s: 40.773032353471905  loss: 0.2088 (0.2088)  time: 2.3581  data: 1.9604  max mem: 11299
+2023-01-27 03:46:38,354	INFO	torchdistill.misc.log	Epoch: [85] Total time: 0:00:36
+2023-01-27 03:46:40,023	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:39:04  model_time: 0.2461 (0.2461)  evaluator_time: 0.0007 (0.0007)  time: 1.6181  data: 1.3706  max mem: 11299
+2023-01-27 03:50:32,568	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:45  model_time: 0.1926 (0.2305)  evaluator_time: 0.0005 (0.0005)  time: 0.1990  data: 0.0001  max mem: 11299
+2023-01-27 03:52:09,606	INFO	torchdistill.misc.log	Validation: Total time: 0:05:31
+2023-01-27 03:52:09,606	INFO	__main__	mean IoU: 71.7, IoU: ['91.9', '80.5', '40.2', '78.3', '68.6', '69.6', '84.5', '81.3', '85.2', '33.0', '83.3', '61.8', '82.3', '79.3', '77.0', '77.9', '57.3', '79.7', '42.9', '82.3', '68.1'], Global pixelwise acc: 92.8, Average row correct: ['95.5', '91.8', '68.9', '90.8', '82.7', '91.2', '96.3', '87.6', '93.4', '46.1', '91.5', '71.7', '91.6', '90.1', '89.5', '87.0', '71.8', '90.3', '56.3', '91.7', '83.9']
+2023-01-27 03:52:12,209	INFO	torchdistill.misc.log	Epoch: [86]  [ 0/92]  eta: 0:03:58  lr: 0.0017437502526197635  img/s: 37.54833583809013  loss: 0.2572 (0.2572)  time: 2.5921  data: 2.1608  max mem: 11299
+2023-01-27 03:52:46,195	INFO	torchdistill.misc.log	Epoch: [86] Total time: 0:00:36
+2023-01-27 03:52:48,083	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:44:15  model_time: 0.2757 (0.2757)  evaluator_time: 0.0006 (0.0006)  time: 1.8326  data: 1.5557  max mem: 11299
+2023-01-27 03:56:41,410	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:45  model_time: 0.2284 (0.2313)  evaluator_time: 0.0005 (0.0005)  time: 0.2238  data: 0.0001  max mem: 11299
+2023-01-27 03:58:27,755	INFO	torchdistill.misc.log	Validation: Total time: 0:05:41
+2023-01-27 03:58:27,755	INFO	__main__	mean IoU: 71.6, IoU: ['91.9', '80.7', '40.9', '78.1', '68.8', '69.3', '85.5', '80.9', '84.4', '34.2', '83.5', '60.7', '82.0', '79.9', '77.3', '77.7', '57.3', '80.4', '40.7', '82.9', '67.1'], Global pixelwise acc: 92.9, Average row correct: ['95.9', '91.6', '66.5', '90.1', '80.8', '91.0', '95.9', '87.3', '94.2', '45.7', '90.7', '68.8', '90.7', '91.3', '88.3', '86.9', '72.0', '90.0', '50.2', '90.2', '83.4']
+2023-01-27 03:58:30,120	INFO	torchdistill.misc.log	Epoch: [87]  [ 0/92]  eta: 0:03:36  lr: 0.0013448822141681601  img/s: 39.870591569345166  loss: 0.2080 (0.2080)  time: 2.3547  data: 1.9484  max mem: 11299
+2023-01-27 03:59:04,115	INFO	torchdistill.misc.log	Epoch: [87] Total time: 0:00:36
+2023-01-27 03:59:05,823	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:01  model_time: 0.2961 (0.2961)  evaluator_time: 0.0006 (0.0006)  time: 1.6572  data: 1.3597  max mem: 11299
+2023-01-27 04:02:47,689	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:40  model_time: 0.2289 (0.2199)  evaluator_time: 0.0005 (0.0005)  time: 0.2349  data: 0.0001  max mem: 11299
+2023-01-27 04:04:28,809	INFO	torchdistill.misc.log	Validation: Total time: 0:05:24
+2023-01-27 04:04:28,809	INFO	__main__	mean IoU: 72.1, IoU: ['92.0', '81.5', '40.8', '78.6', '68.5', '71.0', '86.7', '81.8', '85.0', '34.4', '83.4', '59.4', '82.2', '79.8', '77.6', '77.8', '57.2', '80.6', '42.4', '84.0', '68.8'], Global pixelwise acc: 93.0, Average row correct: ['95.9', '91.7', '69.4', '90.4', '80.4', '90.4', '95.8', '88.2', '94.0', '47.1', '89.8', '64.4', '90.9', '90.7', '88.5', '86.6', '72.9', '88.9', '55.9', '92.1', '85.8']
+2023-01-27 04:04:28,811	INFO	__main__	Best mIoU: 72.0713 -> 72.0833
+2023-01-27 04:04:28,811	INFO	__main__	Updating ckpt at ./resource/ckpt/pascal_voc2012/supervised_compression/entropic_student/pascal_voc2012-deeplabv3_splittable_resnest269e-fp-beta0.32_two_stages.pt
+2023-01-27 04:04:35,203	INFO	torchdistill.misc.log	Epoch: [88]  [ 0/92]  eta: 0:03:36  lr: 0.0009321607373186334  img/s: 39.97856812228609  loss: 0.1743 (0.1743)  time: 2.3527  data: 1.9474  max mem: 11299
+2023-01-27 04:05:09,181	INFO	torchdistill.misc.log	Epoch: [88] Total time: 0:00:36
+2023-01-27 04:05:10,882	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:39:50  model_time: 0.2961 (0.2961)  evaluator_time: 0.0006 (0.0006)  time: 1.6495  data: 1.3521  max mem: 11299
+2023-01-27 04:08:58,677	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:42  model_time: 0.1930 (0.2258)  evaluator_time: 0.0005 (0.0005)  time: 0.1986  data: 0.0001  max mem: 11299
+2023-01-27 04:10:39,920	INFO	torchdistill.misc.log	Validation: Total time: 0:05:30
+2023-01-27 04:10:39,920	INFO	__main__	mean IoU: 71.8, IoU: ['91.9', '81.2', '40.5', '78.0', '68.8', '70.5', '86.6', '81.0', '84.3', '33.1', '83.0', '61.4', '81.7', '79.0', '76.9', '77.6', '57.9', '81.1', '41.9', '83.3', '67.7'], Global pixelwise acc: 92.9, Average row correct: ['95.5', '91.7', '70.2', '90.8', '81.4', '90.7', '96.0', '87.6', '94.0', '46.4', '91.1', '70.7', '91.5', '92.1', '89.2', '87.0', '73.8', '89.7', '54.5', '91.3', '85.5']
+2023-01-27 04:10:42,414	INFO	torchdistill.misc.log	Epoch: [89]  [ 0/92]  eta: 0:03:48  lr: 0.0004970751803950711  img/s: 41.79315928252305  loss: 0.1825 (0.1825)  time: 2.4834  data: 2.0956  max mem: 11299
+2023-01-27 04:11:16,383	INFO	torchdistill.misc.log	Epoch: [89] Total time: 0:00:36
+2023-01-27 04:11:18,113	INFO	torchdistill.misc.log	Validation:  [   0/1449]  eta: 0:40:32  model_time: 0.2764 (0.2764)  evaluator_time: 0.0006 (0.0006)  time: 1.6787  data: 1.4010  max mem: 11299
+2023-01-27 04:15:08,808	INFO	torchdistill.misc.log	Validation:  [1000/1449]  eta: 0:01:44  model_time: 0.1930 (0.2287)  evaluator_time: 0.0005 (0.0005)  time: 0.1987  data: 0.0001  max mem: 11299
+2023-01-27 04:16:49,618	INFO	torchdistill.misc.log	Validation: Total time: 0:05:33
+2023-01-27 04:16:49,618	INFO	__main__	mean IoU: 71.8, IoU: ['91.9', '81.2', '40.5', '78.5', '68.6', '68.4', '86.7', '81.4', '84.8', '34.3', '83.6', '60.6', '82.4', '79.8', '77.4', '77.7', '57.1', '80.3', '41.5', '83.3', '67.1'], Global pixelwise acc: 92.9, Average row correct: ['95.6', '90.8', '69.3', '90.1', '80.3', '91.6', '95.8', '88.0', '94.0', '47.9', '91.1', '68.0', '92.3', '90.5', '89.0', '87.2', '73.1', '90.7', '53.3', '90.2', '85.9']
+2023-01-27 04:16:49,619	INFO	__main__	Training time 1 day, 15:24:01
+2023-01-27 04:16:49,977	INFO	torchdistill.common.main_util	Loading model parameters
+2023-01-27 04:16:51,105	INFO	__main__	[Student: deeplabv3_model]
+2023-01-27 04:16:52,787	INFO	torchdistill.misc.log	Test:  [   0/1449]  eta: 0:40:25  model_time: 0.3391 (0.3391)  evaluator_time: 0.0006 (0.0006)  time: 1.6740  data: 1.3335  max mem: 11299
+2023-01-27 04:20:42,206	INFO	torchdistill.misc.log	Test:  [1000/1449]  eta: 0:01:43  model_time: 0.2360 (0.2274)  evaluator_time: 0.0005 (0.0005)  time: 0.2428  data: 0.0001  max mem: 11299
+2023-01-27 04:22:28,916	INFO	torchdistill.misc.log	Test: Total time: 0:05:37
+2023-01-27 04:22:28,916	INFO	__main__	mean IoU: 72.1, IoU: ['92.0', '81.5', '40.8', '78.6', '68.5', '71.0', '86.7', '81.8', '85.0', '34.4', '83.4', '59.4', '82.2', '79.8', '77.6', '77.8', '57.2', '80.6', '42.4', '84.0', '68.8'], Global pixelwise acc: 93.0, Average row correct: ['95.9', '91.7', '69.4', '90.4', '80.4', '90.4', '95.8', '88.2', '94.0', '47.1', '89.8', '64.4', '90.9', '90.7', '88.5', '86.6', '72.9', '88.9', '55.9', '92.1', '85.8']
+2023-01-27 04:22:28,917	INFO	sc2bench.analysis	Bottleneck size [KB]: mean 103.00828089954278 std 13.106796216778713 for 1449 samples
