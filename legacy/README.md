@@ -11,6 +11,7 @@ If you want to use more recent versions of the required packages, refer to [Upda
 - torch == 1.12.1
 - torchvision == 0.13.1
 - timm == 0.6.12
+- numpy == 1.24.2
 
 ```shell
 pipenv install --python 3.8
