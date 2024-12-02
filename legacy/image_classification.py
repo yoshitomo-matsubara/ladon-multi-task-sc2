@@ -5,6 +5,11 @@ import os
 import time
 
 import torch
+from sc2bench.analysis import check_if_analyzable
+from sc2bench.common.config_util import overwrite_config
+from sc2bench.models.backbone import check_if_updatable
+from sc2bench.models.registry import load_classification_model
+from sc2bench.models.wrapper import get_wrapped_classification_model
 from torch import distributed as dist
 from torch.backends import cudnn
 from torch.nn import DataParallel
@@ -18,11 +23,6 @@ from torchdistill.datasets import util
 from torchdistill.eval.classification import compute_accuracy
 from torchdistill.misc.log import setup_log_file, SmoothedValue, MetricLogger
 
-from sc2bench.analysis import check_if_analyzable
-from sc2bench.common.config_util import overwrite_config
-from sc2bench.models.backbone import check_if_updatable
-from sc2bench.models.registry import load_classification_model
-from sc2bench.models.wrapper import get_wrapped_classification_model
 from modules.ladon import ladon_splittable_resnet
 
 logger = def_logger.getChild(__name__)
