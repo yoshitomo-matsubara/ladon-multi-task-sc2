@@ -13,7 +13,7 @@ This is the official repository for our WACV 2025 paper, ***"A Multi-task Superv
 Follow the instructions in [my sc2-benchmark repository](https://github.com/yoshitomo-matsubara/sc2-benchmark/tree/main/script#datasets)
 
 ## Checkpoints
-You can download our checkpoints including trained model weights [here](https://github.com/yoshitomo-matsubara/ladon-multi-task-sc2/releases/tag/).  
+You can download our checkpoints including trained model weights [here](https://github.com/yoshitomo-matsubara/ladon-multi-task-sc2/releases/tag/wacv2025).  
 Unzip the downloaded zip files under `./`, then there will be `./resource/ckpt/`.
 
 ## Legacy code
