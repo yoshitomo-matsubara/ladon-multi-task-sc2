@@ -106,7 +106,7 @@ models:
           pre_transform_params:
           skips_avgpool: True
           skips_fc: True
-        ckpt: 'resource/ckpt/ilsvrc2012/ladon/ilsvrc2012-splittable_resnest269e-fp-beta10.24_from_resnest269e.pt'
+        ckpt: './resource/ckpt/ilsvrc2012/ladon/ilsvrc2012-splittable_resnest269e-fp-beta10.24_from_resnest269e.pt'
       start_ckpt_file_path:
     experiment: &student_experiment !join [*pascal_dataset_name, '-deeplabv3_splittable_resnest269e-fp-beta10.24_two_stages']
     ckpt: !join ['./resource/ckpt/pascal_voc2012/ladon/', *student_experiment, '.pt']

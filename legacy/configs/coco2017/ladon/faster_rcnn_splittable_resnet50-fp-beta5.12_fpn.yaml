@@ -44,7 +44,7 @@ models:
               - type: 'FileSizeAnalyzer'
                 params:
                   unit: 'KB'
-        ckpt: 'resource/ckpt/ilsvrc2012/ladon/ilsvrc2012-splittable_resnet50-fp-beta5.12_from_resnet50.pt'
+        ckpt: './resource/ckpt/ilsvrc2012/ladon/ilsvrc2012-splittable_resnet50-fp-beta5.12_from_resnet50.pt'
       backbone_fpn_kwargs:
         return_layer_dict:
           bottleneck_layer: '1'

@@ -105,7 +105,7 @@ models:
           pre_transform_params:
           skips_avgpool: True
           skips_fc: True
-        ckpt: 'resource/ckpt/ilsvrc2012/ladon/ilsvrc2012-splittable_resnet50-fp-beta20.48_from_resnet50.pt'
+        ckpt: './resource/ckpt/ilsvrc2012/ladon/ilsvrc2012-splittable_resnet50-fp-beta20.48_from_resnet50.pt'
       start_ckpt_file_path:
     experiment: &student_experiment !join [*pascal_dataset_name, '-deeplabv3_splittable_resnet50-fp-beta20.48_two_stages']
     ckpt: !join ['./resource/ckpt/pascal_voc2012/ladon/', *student_experiment, '.pt']
