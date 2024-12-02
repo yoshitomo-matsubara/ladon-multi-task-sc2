@@ -6,7 +6,11 @@ This is the official repository for our WACV 2025 paper, ***"A Multi-task Superv
 ![Entropic Student vs. Ladon](imgs/ladon_model-comparison.png)
 
 ## Datasets
-Follow the instructions in [my sc2-benchmark repository](https://github.com/yoshitomo-matsubara/sc2-benchmark/tree/main/script#datasets
+- Image classification: [ILSVRC 2012 (ImageNet)](https://www.image-net.org/challenges/LSVRC/2012/)
+- Object detection: [COCO 2017](https://cocodataset.org/#detection-2017)
+- Semantic segmentation: [PASCAL VOC 2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/)
+
+Follow the instructions in [my sc2-benchmark repository](https://github.com/yoshitomo-matsubara/sc2-benchmark/tree/main/script#datasets)
 
 ## Checkpoints
 You can download our checkpoints including trained model weights [here](https://github.com/yoshitomo-matsubara/ladon-multi-task-sc2/releases/tag/).  
