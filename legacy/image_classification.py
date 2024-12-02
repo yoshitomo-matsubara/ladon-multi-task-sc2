@@ -23,6 +23,7 @@ from sc2bench.common.config_util import overwrite_config
 from sc2bench.models.backbone import check_if_updatable
 from sc2bench.models.registry import load_classification_model
 from sc2bench.models.wrapper import get_wrapped_classification_model
+from modules.ladon import ladon_splittable_resnet
 
 logger = def_logger.getChild(__name__)
 torch.multiprocessing.set_sharing_strategy('file_system')
@@ -50,7 +51,9 @@ def get_argparser():
 
 
 def load_model(model_config, device, distributed):
-    if 'classification_model' not in model_config:
+    if model_config['name'] == 'ladon':
+        return ladon_splittable_resnet(model_config, device)
+    elif 'classification_model' not in model_config:
         return load_classification_model(model_config, device, distributed)
     return get_wrapped_classification_model(model_config, device, distributed)
 
@@ -113,6 +116,9 @@ def evaluate(model_wo_ddp, data_loader, device, device_ids, distributed, no_dp_e
             target = target.to(device, non_blocking=True)
 
         output = model(image)
+        if isinstance(output, dict):
+            output = output['classification']
+
         acc1, acc5 = compute_accuracy(output, target, topk=(1, 5))
         # FIXME need to take into account that the datasets
         # could have been padded in distributed setup
