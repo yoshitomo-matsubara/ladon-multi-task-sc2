@@ -5,6 +5,11 @@ import os
 import time
 
 import torch
+from sc2bench.analysis import check_if_analyzable
+from sc2bench.common.config_util import overwrite_config
+from sc2bench.models.segmentation.base import check_if_updatable_segmentation_model
+from sc2bench.models.segmentation.registry import load_segmentation_model
+from sc2bench.models.segmentation.wrapper import get_wrapped_segmentation_model
 from torch import distributed as dist
 from torch.backends import cudnn
 from torch.nn import DataParallel
@@ -20,11 +25,7 @@ from torchdistill.eval.coco import SegEvaluator
 from torchdistill.misc.log import setup_log_file, SmoothedValue, MetricLogger
 from torchdistill.optim.util import customize_lr_config
 
-from sc2bench.analysis import check_if_analyzable
-from sc2bench.common.config_util import overwrite_config
-from sc2bench.models.segmentation.base import check_if_updatable_segmentation_model
-from sc2bench.models.segmentation.registry import load_segmentation_model
-from sc2bench.models.segmentation.wrapper import get_wrapped_segmentation_model
+from modules.ladon import ladon_splittable_resnet
 
 logger = def_logger.getChild(__name__)
 torch.multiprocessing.set_sharing_strategy('file_system')
@@ -53,7 +54,9 @@ def get_argparser():
 
 
 def load_model(model_config, device):
-    if 'segmentation_model' not in model_config:
+    if model_config['name'] == 'ladon':
+        return ladon_splittable_resnet(model_config, device)
+    elif 'segmentation_model' not in model_config:
         return load_segmentation_model(model_config, device)
     return get_wrapped_segmentation_model(model_config, device)
 
@@ -120,6 +123,10 @@ def evaluate(model_wo_ddp, data_loader, device, device_ids, distributed, num_cla
         model_time = time.time()
         outputs = model(sample_batch)
         model_time = time.time() - model_time
+
+        if isinstance(outputs, dict) and 'segmentation' in outputs:
+            outputs = {'out': outputs['segmentation']}
+
         outputs = outputs['out']
         evaluator_time = time.time()
         seg_evaluator.update(targets.flatten(), outputs.argmax(1).flatten())
@@ -155,7 +162,6 @@ def train(teacher_model, student_model, dataset_dict, ckpt_file_path, device, de
     bottleneck_updated = False
     no_dp_eval = args.no_dp_eval
     start_time = time.time()
-    from torchdistill.common.module_util import get_frozen_param_names
     for epoch in range(args.start_epoch, training_box.num_epochs):
         training_box.pre_process(epoch=epoch)
         if epoch_to_update is not None and epoch_to_update <= epoch and not bottleneck_updated:

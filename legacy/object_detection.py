@@ -6,6 +6,11 @@ import os
 import time
 
 import torch
+from sc2bench.analysis import check_if_analyzable
+from sc2bench.common.config_util import overwrite_config
+from sc2bench.models.detection.base import check_if_updatable_detection_model
+from sc2bench.models.detection.registry import load_detection_model
+from sc2bench.models.detection.wrapper import get_wrapped_detection_model
 from torch import distributed as dist
 from torch.backends import cudnn
 from torch.nn import DataParallel
@@ -23,12 +28,7 @@ from torchdistill.misc.log import setup_log_file, SmoothedValue, MetricLogger
 from torchvision.models.detection.keypoint_rcnn import KeypointRCNN
 from torchvision.models.detection.mask_rcnn import MaskRCNN
 
-from sc2bench.analysis import check_if_analyzable
-from sc2bench.common.config_util import overwrite_config
-from sc2bench.models.detection.base import check_if_updatable_detection_model
-from sc2bench.models.detection.registry import load_detection_model
-from sc2bench.models.detection.wrapper import get_wrapped_detection_model
-from modules import detection
+from modules.ladon import ladon_splittable_resnet
 
 logger = def_logger.getChild(__name__)
 torch.multiprocessing.set_sharing_strategy('file_system')
@@ -58,7 +58,9 @@ def get_argparser():
 
 
 def load_model(model_config, device):
-    if 'detection_model' not in model_config:
+    if model_config['name'] == 'ladon':
+        return ladon_splittable_resnet(model_config, device)
+    elif 'detection_model' not in model_config:
         return load_detection_model(model_config, device)
     return get_wrapped_detection_model(model_config, device)
 
@@ -150,6 +152,9 @@ def evaluate(model_wo_ddp, data_loader, iou_types, device, device_ids, distribut
         torch.cuda.synchronize()
         model_time = time.time()
         outputs = model(sample_batch)
+
+        if isinstance(outputs, dict) and 'detection' in outputs:
+            outputs = outputs['detection']
 
         outputs = [{k: v.to(cpu_device) for k, v in t.items()} for t in outputs]
         model_time = time.time() - model_time

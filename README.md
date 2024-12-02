@@ -27,6 +27,7 @@ Coming soon!
 ### Requirements
 - Python >= 3.9
 - sc2bench >= 0.1.0
+- numpy
 
 ## Citation
 [[Preprint](https://arxiv.org/)]

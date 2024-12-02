@@ -1,0 +1,240 @@
+datasets:
+  coco2017:
+    name: &coco_dataset_name 'coco2017'
+    type: 'cocodetect'
+    root: &coco_root_dir !join ['~/dataset/', *coco_dataset_name]
+    splits:
+      train:
+        dataset_id: &coco_train !join [*coco_dataset_name, '/train']
+        images: !join [*coco_root_dir, '/train2017']
+        annotations: !join [*coco_root_dir, '/annotations/instances_train2017.json']
+        annotated_only: True
+        is_segment: True
+        random_horizontal_flip: 0.5
+        transforms_params: &train_transforms
+          - type: 'CustomRandomResize'
+            params:
+              min_size: 256
+              max_size: 832
+              square: True
+          - type: 'CustomRandomHorizontalFlip'
+            params:
+              p: 0.5
+          - type: 'CustomRandomCrop'
+            params:
+              size: 416
+          - type: 'CustomToTensor'
+            params:
+          - &normalize
+            type: 'CustomNormalize'
+            params:
+              mean: [0.485, 0.456, 0.406]
+              std: [0.229, 0.224, 0.225]
+      val:
+        dataset_id: &coco_val !join [*coco_dataset_name, '/val']
+        images: !join [*coco_root_dir, '/val2017']
+        annotations: !join [*coco_root_dir, '/annotations/instances_val2017.json']
+        annotated_only: False
+        is_segment: True
+        transforms_params: &val_transforms
+          - type: 'CustomRandomResize'
+            params:
+              min_size: 416
+              max_size: 416
+              square: True
+          - type: 'CustomToTensor'
+            params:
+              converts_sample: True
+              converts_target: True
+          - *normalize
+  pascal_voc:
+    name: &pascal_dataset_name 'pascal_voc2012'
+    type: 'VOCSegmentation'
+    root: &root_dir '~/dataset'
+    splits:
+      train:
+        dataset_id: &pascal_train !join [*pascal_dataset_name, '/train']
+        params:
+          root: *root_dir
+          image_set: 'train'
+          year: '2012'
+          download: False
+          transforms_compose_cls: 'CustomCompose'
+          transforms_params: *train_transforms
+      val:
+        dataset_id: &pascal_val !join [*pascal_dataset_name, '/val']
+        params:
+          root: *root_dir
+          image_set: 'val'
+          year: '2012'
+          download: False
+          transforms_compose_cls: 'CustomCompose'
+          transforms_params: *val_transforms
+
+models:
+  model:
+    name: 'deeplabv3_model'
+    params:
+      pretrained: False
+      pretrained_backbone_name:
+      num_classes: 21
+      uses_aux: True
+      num_input_channels: 2048
+      num_aux_channels: 1024
+      return_layer_dict:
+        layer3: 'aux'
+        layer4: 'out'
+      analysis_config:
+        analyzes_after_compress: True
+        analyzer_configs:
+          - type: 'FileSizeAnalyzer'
+            params:
+              unit: 'KB'
+      analyzable_layer_key: 'bottleneck_layer'
+      backbone_config:
+        name: 'splittable_resnest'
+        params:
+          num_classes: 1000
+          pretrained: False
+          inplanes: 2048
+          bottleneck_config:
+            name: 'FPBasedResNetBottleneck'
+            params:
+              num_bottleneck_channels: 32
+              num_target_channels: 256
+          resnest_name: 'resnest269e'
+          pre_transform_params:
+          skips_avgpool: True
+          skips_fc: True
+        ckpt: './resource/ckpt/ilsvrc2012/ladon/ilsvrc2012-splittable_resnest269e-fp-beta5.12_from_resnest269e.pt'
+      start_ckpt_file_path:
+    experiment: &student_experiment !join [*pascal_dataset_name, '-deeplabv3_splittable_resnest269e-fp-beta5.12_two_stages']
+    ckpt: !join ['./resource/ckpt/pascal_voc2012/ladon/', *student_experiment, '.pt']
+
+train:
+  log_freq: 1000
+  epoch_to_update: 0
+  stage1:
+    num_epochs: &coco_num_epochs 30
+    train_data_loader:
+      dataset_id: *coco_train
+      random_sample: True
+      batch_size: 16
+      num_workers: 16
+      collate_fn: 'coco_seg_collate_fn'
+      cache_output:
+    val_data_loader:
+      dataset_id: *coco_val
+      random_sample: False
+      batch_size: 1
+      num_workers: 16
+      collate_fn: 'coco_seg_eval_collate_fn'
+    model:
+      adaptations:
+      sequential: []
+      frozen_modules: ['backbone']
+      forward_hook:
+        input: []
+        output: []
+      wrapper: 'DistributedDataParallel'
+      requires_grad: True
+    optimizer:
+      type: 'SGD'
+      params:
+        lr: 0.02
+        momentum: 0.9
+        weight_decay: 0.0001
+      module_wise_params:
+        - module: 'backbone'
+          params: {}
+        - module: 'classifier'
+          params: {}
+        - module: 'aux_classifier'
+          params:
+            lr: 0.01
+    scheduler:
+      type: 'poly_lr_scheduler'
+      params:
+        num_iterations: None
+        num_epochs: *coco_num_epochs
+        power: 0.9
+      scheduling_step: 1
+    criterion:
+      type: 'GeneralizedCustomLoss'
+      func2extract_org_loss: 'extract_simple_org_loss_dict'
+      org_term:
+        criterion:
+          type: 'CrossEntropyLoss'
+          params:
+            reduction: 'mean'
+            ignore_index: 255
+        factor:
+          out: 1.0
+          aux: 0.5
+      sub_terms:
+  stage2:
+    num_epochs: &pascal_num_epochs 60
+    train_data_loader:
+      dataset_id: *pascal_train
+      random_sample: True
+      batch_size: 16
+      num_workers: 16
+      collate_fn: 'pascal_seg_collate_fn'
+      cache_output:
+    val_data_loader:
+      dataset_id: *pascal_val
+      random_sample: False
+      batch_size: 1
+      num_workers: 16
+      collate_fn: 'pascal_seg_eval_collate_fn'
+    model:
+      adaptations:
+      sequential: []
+      frozen_modules: ['backbone']
+      forward_hook:
+        input: []
+        output: []
+      wrapper: 'DistributedDataParallel'
+      requires_grad: True
+    optimizer:
+      type: 'SGD'
+      params:
+        lr: 0.02
+        momentum: 0.9
+        weight_decay: 0.0001
+      module_wise_params:
+        - module: 'backbone'
+          params: {}
+        - module: 'classifier'
+          params: {}
+        - module: 'aux_classifier'
+          params:
+            lr: 0.01
+    scheduler:
+      type: 'poly_lr_scheduler'
+      params:
+        num_iterations: None
+        num_epochs: *pascal_num_epochs
+        power: 0.9
+      scheduling_step: 1
+    criterion:
+      type: 'GeneralizedCustomLoss'
+      func2extract_org_loss: 'extract_simple_org_loss_dict'
+      org_term:
+        criterion:
+          type: 'CrossEntropyLoss'
+          params:
+            reduction: 'mean'
+            ignore_index: 255
+        factor:
+          out: 1.0
+          aux: 0.5
+      sub_terms:
+
+test:
+  test_data_loader:
+    dataset_id: *pascal_val
+    random_sample: False
+    batch_size: 1
+    num_workers: 16
+    collate_fn: 'pascal_seg_eval_collate_fn'
