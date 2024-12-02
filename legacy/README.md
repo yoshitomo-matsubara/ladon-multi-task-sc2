@@ -22,7 +22,7 @@ pipenv install --python 3.8
 - Object detection: [COCO 2017](https://cocodataset.org/#detection-2017)
 - Semantic segmentation: [PASCAL VOC 2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/)
 
-Follow the instructions in [my sc2-benchmark repository](https://github.com/yoshitomo-matsubara/sc2-benchmark/tree/main/script#datasets)
+Follow the instructions in [my sc2-benchmark repository](https://github.com/yoshitomo-matsubara/sc2-benchmark/tree/main/legacy/script#datasets)
 
 ## Evaluation with checkpoints
 
