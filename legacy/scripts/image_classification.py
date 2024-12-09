@@ -23,7 +23,7 @@ from torchdistill.datasets import util
 from torchdistill.eval.classification import compute_accuracy
 from torchdistill.misc.log import setup_log_file, SmoothedValue, MetricLogger
 
-from modules.ladon import ladon_splittable_resnet
+from scripts.modules import ladon_splittable_resnet
 
 logger = def_logger.getChild(__name__)
 torch.multiprocessing.set_sharing_strategy('file_system')

@@ -34,7 +34,7 @@ Unzip the downloaded zip files under `./`, then there will be `./resource/ckpt/`
 #### Ladon (ResNet-50) 
 ```shell
 for beta in 0.32 1.28 5.12 10.24 20.48; do
-  python legacy/image_classification.py -test_only -student_only \
+  python legacy/scripts/image_classification.py -test_only -student_only \
     --config legacy/configs/ilsvrc2012/ladon/splittable_resnet50-fp-beta${beta}_from_resnet50.yaml \
     --log legacy/logs/ilsvrc2012/ladon/splittable_resnet50-fp-beta${beta}_from_resnet50.txt
 done
@@ -43,7 +43,7 @@ done
 #### Ladon (ResNeSt-269e) 
 ```shell
 for beta in 0.32 1.28 5.12 10.24 20.48; do
-  python legacy/image_classification.py -test_only -student_only \
+  python legacy/scripts/image_classification.py -test_only -student_only \
     --config legacy/configs/ilsvrc2012/ladon/splittable_resnest269e-fp-beta${beta}_from_resnest269e.yaml \
     --log legacy/logs/ilsvrc2012/ladon/splittable_resnest269e-fp-beta${beta}_from_resnest269e.txt
 done
@@ -53,7 +53,7 @@ done
 #### Ladon (Faster R-CNN with ResNet-50 and FPN) 
 ```shell
 for beta in 0.32 1.28 5.12 10.24 20.48; do
-  python legacy/object_detection.py -test_only \
+  python legacy/scripts/object_detection.py -test_only \
     --config legacy/configs/coco2017/ladon/faster_rcnn_splittable_resnet50-fp-beta${beta}_fpn.yaml \
     --log legacy/logs/coco2017/ladon/faster_rcnn_splittable_resnet50-fp-beta${beta}_fpn.txt
 done
@@ -62,7 +62,7 @@ done
 #### Ladon (Faster R-CNN with ResNeSt-269e and FPN) 
 ```shell
 for beta in 0.32 1.28 5.12 10.24 20.48; do
-  python legacy/object_detection.py -test_only \
+  python legacy/scripts/object_detection.py -test_only \
     --config legacy/configs/coco2017/ladon/faster_rcnn_splittable_resnest269e-fp-beta${beta}_fpn.yaml \
     --log legacy/logs/coco2017/ladon/faster_rcnn_splittable_resnest269e-fp-beta${beta}_fpn.txt
 done
@@ -72,7 +72,7 @@ done
 #### Ladon (DeepLabv3 with ResNet-50) 
 ```shell
 for beta in 0.32 1.28 5.12 10.24 20.48; do
-  python legacy/semantic_segmentation.py -test_only \
+  python legacy/scripts/semantic_segmentation.py -test_only \
     --config legacy/configs/pascal_voc2012/ladon/deeplabv3_splittable_resnet50-fp-beta${beta}_two_stages.yaml \
     --log legacy/logs/pascal_voc2012/ladon/deeplabv3_splittable_resnet50-fp-beta${beta}_two_stages.txt
 done
@@ -81,7 +81,7 @@ done
 #### Ladon (DeepLabv3 with ResNeSt-269e) 
 ```shell
 for beta in 0.32 1.28 5.12 10.24 20.48; do
-  python legacy/semantic_segmentation.py -test_only \
+  python legacy/scripts/semantic_segmentation.py -test_only \
     --config legacy/configs/pascal_voc2012/ladon/deeplabv3_splittable_resnest269e-fp-beta${beta}_two_stages.yaml \
     --log legacy/logs/pascal_voc2012/ladon/deeplabv3_splittable_resnest269e-fp-beta${beta}_two_stages.txt
 done
