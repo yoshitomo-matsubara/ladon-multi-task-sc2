@@ -32,8 +32,8 @@ datasets:
                 - !import_call
                   key: 'custom.transform.CustomRandomCrop'
                   init:
-                    kwargs: &final_size
-                      size: 416
+                    kwargs:
+                      size: &final_size 416
                 - !import_call
                   key: 'custom.transform.CustomToTensor'
                   init:
