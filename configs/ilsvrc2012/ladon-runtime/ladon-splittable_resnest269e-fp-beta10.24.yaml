@@ -117,7 +117,7 @@ models:
                 unit: 'KB'
         analyzable_layer_key: 'bottleneck_layer'
         backbone_config:
-          name: 'splittable_resnest'
+          key: 'splittable_resnest'
           kwargs:
             num_classes: 1000
             pretrained: False
