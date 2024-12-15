@@ -1,0 +1,134 @@
+dependencies:
+  - name: 'custom'
+
+datasets:
+  &coco_val coco2017/val: !import_call
+    _name: &dataset_name 'coco2017'
+    _root: &root_dir !join ['~/datasets/', *dataset_name]
+    key: 'coco.dataset.coco_dataset'
+    init:
+      kwargs:
+        img_dir_path: !join [*root_dir, '/val2017']
+        ann_file_path: !join [*root_dir, '/annotations/instances_val2017.json']
+        annotated_only: False
+        is_segment: False
+
+models:
+  model:
+    key: 'ladon'
+    classification:
+      key: 'splittable_resnet'
+      kwargs:
+        num_classes: 1000
+        pretrained: True
+        bottleneck_config:
+          key: 'FPBasedResNetBottleneck'
+          kwargs:
+            num_bottleneck_channels: 24
+            num_target_channels: 256
+        resnet_name: 'resnet50'
+        pre_transform:
+        skips_avgpool: False
+        skips_fc: False
+        analysis_config:
+          analyzes_after_compress: True
+          analyzer_configs:
+            - key: 'FileSizeAnalyzer'
+              kwargs:
+                unit: 'KB'
+        org_model_ckpt_file_path_or_url: 'https://download.pytorch.org/models/resnet50-11ad3fa6.pth'
+      src_ckpt: './resource/ckpt/ilsvrc2012/ladon/ilsvrc2012-splittable_resnet50-fp-beta10.24_from_resnet50.pt'
+    detection:
+      key: 'faster_rcnn_model'
+      kwargs:
+        pretrained: False
+        progress: False
+        num_classes: 91
+        backbone_config:
+          key: 'splittable_resnet'
+          kwargs:
+            num_classes: 1000
+            pretrained: False
+            inplanes: 2048
+            bottleneck_config:
+              key: 'FPBasedResNetBottleneck'
+              kwargs:
+                num_bottleneck_channels: 24
+                num_target_channels: 256
+            resnet_name: 'resnet50'
+            pre_transform:
+            skips_avgpool: False
+            skips_fc: False
+            analysis_config:
+              analyzes_after_compress: True
+              analyzer_configs:
+                - key: 'FileSizeAnalyzer'
+                  kwargs:
+                    unit: 'KB'
+          src_ckpt: './resource/ckpt/ilsvrc2012/ladon/ilsvrc2012-splittable_resnet50-fp-beta10.24_from_resnet50.pt'
+        backbone_fpn_kwargs:
+          return_layer_dict:
+            bottleneck_layer: '1'
+            layer2: '2'
+            layer3: '3'
+            layer4: '4'
+          in_channels_list: [256, 512, 1024, 2048]
+          out_channels: 256
+          analysis_config:
+            analyzes_after_compress: True
+            analyzer_configs:
+              - key: 'FileSizeAnalyzer'
+                kwargs:
+                  unit: 'KB'
+          analyzable_layer_key: 'bottleneck_layer'
+        in_channels_stage2: 256
+        min_size: 416
+        max_size: 416
+        start_ckpt_file_path: './resource/ckpt/coco2017/ladon/coco2017-faster_rcnn_splittable_resnet50-fp-beta10.24_fpn.pt'
+    segmentation:
+      key: 'deeplabv3_model'
+      kwargs:
+        pretrained: False
+        pretrained_backbone_name:
+        num_classes: 21
+        uses_aux: True
+        num_input_channels: 2048
+        num_aux_channels: 1024
+        return_layer_dict:
+          layer3: 'aux'
+          layer4: 'out'
+        analysis_config:
+          analyzes_after_compress: True
+          analyzer_configs:
+            - key: 'FileSizeAnalyzer'
+              kwargs:
+                unit: 'KB'
+        analyzable_layer_key: 'bottleneck_layer'
+        backbone_config:
+          key: 'splittable_resnet'
+          kwargs:
+            num_classes: 1000
+            pretrained: False
+            bottleneck_config:
+              key: 'FPBasedResNetBottleneck'
+              kwargs:
+                num_bottleneck_channels: 24
+                num_target_channels: 256
+            resnet_name: 'resnet50'
+            pre_transform:
+            skips_avgpool: True
+            skips_fc: True
+          src_ckpt: './resource/ckpt/ilsvrc2012/ladon/ilsvrc2012-splittable_resnet50-fp-beta10.24_from_resnet50.pt'
+        start_ckpt_file_path: './resource/ckpt/pascal_voc2012/ladon/pascal_voc2012-deeplabv3_splittable_resnet50-fp-beta10.24.pt'
+
+test:
+  test_data_loader:
+    dataset_id: *coco_val
+    sampler:
+      class_or_func: !import_get
+        key: 'torch.utils.data.SequentialSampler'
+      kwargs:
+    collate_fn: 'coco_collate_fn'
+    kwargs:
+      batch_size: 1
+      num_workers: 8

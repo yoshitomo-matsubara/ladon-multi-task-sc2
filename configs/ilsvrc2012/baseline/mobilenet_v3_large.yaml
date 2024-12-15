@@ -1,0 +1,52 @@
+datasets:
+  &imagenet_val ilsvrc2012/val: !import_call
+    _name: &dataset_name 'ilsvrc2012'
+    _root: &root_dir !join ['~/datasets/', *dataset_name]
+    key: 'torchvision.datasets.ImageFolder'
+    init:
+      kwargs:
+        root: !join [ *root_dir, '/val' ]
+        transform: !import_call
+          key: 'torchvision.transforms.Compose'
+          init:
+            kwargs:
+              transforms:
+                - !import_call
+                  key: 'torchvision.transforms.Resize'
+                  init:
+                    kwargs:
+                      size: 256
+                - !import_call
+                  key: 'torchvision.transforms.CenterCrop'
+                  init:
+                    kwargs:
+                      size: [224, 224]
+                - !import_call
+                  key: 'torchvision.transforms.ToTensor'
+                  init:
+                - !import_call
+                  key: 'torchvision.transforms.Normalize'
+                  init:
+                    kwargs:
+                      mean: [0.485, 0.456, 0.406]
+                      std: [0.229, 0.224, 0.225]
+
+models:
+  model:
+    key: 'mobilenet_v3_large'
+    kwargs:
+      num_classes: 1000
+      pretrained: True
+
+test:
+  test_data_loader:
+    dataset_id: *imagenet_val
+    collate_fn: 'default_collate_w_pil'
+    sampler:
+      class_or_func: !import_get
+        key: 'torch.utils.data.SequentialSampler'
+      kwargs:
+    kwargs:
+      batch_size: 1
+      num_workers: 16
+      drop_last: False
