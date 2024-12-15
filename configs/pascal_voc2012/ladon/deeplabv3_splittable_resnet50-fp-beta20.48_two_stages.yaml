@@ -23,6 +23,7 @@ datasets:
                     kwargs: &train_random_resize_kwargs
                       min_size: 260
                       max_size: 832
+                      square: True
                 - !import_call
                   key: 'custom.transform.CustomRandomHorizontalFlip'
                   init:
@@ -62,6 +63,7 @@ datasets:
                     kwargs:
                       min_size: *final_size
                       max_size: *final_size
+                      square: True
                 - !import_call
                   key: 'custom.transform.CustomToTensor'
                   init:
@@ -124,6 +126,7 @@ datasets:
                     kwargs:
                       min_size: *final_size
                       max_size: *final_size
+                      square: True
                 - !import_call
                   key: 'sc2bench.transforms.misc.CustomToTensor'
                   init:
