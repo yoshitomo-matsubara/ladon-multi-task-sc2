@@ -16,6 +16,14 @@ energy consumption of mobile devices (by up to 88.2%) in multi-task split comput
 ## Ladon: the first multi-task supervised compression model for split computing
 ![Entropic Student vs. Ladon](imgs/ladon_model-comparison.png)
 
+In multi-task split computing scenarios, it is critical to optimize learnable parameters of task-specific modules on
+a unified image processing pipeline instead of task-specific pipelines so that we can
+1. reduce encoding cost and energy consumption on a weak local device,
+2. save offloading data size by transferring only one compressed representation from the weak local device to a(n) cloud/edge server, and
+3. reduce end-to-end latency and local device energy consumption,
+
+while outperforming or rivaling predictive performance of lightweight models.
+
 Note that in split computing, models are trained offline (e.g., on a single machine) and the distributed inference 
 like the above figure occurs only at runtime.
 
