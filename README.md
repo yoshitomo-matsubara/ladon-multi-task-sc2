@@ -2,8 +2,26 @@
 
 This is the official repository for our WACV 2025 paper, ***"A Multi-task Supervised Compression Model for Split Computing"***.
 
+Split computing (/= split learning) is a promising approach to deep learning models for resource-constrained edge 
+computing systems, where weak sensor (mobile) devices are wirelessly connected to stronger edge servers through channels 
+with limited communication capacity. State-of-the-art work on split computing presents methods for single tasks such as 
+image classification, object detection, or semantic segmentation. The application of existing methods to multi-task 
+problems degrades model accuracy and/or significantly increase runtime latency. In this study, we propose Ladon, 
+the first multi-task-head supervised compression model for multi-task split computing. Experimental results show that 
+the multi-task supervised compression model either outperformed or rivaled strong lightweight baseline models 
+in terms of predictive performance for ILSVRC 2012, COCO 2017, and PASCAL VOC 2012 datasets while learning compressed 
+representations at its early layers. Furthermore, our models reduced end-to-end latency (by up to 95.4%) and 
+energy consumption of mobile devices (by up to 88.2%) in multi-task split computing scenarios.
+
 ## Ladon: the first multi-task supervised compression model for split computing
 ![Entropic Student vs. Ladon](imgs/ladon_model-comparison.png)
+
+Note that in split computing, models are trained offline (e.g., on a single machine) and the distributed inference 
+like the above figure occurs only at runtime.
+
+Refer to our previous work for [supervised compression](https://github.com/yoshitomo-matsubara/supervised-compression) 
+and [SC2 benchmark (supervised compression for split computing)](https://github.com/yoshitomo-matsubara/sc2-benchmark)
+
 
 ## Datasets
 - Image classification: [ILSVRC 2012 (ImageNet)](https://www.image-net.org/challenges/LSVRC/2012/)
