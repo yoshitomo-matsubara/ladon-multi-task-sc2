@@ -2,7 +2,7 @@
 
 This is the official repository for our WACV 2025 paper, ***"A Multi-task Supervised Compression Model for Split Computing"***.
 
-Split computing (̸!= split learning) is a promising approach to deep learning models for resource-constrained edge 
+Split computing (/= split learning) is a promising approach to deep learning models for resource-constrained edge 
 computing systems, where weak sensor (mobile) devices are wirelessly connected to stronger edge servers through channels 
 with limited communication capacity. State-of-the-art work on split computing presents methods for single tasks such as 
 image classification, object detection, or semantic segmentation. The application of existing methods to multi-task 
