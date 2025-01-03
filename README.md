@@ -30,6 +30,16 @@ like the above figure occurs only at runtime.
 Refer to our previous work for [supervised compression](https://github.com/yoshitomo-matsubara/supervised-compression) 
 and [SC2 benchmark (supervised compression for split computing)](https://github.com/yoshitomo-matsubara/sc2-benchmark)
 
+## Citation
+[[Preprint](https://arxiv.org/abs/2501.01420)]
+```bibtex
+@article{matsubara2025multitask,
+  title={A Multi-task Supervised Compression Model for Split Computing},
+  author={Matsubara, Yoshitomo and Matteo, Mendula and Levorato, Marco},
+  journal={arXiv preprint arXiv:2501.01420},
+  year={2025}
+}
+```
 
 ## Checkpoints
 You can download our checkpoints including trained model weights [here](https://github.com/yoshitomo-matsubara/ladon-multi-task-sc2/releases/tag/wacv2025).  
@@ -125,10 +135,3 @@ done
 #### Training
 
 Use the same command as above but without `-test_only`.
-
-
-## Citation
-[[Preprint](https://arxiv.org/)]
-```bibtex
-Coming soon!
-```
