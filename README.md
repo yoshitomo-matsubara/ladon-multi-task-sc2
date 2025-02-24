@@ -31,12 +31,14 @@ Refer to our previous work for [supervised compression](https://github.com/yoshi
 and [SC2 benchmark (supervised compression for split computing)](https://github.com/yoshitomo-matsubara/sc2-benchmark)
 
 ## Citation
-[[Preprint](https://arxiv.org/abs/2501.01420)]
+[[Paper](https://openaccess.thecvf.com/content/WACV2025/html/Matsubara_A_Multi-Task_Supervised_Compression_Model_for_Split_Computing_WACV_2025_paper.html)][[Preprint](https://arxiv.org/abs/2501.01420)]
 ```bibtex
-@article{matsubara2025multitask,
-  title={A Multi-task Supervised Compression Model for Split Computing},
-  author={Matsubara, Yoshitomo and Matteo, Mendula and Levorato, Marco},
-  journal={arXiv preprint arXiv:2501.01420},
+@inproceedings{matsubara2025multi,
+  title={{A Multi-Task Supervised Compression Model for Split Computing}},
+  author={Matsubara, Yoshitomo and Mendula, Matteo and Levorato, Marco},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  pages={4913-4922},
+  month={February},
   year={2025}
 }
 ```
